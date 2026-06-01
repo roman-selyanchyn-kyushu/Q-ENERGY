@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Research Publications — Q-ENERGY Innovator Unit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<script src="data/publications-data.js"></script>
+<style>
+  /* ── Bilingual toggle (mirrors student page rules) ──────────────────── */
+  [data-lang-jp]             { display: none; }
+  html[lang="ja"] [data-lang-en] { display: none; }
+  html[lang="ja"] [data-lang-jp] { display: inline; }
+
+  /* ── Publications page ─────────────────────────────────────────────── */
+
+  .pub-hero {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 72px var(--g) 56px;
+    border-bottom: 1px solid var(--line);
+  }
+  .pub-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .pub-eyebrow::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: var(--blue);
+    flex-shrink: 0;
+  }
+  .pub-hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    color: var(--ink);
+    margin: 0 0 28px;
+  }
+  .pub-hero h1 .em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--blue);
+  }
+  .pub-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 48px;
+    margin-top: 32px;
+  }
+  .pub-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .pub-stat .num {
+    font-family: var(--serif);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--blue);
+  }
+  .pub-stat .lbl {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: .04em;
+  }
+
+  /* ── Filter bar ─────────────────────────────────────────────────────── */
+
+  .pub-filter-wrap {
+    position: sticky;
+    top: 56px; /* height of topbar */
+    z-index: 20;
+    background: rgba(246,243,236,.9);
+    backdrop-filter: saturate(120%) blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .pub-filter {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 12px var(--g);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .pub-filter-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-right: 4px;
+    flex-shrink: 0;
+  }
+  .pub-year-btn {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink-2);
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background .15s, color .15s, border-color .15s;
+  }
+  .pub-year-btn:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+  }
+  .pub-year-btn.active {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
+  }
+
+  /* ── Year sections ──────────────────────────────────────────────────── */
+
+  .pub-body {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--g) 80px;
+  }
+  .pub-year-section {
+    padding-top: 56px;
+  }
+  .pub-year-heading {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--blue);
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 0 0 28px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  .pub-year-count {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: .06em;
+  }
+  .pub-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .pub-item {
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(217,211,196,.5);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .pub-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Paper text — uses same styles as student achievement lists */
+  .pub-paper-text {
+    font-family: var(--serif);
+    font-size: 15.5px;
+    color: var(--ink-2);
+    line-height: 1.72;
+  }
+  .pub-paper-text .ach-authors {
+    font-weight: 500;
+    color: var(--accent, var(--green));
+  }
+  .pub-paper-text a {
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 13px;
+    font-family: var(--sans);
+  }
+  .pub-paper-text a:hover {
+    text-decoration: underline;
+  }
+
+  /* Attribution line */
+  .pub-attribution {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .pub-attribution::before {
+    content: "↳";
+    color: var(--line);
+  }
+  .pub-attribution a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .pub-attribution a:hover {
+    text-decoration: underline;
+  }
+  .pub-cohort-tag {
+    color: var(--muted);
+  }
+
+  /* Loading / empty states */
+  .pub-loading {
+    max-width: var(--max);
+    margin: 80px auto;
+    padding: 0 var(--g);
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--muted);
+    font-size: 18px;
+  }
+
+  @media (max-width: 600px) {
+    .pub-stats { gap: 24px 32px; }
+    .pub-stat .num { font-size: 28px; }
+    .pub-filter-wrap { top: 52px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="program-mark" href="index.html">
+      <span class="dot" aria-hidden="true"></span>
+      <span>K2&#8209;SPRING</span>
+      <small>Q-ENERGY Innovator Unit</small>
+    </a>
+    <nav class="landing-nav">
+      <a href="index.html#recruitment" data-lang-en="">Admissions</a>
+      <a href="index.html#recruitment" data-lang-jp="">学生募集</a>
+      <a href="index.html#activities" data-lang-en="">Activities</a>
+      <a href="index.html#activities" data-lang-jp="">活動内容</a>
+      <a href="index.html#pamphlets" data-lang-en="">Pamphlets</a>
+      <a href="index.html#pamphlets" data-lang-jp="">パンフレット</a>
+      <a href="index.html#students" data-lang-en="">Fellows</a>
+      <a href="index.html#students" data-lang-jp="">ユニット生</a>
+      <a href="index.html#publications" data-lang-en="">Achievements</a>
+      <a href="index.html#publications" data-lang-jp="">研究成果</a>
+      <a href="news.html" data-lang-en="" style="color:var(--blue)">News</a>
+      <a href="news.html" data-lang-jp="" style="color:var(--blue)">ニュース</a>
+    </nav>
+    <button class="lang-pill" id="lang-toggle" type="button" aria-label="Switch language">JP</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+  <div class="pub-hero">
+    <div class="pub-eyebrow">
+      <span data-lang-en="">Research achievements</span>
+      <span data-lang-jp="">研究成果</span>
+    </div>
+    <h1>
+      <span data-lang-en="">Programme <span class="em">achievements</span></span>
+      <span data-lang-jp="">プログラム <span class="em">研究成果</span></span>
+    </h1>
+    <p style="font-family:var(--serif);font-size:17px;color:var(--muted);line-height:1.65;max-width:620px;margin:0">
+      <span data-lang-en="">Journal papers by Q-ENERGY fellows and K2-SPRING students, collected across their full research careers.</span>
+      <span data-lang-jp="">Q-ENERGYフェローおよびK2-SPRINGユニット生の研究キャリア全体にわたる論文の記録です。</span>
+    </p>
+    <div class="pub-stats" id="pub-stats">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+
+  <!-- ── Filter bar ────────────────────────────────────────────────────── -->
+  <div class="pub-filter-wrap">
+    <div class="pub-filter" id="pub-filter">
+      <span class="pub-filter-label">
+        <span data-lang-en="">Year</span>
+        <span data-lang-jp="">年</span>
+      </span>
+      <!-- Year buttons filled by JS -->
+    </div>
+  </div>
+
+  <!-- ── Publication list ──────────────────────────────────────────────── -->
+  <div class="pub-body" id="pub-body">
+    <p class="pub-loading">
+      <span data-lang-en="">Loading publications…</span>
+      <span data-lang-jp="">読み込み中…</span>
+    </p>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <span>K2&#8209;SPRING &middot; Q-ENERGY Innovator Unit (coordinated by Q-PIT, Kyushu University)</span>
+  <span>&copy; 2026 Q-PIT, Kyushu University. Designed &amp; built by Roman Selyanchyn.</span>
+</footer>
+
+<script>
+// ── Language toggle (same localStorage key as student pages) ─────────────
+const LANG_KEY = 'k2spring_lang';
+
+function applyLang(lang) {
+  document.documentElement.lang = lang;
+  document.getElementById('lang-toggle').textContent = lang === 'ja' ? 'EN' : 'JP';
+  localStorage.setItem(LANG_KEY, lang);
+}
+
+document.getElementById('lang-toggle').addEventListener('click', () => {
+  applyLang(document.documentElement.lang === 'ja' ? 'en' : 'ja');
+});
+
+// Restore saved lang
+const saved = localStorage.getItem(LANG_KEY);
+if (saved === 'ja') applyLang('ja');
+
+// ── Programme name per cohort ─────────────────────────────────────────
+function progLabel(cohort) {
+  return cohort <= 2023 ? 'Q-ENERGY Fellowship' : 'K2-SPRING';
+}
+
+// ── Render ────────────────────────────────────────────────────────────
+// Use inline data if available (works with file://), otherwise fetch (works with HTTP)
+if (window.PUBLICATIONS_DATA) {
+  renderStats(window.PUBLICATIONS_DATA);
+  renderFilter(window.PUBLICATIONS_DATA);
+  renderPapers(window.PUBLICATIONS_DATA);
+} else {
+  fetch('data/publications.json')
+    .then(r => r.json())
+    .then(data => {
+      renderStats(data);
+      renderFilter(data);
+      renderPapers(data);
+    })
+    .catch(() => {
+      document.getElementById('pub-body').innerHTML =
+        '<p class="pub-loading">Could not load publications data.</p>';
+    });
+}
+
+function renderStats(data) {
+  // Count distinct journals (rough: extract <em> content)
+  const journalSet = new Set();
+  data.papers.forEach(p => {
+    const m = p.html.match(/<em>([^<]+)<\/em>/);
+    if (m) journalSet.add(m[1].split(',')[0].trim());
+  });
+  const minYear = Math.min(...data.years.filter(y => y > 0));
+  const maxYear = Math.max(...data.years);
+
+  const stats = [
+    { num: data.total_papers, lbl_en: 'journal papers', lbl_jp: '論文' },
+    { num: journalSet.size + '+', lbl_en: 'journals & proceedings', lbl_jp: '掲載誌' },
+    { num: `${minYear}–${maxYear}`, lbl_en: 'years of output', lbl_jp: '掲載年' },
+    { num: 71, lbl_en: 'Q-ENERGY / K2-SPRING fellows', lbl_jp: 'フェロー' },
+  ];
+  document.getElementById('pub-stats').innerHTML = stats.map(s => `
+    <div class="pub-stat">
+      <span class="num">${s.num}</span>
+      <span class="lbl">
+        <span data-lang-en="">${s.lbl_en}</span>
+        <span data-lang-jp="">${s.lbl_jp}</span>
+      </span>
+    </div>`).join('');
+}
+
+function renderFilter(data) {
+  const filter = document.getElementById('pub-filter');
+  const allBtn = `<button class="pub-year-btn active" data-year="all" type="button">
+    <span data-lang-en="">All</span><span data-lang-jp="">すべて</span>
+  </button>`;
+  const yearBtns = data.years
+    .filter(y => y > 0)
+    .map(y => `<button class="pub-year-btn" data-year="${y}" type="button">${y}</button>`)
+    .join('');
+  filter.insertAdjacentHTML('beforeend', allBtn + yearBtns);
+
+  filter.addEventListener('click', e => {
+    const btn = e.target.closest('.pub-year-btn');
+    if (!btn) return;
+    filter.querySelectorAll('.pub-year-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const year = btn.dataset.year;
+    document.querySelectorAll('.pub-year-section').forEach(sec => {
+      sec.hidden = year !== 'all' && sec.dataset.pubYear !== year;
+    });
+  });
+}
+
+function renderPapers(data) {
+  // Group by year
+  const byYear = {};
+  data.papers.forEach(p => {
+    const y = p.year > 0 ? String(p.year) : '0';
+    if (!byYear[y]) byYear[y] = [];
+    byYear[y].push(p);
+  });
+
+  const body = document.getElementById('pub-body');
+  body.innerHTML = '';
+
+  // Render newest year first; put year=0 last as "Year unknown"
+  const years = data.years.filter(y => y > 0).concat(byYear['0'] ? [0] : []);
+
+  years.forEach(year => {
+    const yearStr = String(year);
+    const papers  = byYear[yearStr] || [];
+    if (!papers.length) return;
+
+    const sec = document.createElement('div');
+    sec.className = 'pub-year-section';
+    sec.dataset.pubYear = yearStr;
+
+    const yearLabel = year > 0 ? year
+      : '<span data-lang-en="">In press / under review</span><span data-lang-jp="">掲載予定</span>';
+    sec.innerHTML = `
+      <h2 class="pub-year-heading">
+        ${yearLabel}
+        <span class="pub-year-count">
+          <span data-lang-en="">${papers.length} paper${papers.length !== 1 ? 's' : ''}</span>
+          <span data-lang-jp="">${papers.length}件</span>
+        </span>
+      </h2>
+      <ol class="pub-list" id="pub-year-${yearStr}"></ol>`;
+    body.appendChild(sec);
+
+    const list = sec.querySelector('.pub-list');
+    papers.forEach(p => {
+      const studentPath = `students/${p.cohort}/${p.student_slug}.html`;
+      const cohortLabel_en = `${p.cohort} ${progLabel(p.cohort)}`;
+      const cohortLabel_jp = `${p.cohort}年度`;
+
+      const li = document.createElement('li');
+      li.className = 'pub-item';
+      li.innerHTML = `
+        <div class="pub-paper-text">${p.html}</div>
+        <div class="pub-attribution">
+          <a href="${studentPath}">${p.student_name}</a>
+          <span class="pub-cohort-tag">
+            <span data-lang-en="">${cohortLabel_en}</span>
+            <span data-lang-jp="">${cohortLabel_jp}</span>
+          </span>
+        </div>`;
+      list.appendChild(li);
+    });
+  });
+}
+</script>
+</body>
+</html>

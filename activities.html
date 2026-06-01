@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Programme Activities — Q-ENERGY Innovator Unit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+  /* ── Bilingual toggle ───────────────────────────────────── */
+  [data-lang-jp]                 { display: none; }
+  html[lang="ja"] [data-lang-en] { display: none; }
+  html[lang="ja"] [data-lang-jp] { display: inline; }
+
+  /* ── Activities page ────────────────────────────────────── */
+  .act-hero {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 72px var(--g) 56px;
+    border-bottom: 1px solid var(--line);
+  }
+  .act-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .act-eyebrow::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: var(--blue);
+    flex-shrink: 0;
+  }
+  .act-hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    color: var(--ink);
+    margin: 0 0 20px;
+  }
+  .act-hero h1 .em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--blue);
+  }
+  .act-hero .lead {
+    font-family: var(--serif);
+    font-size: clamp(15px, 1.6vw, 18px);
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 620px;
+    margin: 0;
+  }
+
+  /* ── Activity sections ──────────────────────────────────── */
+  .act-body {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--g) 80px;
+  }
+  .act-section {
+    padding: 64px 0;
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+  }
+  .act-section:last-child { border-bottom: none; }
+  .act-section-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .act-section-head {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .act-number {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .act-number::before {
+    content: "";
+    width: 20px;
+    height: 1px;
+    background: var(--blue);
+  }
+  .act-section h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(22px, 2.5vw, 32px);
+    line-height: 1.15;
+    letter-spacing: -.01em;
+    color: var(--ink);
+    margin: 0;
+  }
+  .act-section h2 .em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--blue);
+  }
+  .act-section-jp {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: .04em;
+  }
+  .act-freq-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--paper2);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-family: var(--sans);
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--blue);
+    letter-spacing: .04em;
+    width: fit-content;
+  }
+  .act-description {
+    font-family: var(--serif);
+    font-size: clamp(15px, 1.4vw, 17px);
+    color: var(--ink-2, #3a423d);
+    line-height: 1.8;
+  }
+  .act-description p { margin: 0 0 14px; }
+  .act-description p:last-child { margin: 0; }
+  .act-examples {
+    margin: 16px 0 0;
+    padding: 0 0 0 16px;
+    border-left: 2px solid var(--line);
+  }
+  .act-examples-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .act-examples ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .act-examples li {
+    font-family: var(--serif);
+    font-size: 14.5px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .act-examples li::before {
+    content: "–  ";
+    color: var(--line);
+  }
+
+  /* ── Photo slider ───────────────────────────────────────── */
+  .photo-slider {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: var(--paper2);
+    box-shadow: 0 1px 0 rgba(26,31,28,.04), 0 16px 40px -20px rgba(26,31,28,.13);
+  }
+  .slider-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity .45s ease;
+    pointer-events: none;
+  }
+  .slider-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .slider-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  /* Arrow buttons */
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    appearance: none;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(246,243,236,.88);
+    backdrop-filter: blur(4px);
+    color: var(--blue);
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  }
+  .slider-btn:hover { background: rgba(246,243,236,1); }
+  .slider-btn.hidden { display: none; }
+  .slider-prev { left: 10px; }
+  .slider-next { right: 10px; }
+  /* Dot indicators */
+  .slider-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 10;
+  }
+  .slider-dot {
+    appearance: none;
+    border: none;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.5);
+    cursor: pointer;
+    padding: 0;
+    transition: background .2s, transform .2s;
+  }
+  .slider-dot.active {
+    background: #fff;
+    transform: scale(1.25);
+  }
+  /* Counter badge top-right */
+  .slider-counter {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    z-index: 10;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(0,0,0,.32);
+    border-radius: 999px;
+    padding: 3px 10px;
+    letter-spacing: .04em;
+  }
+
+  .slider-caption {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+  .slider-caption a { color: var(--blue); }
+
+  @media(max-width: 860px) {
+    .act-section { grid-template-columns: 1fr; }
+    .photo-slider { order: -1; aspect-ratio: 16/9; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="program-mark" href="index.html">
+      <span class="dot" aria-hidden="true"></span>
+      <span>K2&#8209;SPRING</span>
+      <small>Q-ENERGY Innovator Unit</small>
+    </a>
+    <nav class="landing-nav">
+      <a href="index.html#recruitment" data-lang-en="">Admissions</a>
+      <a href="index.html#recruitment" data-lang-jp="">学生募集</a>
+      <a href="index.html#activities" data-lang-en="">Activities</a>
+      <a href="index.html#activities" data-lang-jp="">活動内容</a>
+      <a href="index.html#pamphlets" data-lang-en="">Pamphlets</a>
+      <a href="index.html#pamphlets" data-lang-jp="">パンフレット</a>
+      <a href="index.html#students" data-lang-en="">Fellows</a>
+      <a href="index.html#students" data-lang-jp="">ユニット生</a>
+      <a href="index.html#publications" data-lang-en="">Achievements</a>
+      <a href="index.html#publications" data-lang-jp="">研究成果</a>
+      <a href="news.html" data-lang-en="" style="color:var(--blue)">News</a>
+      <a href="news.html" data-lang-jp="" style="color:var(--blue)">ニュース</a>
+    </nav>
+    <button class="lang-pill" id="lang-toggle" type="button" aria-label="Switch language">EN</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ── Hero ───────────────────────────────────────────────── -->
+  <div class="act-hero">
+    <div class="act-eyebrow">
+      <span data-lang-en="">Programme activities</span>
+      <span data-lang-jp="">活動内容</span>
+    </div>
+    <h1>
+      <span data-lang-en="">What we <span class="em">do together</span></span>
+      <span data-lang-jp="">ユニットの <span class="em">活動</span></span>
+    </h1>
+    <p class="lead">
+      <span data-lang-en="">Beyond individual doctoral research, Q-ENERGY Innovator Unit students follow a shared calendar of activities: seminars, company visits, public showcases of their research progress, and the annual summer camp. These activities build the cross-disciplinary community central to the program.</span>
+      <span data-lang-jp="">個々の博士研究に加え、Q-ENERGYイノベーターユニットの学生たちは、合同ゼミ・企業訪問・研究成果の公開発表・夏合宿など、共通の活動カレンダーに従って行動します。これらの活動が、プログラムの中心にある異分野コミュニティを形成します。</span>
+    </p>
+  </div>
+
+  <!-- ── Activity sections ───────────────────────────────────── -->
+  <div class="act-body">
+
+    <!-- 1. Joint Seminars -->
+    <div class="act-section">
+      <div class="act-section-meta">
+        <div class="act-section-head">
+          <span class="act-number">
+            <span data-lang-en="">Activity 01</span>
+            <span data-lang-jp="">活動 01</span>
+          </span>
+          <h2>
+            <span data-lang-en="">Joint <span class="em">Seminars</span></span>
+            <span data-lang-jp="">合同 <span class="em">ゼミ</span></span>
+          </h2>
+          <span class="act-section-jp" data-lang-en="">合同ゼミ</span>
+        </div>
+        <span class="act-freq-badge">
+          <span data-lang-en="">4–5 times per year</span>
+          <span data-lang-jp="">年4〜5回</span>
+        </span>
+        <div class="act-description">
+          <p>
+            <span data-lang-en="">Held every three to four months, the joint seminars bring together unit fellows for research presentations and cross-disciplinary discussion. Each session gives students the chance to present their current work and receive feedback from peers in fields very different from their own — an economist hearing from a materials scientist, an engineer engaging with a social scientist. We also use the joint seminars for final unit students' presentations of their doctoral theses.</span>
+            <span data-lang-jp="">3〜4ヶ月ごとに開催する合同ゼミでは、ユニット生が一堂に集まり研究発表と異分野交流を行います。各回、学生は自身の研究を発表し、全く異なる分野の仲間からフィードバックを受けます。材料科学者が経済学者の意見を聞き、工学者が社会科学者と議論するような場です。また、修了を控えたユニット生の博士論文発表にも合同ゼミを活用しています。</span>
+          </p>
+          <p>
+            <span data-lang-en="">Unit coordinators, faculty supervisors, and external experienced researchers also participate, keeping the discussion grounded, providing valuable feedback while allowing genuinely open interdisciplinary exchange.</span>
+            <span data-lang-jp="">ユニットコーディネーター、指導教員、そして学外の経験豊富な研究者も参加し、議論に深みを持たせながら、真に開かれた学際的交流を促しています。</span>
+          </p>
+        </div>
+      </div>
+      <div class="photo-slider" data-slider>
+      <div class="slider-slide"><img src="assets/photos/activities/seminars/01.jpg" alt="Joint seminar session" loading="lazy"></div>
+      <div class="slider-slide"><img src="assets/photos/activities/seminars/02.jpg" alt="Joint seminar session" loading="lazy"></div>
+      <div class="slider-slide"><img src="assets/photos/activities/seminars/03.jpg" alt="Joint seminar session" loading="lazy"></div>
+      <button class="slider-btn slider-prev" aria-label="Previous photo">&#8249;</button>
+      <button class="slider-btn slider-next" aria-label="Next photo">&#8250;</button>
+      <div class="slider-dots">
+        <button class="slider-dot active" aria-label="Photo 1"></button>
+        <button class="slider-dot" aria-label="Photo 2"></button>
+        <button class="slider-dot" aria-label="Photo 3"></button>
+      </div>
+      <span class="slider-counter">1 / 3</span>
+      </div>
+    </div>
+
+    <!-- 2. Company Visits -->
+    <div class="act-section">
+      <div class="act-section-meta">
+        <div class="act-section-head">
+          <span class="act-number">
+            <span data-lang-en="">Activity 02</span>
+            <span data-lang-jp="">活動 02</span>
+          </span>
+          <h2>
+            <span data-lang-en="">Company <span class="em">Visits</span></span>
+            <span data-lang-jp="">企業 <span class="em">訪問</span></span>
+          </h2>
+          <span class="act-section-jp" data-lang-en="">企業訪問</span>
+        </div>
+        <span class="act-freq-badge">
+          <span data-lang-en="">Once per year</span>
+          <span data-lang-jp="">年1回</span>
+        </span>
+        <div class="act-description">
+          <p>
+            <span data-lang-en="">Once a year, the unit visits energy-related industrial facilities in the Kyushu region. These visits connect the fellows' research to real industrial practice, allowing them to see how industries set up their operations, use energy, produce, manage, and transform at scale.</span>
+            <span data-lang-jp="">年に一度、ユニットは九州地域のエネルギー関連産業施設を訪問します。この訪問は、ユニット生の研究と実際の産業現場をつなぐ機会となり、産業界が事業をどのように構築し、エネルギーをいかに利用・生産・管理・変換しているかを大規模に体感することができます。</span>
+          </p>
+        </div>
+        <div class="act-examples">
+          <div class="act-examples-label">
+            <span data-lang-en="">Past visits</span>
+            <span data-lang-jp="">これまでの訪問先</span>
+          </div>
+          <ul>
+            <li>
+              <span data-lang-en="">Toyota plant, Kitakyushu</span>
+              <span data-lang-jp="">トヨタ自動車 北九州工場</span>
+            </li>
+            <li>
+              <span data-lang-en="">Waste incineration plant, Saga Prefecture</span>
+              <span data-lang-jp="">佐賀県 ごみ焼却施設</span>
+            </li>
+            <li>
+              <span data-lang-en="">Biogas production facility, Fukuoka</span>
+              <span data-lang-jp="">バイオガス製造施設（福岡）</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="photo-slider" data-slider>
+      <div class="slider-slide"><img src="assets/photos/activities/company-visit/01.jpg" alt="Company visit" loading="lazy"></div>
+      <div class="slider-slide"><img src="assets/photos/activities/company-visit/02.jpg" alt="Company visit" loading="lazy"></div>
+      <button class="slider-btn slider-prev" aria-label="Previous photo">&#8249;</button>
+      <button class="slider-btn slider-next" aria-label="Next photo">&#8250;</button>
+      <div class="slider-dots">
+        <button class="slider-dot active" aria-label="Photo 1"></button>
+        <button class="slider-dot" aria-label="Photo 2"></button>
+      </div>
+      <span class="slider-counter">1 / 2</span>
+      </div>
+    </div>
+
+    <!-- 3. Kyushu Energy Week -->
+    <div class="act-section">
+      <div class="act-section-meta">
+        <div class="act-section-head">
+          <span class="act-number">
+            <span data-lang-en="">Activity 03</span>
+            <span data-lang-jp="">活動 03</span>
+          </span>
+          <h2>
+            <span data-lang-en="">Kyushu <span class="em">Energy Week</span></span>
+            <span data-lang-jp="">九州 <span class="em">エネルギーウィーク</span></span>
+          </h2>
+          <span class="act-section-jp" data-lang-en="">九州エネルギーウィーク</span>
+        </div>
+        <span class="act-freq-badge">
+          <span data-lang-en="">Every January</span>
+          <span data-lang-jp="">毎年1月</span>
+        </span>
+        <div class="act-description">
+          <p>
+            <span data-lang-en="">Each January, all Q-ENERGY Innovator Unit fellows participate in Kyushu Energy Week, the University's main energy-related event. Here, the program of presentations is curated for young researchers, followed by a large joint poster session. Every student presents their research, making this the program's most visible public showcase. Attendance and participation are mandatory for all unit members.</span>
+            <span data-lang-jp="">毎年1月、Q-ENERGYイノベーターユニットの全ユニット生が、大学の主要なエネルギー関連イベントである九州エネルギーウィークに参加します。若手研究者向けに厳選された講演プログラムの後、大規模な合同ポスターセッションが開催されます。全学生が研究成果を発表するこのイベントは、プログラムの中で最も広く対外発信できる公開の場です。ユニット生全員の参加・発表が必須となっています。</span>
+          </p>
+          <p>
+            <span data-lang-en="">The session brings together researchers, faculty, and external guests, giving fellows experience in presenting to a broad, multidisciplinary audience.</span>
+            <span data-lang-jp="">研究者・教員・外部ゲストが一堂に集まり、多様な聴衆に向けた発表経験を積む場となっています。</span>
+          </p>
+        </div>
+      </div>
+      <div class="photo-slider" data-slider>
+      <div class="slider-slide"><img src="assets/photos/activities/energy-week/01.jpg" alt="Kyushu Energy Week poster session" loading="lazy"></div>
+      <div class="slider-slide"><img src="assets/photos/activities/energy-week/02.jpg" alt="Kyushu Energy Week poster session" loading="lazy"></div>
+      <div class="slider-slide"><img src="assets/photos/activities/energy-week/03.jpg" alt="Kyushu Energy Week poster session" loading="lazy"></div>
+      <div class="slider-slide"><img src="assets/photos/activities/energy-week/04.jpg" alt="Kyushu Energy Week poster session" loading="lazy"></div>
+      <div class="slider-slide"><img src="assets/photos/activities/energy-week/05.jpg" alt="Kyushu Energy Week poster session" loading="lazy"></div>
+      <button class="slider-btn slider-prev" aria-label="Previous photo">&#8249;</button>
+      <button class="slider-btn slider-next" aria-label="Next photo">&#8250;</button>
+      <div class="slider-dots">
+        <button class="slider-dot active" aria-label="Photo 1"></button>
+        <button class="slider-dot" aria-label="Photo 2"></button>
+        <button class="slider-dot" aria-label="Photo 3"></button>
+        <button class="slider-dot" aria-label="Photo 4"></button>
+        <button class="slider-dot" aria-label="Photo 5"></button>
+      </div>
+      <span class="slider-counter">1 / 5</span>
+      </div>
+    </div>
+
+    <!-- 4. Decarbonization Workshop -->
+    <div class="act-section">
+      <div class="act-section-meta">
+        <div class="act-section-head">
+          <span class="act-number">
+            <span data-lang-en="">Activity 04</span>
+            <span data-lang-jp="">活動 04</span>
+          </span>
+          <h2>
+            <span data-lang-en="">Outreach for <span class="em">Industry</span></span>
+            <span data-lang-jp="">産業界向け <span class="em">成果報告</span></span>
+          </h2>
+          <span class="act-section-jp" data-lang-en="">産業界向け成果報告</span>
+        </div>
+        <span class="act-freq-badge">
+          <span data-lang-en="">6 workshops/year · 1 student slot</span>
+          <span data-lang-jp="">年6回開催・年1回登壇</span>
+        </span>
+        <div class="act-description">
+          <p>
+            <span data-lang-en="">The Unit actively participates in University activities focused on collaboration with industry. In addition to the occasional outreach for industry meetings, the Unit now contributes to a regular series of workshops organized by the <a href="https://q-decs.kyushu-u.net/" target="_blank" rel="noopener">Decarbonization Society in Kyushu (Q-DeCS)</a>, held six times per year, that connect Kyushu University researchers with industrial partners from across the region. In each workshop, two unit fellows are invited to present their doctoral research, a direct bridge between the program and the broader research and business community.</span>
+            <span data-lang-jp="">ユニットは、産学連携を目的とした大学の活動に積極的に参加しています。個別の産業界向け成果報告の機会に加え、現在は<a href="https://q-decs.kyushu-u.net/" target="_blank" rel="noopener">九州脱炭素社会（Q-DeCS）</a>が主催する定期ワークショップシリーズにも貢献しています。このワークショップは年6回開催され、九州大学の研究者と地域の産業パートナーをつなぐ場となっています。各回、ユニット生2名が博士研究の成果を発表し、プログラムと広域の研究・ビジネスコミュニティをつなぐ架け橋となっています。</span>
+          </p>
+        </div>
+      </div>
+      <div class="photo-slider" data-slider>
+      <div class="slider-slide"><img src="assets/photos/activities/decarbonization-workshop/01.jpg" alt="Decarbonization Society in Kyushu workshop" loading="lazy"></div>
+      <div class="slider-slide"><img src="assets/photos/activities/decarbonization-workshop/02.jpg" alt="Decarbonization Society in Kyushu workshop" loading="lazy"></div>
+      <div class="slider-slide"><img src="assets/photos/activities/decarbonization-workshop/03.jpg" alt="Decarbonization Society in Kyushu workshop" loading="lazy"></div>
+      <div class="slider-slide"><img src="assets/photos/activities/decarbonization-workshop/04.jpg" alt="Decarbonization Society in Kyushu workshop" loading="lazy"></div>
+      <button class="slider-btn slider-prev" aria-label="Previous photo">&#8249;</button>
+      <button class="slider-btn slider-next" aria-label="Next photo">&#8250;</button>
+      <div class="slider-dots">
+        <button class="slider-dot active" aria-label="Photo 1"></button>
+        <button class="slider-dot" aria-label="Photo 2"></button>
+        <button class="slider-dot" aria-label="Photo 3"></button>
+        <button class="slider-dot" aria-label="Photo 4"></button>
+      </div>
+      <span class="slider-counter">1 / 4</span>
+      </div>
+    </div>
+
+    <!-- 5. Summer Camp -->
+    <div class="act-section">
+      <div class="act-section-meta">
+        <div class="act-section-head">
+          <span class="act-number">
+            <span data-lang-en="">Activity 05</span>
+            <span data-lang-jp="">活動 05</span>
+          </span>
+          <h2>
+            <span data-lang-en="">Summer <span class="em">Camp</span></span>
+            <span data-lang-jp="">夏 <span class="em">合宿</span></span>
+          </h2>
+          <span class="act-section-jp" data-lang-en="">夏合宿</span>
+        </div>
+        <span class="act-freq-badge">
+          <span data-lang-en="">Every summer · 2 days</span>
+          <span data-lang-jp="">毎年夏・1泊2日</span>
+        </span>
+        <div class="act-description">
+          <p>
+            <span data-lang-en="">The summer camp is the unit's flagship activity, an annual two-day trip outside Fukuoka that combines hands-on group work with site visits to energy companies and industrial facilities. Half of the summer camp program is usually devoted to collaborative group challenges (joint research proposals, carbon-neutral campus strategies, etc.), the other half to seeing real-world energy infrastructure. We also enjoy plenty of social time together.</span>
+            <span data-lang-jp="">夏合宿はユニット最大のイベントです。毎年夏、福岡を離れた1泊2日の合宿で、グループワークとエネルギー企業・施設訪問を組み合わせています。前半は合同研究提案やカーボンニュートラルキャンパス提言など協働課題に取り組み、後半は実際のエネルギーインフラを訪問します。もちろん、親睦を深める時間も大切にしています。</span>
+          </p>
+        </div>
+        <p class="slider-caption"><span data-lang-en="">Videos from all four camps are available on the <a href="index.html#program" style="color:var(--blue)">home page</a>.</span><span data-lang-jp="">全4回の動画は<a href="index.html#program" style="color:var(--blue)">ホームページ</a>でご覧いただけます。</span></p>
+        <div class="act-examples">
+          <div class="act-examples-label">
+            <span data-lang-en="">Past destinations</span>
+            <span data-lang-jp="">これまでの訪問先</span>
+          </div>
+          <ul>
+            <li>
+              <span data-lang-en="">Yakushima Denko (Yakushima Island, Kagoshima)</span>
+              <span data-lang-jp="">屋久島電工（鹿児島県屋久島）</span>
+            </li>
+            <li>
+              <span data-lang-en="">Kyocera (Kirishima city, Kagoshima Prefecture)</span>
+              <span data-lang-jp="">京セラ（鹿児島県霧島市）</span>
+            </li>
+            <li>
+              <span data-lang-en="">Genkai Nuclear Power Plant (Karatsu city, Saga Prefecture)</span>
+              <span data-lang-jp="">玄海原子力発電所（佐賀県唐津市）</span>
+            </li>
+            <li>
+              <span data-lang-en="">Tokuyama Chemical Complex (Shunan city, Yamaguchi Prefecture)</span>
+              <span data-lang-jp="">徳山コンビナート（山口県周南市）</span>
+            </li>
+            <li>
+              <span data-lang-en="">Hibiki LNG &amp; renewable energy projects (Kitakyushu city, planned for 2026)</span>
+              <span data-lang-jp="">Hibiki LNG・再生可能エネルギー施設（北九州市、2026年度予定）</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="photo-slider" data-slider>
+      <div class="slider-slide"><img src="assets/photos/activities/summer-camp/01.jpg" alt="Q-ENERGY summer camp" loading="lazy"></div>
+      <div class="slider-slide"><img src="assets/photos/activities/summer-camp/02.jpg" alt="Q-ENERGY summer camp" loading="lazy"></div>
+      <div class="slider-slide"><img src="assets/photos/activities/summer-camp/03.jpg" alt="Q-ENERGY summer camp" loading="lazy"></div>
+      <div class="slider-slide"><img src="assets/photos/activities/summer-camp/04.jpg" alt="Q-ENERGY summer camp" loading="lazy"></div>
+      <div class="slider-slide"><img src="assets/photos/activities/summer-camp/05.jpg" alt="Q-ENERGY summer camp" loading="lazy"></div>
+      <button class="slider-btn slider-prev" aria-label="Previous photo">&#8249;</button>
+      <button class="slider-btn slider-next" aria-label="Next photo">&#8250;</button>
+      <div class="slider-dots">
+        <button class="slider-dot active" aria-label="Photo 1"></button>
+        <button class="slider-dot" aria-label="Photo 2"></button>
+        <button class="slider-dot" aria-label="Photo 3"></button>
+        <button class="slider-dot" aria-label="Photo 4"></button>
+        <button class="slider-dot" aria-label="Photo 5"></button>
+      </div>
+      <span class="slider-counter">1 / 5</span>
+      </div>
+    </div>
+
+  </div><!-- /act-body -->
+
+</main>
+
+<footer class="footer">
+  <span>K2&#8209;SPRING &middot; Q-ENERGY Innovator Unit (coordinated by Q-PIT, Kyushu University)</span>
+  <span>&copy; 2026 Q-PIT, Kyushu University. Designed &amp; built by Roman Selyanchyn.</span>
+</footer>
+
+<script>
+const LANG_KEY = 'k2spring_lang';
+function applyLang(lang) {
+  document.documentElement.lang = lang;
+  document.getElementById('lang-toggle').textContent = lang === 'ja' ? 'EN' : 'JP';
+  localStorage.setItem(LANG_KEY, lang);
+}
+document.getElementById('lang-toggle').addEventListener('click', () => {
+  applyLang(document.documentElement.lang === 'ja' ? 'en' : 'ja');
+});
+const saved = localStorage.getItem(LANG_KEY);
+if (saved === 'en') applyLang('en');
+
+// ── Photo sliders ────────────────────────────────────────────
+document.querySelectorAll('[data-slider]').forEach(slider => {
+  const slides  = Array.from(slider.querySelectorAll('.slider-slide'));
+  const dots    = Array.from(slider.querySelectorAll('.slider-dot'));
+  const counter = slider.querySelector('.slider-counter');
+  const total   = slides.length;
+  let current   = 0;
+
+  // Make first slide active
+  slides[0].classList.add('active');
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dots[current]?.classList.remove('active');
+    current = (n + total) % total;
+    slides[current].classList.add('active');
+    dots[current]?.classList.add('active');
+    if (counter) counter.textContent = `${current + 1} / ${total}`;
+  }
+
+  slider.querySelector('.slider-prev')?.addEventListener('click', () => goTo(current - 1));
+  slider.querySelector('.slider-next')?.addEventListener('click', () => goTo(current + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+  // Swipe support for touch devices
+  let touchStartX = 0;
+  slider.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  slider.addEventListener('touchend',   e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+  });
+});
+</script>
+</body>
+</html>

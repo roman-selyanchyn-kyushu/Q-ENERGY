@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Paper by Phua Yin Kan et al.: Making Black-Box AI Explainable for Polymer Design — Q-ENERGY News</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+<style>
+  [data-lang-jp]                 { display: none; }
+  html[lang="ja"] [data-lang-en] { display: none; }
+  html[lang="ja"] [data-lang-jp] { display: inline; }
+  html[lang="ja"] [data-lang-jp-block] { display: block; }
+  html[lang="ja"] [data-lang-en-block] { display: none; }
+  [data-lang-jp-block] { display: none; }
+
+  /* ── Article layout ─────────────────────────────────────── */
+  .article-wrap {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 64px var(--g) 96px;
+  }
+
+  /* Back link */
+  .article-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+    transition: color .2s;
+  }
+  .article-back:hover { color: var(--blue); }
+  .article-back::before { content: "←"; font-size: 14px; }
+
+  /* Header */
+  .article-header { margin-bottom: 40px; }
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .article-date {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: .04em;
+  }
+  .article-tag {
+    display: inline-flex;
+    align-items: center;
+    background: var(--paper2);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 3px 11px;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--blue);
+    letter-spacing: .04em;
+  }
+  .article-headline {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(24px, 3.5vw, 38px);
+    line-height: 1.18;
+    letter-spacing: -.02em;
+    color: var(--ink);
+    margin: 0 0 16px;
+  }
+  .article-lead {
+    font-family: var(--serif);
+    font-size: clamp(16px, 1.6vw, 19px);
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Graphical abstract / hero image */
+  .article-figure {
+    margin: 40px 0;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+  }
+  .article-figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+  }
+  .article-figure figcaption {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 14px;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  /* Body text */
+  .article-body {
+    font-family: var(--serif);
+    font-size: clamp(15px, 1.4vw, 17px);
+    color: var(--ink);
+    line-height: 1.85;
+  }
+  .article-body p { margin: 0 0 20px; }
+  .article-body p:last-child { margin: 0; }
+  .article-body a { color: var(--blue); }
+  .article-body strong { font-weight: 600; }
+
+  /* Section divider */
+  .article-divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 40px 0;
+  }
+
+  /* Publication details block */
+  .pub-details {
+    background: var(--paper2);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 40px 0;
+  }
+  .pub-details-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 16px;
+  }
+  .pub-details-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 6px 16px;
+    font-family: var(--sans);
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    align-items: baseline;
+  }
+  .pub-details-row:last-child { margin-bottom: 0; }
+  .pub-details-key {
+    color: var(--muted);
+    font-weight: 500;
+    font-size: 11.5px;
+    letter-spacing: .03em;
+  }
+  .pub-details-val { color: var(--ink); }
+  .pub-details-val a { color: var(--blue); word-break: break-all; }
+  .pub-details-val em { font-style: italic; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="program-mark" href="../index.html">
+      <span class="dot" aria-hidden="true"></span>
+      <span>K2&#8209;SPRING</span>
+      <small>Q-ENERGY Innovator Unit</small>
+    </a>
+    <nav class="landing-nav">
+      <a href="../index.html#recruitment" data-lang-en="">Admissions</a>
+      <a href="../index.html#recruitment" data-lang-jp="">学生募集</a>
+      <a href="../index.html#activities" data-lang-en="">Activities</a>
+      <a href="../index.html#activities" data-lang-jp="">活動内容</a>
+      <a href="../index.html#pamphlets" data-lang-en="">Pamphlets</a>
+      <a href="../index.html#pamphlets" data-lang-jp="">パンフレット</a>
+      <a href="../index.html#students" data-lang-en="">Fellows</a>
+      <a href="../index.html#students" data-lang-jp="">ユニット生</a>
+      <a href="../index.html#publications" data-lang-en="">Achievements</a>
+      <a href="../index.html#publications" data-lang-jp="">研究成果</a>
+      <a href="../news.html" data-lang-en="" style="color:var(--blue)">News</a>
+      <a href="../news.html" data-lang-jp="" style="color:var(--blue)">ニュース</a>
+    </nav>
+    <button class="lang-pill" id="lang-toggle" type="button" aria-label="Switch language">EN</button>
+  </div>
+</header>
+
+<main>
+  <div class="article-wrap">
+
+    <a class="article-back" href="../news.html">
+      <span data-lang-en="">All news</span>
+      <span data-lang-jp="">ニュース一覧</span>
+    </a>
+
+    <header class="article-header">
+      <div class="article-meta">
+        <span class="article-date">May 15, 2026</span>
+        <span class="article-tag">
+          <span data-lang-en="">New Paper</span>
+          <span data-lang-jp="">新論文</span>
+        </span>
+      </div>
+      <h1 class="article-headline">
+        <span data-lang-en="">Paper by Phua Yin Kan et al.: Making Black-Box AI Explainable for Polymer Design</span>
+        <span data-lang-jp="">Phua Yin Kanらの論文：ポリマー設計のためのブラックボックスAIを説明可能に</span>
+      </h1>
+      <p class="article-lead">
+        <span data-lang-en="">A new framework combining explainable AI, ChatGPT, and expert knowledge enables researchers to extract quantitative design guidelines for anion exchange membrane materials from complex neural network models.</span>
+        <span data-lang-jp="">説明可能AI・ChatGPT・専門知識を組み合わせた新しいフレームワークにより、複雑なニューラルネットワークモデルからアニオン交換膜材料の定量的な設計指針を導き出すことが可能になりました。</span>
+      </p>
+    </header>
+
+    <figure class="article-figure">
+      <img src="../assets/photos/news/phua-yin-kan-graphical-abstract.jpg"
+           alt="Graphical abstract: AI-guided expert design framework for conceptual polymer design">
+      <figcaption>
+        <span data-lang-en="">Graphical abstract. The framework combines a neural network trained on polymer property data, dimensionality reduction for explainability, and ChatGPT-mediated expert interpretation to produce actionable polymer design guidelines.</span>
+        <span data-lang-jp="">グラフィカルアブストラクト。ポリマー特性データで学習したニューラルネットワーク、説明可能性のための次元削減、ChatGPTを介した専門家解釈を組み合わせ、実践的なポリマー設計指針を導出するフレームワーク。</span>
+      </figcaption>
+    </figure>
+
+    <div class="article-body">
+      <p data-lang-en-block="">
+        Artificial neural networks have demonstrated impressive accuracy in predicting polymer properties, but their internal decision-making processes have long been a "black box" — difficult to interpret even for the researchers who build them. This opacity limits the extent to which AI-generated predictions can be translated into real, actionable design knowledge.
+      </p>
+      <p data-lang-jp-block="">
+        人工ニューラルネットワークはポリマー特性の予測において高い精度を示してきましたが、その内部の意思決定プロセスは長らく「ブラックボックス」とされ、構築した研究者にとっても解釈が困難でした。この不透明さが、AIによる予測を実際の設計知識へと転換することを妨げてきました。
+      </p>
+
+      <p data-lang-en-block="">
+        A research team at Kyushu University, led by Prof. Koichiro Kato and Prof. Tsuyohiko Fujigaya, with Q-ENERGY fellowship alumna Phua Yin Kan as lead author, has published a new framework that addresses this challenge directly. Their approach combines explainable AI techniques with ChatGPT and domain expert knowledge to systematically extract polymer design guidelines from neural network models — including models too complex for standard explainability methods.
+      </p>
+      <p data-lang-jp-block="">
+        九州大学の加藤浩一郎教授・藤ヶ谷剛彦教授が率いる研究チームは、Q-ENERGYフェローシップ修了生のPhua Yin Kanを筆頭著者として、この課題に直接取り組む新しいフレームワークを発表しました。このアプローチは、説明可能AI技術とChatGPT、および専門家知識を組み合わせ、ニューラルネットワークモデルからポリマー設計指針を体系的に抽出するものです。標準的な説明可能性手法では対応が難しい複雑なモデルにも適用可能です。
+      </p>
+
+      <p data-lang-en-block="">
+        The target application is anion exchange membrane (AEM) materials — a key component in hydrogen fuel cells and water electrolysis systems. Using their framework, the team successfully identified concrete, quantitative design guidelines: the effectiveness of biphenyl structures and optimal side-chain configurations for maximising ionic conductivity.
+      </p>
+      <p data-lang-jp-block="">
+        応用対象は、水素燃料電池や水電解システムの重要部材であるアニオン交換膜（AEM）材料です。このフレームワークを用いて、研究チームはビフェニル構造の有効性やイオン伝導率を最大化するための最適側鎖構成など、具体的かつ定量的な設計指針を明らかにしました。
+      </p>
+
+      <p data-lang-en-block="">
+        The researchers also released the underlying database and source code on GitHub, making the framework broadly applicable to other polymer design challenges.
+      </p>
+      <p data-lang-jp-block="">
+        また、基盤となるデータベースとソースコードをGitHub上で公開しており、他のポリマー設計課題にも幅広く応用できます。
+      </p>
+    </div>
+
+    <div class="pub-details">
+      <div class="pub-details-label">
+        <span data-lang-en="">Publication details</span>
+        <span data-lang-jp="">論文情報</span>
+      </div>
+      <div class="pub-details-row">
+        <span class="pub-details-key">Journal</span>
+        <span class="pub-details-val"><em>Journal of Materials Chemistry A</em> (Royal Society of Chemistry)</span>
+      </div>
+      <div class="pub-details-row">
+        <span class="pub-details-key">Title</span>
+        <span class="pub-details-val">"Orchestrating Explainable AI, ChatGPT, and Human Expertise: A Framework for Extracting Polymer Design Guidelines"</span>
+      </div>
+      <div class="pub-details-row">
+        <span class="pub-details-key">Authors</span>
+        <span class="pub-details-val">Phua Yin Kan, Nana Terasoba, Manabu Tanaka, Tsuyohiko Fujigaya, Koichiro Kato</span>
+      </div>
+      <div class="pub-details-row">
+        <span class="pub-details-key">DOI</span>
+        <span class="pub-details-val"><a href="https://doi.org/10.1039/D5TA06120B" target="_blank" rel="noopener">10.1039/D5TA06120B</a></span>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <span>K2&#8209;SPRING &middot; Q-ENERGY Innovator Unit (coordinated by Q-PIT, Kyushu University)</span>
+  <span>&copy; 2026 Q-PIT, Kyushu University. Designed &amp; built by Roman Selyanchyn.</span>
+</footer>
+
+<script>
+const LANG_KEY = 'k2spring_lang';
+function applyLang(lang) {
+  document.documentElement.lang = lang;
+  document.getElementById('lang-toggle').textContent = lang === 'ja' ? 'EN' : 'JP';
+  localStorage.setItem(LANG_KEY, lang);
+}
+document.getElementById('lang-toggle').addEventListener('click', () => {
+  applyLang(document.documentElement.lang === 'ja' ? 'en' : 'ja');
+});
+const saved = localStorage.getItem(LANG_KEY);
+if (saved === 'en') applyLang('en');
+</script>
+</body>
+</html>
