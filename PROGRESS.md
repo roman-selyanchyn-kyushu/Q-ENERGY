@@ -1,6 +1,6 @@
 # Q-ENERGY Student Site Remake — Progress
 
-Updated: 2026-06-01
+Updated: 2026-06-02
 
 Safety rules:
 - Do not modify the live Q-PIT/WordPress site.
@@ -21,13 +21,30 @@ Milestones:
 - [x] Activities page completed (all 5 activities, photo sliders, bilingual)
 - [x] Publications page completed (all cohorts, bilingual)
 - [x] News system built (news.html index + individual pages)
-- [ ] Roman review
+- [x] Published to GitHub — https://github.com/roman-selyanchyn-kyushu/Q-ENERGY
+- [ ] Roman review / final QA
 
 Resume instruction:
 Open the Dropbox folder `00-QPIT/Q-fellowship/QENERGY-STUDENT-SITE-REMAKE` on any machine.
 Run `python3 -m http.server 8765` from the project root to preview locally.
 Key files: `index.html` (landing), `activities.html`, `publications.html`, `news.html`,
 `students/[cohort]/[slug].html` (profiles), `data/students.json` (full database), `data/news.json` (news index metadata).
+
+GitHub repository: https://github.com/roman-selyanchyn-kyushu/Q-ENERGY (branch: main)
+- Sensitive folders excluded from repo: `Scopus/`, `LIST/`, `scripts_*.py`, `.claude/`, `__pycache__/`
+- `.gitignore` in place to keep future runs of those folders out
+- To push updates: `git add [files] && git commit -m "message" && git push`
+
+---
+
+Session 2026-06-02
+
+## GitHub publication
+- Repository created: https://github.com/roman-selyanchyn-kyushu/Q-ENERGY (branch: main)
+- Initial commit: full static site published from work computer.
+- Sensitive folders kept out of repo: `Scopus/`, `LIST/`, `scripts_*.py`, `.claude/`, `__pycache__/` — `.gitignore` added.
+- 4 commits: initial commit → remove sensitive folders → remove .claude/__pycache__ + add .gitignore → add robots.txt.
+- `robots.txt` added to block search engine indexing (site is for internal/academic use, not public SEO).
 
 ---
 

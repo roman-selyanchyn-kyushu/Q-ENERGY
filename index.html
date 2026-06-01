@@ -25,7 +25,7 @@
       <a href="#publications" data-ja="研究成果" data-en="Achievements">研究成果</a>
       <a href="news.html" data-ja="ニュース" data-en="News" style="color:var(--blue)">ニュース</a>
     </nav>
-    <button class="lang-pill" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+    <div class="lang-toggle" id="lang-toggle" data-lang="en" role="group" aria-label="Language"><span class="pill" aria-hidden="true"></span><button type="button" data-set-lang="en" class="is-active" aria-pressed="true">EN</button><button type="button" data-set-lang="jp" aria-pressed="false">日本語</button></div>
   </div>
 </header>
 <main>
@@ -73,7 +73,7 @@
 
       <div class="coordinator-card">
         <div class="coordinator-photo-wrap size-sm">
-          <img src="assets/photos/coordinators/SELYANCHYN-Roman.jpg" alt="Prof. Roman Selyanchyn" loading="lazy">
+          <img src="assets/photos/coordinators/Roman-Selyanchyn.jpg" alt="Prof. Roman Selyanchyn" loading="lazy">
         </div>
         <div class="coordinator-body">
           <div class="coordinator-name-block">
@@ -189,15 +189,15 @@
       <div class="photo-grid">
         
         <a class="photo-person" href="students/2026/chang-s.html">
-          <div class="photo-box"><img src="students/2026/assets/photos/placeholder-portrait.svg" alt="Shih-Peng Chang" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
+          <div class="photo-box"><img src="assets/photos/2026/chang_shih-peng.jpg" alt="Shih-Peng Chang" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
           <div class="photo-name" data-ja="Shih-Peng Chang" data-en="Shih-Peng Chang">Shih-Peng Chang</div>
         </a>
         <a class="photo-person" href="students/2026/chen-h.html">
-          <div class="photo-box"><img src="students/2026/assets/photos/placeholder-portrait.svg" alt="Hao Chen" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
+          <div class="photo-box"><img src="assets/photos/2026/chen_hao.jpg" alt="Hao Chen" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
           <div class="photo-name" data-ja="陳 昊" data-en="Hao Chen">Hao Chen</div>
         </a>
         <a class="photo-person" href="students/2026/jiang-z.html">
-          <div class="photo-box"><img src="students/2026/assets/photos/placeholder-portrait.svg" alt="Ziqi Jiang" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
+          <div class="photo-box"><img src="assets/photos/2026/jiang_ziqi.jpg" alt="Ziqi Jiang" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
           <div class="photo-name" data-ja="Ziqi Jiang" data-en="Ziqi Jiang">Ziqi Jiang</div>
         </a>
         <a class="photo-person" href="students/2026/kotajima-m.html">
@@ -205,19 +205,19 @@
           <div class="photo-name" data-ja="古田島 勝" data-en="Masaru Kotajima">Masaru Kotajima</div>
         </a>
         <a class="photo-person" href="students/2026/minoda-k.html">
-          <div class="photo-box"><img src="students/2026/assets/photos/placeholder-portrait.svg" alt="Kohei Minoda" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
+          <div class="photo-box"><img src="assets/photos/2026/minoda_kohei.jpg" alt="Kohei Minoda" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
           <div class="photo-name" data-ja="簑田 康平" data-en="Kohei Minoda">Kohei Minoda</div>
         </a>
         <a class="photo-person" href="students/2026/mochizuki-t.html">
-          <div class="photo-box"><img src="students/2026/assets/photos/placeholder-portrait.svg" alt="Takeshi Mochizuki" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
+          <div class="photo-box"><img src="assets/photos/2026/mochizuki_takeshi.jpg" alt="Takeshi Mochizuki" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
           <div class="photo-name" data-ja="望月 建志" data-en="Takeshi Mochizuki">Takeshi Mochizuki</div>
         </a>
         <a class="photo-person" href="students/2026/nakagawa-n.html">
-          <div class="photo-box"><img src="students/2026/assets/photos/placeholder-portrait.svg" alt="Niki Nakagawa" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
+          <div class="photo-box"><img src="assets/photos/2026/nakagawa_niki.jpg" alt="Niki Nakagawa" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
           <div class="photo-name" data-ja="中川 和" data-en="Niki Nakagawa">Niki Nakagawa</div>
         </a>
         <a class="photo-person" href="students/2026/omoto-s.html">
-          <div class="photo-box"><img src="students/2026/assets/photos/placeholder-portrait.svg" alt="Shinnosuke Omoto" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
+          <div class="photo-box"><img src="assets/photos/2026/omoto_shinnosuke.jpg" alt="Shinnosuke Omoto" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
           <div class="photo-name" data-ja="大元 紳ノ介" data-en="Shinnosuke Omoto">Shinnosuke Omoto</div>
         </a>
         <a class="photo-person" href="students/2026/sun-h.html">
@@ -225,19 +225,19 @@
           <div class="photo-name" data-ja="Haonan Sun" data-en="Haonan Sun">Haonan Sun</div>
         </a>
         <a class="photo-person" href="students/2026/wang-w.html">
-          <div class="photo-box"><img src="students/2026/assets/photos/placeholder-portrait.svg" alt="Weifeng Wang" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
+          <div class="photo-box"><img src="assets/photos/2026/wang_weifeng.jpg" alt="Weifeng Wang" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
           <div class="photo-name" data-ja="Weifeng Wang" data-en="Weifeng Wang">Weifeng Wang</div>
         </a>
         <a class="photo-person" href="students/2026/yoshida-s.html">
-          <div class="photo-box"><img src="students/2026/assets/photos/placeholder-portrait.svg" alt="Shotaro Yoshida" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
+          <div class="photo-box"><img src="assets/photos/2026/yoshida_shotaro.jpg" alt="Shotaro Yoshida" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
           <div class="photo-name" data-ja="吉田 昇太郎" data-en="Shotaro Yoshida">Shotaro Yoshida</div>
         </a>
         <a class="photo-person" href="students/2026/zheng-q.html">
-          <div class="photo-box"><img src="students/2026/assets/photos/placeholder-portrait.svg" alt="Qingen Zheng" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
+          <div class="photo-box"><img src="assets/photos/2026/zheng_qingen.jpg" alt="Qingen Zheng" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
           <div class="photo-name" data-ja="Qingen Zheng" data-en="Qingen Zheng">Qingen Zheng</div>
         </a>
         <a class="photo-person" href="students/2026/zou-z.html">
-          <div class="photo-box"><img src="students/2026/assets/photos/placeholder-portrait.svg" alt="Zeyu Zou" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
+          <div class="photo-box"><img src="assets/photos/2026/zou_zeyu.jpg" alt="Zeyu Zou" loading="lazy" onerror="this.closest('.photo-box').classList.add('missing'); this.remove()"></div>
           <div class="photo-name" data-ja="Zeyu Zou" data-en="Zeyu Zou">Zeyu Zou</div>
         </a>
       </div>

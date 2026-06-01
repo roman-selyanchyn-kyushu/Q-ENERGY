@@ -12,10 +12,17 @@
     document.querySelectorAll('[data-ja][data-en]').forEach((el) => {
       el.textContent = el.dataset[lang];
     });
-    document.querySelectorAll('[data-lang-toggle]').forEach((button) => {
-      button.textContent = lang === 'ja' ? 'EN' : '日本語';
-      button.setAttribute('aria-label', lang === 'ja' ? 'Switch language to English' : '日本語に切り替え');
-    });
+    // Update pill toggle state (data-lang uses 'en'/'jp', html lang uses 'en'/'ja')
+    const pillLang = lang === 'ja' ? 'jp' : 'en';
+    const toggle = document.getElementById('lang-toggle');
+    if (toggle) {
+      toggle.setAttribute('data-lang', pillLang);
+      toggle.querySelectorAll('button[data-set-lang]').forEach((b) => {
+        const on = b.dataset.setLang === pillLang;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    }
     localStorage.setItem(STORAGE_KEY, lang);
   };
   const setSummerVideo = (year) => {
@@ -40,8 +47,8 @@
   document.addEventListener('DOMContentLoaded', () => {
     applyLang(getInitialLang());
     setSummerVideo('2025');
-    document.querySelectorAll('[data-lang-toggle]').forEach((button) => {
-      button.addEventListener('click', () => applyLang(document.documentElement.lang === 'ja' ? 'en' : 'ja'));
+    document.querySelectorAll('#lang-toggle button[data-set-lang]').forEach((button) => {
+      button.addEventListener('click', () => applyLang(button.dataset.setLang === 'jp' ? 'ja' : 'en'));
     });
     document.querySelectorAll('[data-video-year]').forEach((button) => {
       button.addEventListener('click', () => setSummerVideo(button.dataset.videoYear));
