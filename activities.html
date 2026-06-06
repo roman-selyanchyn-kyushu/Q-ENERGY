@@ -679,11 +679,6 @@ fetch('data/activities-photos.json')
     });
   })
   .catch(() => {}); // graceful no-op if JSON not found
-  slider.addEventListener('touchend',   e => {
-    const diff = touchStartX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
-  });
-});
 </script>
 </body>
 </html>
