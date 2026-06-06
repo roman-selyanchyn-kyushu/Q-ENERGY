@@ -313,7 +313,7 @@
       <a href="news.html" data-lang-en="" style="color:var(--blue)">News</a>
       <a href="news.html" data-lang-jp="" style="color:var(--blue)">ニュース</a>
     </nav>
-    <button class="lang-pill" id="lang-toggle" type="button" aria-label="Switch language">EN</button>
+    <div class="lang-toggle" id="lang-toggle" data-lang="en" role="group" aria-label="Language"><span class="pill" aria-hidden="true"></span><button type="button" data-set-lang="en" class="is-active" aria-pressed="true">EN</button><button type="button" data-set-lang="jp" aria-pressed="false">日本語</button></div>
   </div>
 </header>
 
@@ -616,11 +616,18 @@
 const LANG_KEY = 'k2spring_lang';
 function applyLang(lang) {
   document.documentElement.lang = lang;
-  document.getElementById('lang-toggle').textContent = lang === 'ja' ? 'EN' : 'JP';
+  const toggle = document.getElementById('lang-toggle');
+  const pillLang = lang === 'ja' ? 'jp' : 'en';
+  toggle.setAttribute('data-lang', pillLang);
+  toggle.querySelectorAll('button[data-set-lang]').forEach(function(b) {
+    const on = b.dataset.setLang === pillLang;
+    b.classList.toggle('is-active', on);
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
   localStorage.setItem(LANG_KEY, lang);
 }
-document.getElementById('lang-toggle').addEventListener('click', () => {
-  applyLang(document.documentElement.lang === 'ja' ? 'en' : 'ja');
+document.querySelectorAll('#lang-toggle button[data-set-lang]').forEach(function(b) {
+  b.addEventListener('click', function() { applyLang(b.dataset.setLang === 'jp' ? 'ja' : 'en'); });
 });
 const saved = localStorage.getItem(LANG_KEY);
 if (saved === 'en') applyLang('en');
