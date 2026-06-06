@@ -585,6 +585,7 @@
 
 <script>
 const LANG_KEY = 'k2spring_lang';
+const _captionUpdaters = [];
 function applyLang(lang) {
   document.documentElement.lang = lang;
   const toggle = document.getElementById('lang-toggle');
@@ -605,7 +606,6 @@ const saved = localStorage.getItem(LANG_KEY);
 if (saved === 'en') applyLang('en');
 
 // ── Photo sliders (JSON-driven) ────────────────────────────
-const _captionUpdaters = [];
 
 fetch('data/activities-photos.json')
   .then(r => r.json())
