@@ -1,0 +1,32 @@
+{
+  "seminars": [
+    { "file": "seminar_01.jpg", "en": "", "jp": "" },
+    { "file": "seminar_02.jpg", "en": "", "jp": "" },
+    { "file": "seminar_03.jpg", "en": "", "jp": "" },
+    { "file": "seminar_04.jpg", "en": "", "jp": "" }
+  ],
+  "company-visit": [
+    { "file": "company_visit_01.jpg", "en": "", "jp": "" },
+    { "file": "company_visit_02.jpg", "en": "", "jp": "" }
+  ],
+  "energy-week": [
+    { "file": "energy_week_01.jpg", "en": "", "jp": "" },
+    { "file": "energy_week_02.jpg", "en": "", "jp": "" },
+    { "file": "energy_week_03.jpg", "en": "", "jp": "" },
+    { "file": "energy_week_04.jpg", "en": "", "jp": "" },
+    { "file": "energy_week_05.jpg", "en": "", "jp": "" }
+  ],
+  "decarbonization-workshop": [
+    { "file": "workshop_01.jpg", "en": "", "jp": "" },
+    { "file": "workshop_02.jpg", "en": "", "jp": "" },
+    { "file": "workshop_03.jpg", "en": "", "jp": "" },
+    { "file": "workshop_04.jpg", "en": "", "jp": "" }
+  ],
+  "summer-camp": [
+    { "file": "summer_camp_01.jpg", "en": "", "jp": "" },
+    { "file": "summer_camp_02.jpg", "en": "", "jp": "" },
+    { "file": "summer_camp_03.jpg", "en": "", "jp": "" },
+    { "file": "summer_camp_04.jpg", "en": "", "jp": "" },
+    { "file": "summer_camp_05.jpg", "en": "", "jp": "" }
+  ]
+}
