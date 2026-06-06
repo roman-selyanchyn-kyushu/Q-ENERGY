@@ -6,11 +6,11 @@
     { "file": "seminar_04.jpg", "en": "Unit orientation online meeting, April 2026", "jp": "ユニットオリエンテーション（オンライン、2026年4月）" }
   ],
   "company-visit": [
-    { "file": "company_visit_01.jpg", "en": "Visit to Toyota Motor Kyushu", "jp": "トヨタ自動車九州 訪問" },
-    { "file": "company_visit_02.jpg", "en": "Visit to Toyota Motor Kyushu", "jp": "トヨタ自動車九州 訪問" },
-    { "file": "company_visit_03.jpg", "en": "Visit to Toyota Motor Kyushu", "jp": "トヨタ自動車九州 訪問" },
-    { "file": "company_visit_04.jpg", "en": "Visit to Saga Waste Incineration Plant", "jp": "佐賀市清掃工場 訪問" },
-    { "file": "company_visit_05.jpg", "en": "Visit to Fukuoka Bio Food Recycling — biogas facility near Ito Campus", "jp": "福岡バイオフードリサイクル（伊都キャンパス近郊）訪問" }
+    { "file": "company_visit_01.jpg", "en": "Visit to Toyota Motor Kyushu", "jp": "トヨタ自動車九州 訪問", "url": "https://www.toyota-kyushu.com/" },
+    { "file": "company_visit_02.jpg", "en": "Visit to Toyota Motor Kyushu", "jp": "トヨタ自動車九州 訪問", "url": "https://www.toyota-kyushu.com/" },
+    { "file": "company_visit_03.jpg", "en": "Visit to Toyota Motor Kyushu", "jp": "トヨタ自動車九州 訪問", "url": "https://www.toyota-kyushu.com/" },
+    { "file": "company_visit_04.jpg", "en": "Visit to Saga Eco Plaza — Waste Incineration Plant", "jp": "佐賀エコプラザ 訪問", "url": "https://www.saga-ecoplaza.jp/about/kengaku_zone" },
+    { "file": "company_visit_05.jpg", "en": "Visit to Fukuoka Bio Food Recycling — biogas facility near Ito Campus", "jp": "福岡バイオフードリサイクル（伊都キャンパス近郊）訪問", "url": "https://fukuoka-bio.co.jp/" }
   ],
   "energy-week": [
     { "file": "energy_week_01.jpg", "en": "", "jp": "" },

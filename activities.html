@@ -284,6 +284,17 @@
     min-height: 1.5em;
     text-align: center;
   }
+  .slider-photo-caption a {
+    color: var(--muted);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-color: var(--line);
+    transition: color .2s, text-decoration-color .2s;
+  }
+  .slider-photo-caption a:hover {
+    color: var(--blue);
+    text-decoration-color: var(--blue);
+  }
   .slider-caption {
     font-family: var(--sans);
     font-size: 12px;
@@ -658,7 +669,20 @@ fetch('data/activities-photos.json')
         if (!caption) return;
         const lang = document.documentElement.lang === 'ja' ? 'jp' : 'en';
         const text = photos[current][lang] || '';
-        caption.textContent = text;
+        const url  = photos[current].url || '';
+        caption.innerHTML = '';
+        if (text) {
+          if (url) {
+            const a = document.createElement('a');
+            a.href = url;
+            a.textContent = text;
+            a.target = '_blank';
+            a.rel = 'noopener';
+            caption.appendChild(a);
+          } else {
+            caption.textContent = text;
+          }
+        }
         caption.style.display = text ? '' : 'none';
       }
 
