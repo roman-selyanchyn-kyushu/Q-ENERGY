@@ -381,8 +381,8 @@
       <button class="slider-btn slider-next" aria-label="Next photo">&#8250;</button>
       <div class="slider-dots"></div>
       <span class="slider-counter"></span>
-      <p class="slider-photo-caption" data-photo-caption></p>
       </div>
+      <p class="slider-photo-caption" data-photo-caption></p>
     </div>
 
     <!-- 2. Company Visits -->
@@ -435,8 +435,8 @@
       <button class="slider-btn slider-next" aria-label="Next photo">&#8250;</button>
       <div class="slider-dots"></div>
       <span class="slider-counter"></span>
-      <p class="slider-photo-caption" data-photo-caption></p>
       </div>
+      <p class="slider-photo-caption" data-photo-caption></p>
     </div>
 
     <!-- 3. Kyushu Energy Week -->
@@ -473,8 +473,8 @@
       <button class="slider-btn slider-next" aria-label="Next photo">&#8250;</button>
       <div class="slider-dots"></div>
       <span class="slider-counter"></span>
-      <p class="slider-photo-caption" data-photo-caption></p>
       </div>
+      <p class="slider-photo-caption" data-photo-caption></p>
     </div>
 
     <!-- 4. Decarbonization Workshop -->
@@ -507,8 +507,8 @@
       <button class="slider-btn slider-next" aria-label="Next photo">&#8250;</button>
       <div class="slider-dots"></div>
       <span class="slider-counter"></span>
-      <p class="slider-photo-caption" data-photo-caption></p>
       </div>
+      <p class="slider-photo-caption" data-photo-caption></p>
     </div>
 
     <!-- 5. Summer Camp -->
@@ -570,8 +570,8 @@
       <button class="slider-btn slider-next" aria-label="Next photo">&#8250;</button>
       <div class="slider-dots"></div>
       <span class="slider-counter"></span>
-      <p class="slider-photo-caption" data-photo-caption></p>
       </div>
+      <p class="slider-photo-caption" data-photo-caption></p>
     </div>
 
   </div><!-- /act-body -->
@@ -618,7 +618,7 @@ fetch('data/activities-photos.json')
       const basePath      = 'assets/photos/activities/' + section + '/';
       const dotsContainer = slider.querySelector('.slider-dots');
       const counter       = slider.querySelector('.slider-counter');
-      const caption       = slider.querySelector('[data-photo-caption]');
+      const caption       = slider.nextElementSibling && slider.nextElementSibling.hasAttribute('data-photo-caption') ? slider.nextElementSibling : null;
       let current = 0;
 
       // Build slides
