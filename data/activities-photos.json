@@ -1,9 +1,9 @@
 {
   "seminars": [
-    { "file": "seminar_01.jpg", "en": "", "jp": "" },
-    { "file": "seminar_02.jpg", "en": "", "jp": "" },
-    { "file": "seminar_03.jpg", "en": "", "jp": "" },
-    { "file": "seminar_04.jpg", "en": "", "jp": "" }
+    { "file": "seminar_01.jpg", "en": "Poster session at the on-site joint seminar, May 2026", "jp": "合同ゼミでのポスターセッション（2026年5月）" },
+    { "file": "seminar_02.jpg", "en": "Poster session at the on-site joint seminar, May 2026", "jp": "合同ゼミでのポスターセッション（2026年5月）" },
+    { "file": "seminar_03.jpg", "en": "Joint seminar, June 2024", "jp": "合同ゼミ（2024年6月）" },
+    { "file": "seminar_04.jpg", "en": "Unit orientation online meeting, April 2026", "jp": "ユニットオリエンテーション（オンライン、2026年4月）" }
   ],
   "company-visit": [
     { "file": "company_visit_01.jpg", "en": "", "jp": "" },
