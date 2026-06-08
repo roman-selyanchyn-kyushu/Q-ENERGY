@@ -8,3 +8,7 @@ scripts/
 PROGRESS.md
 _originals/
 supervisor-check.html
+data/public_sections_extracted.json
+data/public_site_extracted.json
+data/cohorts.json
+data/news.json
