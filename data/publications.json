@@ -1,6 +1,6 @@
 {
   "generated": "2026-06-09",
-  "total_papers": 198,
+  "total_papers": 195,
   "years": [
     2026,
     2025,
@@ -14,8 +14,8 @@
   ],
   "year_counts": {
     "2026": 27,
-    "2025": 70,
-    "2024": 47,
+    "2025": 69,
+    "2024": 45,
     "2023": 26,
     "2022": 13,
     "2021": 8,
@@ -32,7 +32,16 @@
       "student_name": "Keitaro Maeno",
       "student_name_jp": "前野 啓太郎",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Keitaro Maeno",
+          "name_jp": "前野 啓太郎",
+          "slug": "keitaro-maeno",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -42,7 +51,16 @@
       "student_name": "Tianhui Fan",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Tianhui Fan",
+          "name_jp": null,
+          "slug": "tianhui-fan",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -52,17 +70,42 @@
       "student_name": "Tianhui Fan",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Tianhui Fan",
+          "name_jp": null,
+          "slug": "tianhui-fan",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
-      "html": "Yamanaka Y., Sawada K., Nanke M., <span class=\"ach-authors\">Shen X.-F.</span>, Song J.T., Abe T., Tanaka K., Matsushima T., Inada M., Ishihara T., Watanabe M. &ldquo;Molecular insight into visible light driven photocatalytic hydrogen peroxide synthesis using a heptazine-imide structure&rdquo; <em>Journal of Materials Chemistry A</em>, Vol.&thinsp;14, pp.&thinsp;3129&ndash;3137 (2026) <a href=\"https://doi.org/10.1039/d5ta06698k\" target=\"_blank\" rel=\"noopener\">doi:10.1039/d5ta06698k</a>",
+      "html": "Yamanaka Y., <span class=\"ach-authors\">Sawada K.</span>, Nanke M., <span class=\"ach-authors\">Shen X.-F.</span>, Song J.T., Abe T., Tanaka K., Matsushima T., Inada M., Ishihara T., Watanabe M. &ldquo;Molecular insight into visible light driven photocatalytic hydrogen peroxide synthesis using a heptazine-imide structure&rdquo; <em>Journal of Materials Chemistry A</em>, Vol.&thinsp;14, pp.&thinsp;3129&ndash;3137 (2026) <a href=\"https://doi.org/10.1039/d5ta06698k\" target=\"_blank\" rel=\"noopener\">doi:10.1039/d5ta06698k</a>",
       "doi": "https://doi.org/10.1039/d5ta06698k",
       "student_slug": "xiaofeng-shen",
       "student_name": "Xiaofeng Shen",
       "student_name_jp": "沈 小烽",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Xiaofeng Shen",
+          "name_jp": "沈 小烽",
+          "slug": "xiaofeng-shen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        },
+        {
+          "name": "Kohei Sawada",
+          "name_jp": "澤田 光平",
+          "slug": "kohei-sawada",
+          "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -72,7 +115,16 @@
       "student_name": "Yulu Chen",
       "student_name_jp": "陳 雨露",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yulu Chen",
+          "name_jp": "陳 雨露",
+          "slug": "yulu-chen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -82,7 +134,16 @@
       "student_name": "Yulu Chen",
       "student_name_jp": "陳 雨露",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yulu Chen",
+          "name_jp": "陳 雨露",
+          "slug": "yulu-chen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -92,7 +153,16 @@
       "student_name": "Yulu Chen",
       "student_name_jp": "陳 雨露",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yulu Chen",
+          "name_jp": "陳 雨露",
+          "slug": "yulu-chen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -102,7 +172,16 @@
       "student_name": "Yulu Chen",
       "student_name_jp": "陳 雨露",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yulu Chen",
+          "name_jp": "陳 雨露",
+          "slug": "yulu-chen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -112,7 +191,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -122,7 +210,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -132,7 +229,16 @@
       "student_name": "Muhammad Irfan Maulana Kusdhany",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Muhammad Irfan Maulana Kusdhany",
+          "name_jp": null,
+          "slug": "muhammad-irfan-maulana-kusdhany",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -142,7 +248,16 @@
       "student_name": "Sora Matsushima",
       "student_name_jp": "松嶋 そら",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Sora Matsushima",
+          "name_jp": "松嶋 そら",
+          "slug": "sora-matsushima",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -152,7 +267,16 @@
       "student_name": "Yin Kan Phua",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yin Kan Phua",
+          "name_jp": null,
+          "slug": "yin-kan-phua",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -162,7 +286,16 @@
       "student_name": "Hiroki Isogawa",
       "student_name_jp": "五十川 浩希",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Hiroki Isogawa",
+          "name_jp": "五十川 浩希",
+          "slug": "hiroki-isogawa",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -172,7 +305,16 @@
       "student_name": "Narmandakh Khongorzul",
       "student_name_jp": null,
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Narmandakh Khongorzul",
+          "name_jp": null,
+          "slug": "narmandakh-khongorzul",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -182,7 +324,16 @@
       "student_name": "Narmandakh Khongorzul",
       "student_name_jp": null,
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Narmandakh Khongorzul",
+          "name_jp": null,
+          "slug": "narmandakh-khongorzul",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -192,7 +343,16 @@
       "student_name": "Taisei Tomaru",
       "student_name_jp": "都丸 大晟",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Taisei Tomaru",
+          "name_jp": "都丸 大晟",
+          "slug": "taisei-tomaru",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -202,7 +362,16 @@
       "student_name": "Yuta Takaoka",
       "student_name_jp": "髙岡 祐太",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yuta Takaoka",
+          "name_jp": "髙岡 祐太",
+          "slug": "yuta-takaoka",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -212,17 +381,35 @@
       "student_name": "Yutong Chen",
       "student_name_jp": "陳 昱通",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yutong Chen",
+          "name_jp": "陳 昱通",
+          "slug": "yutong-chen",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2026,
-      "html": "<span class=\"ach-authors\">Itsuki OYAMA</span>, Yusuke KOSGUA. &ldquo;Finite Ti Effects on Parallel-Velocity-Gradient Driven Instability&rdquo; <em>Vol.21 1403013 (2026)</em> [accepted] <a href=\"https://doi.org/10.1585/pfr.21.1403013\" target=\"_blank\" rel=\"noopener\">doi:10.1585/pfr.21.1403013</a>",
+      "html": "<span class=\"ach-authors\">Itsuki Oyama</span>, Yusuke Kosgua. &ldquo;Finite Ti Effects on Parallel-Velocity-Gradient Driven Instability&rdquo; <em>Vol.21 1403013 (2026)</em> [accepted] <a href=\"https://doi.org/10.1585/pfr.21.1403013\" target=\"_blank\" rel=\"noopener\">doi:10.1585/pfr.21.1403013</a>",
       "doi": "https://doi.org/10.1585/pfr.21.1403013",
       "student_slug": "itsuki-oyama",
       "student_name": "Itsuki Oyama",
       "student_name_jp": "小山 一輝",
       "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Itsuki Oyama",
+          "name_jp": "小山 一輝",
+          "slug": "itsuki-oyama",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -232,7 +419,16 @@
       "student_name": "Shogo Nakamura",
       "student_name_jp": "中村 省吾",
       "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Shogo Nakamura",
+          "name_jp": "中村 省吾",
+          "slug": "shogo-nakamura",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -242,7 +438,16 @@
       "student_name": "Siyu Shen",
       "student_name_jp": null,
       "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Siyu Shen",
+          "name_jp": null,
+          "slug": "shen-siyu",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -252,7 +457,16 @@
       "student_name": "Chenyu Yan",
       "student_name_jp": null,
       "cohort": 2025,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Chenyu Yan",
+          "name_jp": null,
+          "slug": "yan-chenyu",
+          "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -262,7 +476,16 @@
       "student_name": "Jingxuan Zhang",
       "student_name_jp": null,
       "cohort": 2025,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Jingxuan Zhang",
+          "name_jp": null,
+          "slug": "zhang-jingxuan",
+          "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -272,7 +495,16 @@
       "student_name": "Kohei Sawada",
       "student_name_jp": "澤田 光平",
       "cohort": 2025,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Kohei Sawada",
+          "name_jp": "澤田 光平",
+          "slug": "kohei-sawada",
+          "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -282,7 +514,16 @@
       "student_name": "Weifeng Wang",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Weifeng Wang",
+          "name_jp": null,
+          "slug": "wang-w",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2026,
@@ -292,7 +533,16 @@
       "student_name": "Weifeng Wang",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Weifeng Wang",
+          "name_jp": null,
+          "slug": "wang-w",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -302,7 +552,16 @@
       "student_name": "Haruka Mitoma",
       "student_name_jp": "三苫 春香",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Haruka Mitoma",
+          "name_jp": "三苫 春香",
+          "slug": "haruka-mitoma",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -312,7 +571,16 @@
       "student_name": "Keitaro Maeno",
       "student_name_jp": "前野 啓太郎",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Keitaro Maeno",
+          "name_jp": "前野 啓太郎",
+          "slug": "keitaro-maeno",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -322,7 +590,16 @@
       "student_name": "Keitaro Maeno",
       "student_name_jp": "前野 啓太郎",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Keitaro Maeno",
+          "name_jp": "前野 啓太郎",
+          "slug": "keitaro-maeno",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -332,7 +609,16 @@
       "student_name": "Keitaro Maeno",
       "student_name_jp": "前野 啓太郎",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Keitaro Maeno",
+          "name_jp": "前野 啓太郎",
+          "slug": "keitaro-maeno",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -342,7 +628,16 @@
       "student_name": "Mingxu Sun",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Mingxu Sun",
+          "name_jp": null,
+          "slug": "mingxu-sun",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -352,7 +647,16 @@
       "student_name": "Tianhui Fan",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Tianhui Fan",
+          "name_jp": null,
+          "slug": "tianhui-fan",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -362,17 +666,42 @@
       "student_name": "Tianhui Fan",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Tianhui Fan",
+          "name_jp": null,
+          "slug": "tianhui-fan",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
-      "html": "<span class=\"ach-authors\">Fan T.</span>, Shen S., Sit C.Y.B., Kenis P.J.A., Chapman A. &ldquo;Environmental, economic and social trade-offs of membrane-based direct air capture technologies integrated with CO<sub>2</sub> conversion using life cycle assessment&rdquo; <em>Journal of CO<sub>2</sub> Utilization</em>, Vol.&thinsp;91, 103002 (2025) <a href=\"https://doi.org/10.1016/j.jcou.2024.103002\" target=\"_blank\" rel=\"noopener\">doi:10.1016/j.jcou.2024.103002</a>",
+      "html": "<span class=\"ach-authors\">Fan T.</span>, <span class=\"ach-authors\">Shen S.</span>, Sit C.Y.B., Kenis P.J.A., Chapman A. &ldquo;Environmental, economic and social trade-offs of membrane-based direct air capture technologies integrated with CO<sub>2</sub> conversion using life cycle assessment&rdquo; <em>Journal of CO<sub>2</sub> Utilization</em>, Vol.&thinsp;91, 103002 (2025) <a href=\"https://doi.org/10.1016/j.jcou.2024.103002\" target=\"_blank\" rel=\"noopener\">doi:10.1016/j.jcou.2024.103002</a>",
       "doi": "https://doi.org/10.1016/j.jcou.2024.103002",
       "student_slug": "tianhui-fan",
       "student_name": "Tianhui Fan",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Tianhui Fan",
+          "name_jp": null,
+          "slug": "tianhui-fan",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        },
+        {
+          "name": "Siyu Shen",
+          "name_jp": null,
+          "slug": "shen-siyu",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -382,7 +711,16 @@
       "student_name": "Timothee Redarce",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Timothee Redarce",
+          "name_jp": null,
+          "slug": "timothee-redarce",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -392,7 +730,16 @@
       "student_name": "Xiaofeng Shen",
       "student_name_jp": "沈 小烽",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Xiaofeng Shen",
+          "name_jp": "沈 小烽",
+          "slug": "xiaofeng-shen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -402,7 +749,16 @@
       "student_name": "Xiaofeng Shen",
       "student_name_jp": "沈 小烽",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Xiaofeng Shen",
+          "name_jp": "沈 小烽",
+          "slug": "xiaofeng-shen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -412,7 +768,16 @@
       "student_name": "Yulu Chen",
       "student_name_jp": "陳 雨露",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yulu Chen",
+          "name_jp": "陳 雨露",
+          "slug": "yulu-chen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -422,7 +787,16 @@
       "student_name": "Yulu Chen",
       "student_name_jp": "陳 雨露",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yulu Chen",
+          "name_jp": "陳 雨露",
+          "slug": "yulu-chen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -432,7 +806,16 @@
       "student_name": "Yulu Chen",
       "student_name_jp": "陳 雨露",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yulu Chen",
+          "name_jp": "陳 雨露",
+          "slug": "yulu-chen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -442,7 +825,16 @@
       "student_name": "Hyun-Gyu Park",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Hyun-Gyu Park",
+          "name_jp": null,
+          "slug": "hyun-gyu-park",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -452,7 +844,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -462,7 +863,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -472,7 +882,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -482,7 +901,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -492,7 +920,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -502,7 +939,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -512,7 +958,16 @@
       "student_name": "Muhammad Irfan Maulana Kusdhany",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Muhammad Irfan Maulana Kusdhany",
+          "name_jp": null,
+          "slug": "muhammad-irfan-maulana-kusdhany",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -522,7 +977,16 @@
       "student_name": "Muhammad Irfan Maulana Kusdhany",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Muhammad Irfan Maulana Kusdhany",
+          "name_jp": null,
+          "slug": "muhammad-irfan-maulana-kusdhany",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -532,7 +996,16 @@
       "student_name": "Muhammad Irfan Maulana Kusdhany",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Muhammad Irfan Maulana Kusdhany",
+          "name_jp": null,
+          "slug": "muhammad-irfan-maulana-kusdhany",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -542,7 +1015,16 @@
       "student_name": "Qingyi He",
       "student_name_jp": "何 清怡",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Qingyi He",
+          "name_jp": "何 清怡",
+          "slug": "qingyi-he",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -552,7 +1034,16 @@
       "student_name": "Shinichi Takeno",
       "student_name_jp": "竹野 慎一",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Shinichi Takeno",
+          "name_jp": "竹野 慎一",
+          "slug": "shinichi-takeno",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -562,7 +1053,16 @@
       "student_name": "Shinichi Takeno",
       "student_name_jp": "竹野 慎一",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Shinichi Takeno",
+          "name_jp": "竹野 慎一",
+          "slug": "shinichi-takeno",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -572,7 +1072,16 @@
       "student_name": "Sora Matsushima",
       "student_name_jp": "松嶋 そら",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Sora Matsushima",
+          "name_jp": "松嶋 そら",
+          "slug": "sora-matsushima",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -582,7 +1091,16 @@
       "student_name": "Tatsuya Hamashima",
       "student_name_jp": "濱島 達也",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Tatsuya Hamashima",
+          "name_jp": "濱島 達也",
+          "slug": "tatsuya-hamashima",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -592,7 +1110,16 @@
       "student_name": "Yixin Chen",
       "student_name_jp": "陳 伊新",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yixin Chen",
+          "name_jp": "陳 伊新",
+          "slug": "yixin-chen",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -602,7 +1129,16 @@
       "student_name": "Zifei Nie",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Zifei Nie",
+          "name_jp": null,
+          "slug": "zifei-nie",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -612,7 +1148,16 @@
       "student_name": "Kentaro Wada",
       "student_name_jp": "和田 健太郎",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Kentaro Wada",
+          "name_jp": "和田 健太郎",
+          "slug": "kentaro-wada",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -622,7 +1167,16 @@
       "student_name": "Kentaro Wada",
       "student_name_jp": "和田 健太郎",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Kentaro Wada",
+          "name_jp": "和田 健太郎",
+          "slug": "kentaro-wada",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -632,7 +1186,16 @@
       "student_name": "Kotaro Shinozaki",
       "student_name_jp": "篠崎 航太朗",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Kotaro Shinozaki",
+          "name_jp": "篠崎 航太朗",
+          "slug": "kotaro-shinozaki",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -642,7 +1205,16 @@
       "student_name": "Seiya Imada",
       "student_name_jp": "今田 青冶",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Seiya Imada",
+          "name_jp": "今田 青冶",
+          "slug": "seiya-imada",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -652,7 +1224,16 @@
       "student_name": "Taisei Tomaru",
       "student_name_jp": "都丸 大晟",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Taisei Tomaru",
+          "name_jp": "都丸 大晟",
+          "slug": "taisei-tomaru",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -662,7 +1243,16 @@
       "student_name": "Xuesong Wei",
       "student_name_jp": "韋 雪淞",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Xuesong Wei",
+          "name_jp": "韋 雪淞",
+          "slug": "xuesong-wei",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -672,7 +1262,16 @@
       "student_name": "Yusuke Oga",
       "student_name_jp": "大賀 雄介",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yusuke Oga",
+          "name_jp": "大賀 雄介",
+          "slug": "yusuke-oga",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -682,7 +1281,16 @@
       "student_name": "Yuta Takaoka",
       "student_name_jp": "髙岡 祐太",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yuta Takaoka",
+          "name_jp": "髙岡 祐太",
+          "slug": "yuta-takaoka",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -692,7 +1300,16 @@
       "student_name": "Yuta Takaoka",
       "student_name_jp": "髙岡 祐太",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yuta Takaoka",
+          "name_jp": "髙岡 祐太",
+          "slug": "yuta-takaoka",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -702,7 +1319,16 @@
       "student_name": "Yuta Takaoka",
       "student_name_jp": "髙岡 祐太",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yuta Takaoka",
+          "name_jp": "髙岡 祐太",
+          "slug": "yuta-takaoka",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -712,17 +1338,35 @@
       "student_name": "Yutong Chen",
       "student_name_jp": "陳 昱通",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yutong Chen",
+          "name_jp": "陳 昱通",
+          "slug": "yutong-chen",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2025,
-      "html": "<span class=\"ach-authors\">Haomin FU</span>. &ldquo;Electric Vehicle Adoption in China’s Post-Subsidy Era: A Mixed-Methods Study of Non-Fiscal Incentives&rdquo; <em>Int. J. Automotive Technology and Management. 2026</em> (2025) [accepted] <a href=\"https://doi.org/not yet\" target=\"_blank\" rel=\"noopener\">doi:not yet</a>",
+      "html": "<span class=\"ach-authors\">Haomin Fu</span>. &ldquo;Electric Vehicle Adoption in China’s Post-Subsidy Era: A Mixed-Methods Study of Non-Fiscal Incentives&rdquo; <em>Int. J. Automotive Technology and Management. 2026</em> (2025) [accepted] <a href=\"https://doi.org/not yet\" target=\"_blank\" rel=\"noopener\">doi:not yet</a>",
       "doi": "",
       "student_slug": "haomin-fu",
       "student_name": "Haomin Fu",
       "student_name_jp": null,
       "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Haomin Fu",
+          "name_jp": null,
+          "slug": "haomin-fu",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -732,7 +1376,16 @@
       "student_name": "Kaili Zhang",
       "student_name_jp": null,
       "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Kaili Zhang",
+          "name_jp": null,
+          "slug": "zhang-kaili",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -742,7 +1395,16 @@
       "student_name": "Kaili Zhang",
       "student_name_jp": null,
       "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Kaili Zhang",
+          "name_jp": null,
+          "slug": "zhang-kaili",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -752,17 +1414,16 @@
       "student_name": "Kodai Matsumoto",
       "student_name_jp": "松本 昂大",
       "cohort": 2024,
-      "programme": "K2-SPRING"
-    },
-    {
-      "year": 2025,
-      "html": "<span class=\"ach-authors\">Ryudai Ueno</span>; Takahiro Fujiwara; Noriko Sato. &ldquo;Pre-Afforestation Land-Use of post-WWII Plantation Forests in Japan.&rdquo; <em>Journal of Rural Planning Studies, 2025, Vol.5, No.1,pp.120-129</em> <a href=\"https://doi.org/10.2750/jrps.5.1_120\" target=\"_blank\" rel=\"noopener\">doi:10.2750/jrps.5.1_120</a>",
-      "doi": "https://doi.org/10.2750/jrps.5.1_120",
-      "student_slug": "ryudai-ueno",
-      "student_name": "Ryudai Ueno",
-      "student_name_jp": "上野 竜大生",
-      "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Kodai Matsumoto",
+          "name_jp": "松本 昂大",
+          "slug": "kodai-matsumoto",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -772,7 +1433,35 @@
       "student_name": "Ryudai Ueno",
       "student_name_jp": "上野 竜大生",
       "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Ryudai Ueno",
+          "name_jp": "上野 竜大生",
+          "slug": "ryudai-ueno",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "html": "<span class=\"ach-authors\">Ryudai Ueno</span>; Takahiro Fujiwara; Noriko Sato. &ldquo;Pre-Afforestation Land-Use of post-WWII Plantation Forests in Japan.&rdquo; <em>Journal of Rural Planning Studies, 2025, Vol.5, No.1,pp.120-129</em> <a href=\"https://doi.org/10.2750/jrps.5.1_120\" target=\"_blank\" rel=\"noopener\">doi:10.2750/jrps.5.1_120</a>",
+      "doi": "https://doi.org/10.2750/jrps.5.1_120",
+      "student_slug": "ryudai-ueno",
+      "student_name": "Ryudai Ueno",
+      "student_name_jp": "上野 竜大生",
+      "cohort": 2024,
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Ryudai Ueno",
+          "name_jp": "上野 竜大生",
+          "slug": "ryudai-ueno",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -782,7 +1471,16 @@
       "student_name": "Ryudai Ueno",
       "student_name_jp": "上野 竜大生",
       "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Ryudai Ueno",
+          "name_jp": "上野 竜大生",
+          "slug": "ryudai-ueno",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -792,17 +1490,16 @@
       "student_name": "Siyu Shen",
       "student_name_jp": null,
       "cohort": 2024,
-      "programme": "K2-SPRING"
-    },
-    {
-      "year": 2025,
-      "html": "<span class=\"ach-authors\">Xianzhe Yang</span>, Akihito Ozaki, Seonghwan Yoon, Sung-Jun Yoo, Younhee Choi, Yusuke Arima. &ldquo;Optimization of the boundary condition treatment for coupled BES–CFD simulation&rdquo; <em>Building and Environment, Volume 287, Part A, 1 January 2026, 113799</em> <a href=\"https://doi.org/10.1016/j.buildenv.2025.113799\" target=\"_blank\" rel=\"noopener\">doi:10.1016/j.buildenv.2025.113799</a>",
-      "doi": "https://doi.org/10.1016/j.buildenv.2025.113799",
-      "student_slug": "xianzhe-yang",
-      "student_name": "Xianzhe Yang",
-      "student_name_jp": "楊 賢哲",
-      "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Siyu Shen",
+          "name_jp": null,
+          "slug": "shen-siyu",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -812,7 +1509,16 @@
       "student_name": "Xianzhe Yang",
       "student_name_jp": "楊 賢哲",
       "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Xianzhe Yang",
+          "name_jp": "楊 賢哲",
+          "slug": "xianzhe-yang",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -822,7 +1528,16 @@
       "student_name": "Xianzhe Yang",
       "student_name_jp": "楊 賢哲",
       "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Xianzhe Yang",
+          "name_jp": "楊 賢哲",
+          "slug": "xianzhe-yang",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -832,7 +1547,35 @@
       "student_name": "Xianzhe Yang",
       "student_name_jp": "楊 賢哲",
       "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Xianzhe Yang",
+          "name_jp": "楊 賢哲",
+          "slug": "xianzhe-yang",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "html": "<span class=\"ach-authors\">Xianzhe Yang</span>, Akihito Ozaki, Seonghwan Yoon, Sung-Jun Yoo, Younhee Choi, Yusuke Arima. &ldquo;Optimization of the boundary condition treatment for coupled BES–CFD simulation&rdquo; <em>Building and Environment, Volume 287, Part A, 1 January 2026, 113799</em> <a href=\"https://doi.org/10.1016/j.buildenv.2025.113799\" target=\"_blank\" rel=\"noopener\">doi:10.1016/j.buildenv.2025.113799</a>",
+      "doi": "https://doi.org/10.1016/j.buildenv.2025.113799",
+      "student_slug": "xianzhe-yang",
+      "student_name": "Xianzhe Yang",
+      "student_name_jp": "楊 賢哲",
+      "cohort": 2024,
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Xianzhe Yang",
+          "name_jp": "楊 賢哲",
+          "slug": "xianzhe-yang",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -842,17 +1585,16 @@
       "student_name": "Jingxuan Zhang",
       "student_name_jp": null,
       "cohort": 2025,
-      "programme": "K2-SPRING"
-    },
-    {
-      "year": 2025,
-      "html": "Yamato Yamanaka, <span class=\"ach-authors\">Kohei Sawada</span>, Mizuki Nanke, Xiao-Feng Shen, Jun Tae Song, Tatsuki Abe, Keiji Tanaka, Matsushima, Toshinori, Miki Inada, Tatsumi Ishihara, Motonori Watanabe. &ldquo;Molecular insight into visible light driven photocatalytic hydrogen peroxide synthesis using a heptazine-imide structure&rdquo; <em>Journal of Materials Chemistry A(2026,14, 3129)</em> (2025) <a href=\"https://doi.org/10.1039/D5TA06698K\" target=\"_blank\" rel=\"noopener\">doi:10.1039/D5TA06698K</a>",
-      "doi": "https://doi.org/10.1039/D5TA06698K",
-      "student_slug": "kohei-sawada",
-      "student_name": "Kohei Sawada",
-      "student_name_jp": "澤田 光平",
-      "cohort": 2025,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Jingxuan Zhang",
+          "name_jp": null,
+          "slug": "zhang-jingxuan",
+          "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -862,7 +1604,16 @@
       "student_name": "Kohei Sawada",
       "student_name_jp": "澤田 光平",
       "cohort": 2025,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Kohei Sawada",
+          "name_jp": "澤田 光平",
+          "slug": "kohei-sawada",
+          "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -872,17 +1623,16 @@
       "student_name": "Rika Iriguchi",
       "student_name_jp": "入口 梨佳",
       "cohort": 2025,
-      "programme": "K2-SPRING"
-    },
-    {
-      "year": 2025,
-      "html": "Akihiro HAMANAKA; Fa-quing SU; <span class=\"ach-authors\">Rika IRIGUCHI</span>; Ken-ichi ITAKURA; Kazuhiro TAKAHASHI; Jun-ichi KODAMA; Takashi SASAOKA; Hideki SHIMADA; Gota DEGUCHI. &ldquo;Water injection in underground coal gasification with a horizontal hole: A strategy to prevent steel pipe rupture and enhancing hydrogen production reaction&rdquo; <em>Energy, 2025, volume 329, 巻なし, pp.1-11</em> (2025) <a href=\"https://doi.org/10.1016/j.energy.2025.136603\" target=\"_blank\" rel=\"noopener\">doi:10.1016/j.energy.2025.136603</a>",
-      "doi": "https://doi.org/10.1016/j.energy.2025.136603",
-      "student_slug": "rika-iriguchi",
-      "student_name": "Rika Iriguchi",
-      "student_name_jp": "入口 梨佳",
-      "cohort": 2025,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Rika Iriguchi",
+          "name_jp": "入口 梨佳",
+          "slug": "rika-iriguchi",
+          "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -892,7 +1642,35 @@
       "student_name": "Rika Iriguchi",
       "student_name_jp": "入口 梨佳",
       "cohort": 2025,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Rika Iriguchi",
+          "name_jp": "入口 梨佳",
+          "slug": "rika-iriguchi",
+          "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "html": "Akihiro Hamanaka; Fa-quing Su; <span class=\"ach-authors\">Rika Iriguchi</span>; Ken-ichi Itakura; Kazuhiro Takahashi; Jun-ichi Kodama; Takashi Sasaoka; Hideki Shimada; Gota Deguchi. &ldquo;Water injection in underground coal gasification with a horizontal hole: A strategy to prevent steel pipe rupture and enhancing hydrogen production reaction&rdquo; <em>Energy, 2025, volume 329, 巻なし, pp.1-11</em> (2025) <a href=\"https://doi.org/10.1016/j.energy.2025.136603\" target=\"_blank\" rel=\"noopener\">doi:10.1016/j.energy.2025.136603</a>",
+      "doi": "https://doi.org/10.1016/j.energy.2025.136603",
+      "student_slug": "rika-iriguchi",
+      "student_name": "Rika Iriguchi",
+      "student_name_jp": "入口 梨佳",
+      "cohort": 2025,
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Rika Iriguchi",
+          "name_jp": "入口 梨佳",
+          "slug": "rika-iriguchi",
+          "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -902,7 +1680,16 @@
       "student_name": "Ryoshi Oda",
       "student_name_jp": "小田 亮志",
       "cohort": 2025,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Ryoshi Oda",
+          "name_jp": "小田 亮志",
+          "slug": "ryoshi-oda",
+          "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -912,7 +1699,35 @@
       "student_name": "Ryoshi Oda",
       "student_name_jp": "小田 亮志",
       "cohort": 2025,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Ryoshi Oda",
+          "name_jp": "小田 亮志",
+          "slug": "ryoshi-oda",
+          "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "html": "<span class=\"ach-authors\">Wang Sheng</span>, Shimada Hideki, Sasaoka Takashi, Hamanaka Akihiro. &ldquo;In-Situ Monitoring-Based Study on Structural Evolution and Failure Mechanism of Surrounding Rock in Deep Soft Rock Roadways&rdquo; <em>International Symposium on Earth Science and Technology</em>, Fukuoka, Japan (2025/11) [proceedings]",
+      "doi": "",
+      "student_slug": "wang-sheng",
+      "student_name": "Sheng Wang",
+      "student_name_jp": null,
+      "cohort": 2025,
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Sheng Wang",
+          "name_jp": null,
+          "slug": "wang-sheng",
+          "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -922,37 +1737,54 @@
       "student_name": "Sheng Wang",
       "student_name_jp": null,
       "cohort": 2025,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Sheng Wang",
+          "name_jp": null,
+          "slug": "wang-sheng",
+          "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
-      "html": "<span class=\"ach-authors\">Wang Sheng</span>, SHIMADA HIDEKI, SASAOKA TAKASHI, HAMANAKA AKIHIRO. &ldquo;In-Situ Monitoring-Based Study on Structural Evolution and Failure Mechanism of Surrounding Rock in Deep Soft Rock Roadways&rdquo; <em>International Symposium on Earth Science and Technology</em>, Fukuoka, Japan (2025/11) [proceedings]",
+      "html": "<span class=\"ach-authors\">Yuki Nishimura</span>, Akihide Fujisawa, Yoshihiko Nagashima, Chanho Moon, Takashi Nishizawa, Taiki Kobayashi, Naohiro Kasuya, Tatsuya Kobayashi, Akihiro Shimizu, Tokihiko Tokuzawa, Takeshi Ido. &ldquo;Neural Network for Fluctuation Evaluations of Plasma Tomography&rdquo; <em>Review of Scientific Instruments</em> (2025) [submitted]",
       "doi": "",
-      "student_slug": "wang-sheng",
-      "student_name": "Sheng Wang",
-      "student_name_jp": null,
+      "student_slug": "yuki-nishimura",
+      "student_name": "Yuki Nishimura",
+      "student_name_jp": "西村 勇輝",
       "cohort": 2025,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Yuki Nishimura",
+          "name_jp": "西村 勇輝",
+          "slug": "yuki-nishimura",
+          "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
-      "html": "<span class=\"ach-authors\">Yuki NISHIMURA</span>, Akihide FUJISAWA, Yoshihiko NAGASHIMA, Chanho MOON, Takashi NISHIZAWA, Taiki KOBAYASHI, Naohiro KASUYA, Tatsuya KOBAYASHI, Akihiro SHIMIZU, Tokihiko TOKUZAWA, Takeshi IDO. &ldquo;Revisit to Cormack Inversion Using Function Modification Technique for Plasma Tomography&rdquo; <em>Plasma and Fusion Research, 2025, Vol.20, 1201052</em> <a href=\"https://doi.org/10.1585/pfr.20.1201052\" target=\"_blank\" rel=\"noopener\">doi:10.1585/pfr.20.1201052</a>",
+      "html": "<span class=\"ach-authors\">Yuki Nishimura</span>, Akihide Fujisawa, Yoshihiko Nagashima, Chanho Moon, Takashi Nishizawa, Taiki Kobayashi, Naohiro Kasuya, Tatsuya Kobayashi, Akihiro Shimizu, Tokihiko Tokuzawa, Takeshi Ido. &ldquo;Revisit to Cormack Inversion Using Function Modification Technique for Plasma Tomography&rdquo; <em>Plasma and Fusion Research, 2025, Vol.20, 1201052</em> <a href=\"https://doi.org/10.1585/pfr.20.1201052\" target=\"_blank\" rel=\"noopener\">doi:10.1585/pfr.20.1201052</a>",
       "doi": "https://doi.org/10.1585/pfr.20.1201052",
       "student_slug": "yuki-nishimura",
       "student_name": "Yuki Nishimura",
       "student_name_jp": "西村 勇輝",
       "cohort": 2025,
-      "programme": "K2-SPRING"
-    },
-    {
-      "year": 2025,
-      "html": "<span class=\"ach-authors\">Yuki NISHIMURA</span>, Akihide FUJISAWA, Yoshihiko NAGASHIMA, Chanho MOON, Takashi NISHIZAWA, Taiki KOBAYASHI, Naohiro KASUYA, Tatsuya KOBAYASHI, Akihiro SHIMIZU, Tokihiko TOKUZAWA, Takeshi IDO. &ldquo;Neural Network for Fluctuation Evaluations of Plasma Tomography&rdquo; <em>Review of Scientific Instruments</em> (2025) [submitted]",
-      "doi": "",
-      "student_slug": "yuki-nishimura",
-      "student_name": "Yuki Nishimura",
-      "student_name_jp": "西村 勇輝",
-      "cohort": 2025,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Yuki Nishimura",
+          "name_jp": "西村 勇輝",
+          "slug": "yuki-nishimura",
+          "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -962,7 +1794,16 @@
       "student_name": "Shotaro Yoshida",
       "student_name_jp": "吉田 昇太郎",
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Shotaro Yoshida",
+          "name_jp": "吉田 昇太郎",
+          "slug": "yoshida-s",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -972,7 +1813,16 @@
       "student_name": "Takeshi Mochizuki",
       "student_name_jp": "望月 建志",
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Takeshi Mochizuki",
+          "name_jp": "望月 建志",
+          "slug": "mochizuki-t",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -982,7 +1832,16 @@
       "student_name": "Zeyu Zou",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Zeyu Zou",
+          "name_jp": null,
+          "slug": "zou-z",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2025,
@@ -992,17 +1851,42 @@
       "student_name": "Ziqi Jiang",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Ziqi Jiang",
+          "name_jp": null,
+          "slug": "jiang-z",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2024,
-      "html": "Imada S., <span class=\"ach-authors\">Maeno K.</span>, Kagawa S. &ldquo;CO<sub>2</sub> emission hotspots analysis on supply chains for wooden houses in Japan&rdquo; <em>Journal of Environmental Management</em>, Vol.&thinsp;353, 120151 (2024) <a href=\"https://doi.org/10.1016/j.jenvman.2024.120151\" target=\"_blank\" rel=\"noopener\">doi:10.1016/j.jenvman.2024.120151</a>",
+      "html": "<span class=\"ach-authors\">Imada S.</span>, <span class=\"ach-authors\">Maeno K.</span>, Kagawa S. &ldquo;CO<sub>2</sub> emission hotspots analysis on supply chains for wooden houses in Japan&rdquo; <em>Journal of Environmental Management</em>, Vol.&thinsp;353, 120151 (2024) <a href=\"https://doi.org/10.1016/j.jenvman.2024.120151\" target=\"_blank\" rel=\"noopener\">doi:10.1016/j.jenvman.2024.120151</a>",
       "doi": "https://doi.org/10.1016/j.jenvman.2024.120151",
       "student_slug": "keitaro-maeno",
       "student_name": "Keitaro Maeno",
       "student_name_jp": "前野 啓太郎",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Keitaro Maeno",
+          "name_jp": "前野 啓太郎",
+          "slug": "keitaro-maeno",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        },
+        {
+          "name": "Seiya Imada",
+          "name_jp": "今田 青冶",
+          "slug": "seiya-imada",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1012,7 +1896,16 @@
       "student_name": "Mingxu Sun",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Mingxu Sun",
+          "name_jp": null,
+          "slug": "mingxu-sun",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1022,7 +1915,16 @@
       "student_name": "Tianhui Fan",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Tianhui Fan",
+          "name_jp": null,
+          "slug": "tianhui-fan",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1032,7 +1934,16 @@
       "student_name": "Tianhui Fan",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Tianhui Fan",
+          "name_jp": null,
+          "slug": "tianhui-fan",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1042,7 +1953,16 @@
       "student_name": "Tianhui Fan",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Tianhui Fan",
+          "name_jp": null,
+          "slug": "tianhui-fan",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1052,7 +1972,16 @@
       "student_name": "Xiaofeng Shen",
       "student_name_jp": "沈 小烽",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Xiaofeng Shen",
+          "name_jp": "沈 小烽",
+          "slug": "xiaofeng-shen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1062,7 +1991,16 @@
       "student_name": "Xiaofeng Shen",
       "student_name_jp": "沈 小烽",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Xiaofeng Shen",
+          "name_jp": "沈 小烽",
+          "slug": "xiaofeng-shen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1072,7 +2010,16 @@
       "student_name": "Xiaofeng Shen",
       "student_name_jp": "沈 小烽",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Xiaofeng Shen",
+          "name_jp": "沈 小烽",
+          "slug": "xiaofeng-shen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1082,7 +2029,16 @@
       "student_name": "Yulu Chen",
       "student_name_jp": "陳 雨露",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yulu Chen",
+          "name_jp": "陳 雨露",
+          "slug": "yulu-chen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1092,7 +2048,16 @@
       "student_name": "Yulu Chen",
       "student_name_jp": "陳 雨露",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yulu Chen",
+          "name_jp": "陳 雨露",
+          "slug": "yulu-chen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1102,7 +2067,16 @@
       "student_name": "Yulu Chen",
       "student_name_jp": "陳 雨露",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yulu Chen",
+          "name_jp": "陳 雨露",
+          "slug": "yulu-chen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1112,7 +2086,16 @@
       "student_name": "Yulu Chen",
       "student_name_jp": "陳 雨露",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yulu Chen",
+          "name_jp": "陳 雨露",
+          "slug": "yulu-chen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1122,7 +2105,16 @@
       "student_name": "Hyun-Gyu Park",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Hyun-Gyu Park",
+          "name_jp": null,
+          "slug": "hyun-gyu-park",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1132,7 +2124,16 @@
       "student_name": "Hyun-Gyu Park",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Hyun-Gyu Park",
+          "name_jp": null,
+          "slug": "hyun-gyu-park",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1142,7 +2143,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1152,7 +2162,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1162,7 +2181,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1172,7 +2200,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1182,7 +2219,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1192,7 +2238,16 @@
       "student_name": "Sora Matsushima",
       "student_name_jp": "松嶋 そら",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Sora Matsushima",
+          "name_jp": "松嶋 そら",
+          "slug": "sora-matsushima",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1202,7 +2257,16 @@
       "student_name": "Tatsuya Hamashima",
       "student_name_jp": "濱島 達也",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Tatsuya Hamashima",
+          "name_jp": "濱島 達也",
+          "slug": "tatsuya-hamashima",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1212,7 +2276,16 @@
       "student_name": "Yin Kan Phua",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yin Kan Phua",
+          "name_jp": null,
+          "slug": "yin-kan-phua",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1222,7 +2295,16 @@
       "student_name": "Yixin Chen",
       "student_name_jp": "陳 伊新",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yixin Chen",
+          "name_jp": "陳 伊新",
+          "slug": "yixin-chen",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1232,7 +2314,16 @@
       "student_name": "Yixin Chen",
       "student_name_jp": "陳 伊新",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yixin Chen",
+          "name_jp": "陳 伊新",
+          "slug": "yixin-chen",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1242,7 +2333,16 @@
       "student_name": "Yixin Chen",
       "student_name_jp": "陳 伊新",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yixin Chen",
+          "name_jp": "陳 伊新",
+          "slug": "yixin-chen",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1252,7 +2352,16 @@
       "student_name": "Yixin Chen",
       "student_name_jp": "陳 伊新",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yixin Chen",
+          "name_jp": "陳 伊新",
+          "slug": "yixin-chen",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1262,7 +2371,16 @@
       "student_name": "Zifei Nie",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Zifei Nie",
+          "name_jp": null,
+          "slug": "zifei-nie",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1272,17 +2390,16 @@
       "student_name": "Hiroki Isogawa",
       "student_name_jp": "五十川 浩希",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
-    },
-    {
-      "year": 2024,
-      "html": "<span class=\"ach-authors\">Imada S.</span>; Maeno K.; Kagawa S. &ldquo;CO<sub>2</sub> emission hotspots analysis on supply chains for wooden houses in Japan&rdquo; <em>Journal of Environmental Management</em>, Vol. 353, 120151 (2024) <a href=\"https://doi.org/10.1016/j.jenvman.2024.120151\" target=\"_blank\" rel=\"noopener\">doi:10.1016/j.jenvman.2024.120151</a>",
-      "doi": "https://doi.org/10.1016/j.jenvman.2024.120151",
-      "student_slug": "seiya-imada",
-      "student_name": "Seiya Imada",
-      "student_name_jp": "今田 青冶",
-      "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Hiroki Isogawa",
+          "name_jp": "五十川 浩希",
+          "slug": "hiroki-isogawa",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1292,7 +2409,16 @@
       "student_name": "Taisei Tomaru",
       "student_name_jp": "都丸 大晟",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Taisei Tomaru",
+          "name_jp": "都丸 大晟",
+          "slug": "taisei-tomaru",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1302,17 +2428,35 @@
       "student_name": "Yuta Takaoka",
       "student_name_jp": "髙岡 祐太",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yuta Takaoka",
+          "name_jp": "髙岡 祐太",
+          "slug": "yuta-takaoka",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2024,
-      "html": "<span class=\"ach-authors\">Itsuki OYAMA</span>, Yusuke KOSGUA. &ldquo;Implication of Parallel Velocity Gradient-Driven Instability with Hydrodynamic Electrons to SOL Width&rdquo; <em>Vol.19 143019 (2024)</em> (2024) <a href=\"https://doi.org/10.1585/pfr.19.1403019\" target=\"_blank\" rel=\"noopener\">doi:10.1585/pfr.19.1403019</a>",
+      "html": "<span class=\"ach-authors\">Itsuki Oyama</span>, Yusuke Kosgua. &ldquo;Implication of Parallel Velocity Gradient-Driven Instability with Hydrodynamic Electrons to SOL Width&rdquo; <em>Vol.19 143019 (2024)</em> (2024) <a href=\"https://doi.org/10.1585/pfr.19.1403019\" target=\"_blank\" rel=\"noopener\">doi:10.1585/pfr.19.1403019</a>",
       "doi": "https://doi.org/10.1585/pfr.19.1403019",
       "student_slug": "itsuki-oyama",
       "student_name": "Itsuki Oyama",
       "student_name_jp": "小山 一輝",
       "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Itsuki Oyama",
+          "name_jp": "小山 一輝",
+          "slug": "itsuki-oyama",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1322,7 +2466,16 @@
       "student_name": "Itsuki Oyama",
       "student_name_jp": "小山 一輝",
       "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Itsuki Oyama",
+          "name_jp": "小山 一輝",
+          "slug": "itsuki-oyama",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1332,7 +2485,16 @@
       "student_name": "Kaili Zhang",
       "student_name_jp": null,
       "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Kaili Zhang",
+          "name_jp": null,
+          "slug": "zhang-kaili",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1342,17 +2504,16 @@
       "student_name": "Shogo Nakamura",
       "student_name_jp": "中村 省吾",
       "cohort": 2024,
-      "programme": "K2-SPRING"
-    },
-    {
-      "year": 2024,
-      "html": "Tianhui Fan, <span class=\"ach-authors\">Siyu Shen</span>, Chun Yat (Benjamin) Sit, Paul J.A. Kenis, Andrew Chapman. &ldquo;Environmental, economic and social trade-offs of membrane-based direct air capture technologies integrated with CO<sub>2</sub> conversion using life cycle assessment&rdquo; <em>Journal of CO<sub>2</sub> Utilization (Volume 91, January 2025, 103002)</em> <a href=\"https://doi.org/10.1016/j.jcou.2024.103002\" target=\"_blank\" rel=\"noopener\">doi:10.1016/j.jcou.2024.103002</a>",
-      "doi": "https://doi.org/10.1016/j.jcou.2024.103002",
-      "student_slug": "shen-siyu",
-      "student_name": "Siyu Shen",
-      "student_name_jp": null,
-      "cohort": 2024,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Shogo Nakamura",
+          "name_jp": "中村 省吾",
+          "slug": "shogo-nakamura",
+          "cohort": 2024,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1362,7 +2523,16 @@
       "student_name": "Shih-Peng Chang",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Shih-Peng Chang",
+          "name_jp": null,
+          "slug": "chang-s",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1372,7 +2542,16 @@
       "student_name": "Weifeng Wang",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Weifeng Wang",
+          "name_jp": null,
+          "slug": "wang-w",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1382,7 +2561,16 @@
       "student_name": "Weifeng Wang",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Weifeng Wang",
+          "name_jp": null,
+          "slug": "wang-w",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1392,7 +2580,16 @@
       "student_name": "Weifeng Wang",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Weifeng Wang",
+          "name_jp": null,
+          "slug": "wang-w",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1402,7 +2599,16 @@
       "student_name": "Zeyu Zou",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Zeyu Zou",
+          "name_jp": null,
+          "slug": "zou-z",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1412,7 +2618,16 @@
       "student_name": "Zeyu Zou",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Zeyu Zou",
+          "name_jp": null,
+          "slug": "zou-z",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1422,7 +2637,16 @@
       "student_name": "Ziqi Jiang",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Ziqi Jiang",
+          "name_jp": null,
+          "slug": "jiang-z",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1432,7 +2656,16 @@
       "student_name": "Ziqi Jiang",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Ziqi Jiang",
+          "name_jp": null,
+          "slug": "jiang-z",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1442,7 +2675,16 @@
       "student_name": "Ziqi Jiang",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Ziqi Jiang",
+          "name_jp": null,
+          "slug": "jiang-z",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1452,7 +2694,16 @@
       "student_name": "Ziqi Jiang",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Ziqi Jiang",
+          "name_jp": null,
+          "slug": "jiang-z",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2024,
@@ -1462,7 +2713,16 @@
       "student_name": "Ziqi Jiang",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Ziqi Jiang",
+          "name_jp": null,
+          "slug": "jiang-z",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1472,7 +2732,16 @@
       "student_name": "Haruka Mitoma",
       "student_name_jp": "三苫 春香",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Haruka Mitoma",
+          "name_jp": "三苫 春香",
+          "slug": "haruka-mitoma",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1482,7 +2751,16 @@
       "student_name": "Keitaro Maeno",
       "student_name_jp": "前野 啓太郎",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Keitaro Maeno",
+          "name_jp": "前野 啓太郎",
+          "slug": "keitaro-maeno",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1492,7 +2770,16 @@
       "student_name": "Kento Komatsubara",
       "student_name_jp": "小松原 建人",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Kento Komatsubara",
+          "name_jp": "小松原 建人",
+          "slug": "kento-komatsubara",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1502,7 +2789,16 @@
       "student_name": "Likhith Manjunatha",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Likhith Manjunatha",
+          "name_jp": null,
+          "slug": "likhith-manjunatha",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1512,7 +2808,16 @@
       "student_name": "Tianhui Fan",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Tianhui Fan",
+          "name_jp": null,
+          "slug": "tianhui-fan",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1522,7 +2827,16 @@
       "student_name": "Xiaofeng Shen",
       "student_name_jp": "沈 小烽",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Xiaofeng Shen",
+          "name_jp": "沈 小烽",
+          "slug": "xiaofeng-shen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1532,7 +2846,16 @@
       "student_name": "Xiaofeng Shen",
       "student_name_jp": "沈 小烽",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Xiaofeng Shen",
+          "name_jp": "沈 小烽",
+          "slug": "xiaofeng-shen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1542,7 +2865,16 @@
       "student_name": "Xiaofeng Shen",
       "student_name_jp": "沈 小烽",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Xiaofeng Shen",
+          "name_jp": "沈 小烽",
+          "slug": "xiaofeng-shen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1552,7 +2884,16 @@
       "student_name": "Xiaofeng Shen",
       "student_name_jp": "沈 小烽",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Xiaofeng Shen",
+          "name_jp": "沈 小烽",
+          "slug": "xiaofeng-shen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1562,7 +2903,16 @@
       "student_name": "Yulu Chen",
       "student_name_jp": "陳 雨露",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yulu Chen",
+          "name_jp": "陳 雨露",
+          "slug": "yulu-chen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1572,7 +2922,16 @@
       "student_name": "Daisuke Yoshizawa",
       "student_name_jp": "吉澤 大佑",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Daisuke Yoshizawa",
+          "name_jp": "吉澤 大佑",
+          "slug": "daisuke-yoshizawa",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1582,7 +2941,16 @@
       "student_name": "Hyun-Gyu Park",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Hyun-Gyu Park",
+          "name_jp": null,
+          "slug": "hyun-gyu-park",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1592,7 +2960,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1602,7 +2979,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1612,7 +2998,16 @@
       "student_name": "Muhammad Irfan Maulana Kusdhany",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Muhammad Irfan Maulana Kusdhany",
+          "name_jp": null,
+          "slug": "muhammad-irfan-maulana-kusdhany",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1622,7 +3017,16 @@
       "student_name": "Yin Kan Phua",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yin Kan Phua",
+          "name_jp": null,
+          "slug": "yin-kan-phua",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1632,7 +3036,16 @@
       "student_name": "Yin Kan Phua",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yin Kan Phua",
+          "name_jp": null,
+          "slug": "yin-kan-phua",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1642,7 +3055,16 @@
       "student_name": "Zifei Nie",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Zifei Nie",
+          "name_jp": null,
+          "slug": "zifei-nie",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1652,7 +3074,16 @@
       "student_name": "Kentaro Wada",
       "student_name_jp": "和田 健太郎",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Kentaro Wada",
+          "name_jp": "和田 健太郎",
+          "slug": "kentaro-wada",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1662,7 +3093,16 @@
       "student_name": "Taisei Tomaru",
       "student_name_jp": "都丸 大晟",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Taisei Tomaru",
+          "name_jp": "都丸 大晟",
+          "slug": "taisei-tomaru",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1672,7 +3112,16 @@
       "student_name": "Taisei Tomaru",
       "student_name_jp": "都丸 大晟",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Taisei Tomaru",
+          "name_jp": "都丸 大晟",
+          "slug": "taisei-tomaru",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1682,7 +3131,16 @@
       "student_name": "Xuesong Wei",
       "student_name_jp": "韋 雪淞",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Xuesong Wei",
+          "name_jp": "韋 雪淞",
+          "slug": "xuesong-wei",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1692,7 +3150,16 @@
       "student_name": "Yuta Takaoka",
       "student_name_jp": "髙岡 祐太",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yuta Takaoka",
+          "name_jp": "髙岡 祐太",
+          "slug": "yuta-takaoka",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1702,7 +3169,16 @@
       "student_name": "Yuta Takaoka",
       "student_name_jp": "髙岡 祐太",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yuta Takaoka",
+          "name_jp": "髙岡 祐太",
+          "slug": "yuta-takaoka",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1712,7 +3188,16 @@
       "student_name": "Haonan Sun",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Haonan Sun",
+          "name_jp": null,
+          "slug": "sun-h",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2023,
@@ -1722,7 +3207,16 @@
       "student_name": "Weifeng Wang",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Weifeng Wang",
+          "name_jp": null,
+          "slug": "wang-w",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     },
     {
       "year": 2022,
@@ -1732,7 +3226,16 @@
       "student_name": "Keitaro Maeno",
       "student_name_jp": "前野 啓太郎",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Keitaro Maeno",
+          "name_jp": "前野 啓太郎",
+          "slug": "keitaro-maeno",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2022,
@@ -1742,7 +3245,16 @@
       "student_name": "Kento Komatsubara",
       "student_name_jp": "小松原 建人",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Kento Komatsubara",
+          "name_jp": "小松原 建人",
+          "slug": "kento-komatsubara",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2022,
@@ -1752,7 +3264,16 @@
       "student_name": "Mingxu Sun",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Mingxu Sun",
+          "name_jp": null,
+          "slug": "mingxu-sun",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2022,
@@ -1762,7 +3283,16 @@
       "student_name": "Tianhui Fan",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Tianhui Fan",
+          "name_jp": null,
+          "slug": "tianhui-fan",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2022,
@@ -1772,7 +3302,16 @@
       "student_name": "Yulu Chen",
       "student_name_jp": "陳 雨露",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yulu Chen",
+          "name_jp": "陳 雨露",
+          "slug": "yulu-chen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2022,
@@ -1782,7 +3321,16 @@
       "student_name": "Muhammad Irfan Maulana Kusdhany",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Muhammad Irfan Maulana Kusdhany",
+          "name_jp": null,
+          "slug": "muhammad-irfan-maulana-kusdhany",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2022,
@@ -1792,7 +3340,16 @@
       "student_name": "Shinichi Takeno",
       "student_name_jp": "竹野 慎一",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Shinichi Takeno",
+          "name_jp": "竹野 慎一",
+          "slug": "shinichi-takeno",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2022,
@@ -1802,7 +3359,16 @@
       "student_name": "Yin Kan Phua",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yin Kan Phua",
+          "name_jp": null,
+          "slug": "yin-kan-phua",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2022,
@@ -1812,7 +3378,16 @@
       "student_name": "Yin Kan Phua",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yin Kan Phua",
+          "name_jp": null,
+          "slug": "yin-kan-phua",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2022,
@@ -1822,7 +3397,16 @@
       "student_name": "Yixin Chen",
       "student_name_jp": "陳 伊新",
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yixin Chen",
+          "name_jp": "陳 伊新",
+          "slug": "yixin-chen",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2022,
@@ -1832,7 +3416,16 @@
       "student_name": "Zifei Nie",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Zifei Nie",
+          "name_jp": null,
+          "slug": "zifei-nie",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2022,
@@ -1842,7 +3435,16 @@
       "student_name": "Zifei Nie",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Zifei Nie",
+          "name_jp": null,
+          "slug": "zifei-nie",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2022,
@@ -1852,7 +3454,16 @@
       "student_name": "Hiroki Isogawa",
       "student_name_jp": "五十川 浩希",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Hiroki Isogawa",
+          "name_jp": "五十川 浩希",
+          "slug": "hiroki-isogawa",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2021,
@@ -1862,7 +3473,16 @@
       "student_name": "Haruka Mitoma",
       "student_name_jp": "三苫 春香",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Haruka Mitoma",
+          "name_jp": "三苫 春香",
+          "slug": "haruka-mitoma",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2021,
@@ -1872,7 +3492,16 @@
       "student_name": "Haruka Mitoma",
       "student_name_jp": "三苫 春香",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Haruka Mitoma",
+          "name_jp": "三苫 春香",
+          "slug": "haruka-mitoma",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2021,
@@ -1882,7 +3511,16 @@
       "student_name": "Tianhui Fan",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Tianhui Fan",
+          "name_jp": null,
+          "slug": "tianhui-fan",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2021,
@@ -1892,7 +3530,16 @@
       "student_name": "Tianhui Fan",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Tianhui Fan",
+          "name_jp": null,
+          "slug": "tianhui-fan",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2021,
@@ -1902,7 +3549,16 @@
       "student_name": "Xiaofeng Shen",
       "student_name_jp": "沈 小烽",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Xiaofeng Shen",
+          "name_jp": "沈 小烽",
+          "slug": "xiaofeng-shen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2021,
@@ -1912,7 +3568,16 @@
       "student_name": "Hyun-Gyu Park",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Hyun-Gyu Park",
+          "name_jp": null,
+          "slug": "hyun-gyu-park",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2021,
@@ -1922,7 +3587,16 @@
       "student_name": "Zifei Nie",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Zifei Nie",
+          "name_jp": null,
+          "slug": "zifei-nie",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2021,
@@ -1932,7 +3606,16 @@
       "student_name": "Yuta Takaoka",
       "student_name_jp": "髙岡 祐太",
       "cohort": 2023,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yuta Takaoka",
+          "name_jp": "髙岡 祐太",
+          "slug": "yuta-takaoka",
+          "cohort": 2023,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2020,
@@ -1942,7 +3625,16 @@
       "student_name": "Timothee Redarce",
       "student_name_jp": null,
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Timothee Redarce",
+          "name_jp": null,
+          "slug": "timothee-redarce",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2020,
@@ -1952,7 +3644,16 @@
       "student_name": "Xiaofeng Shen",
       "student_name_jp": "沈 小烽",
       "cohort": 2021,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Xiaofeng Shen",
+          "name_jp": "沈 小烽",
+          "slug": "xiaofeng-shen",
+          "cohort": 2021,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2020,
@@ -1962,7 +3663,16 @@
       "student_name": "Hyun-Gyu Park",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Hyun-Gyu Park",
+          "name_jp": null,
+          "slug": "hyun-gyu-park",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2020,
@@ -1972,7 +3682,16 @@
       "student_name": "Jacqueline Andrea Hidalgo Jiménez",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Jacqueline Andrea Hidalgo Jiménez",
+          "name_jp": null,
+          "slug": "jacqueline-andrea-hidalgo-jim-nez",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2020,
@@ -1982,7 +3701,16 @@
       "student_name": "Zifei Nie",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Zifei Nie",
+          "name_jp": null,
+          "slug": "zifei-nie",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 2019,
@@ -1992,7 +3720,16 @@
       "student_name": "Yin Kan Phua",
       "student_name_jp": null,
       "cohort": 2022,
-      "programme": "Q-ENERGY Fellowship"
+      "programme": "Q-ENERGY Fellowship",
+      "attributions": [
+        {
+          "name": "Yin Kan Phua",
+          "name_jp": null,
+          "slug": "yin-kan-phua",
+          "cohort": 2022,
+          "programme": "Q-ENERGY Fellowship"
+        }
+      ]
     },
     {
       "year": 0,
@@ -2002,7 +3739,16 @@
       "student_name": "Zeyu Zou",
       "student_name_jp": null,
       "cohort": 2026,
-      "programme": "K2-SPRING"
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Zeyu Zou",
+          "name_jp": null,
+          "slug": "zou-z",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
+        }
+      ]
     }
   ]
 }

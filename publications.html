@@ -210,7 +210,16 @@
     color: var(--muted);
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 6px;
+  }
+  .pub-attrib-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .pub-attrib-sep {
+    color: var(--line);
   }
   .pub-attribution::before {
     content: "↳";
@@ -451,21 +460,22 @@ function renderPapers(data) {
 
     const list = sec.querySelector('.pub-list');
     papers.forEach(p => {
-      const studentPath = `students/${p.cohort}/${p.student_slug}.html`;
-      const cohortLabel_en = `${p.cohort} ${progLabel(p.cohort)}`;
-      const cohortLabel_jp = `${p.cohort}年度`;
+      const attribs = (p.attributions && p.attributions.length)
+        ? p.attributions
+        : [{ name: p.student_name, slug: p.student_slug, cohort: p.cohort }];
+      const attribHTML = attribs.map(a => {
+        const path = `students/${a.cohort}/${a.slug}.html`;
+        return `<span class="pub-attrib-item"><a href="${path}">${a.name}</a>`
+             + `<span class="pub-cohort-tag">`
+             + `<span data-lang-en="">${a.cohort} ${progLabel(a.cohort)}</span>`
+             + `<span data-lang-jp="">${a.cohort}年度</span></span></span>`;
+      }).join('<span class="pub-attrib-sep">·</span>');
 
       const li = document.createElement('li');
       li.className = 'pub-item';
       li.innerHTML = `
         <div class="pub-paper-text">${p.html}</div>
-        <div class="pub-attribution">
-          <a href="${studentPath}">${p.student_name}</a>
-          <span class="pub-cohort-tag">
-            <span data-lang-en="">${cohortLabel_en}</span>
-            <span data-lang-jp="">${cohortLabel_jp}</span>
-          </span>
-        </div>`;
+        <div class="pub-attribution">${attribHTML}</div>`;
       list.appendChild(li);
     });
   });
