@@ -1,6 +1,6 @@
 {
-  "generated": "2026-05-31",
-  "total_papers": 196,
+  "generated": "2026-06-09",
+  "total_papers": 198,
   "years": [
     2026,
     2025,
@@ -13,7 +13,7 @@
     0
   ],
   "year_counts": {
-    "2026": 25,
+    "2026": 27,
     "2025": 70,
     "2024": 47,
     "2023": 26,
@@ -272,6 +272,26 @@
       "student_name": "Kohei Sawada",
       "student_name_jp": "澤田 光平",
       "cohort": 2025,
+      "programme": "K2-SPRING"
+    },
+    {
+      "year": 2026,
+      "html": "<span class=\"ach-authors\">Wang, Weifeng</span>, Karapetsas, G., Kita, Y. and Wang, Z.\n          &ldquo;Solar radiation reshapes the deposition patterns of plasmonic nanosuspension droplets&rdquo;\n          <em>Langmuir</em>, Vol.&thinsp;42, No.&thinsp;14, pp.&thinsp;10067&ndash;10077 (2026) [peer-reviewed]\n          &mdash; <a href=\"https://doi.org/10.1021/acs.langmuir.6c00247\" target=\"_blank\" rel=\"noopener\">10.1021/acs.langmuir.6c00247</a>",
+      "doi": "https://doi.org/10.1021/acs.langmuir.6c00247",
+      "student_slug": "wang-w",
+      "student_name": "Weifeng Wang",
+      "student_name_jp": null,
+      "cohort": 2026,
+      "programme": "K2-SPRING"
+    },
+    {
+      "year": 2026,
+      "html": "<span class=\"ach-authors\">Wang, Weifeng</span>, Huang, X., Wang, K., Hao, G., Luo, X., Teng, L. and Jiang, L.\n          &ldquo;Flow and electric field affect ammonia absorption into evaporating sessile water droplets&rdquo;\n          <em>Chemical Engineering Science</em>, Vol.&thinsp;327, 123571 (2026) [peer-reviewed]\n          &mdash; <a href=\"https://doi.org/10.1016/j.ces.2026.123571\" target=\"_blank\" rel=\"noopener\">10.1016/j.ces.2026.123571</a>",
+      "doi": "https://doi.org/10.1016/j.ces.2026.123571",
+      "student_slug": "wang-w",
+      "student_name": "Weifeng Wang",
+      "student_name_jp": null,
+      "cohort": 2026,
       "programme": "K2-SPRING"
     },
     {

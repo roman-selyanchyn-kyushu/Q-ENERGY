@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-30",
+  "generated": "2026-06-09",
   "total": 71,
   "students": [
     {
@@ -13,7 +13,7 @@
       "supervisor_name": null,
       "supervisor_name_jp": null,
       "supervisor_url": null,
-      "photo": "assets/photos/2021/img_fellow_2021_nishimura.jpg",
+      "photo": "assets/photos/2021/nishimura_daiki.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -40,7 +40,7 @@
       "supervisor_name": "Prof. Shigemi KAGAWA",
       "supervisor_name_jp": "加河 茂美 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/",
-      "photo": "assets/photos/2021/img_fellow_2021_mitoma_h.jpg",
+      "photo": "assets/photos/2021/mitoma_haruka.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -84,12 +84,12 @@
       "supervisor_name": "Prof. Shigemi KAGAWA",
       "supervisor_name_jp": "加河 茂美 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/",
-      "photo": "assets/photos/2021/img_fellow_2021_maeno.jpg",
+      "photo": "assets/photos/2021/maeno_keitaro.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
-        "title_en": "CO2 mitigation through global supply chain restructuring",
-        "title_jp": "グローバルサプライチェーンの再構築を通したCO2排出削減",
+        "title_en": "CO 2 mitigation through global supply chain restructuring",
+        "title_jp": "グローバルサプライチェーンの再構築を通したCO 2 排出削減",
         "abstract_en": "Automotive industries have large CO 2 emissions from their global supply chain. In order to realize a decarbonized society, there is urgent need for automotive industries to build a green supply chain, taking the opportunity of the restructuring of GSC in major countries caused by COVID-19. To build a green supply chain, it is important for an industry to identify the CO 2 emission hotspots in the its GSC and to reduce CO 2 emissions from these hotspots intensively. Therefore, this study develops a new frame work that can estimate the impact of the restructuring of Japan’s automotive industry which eliminates the CO 2 emission hotspots on the global carbon footprint, and proposes appropriate climate policies for the restructuring to reduce comprehensive CO 2 emissions from the newly reformed GSC of Japan’s automotive industry.",
         "abstract_jp": null
       },
@@ -140,7 +140,7 @@
       "supervisor_name": "Prof. Shunsuke MANAGI",
       "supervisor_name_jp": "馬奈木 俊介 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E9%A6%AC%E5%A5%88%E6%9C%A8-%E4%BF%8A%E4%BB%8B/",
-      "photo": "assets/photos/2021/img_fellow_2021_komatsubara.jpg",
+      "photo": "assets/photos/2021/komatsubara_kento.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -176,7 +176,7 @@
       "supervisor_name": "Prof. Akari HAYASHI",
       "supervisor_name_jp": "林 灯 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E6%9E%97-%E7%81%AF/",
-      "photo": "assets/photos/2021/img_fellow_2021_likhith.jpg",
+      "photo": "assets/photos/2021/likhith_manjunatha.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -213,7 +213,7 @@
       "supervisor_name": "Prof. Ken ALBRECHT",
       "supervisor_name_jp": "アルブレヒト 建 准教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E3%82%A2%E3%83%AB%E3%83%96%E3%83%AC%E3%83%92%E3%83%88-%E5%BB%BA/",
-      "photo": "assets/photos/2021/img_fellow_2021_tashima.jpg",
+      "photo": "assets/photos/2021/tashima_masatoshi.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -240,7 +240,7 @@
       "supervisor_name": "Prof. Miho YAMAUCHI",
       "supervisor_name_jp": "山内 美穂 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%B1%B1%E5%86%85-%E7%BE%8E%E7%A9%82/",
-      "photo": "assets/photos/2021/img_fellow_2021_sun.jpg",
+      "photo": "assets/photos/2021/sun_mingxu.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -280,7 +280,7 @@
       "supervisor_name": "Prof. Andrew CHAPMAN",
       "supervisor_name_jp": "アンドリュー・チャップマン 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E3%82%A2%E3%83%B3%E3%83%89%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%BB%E3%83%81%E3%83%A3%E3%83%83%E3%83%97%E3%83%9E%E3%83%B3/",
-      "photo": "assets/photos/2021/Tianhui_Fan_Profile.png",
+      "photo": "assets/photos/2021/fan_tianhui.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -356,7 +356,7 @@
       "supervisor_name": "Prof. Hisao MATSUNAGA",
       "supervisor_name_jp": "松永 久生 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E6%9D%BE%E6%B0%B8-%E4%B9%85%E7%94%9F/",
-      "photo": "assets/photos/2021/img_fellow_2021_redarce.jpg",
+      "photo": "assets/photos/2021/redarce_timothee.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -392,7 +392,7 @@
       "supervisor_name": "Prof. Takeshi SHINODA",
       "supervisor_name_jp": "篠田 岳思 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E7%AF%A0%E7%94%B0-%E5%B2%B3%E6%80%9D/",
-      "photo": "assets/photos/2021/img_fellow_2021_watanabe.jpg",
+      "photo": "assets/photos/2021/watanabe_toraharu.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -505,7 +505,7 @@
       "supervisor_name": "Prof. Akihito OZAKI",
       "supervisor_name_jp": "尾崎 明仁 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%B0%BE%E5%B4%8E-%E6%98%8E%E4%BB%81/",
-      "photo": "assets/photos/2021/img_fellow_2021_chen.jpg",
+      "photo": "assets/photos/2021/chen_yulu.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -598,12 +598,12 @@
       "supervisor_name": "Prof. Shigemi KAGAWA",
       "supervisor_name_jp": "加河 茂美 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/",
-      "photo": "assets/photos/2022/img_fellow_2022_yoshizawa.jpg",
+      "photo": "assets/photos/2022/yoshizawa_daisuke.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
         "title_en": "CO 2 Reduction Potential of Expanding Car Sharing Services",
-        "title_jp": "カーシェアリング普及のCO2排出削減効果",
+        "title_jp": "カーシェアリング普及のCO 2 排出削減効果",
         "abstract_en": "While it is important to change the way we use cars in order to decarbonize, there is little research on the environmental impact of car sharing services, which significantly change the way we use cars. We analyze how CO 2 emissions in Japan will change when car sharing services become widespread, and make recommendations that will lead to global warming mitigation policies. This study applies a stock-flow model of passenger cars to develop a framework that can comprehensively analyze changes in CO 2 emissions when car-sharing services expand, and quantitatively analyze the role of the car-sharing service diffusion in reducing CO 2 emissions.",
         "abstract_jp": null
       },
@@ -630,7 +630,7 @@
       "supervisor_name": "Prof. Kazuhide ITO",
       "supervisor_name_jp": "伊藤 一秀 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E4%BC%8A%E8%97%A4-%E4%B8%80%E7%A7%80/",
-      "photo": "assets/photos/2022/img_fellow_2022_park.jpg",
+      "photo": "assets/photos/2022/park_hyungyu.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -695,7 +695,7 @@
       "supervisor_name": "Prof. Kaveh EDALATI",
       "supervisor_name_jp": "Edalati Kaveh 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/edalati-kaveh/",
-      "photo": "assets/photos/2022/img_fellow_2022_jacqueline.jpg",
+      "photo": "assets/photos/2022/hidalgo_jacqueline.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -787,7 +787,7 @@
       "supervisor_name": "Prof. Masamichi NISHIHARA",
       "supervisor_name_jp": "西原 正通 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E8%A5%BF%E5%8E%9F-%E6%AD%A3%E9%80%9A/",
-      "photo": "assets/photos/2022/Irfan.jpg",
+      "photo": "assets/photos/2022/kusdhany_irfan.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -844,7 +844,7 @@
       "supervisor_name": "Prof. Daisuke SUMIYOSHI",
       "supervisor_name_jp": "住吉 大輔 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E4%BD%8F%E5%90%89-%E5%A4%A7%E8%BC%94/",
-      "photo": "assets/photos/2022/img_fellow_2022_he.jpg",
+      "photo": "assets/photos/2022/he_qingyi.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -881,7 +881,7 @@
       "supervisor_name": "Prof. Sakae AGARIE",
       "supervisor_name_jp": "東江 栄 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E6%9D%B1%E6%B1%9F-%E6%A0%84/",
-      "photo": "assets/photos/2022/img_fellow_2022_sato.jpg",
+      "photo": "assets/photos/2022/sato_ryoma.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -908,7 +908,7 @@
       "supervisor_name": "Prof. Ken WATANABE",
       "supervisor_name_jp": "渡邉 賢 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E6%B8%A1%E9%82%89-%E8%B3%A2/",
-      "photo": "assets/photos/2022/img_fellow_2022_takeno.jpg",
+      "photo": "assets/photos/2022/takeno_shinichi.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -948,7 +948,7 @@
       "supervisor_name": "Prof. Shigemi KAGAWA",
       "supervisor_name_jp": "加河 茂美 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/",
-      "photo": "assets/photos/2022/img_fellow_2022_matsushima.jpg",
+      "photo": "assets/photos/2022/matsushima_sora.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -988,7 +988,7 @@
       "supervisor_name": "Prof. Hisahiro EINAGA",
       "supervisor_name_jp": "永長 久寛 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E6%B0%B8%E9%95%B7-%E4%B9%85%E5%AF%9B/",
-      "photo": "assets/photos/2022/img_fellow_2022_hamashima.jpg",
+      "photo": "assets/photos/2022/hamashima_tatsuya.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -1024,7 +1024,7 @@
       "supervisor_name": "Prof. Koichiro KATO",
       "supervisor_name_jp": "加藤 幸一郎 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E8%97%A4-%E5%B9%B8%E4%B8%80%E9%83%8E/",
-      "photo": "assets/photos/2022/img_fellow_2022_phua.jpg",
+      "photo": "assets/photos/2022/phua_yinkan.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -1080,7 +1080,7 @@
       "supervisor_name": "Prof. Ken ALBRECHT",
       "supervisor_name_jp": "アルブレヒト 建 准教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E3%82%A2%E3%83%AB%E3%83%96%E3%83%AC%E3%83%92%E3%83%88-%E5%BB%BA/",
-      "photo": "assets/photos/2022/img_fellow_2022_Yixin_Chen.jpg",
+      "photo": "assets/photos/2022/chen_yixin.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -1132,7 +1132,7 @@
       "supervisor_name": "Prof. Farzaneh HOOMAN",
       "supervisor_name_jp": "Farzaneh Hooman 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/hooman/",
-      "photo": "assets/photos/2022/img_fellow_2022_Zifei.jpg",
+      "photo": "assets/photos/2022/nie_zifei.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -1215,7 +1215,7 @@
       "supervisor_name": "Prof. Kazunari KATAYAMA",
       "supervisor_name_jp": "片山 一成 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E7%89%87%E5%B1%B1-%E4%B8%80%E6%88%90/",
-      "photo": "assets/photos/2023/img_fellow_2023_isogawa.jpg",
+      "photo": "assets/photos/2023/isogawa_hiroki.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -1227,15 +1227,15 @@
       "achievements": {
         "papers": [
           {
-            "text": "Isogawa H.; Katayama K.; Henzan D.; Matsuura H. \"Permeation behavior of gaseous tritium through the assembly composed of Zr and Al2O3 simulating Li rod\" Nuclear Materials and Energy (2022)",
+            "text": "Isogawa H. ; Katayama K.; Henzan D.; Matsuura H. “Permeation behavior of gaseous tritium through the assembly composed of Zr and Al2O3 simulating Li rod” Nuclear Materials and Energy , Vol. 31, 101170 (2022) doi:10.1016/j.nme.2022.101170",
             "doi": "https://doi.org/10.1016/j.nme.2022.101170"
           },
           {
-            "text": "Kobayashi S.; Katayama K.; Isogawa H.; Matsuura H.; Akashi K.; Iinuma Y. \"Experimental investigation of tritium release from LiAlO2 and absorption into Zr\" Fusion Engineering and Design (2026)",
+            "text": "Kobayashi S.; Katayama K.; Isogawa H. ; Matsuura H.; Akashi K.; Iinuma Y. “Experimental investigation of tritium release from LiAlO 2 and absorption into Zr” Fusion Engineering and Design , Vol. 222, 115471 (2026) doi:10.1016/j.fusengdes.2025.115471",
             "doi": "https://doi.org/10.1016/j.fusengdes.2025.115471"
           },
           {
-            "text": "Isogawa H.; Katayama K.; Kobayashi S.; Matsuura H.; Iinuma Y. \"Experimental investigation of tritium release behavior from neutron irradiated LiAlO2 with Zr for tritium production in a high-temperature gas-cooled reactor\" Fusion Engineering and Design (2024)",
+            "text": "Isogawa H. ; Katayama K.; Kobayashi S.; Matsuura H.; Iinuma Y. “Experimental investigation of tritium release behavior from neutron irradiated LiAlO 2 with Zr for tritium production in a high-temperature gas-cooled reactor” Fusion Engineering and Design , Vol. 208, 114657 (2024) doi:10.1016/j.fusengdes.2024.114657",
             "doi": "https://doi.org/10.1016/j.fusengdes.2024.114657"
           }
         ],
@@ -1267,21 +1267,21 @@
       "achievements": {
         "papers": [
           {
-            "text": "Zhang N.; Wada K.; Komoda R.; Staykov A.; Kubota M. \"Kinetic modeling of ammonia and hydrogen dissociative co-adsorption on iron surface and its effect on hydrogen embrittlement\" Physical Chemistry Chemical Physics (2025)",
+            "text": "Zhang N.; Wada K. ; Komoda R.; Staykov A.; Kubota M. “Kinetic modeling of ammonia and hydrogen dissociative co-adsorption on iron surface and its effect on hydrogen embrittlement” Physical Chemistry Chemical Physics , Vol. 27(45), pp. 24589–24600 (2025) doi:10.1039/d5cp02423d",
             "doi": "https://doi.org/10.1039/d5cp02423d"
           },
           {
-            "text": "Vijayvargia K.; Dadfarnia M.; Sofronis P.; Kubota M.; Staykov A.; Wada K.; Pugh J.A.; Eason T.J. \"Three-dimensional constraint-based void-growth model for high temperature hydrogen attack\" International Journal of Fracture (2023)",
+            "text": "Vijayvargia K.; Dadfarnia M.; Sofronis P.; Kubota M.; Staykov A.; Wada K. ; Pugh J.A.; Eason T.J. “Three-dimensional constraint-based void-growth model for high temperature hydrogen attack” International Journal of Fracture , Vol. 243(2), pp. 203–228 (2023) doi:10.1007/s10704-023-00739-2",
             "doi": "https://doi.org/10.1007/s10704-023-00739-2"
           },
           {
-            "text": "Komoda R.; Kubota M.; Staykov A.; Zhang N.; Wada K. \"Effect of water temperature in the deep sea on the mitigation of hydrogen embrittlement by O2 impurity\" Engineering Failure Analysis (2025)",
+            "text": "Komoda R.; Kubota M.; Staykov A.; Zhang N.; Wada K. “Effect of water temperature in the deep sea on the mitigation of hydrogen embrittlement by O 2 impurity” Engineering Failure Analysis , Vol. 180, 109885 (2025) doi:10.1016/j.engfailanal.2025.109885",
             "doi": "https://doi.org/10.1016/j.engfailanal.2025.109885"
           }
         ],
         "conferences": [
           {
-            "text": "Kubota M.; Takazaki D.; Komoda R.; Wada K.; Tsuchiyama T.; Dadfarnia M.; Somerday B.P.; Sofronis P. \"Effect of Hydrogen on Creep Properties\" Minerals, Metals and Materials Series (2022)",
+            "text": "Kubota M.; Takazaki D.; Komoda R.; Wada K. ; Tsuchiyama T.; Dadfarnia M.; Somerday B.P.; Sofronis P. “Effect of Hydrogen on Creep Properties” Minerals, Metals and Materials Series , pp. 1541–1548 (2022) doi:10.1007/978-3-030-92381-5_146",
             "doi": "https://doi.org/10.1007/978-3-030-92381-5_146"
           }
         ],
@@ -1312,14 +1312,14 @@
       "achievements": {
         "papers": [
           {
-            "text": "Shinozaki K.; Nishijima J.; Wakeyama T. \"A game theoretic analysis of geothermal development consensus building in Japan\" Energy Reports (2025)",
+            "text": "Shinozaki K. ; Nishijima J.; Wakeyama T. “A game theoretic analysis of geothermal development consensus building in Japan” Energy Reports , Vol. 13, pp. 278–285 (2025) doi:10.1016/j.egyr.2024.12.004",
             "doi": "https://doi.org/10.1016/j.egyr.2024.12.004"
           }
         ],
         "conferences": [
           {
-            "text": "Shinozaki K.; Nishijima J.; Wakeyama T. \"A Questionnaire Survey and An Agent-based Simulation as to Consensus Building on Geothermal Development in Japan\" Transactions - Geothermal Resources Council (2024)",
-            "doi": ""
+            "text": "Shinozaki K. ; Nishijima J.; Wakeyama T. “A Questionnaire Survey and An Agent-based Simulation as to Consensus Building on Geothermal Development in Japan” Transactions - Geothermal Resources Council , Vol. 48, pp. 696–705 (2024)",
+            "doi": null
           }
         ],
         "awards": [],
@@ -1349,11 +1349,11 @@
       "achievements": {
         "papers": [
           {
-            "text": "Zhai M.; Wu T.; Du K.; Chen C.; Shibayama N.; Narmandakh K.; Khan A.H.H.; Wang Y.-C.; Shang J.; Staykov A.; Song J.T.; Ida S.; Wang P.; Yamada S.; Tamada K.; Zhao S.; Wang A.; Guo Z.; Matsushima T.; Miyasaka T.; Cheng M. \"Interfacial dipole engineering by self-assembled molecules in n-i-p and p-i-n perovskite solar cells\" Nature Communications (2026)",
+            "text": "Zhai M.; Wu T.; Du K.; Chen C.; Shibayama N.; Narmandakh K. ; Khan A.H.H.; Wang Y.-C.; Shang J.; Staykov A.; Song J.T.; Ida S.; Wang P.; Yamada S.; Tamada K.; Zhao S.; Wang A.; Guo Z.; Matsushima T.; Miyasaka T.; Cheng M. “Interfacial dipole engineering by self-assembled molecules in n-i-p and p-i-n perovskite solar cells” Nature Communications , Vol. 17(1), 2374 (2026) doi:10.1038/s41467-026-69198-2",
             "doi": "https://doi.org/10.1038/s41467-026-69198-2"
           },
           {
-            "text": "Wu T.; Raju T.B.; Li H.; Shang J.; Cao Q.; Wu L.; Narmandakh K.; Song J.T.; Staykov A.; Zhang C.; Ba Q.; Zhao L.; Nie R.; Wang P.; Yamada S.; Dong H.; Wang Y.; Wang S.; Matsushima T.; Guo Z. \"Hole-Selective Monolayer Molecules with Spatially Separated Carrier Orbitals and Twisted π-Skeleton for Inverted Perovskite Solar Cells and Modules\" ACS Nano (2026)",
+            "text": "Wu T.; Raju T.B.; Li H.; Shang J.; Cao Q.; Wu L.; Narmandakh K. ; Song J.T.; Staykov A.; Zhang C.; Ba Q.; Zhao L.; Nie R.; Wang P.; Yamada S.; Dong H.; Wang Y.; Wang S.; Matsushima T.; Guo Z. “Hole-Selective Monolayer Molecules with Spatially Separated Carrier Orbitals and Twisted π-Skeleton for Inverted Perovskite Solar Cells and Modules” ACS Nano , Vol. 20(6), pp. 5318–5331 (2026) doi:10.1021/acsnano.5c21709",
             "doi": "https://doi.org/10.1021/acsnano.5c21709"
           }
         ],
@@ -1385,11 +1385,11 @@
       "achievements": {
         "papers": [
           {
-            "text": "Imada S. \"Sharing CO2 abatement costs in the iron and steel sector: A shared responsibility input-output approach\" Ecological Economics (2025)",
+            "text": "Imada S. “Sharing CO 2 abatement costs in the iron and steel sector: A shared responsibility input-output approach” Ecological Economics , Vol. 230, 108504 (2025) doi:10.1016/j.ecolecon.2024.108504",
             "doi": "https://doi.org/10.1016/j.ecolecon.2024.108504"
           },
           {
-            "text": "Imada S.; Maeno K.; Kagawa S. \"CO2 emission hotspots analysis on supply chains for wooden houses in Japan\" Journal of Environmental Management (2024)",
+            "text": "Imada S. ; Maeno K.; Kagawa S. “CO 2 emission hotspots analysis on supply chains for wooden houses in Japan” Journal of Environmental Management , Vol. 353, 120151 (2024) doi:10.1016/j.jenvman.2024.120151",
             "doi": "https://doi.org/10.1016/j.jenvman.2024.120151"
           }
         ],
@@ -1421,23 +1421,23 @@
       "achievements": {
         "papers": [
           {
-            "text": "Tomaru T.; Shimanoe H.; Hong S.; Ha S.-J.; Jeon Y.-P.; Nakabayashi K.; Miyawaki J.; Yoon S.-H. \"Preparation of spinnable mesophase pitch from pyrolyzed fuel oil by pressurized heat treatment and its application of carbon fiber\" Carbon (2024)",
+            "text": "Tomaru T. ; Shimanoe H.; Hong S.; Ha S.-J.; Jeon Y.-P.; Nakabayashi K.; Miyawaki J.; Yoon S.-H. “Preparation of spinnable mesophase pitch from pyrolyzed fuel oil by pressurized heat treatment and its application of carbon fiber” Carbon , Vol. 226, 119160 (2024) doi:10.1016/j.carbon.2024.119160",
             "doi": "https://doi.org/10.1016/j.carbon.2024.119160"
           },
           {
-            "text": "Mashio T.; Tomaru T.; Shimanoe H.; Ha S.-J.; Jeon Y.-P.; Nakabayashi K.; Miyawaki J.; Yoon S.-H. \"Analysis of spinnable mesophase pitch in terms of lyotropic liquid crystalline solution\" Carbon Letters (2023)",
+            "text": "Mashio T.; Tomaru T. ; Shimanoe H.; Ha S.-J.; Jeon Y.-P.; Nakabayashi K.; Miyawaki J.; Yoon S.-H. “Analysis of spinnable mesophase pitch in terms of lyotropic liquid crystalline solution” Carbon Letters , Vol. 33(3), pp. 713–726 (2023) doi:10.1007/s42823-022-00453-4",
             "doi": "https://doi.org/10.1007/s42823-022-00453-4"
           },
           {
-            "text": "Teshima K.; Tomaru T.; Choi J.; Shimanoe H.; Ayukawa T.; Miyawaki J.; Yoon S.-H.; Nakabayashi K. \"Structure-Selective Preparation of Carbon Nanofibers under Gaseous CO2Mixed with Other Carbon Sources\" Energy and Fuels (2026)",
+            "text": "Teshima K.; Tomaru T. ; Choi J.; Shimanoe H.; Ayukawa T.; Miyawaki J.; Yoon S.-H.; Nakabayashi K. “Structure-Selective Preparation of Carbon Nanofibers under Gaseous CO 2 Mixed with Other Carbon Sources” Energy and Fuels , Vol. 40(2), pp. 1267–1275 (2026) doi:10.1021/acs.energyfuels.5c04516",
             "doi": "https://doi.org/10.1021/acs.energyfuels.5c04516"
           },
           {
-            "text": "Tomaru T.; Awakura Y.; Kotajima M.; Irisawa T.; Ha S.-J.; Jeon Y.-P.; Nakabayashi K.; Miyawaki J.; Yoon S.-H. \"Effects of chemical structure of mesogenic components on the mechanical properties of mesophase pitch-based carbon fiber\" Carbon (2025)",
+            "text": "Tomaru T. ; Awakura Y.; Kotajima M.; Irisawa T.; Ha S.-J.; Jeon Y.-P.; Nakabayashi K.; Miyawaki J.; Yoon S.-H. “Effects of chemical structure of mesogenic components on the mechanical properties of mesophase pitch-based carbon fiber” Carbon , Vol. 242, 120428 (2025) doi:10.1016/j.carbon.2025.120428",
             "doi": "https://doi.org/10.1016/j.carbon.2025.120428"
           },
           {
-            "text": "Shimanoe H.; Mashio T.; Tomaru T.; Ha S.-J.; Jeon Y.-P.; Nakabayashi K.; Miyawaki J.; Yoon S.-H. \"Evaluation of the utility of isotropic pitches as solvent components of spinnable mesophase pitch precursors for highly graphitizable functional carbon materials\" Journal of Industrial and Engineering Chemistry (2023)",
+            "text": "Shimanoe H.; Mashio T.; Tomaru T. ; Ha S.-J.; Jeon Y.-P.; Nakabayashi K.; Miyawaki J.; Yoon S.-H. “Evaluation of the utility of isotropic pitches as solvent components of spinnable mesophase pitch precursors for highly graphitizable functional carbon materials” Journal of Industrial and Engineering Chemistry , Vol. 120, pp. 325–331 (2023) doi:10.1016/j.jiec.2022.12.039",
             "doi": "https://doi.org/10.1016/j.jiec.2022.12.039"
           }
         ],
@@ -1457,7 +1457,7 @@
       "supervisor_name": "Prof. Shoji MORI",
       "supervisor_name_jp": "森 昌司 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E6%A3%AE-%E6%98%8C%E5%8F%B8/",
-      "photo": "assets/photos/2023/img_fellow_2023_wei.jpg",
+      "photo": "assets/photos/2023/wei_xuesong.jpg",
       "source_url": null,
       "k2spring": null,
       "phd": {
@@ -1469,11 +1469,11 @@
       "achievements": {
         "papers": [
           {
-            "text": "Wei X.; Kakimoto T.; Umehara Y.; Nakajima H.; Ito K.; Inagaki H.; Mori S. \"Improvement of the critical current density of alkaline water electrolysis based on the hydrodynamic similarity between boiling and water electrolysis\" International Journal of Heat and Mass Transfer (2023)",
+            "text": "Wei X. ; Kakimoto T.; Umehara Y.; Nakajima H.; Ito K.; Inagaki H.; Mori S. “Improvement of the critical current density of alkaline water electrolysis based on the hydrodynamic similarity between boiling and water electrolysis” International Journal of Heat and Mass Transfer , Vol. 214, 124420 (2023) doi:10.1016/j.ijheatmasstransfer.2023.124420",
             "doi": "https://doi.org/10.1016/j.ijheatmasstransfer.2023.124420"
           },
           {
-            "text": "Wei X.; Umehara Y.; Nakajima H.; Ito K.; Etoh A.; Mori S. \"Effect of mesh size of Ni wire mesh electrodes on alkaline water electrolysis performance: A study based on the observation of bubble departure behavior\" International Journal of Hydrogen Energy (2025)",
+            "text": "Wei X. ; Umehara Y.; Nakajima H.; Ito K.; Etoh A.; Mori S. “Effect of mesh size of Ni wire mesh electrodes on alkaline water electrolysis performance: A study based on the observation of bubble departure behavior” International Journal of Hydrogen Energy , Vol. 120, pp. 189–200 (2025) doi:10.1016/j.ijhydene.2025.03.267",
             "doi": "https://doi.org/10.1016/j.ijhydene.2025.03.267"
           }
         ],
@@ -1505,7 +1505,7 @@
       "achievements": {
         "papers": [
           {
-            "text": "Oga Y.; Kagawa S. \"Triple bottom line analysis of the decline in foreign tourist demand in Japan due to the COVID-19 pandemic: Counterfactual structural decomposition approach\" Journal of Industrial Ecology (2025)",
+            "text": "Oga Y. ; Kagawa S. “Triple bottom line analysis of the decline in foreign tourist demand in Japan due to the COVID-19 pandemic: Counterfactual structural decomposition approach” Journal of Industrial Ecology , Vol. 29(2), pp. 518–530 (2025) doi:10.1111/jiec.13615",
             "doi": "https://doi.org/10.1111/jiec.13615"
           }
         ],
@@ -1537,35 +1537,35 @@
       "achievements": {
         "papers": [
           {
-            "text": "Song J.T.; Nanke M.; Takaoka Y.; Fujimoto Y.; Watanabe M.; Inada M.; Ishihara T. \"Zeolitic Imidazolate Framework (ZIF)-derived Fe-Co-N-C catalysts as high-performance cathodes for rechargeable zinc-air batteries\" Applied Catalysis A: General (2026)",
+            "text": "Song J.T.; Nanke M.; Takaoka Y. ; Fujimoto Y.; Watanabe M.; Inada M.; Ishihara T. “Zeolitic Imidazolate Framework (ZIF)-derived Fe-Co-N-C catalysts as high-performance cathodes for rechargeable zinc-air batteries” Applied Catalysis A: General , Vol. 709, 120639 (2026) doi:10.1016/j.apcata.2025.120639",
             "doi": "https://doi.org/10.1016/j.apcata.2025.120639"
           },
           {
-            "text": "Shimada J.; Takaoka Y.; Ueda T.; Tani A.; Sugahara T.; Tsunashima K.; Yamada H.; Hirai T. \"Proton conduction in tetra-n-butylammonium bromide semiclathrate hydrate\" Solid State Ionics (2023)",
+            "text": "Shimada J.; Takaoka Y. ; Ueda T.; Tani A.; Sugahara T.; Tsunashima K.; Yamada H.; Hirai T. “Proton conduction in tetra-n-butylammonium bromide semiclathrate hydrate” Solid State Ionics , Vol. 393, 116188 (2023) doi:10.1016/j.ssi.2023.116188",
             "doi": "https://doi.org/10.1016/j.ssi.2023.116188"
           },
           {
-            "text": "Jung Y.; Abbas H.G.; Kim S.; Kim B.; Cho J.; Han S.; Song H.; Takaoka Y.; Song J.T.; Ishihara T.; Choi C.H.; Ringe S.; Oh J. \"Understanding Electrochemical CO2Reduction Selectivity of Cu Binary Alloys from Electronic Structure Descriptors\" Journal of the American Chemical Society (2025)",
+            "text": "Jung Y.; Abbas H.G.; Kim S.; Kim B.; Cho J.; Han S.; Song H.; Takaoka Y. ; Song J.T.; Ishihara T.; Choi C.H.; Ringe S.; Oh J. “Understanding Electrochemical CO 2 Reduction Selectivity of Cu Binary Alloys from Electronic Structure Descriptors” Journal of the American Chemical Society , Vol. 147(43), pp. 39796–39804 (2025) doi:10.1021/jacs.5c14093",
             "doi": "https://doi.org/10.1021/jacs.5c14093"
           },
           {
-            "text": "Shimada J.; Shimada M.; Sugahara T.; Tsunashima K.; Takaoka Y.; Tani A. \"Phase equilibrium temperature and dissociation enthalpy in the tri-n-butylalkylphosphonium bromide semiclathrate hydrate systems\" Chemical Engineering Science (2021)",
+            "text": "Shimada J.; Shimada M.; Sugahara T.; Tsunashima K.; Takaoka Y. ; Tani A. “Phase equilibrium temperature and dissociation enthalpy in the tri-n-butylalkylphosphonium bromide semiclathrate hydrate systems” Chemical Engineering Science , Vol. 236, 116514 (2021) doi:10.1016/j.ces.2021.116514",
             "doi": "https://doi.org/10.1016/j.ces.2021.116514"
           },
           {
-            "text": "Jinguji K.; Watanabe M.; Morita R.; Takaoka Y.; Hossain M.S.; Song J.T.; Takagaki A.; Matsuda J.; Ishihara T. \"Visible light driven hydrogen peroxide production by oxygen and phosphorus co-doped CoP-C3N4 photocatalyst\" Catalysis Today (2024)",
+            "text": "Jinguji K.; Watanabe M.; Morita R.; Takaoka Y. ; Hossain M.S.; Song J.T.; Takagaki A.; Matsuda J.; Ishihara T. “Visible light driven hydrogen peroxide production by oxygen and phosphorus co-doped CoP-C3N4 photocatalyst” Catalysis Today , Vol. 426, 114400 (2024) doi:10.1016/j.cattod.2023.114400",
             "doi": "https://doi.org/10.1016/j.cattod.2023.114400"
           },
           {
-            "text": "Takaoka Y.; Song J.T.; Takagaki A.; Watanabe M.; Ishihara T. \"Bi/UiO-66-derived electrocatalysts for high CO2-to-formate conversion rate\" Applied Catalysis B: Environmental (2023)",
+            "text": "Takaoka Y. ; Song J.T.; Takagaki A.; Watanabe M.; Ishihara T. “Bi/UiO-66-derived electrocatalysts for high CO 2 -to-formate conversion rate” Applied Catalysis B: Environmental , Vol. 326, 122400 (2023) doi:10.1016/j.apcatb.2023.122400",
             "doi": "https://doi.org/10.1016/j.apcatb.2023.122400"
           },
           {
-            "text": "Takaoka Y.; Choi E.; Kim H.-Y.; Song J.T.; Kim H.S.; Watanabe M.; Inada M.; Ishihara T. \"Bi–Zr-Modulated CO2 Microenvironment Enables High-Rate CO2 Electroreduction\" ChemSusChem (2025)",
+            "text": "Takaoka Y. ; Choi E.; Kim H.-Y.; Song J.T.; Kim H.S.; Watanabe M.; Inada M.; Ishihara T. “Bi–Zr-Modulated CO 2 Microenvironment Enables High-Rate CO 2 Electroreduction” ChemSusChem , Vol. 18(23), e202501024 (2025) doi:10.1002/cssc.202501024",
             "doi": "https://doi.org/10.1002/cssc.202501024"
           },
           {
-            "text": "Takaoka Y.; Song J.T.; Watanabe M.; Inada M.; Ishihara T. \"Controlling CO/H2 selectivity in CO2 electrolysis via Ni-Co coordinated nitrogen-doped carbon in various pH conditions\" Applied Catalysis A: General (2025)",
+            "text": "Takaoka Y. ; Song J.T.; Watanabe M.; Inada M.; Ishihara T. “Controlling CO/H 2 selectivity in CO 2 electrolysis via Ni-Co coordinated nitrogen-doped carbon in various pH conditions” Applied Catalysis A: General , Vol. 707, 120502 (2025) doi:10.1016/j.apcata.2025.120502",
             "doi": "https://doi.org/10.1016/j.apcata.2025.120502"
           }
         ],
@@ -1597,25 +1597,25 @@
       "achievements": {
         "papers": [
           {
-            "text": "Chen Y.; Sumiyoshi D.; Morita Y.; Ishibashi S.; Wang X.; Yamamoto T.; Ueno T.; Oh J. \"BI-Tech: An IoT-Based Behavioral Intervention System for User-Driven Energy Optimization in Commercial Spaces\" IEEE Access (2025)",
+            "text": "Chen Y. ; Sumiyoshi D.; Morita Y.; Ishibashi S.; Wang X.; Yamamoto T.; Ueno T.; Oh J. “BI-Tech: An IoT-Based Behavioral Intervention System for User-Driven Energy Optimization in Commercial Spaces” IEEE Access , Vol. 13, pp. 166853–166872 (2025) doi:10.1109/ACCESS.2025.3607329",
             "doi": "https://doi.org/10.1109/ACCESS.2025.3607329"
           },
           {
-            "text": "Chen Y.; Sumiyoshi D.; Wang X.; Yamamoto T.; Ueno T.; Oh J. \"A Foundational Edge-AI Sensing Framework for Occupancy-Driven Energy Management in SMOs\" IoT (2026)",
+            "text": "Chen Y. ; Sumiyoshi D.; Wang X.; Yamamoto T.; Ueno T.; Oh J. “A Foundational Edge-AI Sensing Framework for Occupancy-Driven Energy Management in SMOs” IoT , Vol. 7(1), 25 (2026) doi:10.3390/iot7010025",
             "doi": "https://doi.org/10.3390/iot7010025"
           }
         ],
         "conferences": [
           {
-            "text": "Chen Y.; Sumiyoshi D.; Pan Y.; Yamamoto T.; Ueno T.; Oh J. \"A Low-Cost IoT Framework for Device-Free Human Counting and Lighting Energy Control in Commercial Spaces\" Proceedings of the IEEE International Conference on Computer Communication and the Internet, ICCCI (2025)",
+            "text": "Chen Y. ; Sumiyoshi D.; Pan Y.; Yamamoto T.; Ueno T.; Oh J. “A Low-Cost IoT Framework for Device-Free Human Counting and Lighting Energy Control in Commercial Spaces” Proceedings of the IEEE International Conference on Computer Communication and the Internet, ICCCI , pp. 50–56 (2025) doi:10.1109/ICCCI65070.2025.11158700",
             "doi": "https://doi.org/10.1109/ICCCI65070.2025.11158700"
           },
           {
-            "text": "Wang X.; Chen Y.; Ishibashi S.; Oh J.; Ueno T.; Sumiyoshi D. \"RL-LSTM and Heuristic Optimization for Energy-Efficient Office Management\" 2025 6th International Conference on Information Science, Parallel and Distributed Systems, ISPDS 2025 (2025)",
+            "text": "Wang X.; Chen Y. ; Ishibashi S.; Oh J.; Ueno T.; Sumiyoshi D. “RL-LSTM and Heuristic Optimization for Energy-Efficient Office Management” 2025 6th International Conference on Information Science, Parallel and Distributed Systems, ISPDS 2025 , pp. 83–91 (2025) doi:10.1109/ISPDS67367.2025.11391185",
             "doi": "https://doi.org/10.1109/ISPDS67367.2025.11391185"
           },
           {
-            "text": "Chen Y.; Sumiyoshi D.; Sakai R.; Yamamoto T.; Ueno T.; Oh J. \"Development of Low-Cost IoT Units for Thermal Comfort Measurement and AC Energy Consumption Prediction System\" E3S Web of Conferences (2025)",
+            "text": "Chen Y. ; Sumiyoshi D.; Sakai R.; Yamamoto T.; Ueno T.; Oh J. “Development of Low-Cost IoT Units for Thermal Comfort Measurement and AC Energy Consumption Prediction System” E3S Web of Conferences , Vol. 672, 01055 (2025) doi:10.1051/e3sconf/202567201055",
             "doi": "https://doi.org/10.1051/e3sconf/202567201055"
           }
         ],
@@ -1634,7 +1634,7 @@
       "supervisor_name": "Prof. Takefumi MOKUDAI",
       "supervisor_name_jp": "目代 武史 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E7%9B%AE%E4%BB%A3-%E6%AD%A6%E5%8F%B2/",
-      "photo": "assets/photos/2024/img_fellow_2024_haomin.jpg",
+      "photo": "assets/photos/2024/fu_haomin.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "The Changing Landscape of EV Business Ecosystem: A Downstream Value Chain Analysis",
@@ -1684,7 +1684,7 @@
       "supervisor_name": "Prof. Yusuke KOSUGA",
       "supervisor_name_jp": "小菅 佑輔 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%B0%8F%E8%8F%85-%E4%BD%91%E8%BC%94/",
-      "photo": "assets/photos/2024/img_fellow_2024_oyama.jpg",
+      "photo": "assets/photos/2024/oyama_itsuki.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Optimizing heat sink design in nuclear fusion reactors using topology optimisation",
@@ -1766,7 +1766,7 @@
       "supervisor_name": "Prof. Shigenori FUJIKAWA",
       "supervisor_name_jp": "藤川 茂紀 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E8%97%A4%E5%B7%9D-%E8%8C%82%E7%B4%80/",
-      "photo": "assets/photos/2024/img_fellow_2024_matsumoto.jpg",
+      "photo": "assets/photos/2024/matsumoto_kodai.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Development of Three-Dimensional Chiral Plasmonic Meta-clusters with Circular Polarization Characteristics for Effective Utilization of Sunlight",
@@ -1833,7 +1833,7 @@
       "supervisor_name": "Prof. Noriko SATO",
       "supervisor_name_jp": "佐藤 宣子 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E4%BD%90%E8%97%A4-%E5%AE%A3%E5%AD%90/",
-      "photo": "assets/photos/2024/img_fellow_2024_ueno.jpg",
+      "photo": "assets/photos/2024/ueno_ryudai.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Prediction of Future Afforestation Sites and Sustainable Forest Management in Kyushu",
@@ -1899,7 +1899,7 @@
       "supervisor_name": "Prof. Hidemichi FUJII",
       "supervisor_name_jp": "藤井 秀道 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E8%97%A4%E4%BA%95-%E7%A7%80%E9%81%93/",
-      "photo": "assets/photos/2024/img_fellow_2024_shen.jpg",
+      "photo": "assets/photos/2024/shen_siyu.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Environmental-economic trade-offs of membrane-based direct air capture technologies using life cycle assessment",
@@ -1916,7 +1916,7 @@
       "achievements": {
         "papers": [
           {
-            "text": "Tianhui Fan, Siyu Shen, Chun Yat (Benjamin) Sit, Paul J.A. Kenis, Andrew Chapman. “Environmental, economic and social trade-offs of membrane-based direct air capture technologies integrated with CO2 conversion using life cycle assessment” Journal of CO2 Utilization (Volume 91, January 2025, 103002) doi:10.1016/j.jcou.2024.103002",
+            "text": "Tianhui Fan, Siyu Shen, Chun Yat (Benjamin) Sit, Paul J.A. Kenis, Andrew Chapman. “Environmental, economic and social trade-offs of membrane-based direct air capture technologies integrated with CO 2 conversion using life cycle assessment” Journal of CO 2 Utilization (Volume 91, January 2025, 103002) doi:10.1016/j.jcou.2024.103002",
             "doi": "https://doi.org/10.1016/j.jcou.2024.103002"
           },
           {
@@ -1957,7 +1957,7 @@
       "supervisor_name": "Prof. Kazunari SASAKI",
       "supervisor_name_jp": "佐々木 一成 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E4%BD%90%E3%80%85%E6%9C%A8-%E4%B8%80%E6%88%90/",
-      "photo": "assets/photos/2024/img_fellow_2024_nakamura.jpg",
+      "photo": "assets/photos/2024/nakamura_shogo.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Design and Evaluation of PtW-Based Catalysts for Enhancing Fuel Starvation Tolerance in PEFCs",
@@ -2016,7 +2016,7 @@
       "supervisor_name": "Prof. Shigemi KAGAWA",
       "supervisor_name_jp": "加河 茂美 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/",
-      "photo": "assets/photos/2024/img_fellow_2024_shoda.jpg",
+      "photo": "assets/photos/2024/shoda_tomomi.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "CO₂ Reduction Potential of Global Supply Chain Networks: An MRIO Approach Incorporating Maritime Network Structures",
@@ -2034,11 +2034,11 @@
         "papers": [],
         "conferences": [
           {
-            "text": "Shoda Tomomi, Maeno Keitaro, Shimotsuura Taiga, Kagawa Shigemi. “CO2 Reduction Potential of Global Supply Chain Networks: An MRIO Approach Incorporating Maritime Network Structures” 12th International Conference on Industrial Ecology , Singapore, Singapore (2025/07) [international, poster]",
+            "text": "Shoda Tomomi, Maeno Keitaro, Shimotsuura Taiga, Kagawa Shigemi. “CO 2 Reduction Potential of Global Supply Chain Networks: An MRIO Approach Incorporating Maritime Network Structures” 12th International Conference on Industrial Ecology , Singapore, Singapore (2025/07) [international, poster]",
             "doi": null
           },
           {
-            "text": "Shoda Tomomi, Maeno Keitaro, Shimotsuura Taiga, Kagawa Shigemi. “CO2 Reduction Potential of Global Supply Chain Networks: An MRIO Approach Incorporating Maritime Network Structures” 31th International Input-Output Association Conference , Male, Maldives (2025/07) [international, oral]",
+            "text": "Shoda Tomomi, Maeno Keitaro, Shimotsuura Taiga, Kagawa Shigemi. “CO 2 Reduction Potential of Global Supply Chain Networks: An MRIO Approach Incorporating Maritime Network Structures” 31th International Input-Output Association Conference , Male, Maldives (2025/07) [international, oral]",
             "doi": null
           },
           {
@@ -2065,7 +2065,7 @@
       "supervisor_name": "Prof. Akihito OZAKI",
       "supervisor_name_jp": "尾崎 明仁 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%B0%BE%E5%B4%8E-%E6%98%8E%E4%BB%81/",
-      "photo": "assets/photos/2024/img_fellow_2024_xianzhe.jpg",
+      "photo": "assets/photos/2024/yang_xianzhe.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Research on the digital twin of building thermal environment utilizing digital transformation technology",
@@ -2135,7 +2135,7 @@
       "supervisor_name": "Prof. Daiji KATO",
       "supervisor_name_jp": "加藤 太治 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E8%97%A4-%E5%A4%AA%E6%B2%BB/",
-      "photo": "assets/photos/2024/img_fellow_2024_noguchi.jpg",
+      "photo": "assets/photos/2024/noguchi_yuki.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Study of F82H precipitate amorphisation in a DEMO fusion reactor",
@@ -2192,7 +2192,7 @@
       "supervisor_name": "Prof. Hironobu OZAWA",
       "supervisor_name_jp": "小澤 弘宜 准教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%B0%8F%E6%BE%A4-%E5%BC%98%E5%AE%9C/",
-      "photo": "assets/photos/2024/img_fellow_2024_tomita.jpg",
+      "photo": "assets/photos/2024/tomita_yuki.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Highly Efficient Ammonia Oxidation by a Macrocyclic Molecular Catalyst",
@@ -2241,7 +2241,7 @@
       "supervisor_name": "Prof. Prasanna DIVIGALPITIYA",
       "supervisor_name_jp": "Prasanna Divigalpitiya 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/divigalpitiya/",
-      "photo": "assets/photos/2024/img_fellow_2024_zhang.jpg",
+      "photo": "assets/photos/2024/zhang_kaili.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "The impact mechanism of multi-scale urban built environment on health and well-being of residents",
@@ -2286,7 +2286,7 @@
       "supervisor_name": "Prof. Motonori WATANABE",
       "supervisor_name_jp": "渡邊 源規 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E6%B8%A1%E9%82%8A-%E6%BA%90%E8%A6%8F/",
-      "photo": "assets/photos/2025/07-Kohei-SAWADA-R-230x300.png",
+      "photo": "assets/photos/2025/sawada_kohei.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Development of high-efficiency photocatalytic water-splitting systems using gallium-indium compounds",
@@ -2340,7 +2340,7 @@
       "supervisor_name": "Prof. Yoshihiro YAMAZAKI",
       "supervisor_name_jp": "山崎 仁丈 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%B1%B1%E5%B4%8E-%E4%BB%81%E4%B8%88/",
-      "photo": "assets/photos/2025/09-Nozomu-GOTO-R-230x300.png",
+      "photo": "assets/photos/2025/goto_nozomi.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Accelerated exploration of proton-conducting solid oxide fuel cell cathode materials using machine learning",
@@ -2377,7 +2377,7 @@
       "supervisor_name": "Prof. Motonori WATANABE",
       "supervisor_name_jp": "渡邊 源規 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E6%B8%A1%E9%82%8A-%E6%BA%90%E8%A6%8F/",
-      "photo": "assets/photos/2025/06-Qi-Shi-R-230x300.png",
+      "photo": "assets/photos/2025/shi_qi.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Improvement of tubular solid oxide reversible cells using LSGM electrolyte via dip coating",
@@ -2409,7 +2409,7 @@
       "supervisor_name": "Prof. Hideki SHIMADA",
       "supervisor_name_jp": "島田 英樹 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%B3%B6%E7%94%B0-%E8%8B%B1%E6%A8%B9/",
-      "photo": "assets/photos/2025/11-Rika-IRIGUCHI-R-230x300.png",
+      "photo": "assets/photos/2025/iriguchi_rika.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Development of low environmental impact hydrogen production technology from biomass fermentation processes",
@@ -2426,7 +2426,7 @@
       "achievements": {
         "papers": [
           {
-            "text": "入口梨佳; 河合頼芽; 濵中晃弘; スゲンワヒュディ; 笹岡孝司; 島田英樹; 阿部智彦. “CO2ナノバブルを適用した低炭素型セメント材料の開発とCO2固定および材料特性への影響評価に関する研究” 材料, 2026, 75, 3, pp.未定 (2025) [accepted] doi:未定",
+            "text": "入口梨佳; 河合頼芽; 濵中晃弘; スゲンワヒュディ; 笹岡孝司; 島田英樹; 阿部智彦. “CO 2 ナノバブルを適用した低炭素型セメント材料の開発とCO 2 固定および材料特性への影響評価に関する研究” 材料, 2026, 75, 3, pp.未定 (2025) [accepted] doi:未定",
             "doi": "https://doi.org/未定"
           },
           {
@@ -2444,7 +2444,7 @@
             "doi": null
           },
           {
-            "text": "入口梨佳、河合頼芽、濵中晃弘、笹岡孝司、島田英樹、スゲンワヒュディ、阿部智彦. “高炉セメントへのCO2ナノバブル水の適用がCO2固定および材料特性に与える影響に関する研究” 第43 回 西日本岩盤工学シンポジウム , 長崎大学文教キャンパス、長崎 (2025/08) [oral]",
+            "text": "入口梨佳、河合頼芽、濵中晃弘、笹岡孝司、島田英樹、スゲンワヒュディ、阿部智彦. “高炉セメントへのCO 2 ナノバブル水の適用がCO 2 固定および材料特性に与える影響に関する研究” 第43 回 西日本岩盤工学シンポジウム , 長崎大学文教キャンパス、長崎 (2025/08) [oral]",
             "doi": null
           },
           {
@@ -2484,7 +2484,7 @@
       "supervisor_name": "Prof. Koji NAKABAYASHI",
       "supervisor_name_jp": "中林 康治 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E4%B8%AD%E6%9E%97-%E5%BA%B7%E6%B2%BB/",
-      "photo": "assets/photos/2025/03-Ryosi-ODA-R-230x300.png",
+      "photo": "assets/photos/2025/oda_ryoshi.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Research on turquoise hydrogen synthesis using carbon-based catalysts and effective utilisation of byproduct carbon",
@@ -2539,7 +2539,7 @@
       "supervisor_name": "Prof. Hiroshi IDEI",
       "supervisor_name_jp": "出射 浩 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%87%BA%E5%B0%84-%E6%B5%A9/",
-      "photo": "assets/photos/2025/02-Takahiro-Yamaguchi-R-230x300.png",
+      "photo": "assets/photos/2025/yamaguchi_takahiro.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Application of machine learning for real-time control of tokamak plasma configuration",
@@ -2581,7 +2581,7 @@
       "supervisor_name": "Prof. Hideki SHIMADA",
       "supervisor_name_jp": "島田 英樹 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%B3%B6%E7%94%B0-%E8%8B%B1%E6%A8%B9/",
-      "photo": "assets/photos/2025/08-Sheng-WANG-R-230x300.png",
+      "photo": "assets/photos/2025/wang_sheng.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Investigation of gas-liquid two-phase flow mechanisms in microscopic fractures under reservoir in-situ thermo-pressure conditions",
@@ -2622,7 +2622,7 @@
       "supervisor_name": "Prof. Hisahiro EINAGA",
       "supervisor_name_jp": "永長 久寛 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E6%B0%B8%E9%95%B7-%E4%B9%85%E5%AF%9B/",
-      "photo": "assets/photos/2025/01-Chenyu-YAN-R-230x300.png",
+      "photo": "assets/photos/2025/yan_chenyu.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Microwave-assisted catalytic degradation of plastics and other organic wastes",
@@ -2659,7 +2659,7 @@
       "supervisor_name": "Prof. Akihide FUJISAWA",
       "supervisor_name_jp": "藤澤 彰英 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E8%97%A4%E6%BE%A4-%E5%BD%B0%E8%8B%B1/",
-      "photo": "assets/photos/2025/05-Yuki-NISHIMURA-R-230x300.png",
+      "photo": "assets/photos/2025/nishimura_yuki.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Research on magnetised plasma structure and fluctuations using tomography systems",
@@ -2705,7 +2705,7 @@
       "supervisor_name": "Prof. Jin MIYAWAKI",
       "supervisor_name_jp": "宮脇 仁 准教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E5%AE%AE%E8%84%87-%E4%BB%81/",
-      "photo": "assets/photos/2025/04-Xiazhe-ZHAI-R-230x300.png",
+      "photo": "assets/photos/2025/zhai_xiazhe.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Creating high-value carbon materials from carbonised products and byproducts of locally-sourced Japanese biomass",
@@ -2779,7 +2779,7 @@
       "supervisor_name": "Prof. Andrew CHAPMAN",
       "supervisor_name_jp": "アンドリュー・チャップマン 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/chapman/",
-      "photo": "assets/photos/2025/00-Jingxuan-ZHANG-R-new-230x300.png",
+      "photo": "assets/photos/2025/zhang_jingxuan.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Decarbonizing Compact Cities: Strategic Planning for AEV-Based Public Transport",
@@ -2829,7 +2829,7 @@
       "supervisor_name": "Prof. Kohei ITO",
       "supervisor_name_jp": "伊藤 衡平 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%E4%BC%8A%E8%97%A4-%E8%A1%A1%E5%B9%B3/",
-      "photo": "assets/photos/2025/10-Zhanyi-XIANG-R-230x300.png",
+      "photo": "assets/photos/2025/xiang_zhanyi.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Elucidation of electrochemical reaction mechanisms in H₂O–CO₂ co-electrolysis of SOEC and construction of numerical analysis methods",
@@ -2866,7 +2866,7 @@
       "supervisor_name": "Prof. Masamichi KOHNO",
       "supervisor_name_jp": "河野 正道 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%e6%b2%b3%e9%87%8e-%e6%ad%a3%e9%81%93/",
-      "photo": "assets/photos/chang_shih-peng.jpeg",
+      "photo": "assets/photos/2026/chang_shih-peng.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Deep-Learning-Based Automated Analysis of Droplet-Impact Splashing Behavior and High-Precision Boundary Estimation",
@@ -2908,7 +2908,7 @@
       "supervisor_name": "Prof. Haruichi KANAYA",
       "supervisor_name_jp": "金谷 晴一 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%e9%87%91%e8%b0%b7-%e6%99%b4%e4%b8%80/",
-      "photo": "assets/photos/placeholder-portrait.svg",
+      "photo": "assets/photos/2026/chen_hao.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Hybrid Electromagnetic System for Highway Dynamic Charging: S-CPT × Planar Antennas × Energy Harvesting",
@@ -2945,7 +2945,7 @@
       "supervisor_name": "Prof. Kyaw THU",
       "supervisor_name_jp": "Kyaw Thu 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/kyaw-thu/",
-      "photo": "assets/photos/placeholder-portrait.svg",
+      "photo": "assets/photos/2026/jiang_ziqi.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Reactive-Step Molecular Dynamics for Mechanistic Understanding of SEI Formation in Lithium-Ion Batteries",
@@ -2962,11 +2962,11 @@
       "achievements": {
         "papers": [
           {
-            "text": "Jiang Z , Tian Y, Li K, Zhao Z, Liu N, Zhang H. “Research on refrigerant charge determination under different compressor speed and its effects on the performance of transcritical CO2 air-conditioning heat pump system in electric vehicle” Energy , Vol. 296, 131192 (2024) [peer-reviewed]",
+            "text": "Jiang Z , Tian Y, Li K, Zhao Z, Liu N, Zhang H. “Research on refrigerant charge determination under different compressor speed and its effects on the performance of transcritical CO 2 air-conditioning heat pump system in electric vehicle” Energy , Vol. 296, 131192 (2024) [peer-reviewed]",
             "doi": null
           },
           {
-            "text": "Jiang Z , Li M, Liu Z, Tian Y, Li K, Liu N, et al. “Performance analysis and thermal comfort evaluation of a CO2 transcritical air-conditioning system for cabin thermal management of electric vehicles” Journal of Cleaner Production , Vol. 479, 144023 (2024) [peer-reviewed]",
+            "text": "Jiang Z , Li M, Liu Z, Tian Y, Li K, Liu N, et al. “Performance analysis and thermal comfort evaluation of a CO 2 transcritical air-conditioning system for cabin thermal management of electric vehicles” Journal of Cleaner Production , Vol. 479, 144023 (2024) [peer-reviewed]",
             "doi": null
           },
           {
@@ -2988,7 +2988,7 @@
         ],
         "conferences": [
           {
-            "text": "Jiang Z , Wang Z, Liu Z, et al. “Study on Refrigerant Charge Determination of a Transcritical CO2 Air-Conditioning Heat Pump System in Electric Vehicle” International Symposium on Advanced Mechanical & Power Engineering (ISAPE) , University of Malaysia Sabah (2024/12) [International, Oral]",
+            "text": "Jiang Z , Wang Z, Liu Z, et al. “Study on Refrigerant Charge Determination of a Transcritical CO 2 Air-Conditioning Heat Pump System in Electric Vehicle” International Symposium on Advanced Mechanical & Power Engineering (ISAPE) , University of Malaysia Sabah (2024/12) [International, Oral]",
             "doi": null
           },
           {
@@ -3028,7 +3028,7 @@
       "supervisor_name": "Prof. Koji NAKABAYASHI",
       "supervisor_name_jp": "中林 康治 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%e4%b8%ad%e6%9e%97-%e5%ba%b7%e6%b2%bb/",
-      "photo": "assets/photos/placeholder-portrait.svg",
+      "photo": "assets/photos/2026/kotajima_masaru.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "First-Principles-Coupled Investigation of Refractory Carbon-Waste Recycling for a New Carbon-Resource Cycle",
@@ -3097,7 +3097,7 @@
       "supervisor_name": "Prof. Takahiko MIYAZAKI",
       "supervisor_name_jp": "宮崎 隆彦 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%e5%ae%ae%e5%b4%8e-%e9%9a%86%e5%bd%a6/",
-      "photo": "assets/photos/placeholder-portrait.svg",
+      "photo": "assets/photos/2026/mochizuki_takeshi.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Thermo-Informatics Elucidation of Heat-Transfer Enhancement Mechanisms in Flow Boiling",
@@ -3160,7 +3160,7 @@
       "supervisor_name": "Prof. Motonori WATANABE",
       "supervisor_name_jp": "渡邊 源規 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%e6%b8%a1%e9%82%8a-%e6%ba%90%e8%a6%8f/",
-      "photo": "assets/photos/placeholder-portrait.svg",
+      "photo": "assets/photos/2026/nakagawa_niki.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "MS-SOFC Cell-Stack Fabrication and Structural Evaluation Toward Practical Implementation",
@@ -3192,7 +3192,7 @@
       "supervisor_name": "Prof. Gen INOUE",
       "supervisor_name_jp": "井上 元 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%e4%ba%95%e4%b8%8a-%e5%85%83/",
-      "photo": "assets/photos/placeholder-portrait.svg",
+      "photo": "assets/photos/2026/omoto_shinnosuke.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Elucidating PFAS Transport and Adsorption–Desorption Properties in Soil",
@@ -3275,7 +3275,7 @@
       "supervisor_name": "Prof. Zhenying WANG",
       "supervisor_name_jp": "王 振英 教授",
       "supervisor_url": "https://hyoka.ofc.kyushu-u.ac.jp/html/100020754_en.html",
-      "photo": "assets/photos/wang_weifeng.jpeg",
+      "photo": "assets/photos/2026/wang_weifeng.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Photothermal Nanoparticle-Enhanced Liquid Evaporation for Solar-Driven Energy and Water Harvest",
@@ -3291,6 +3291,14 @@
       },
       "achievements": {
         "papers": [
+          {
+            "text": "Wang, Weifeng , Karapetsas, G., Kita, Y. and Wang, Z. “Solar radiation reshapes the deposition patterns of plasmonic nanosuspension droplets” Langmuir , Vol. 42, No. 14, pp. 10067–10077 (2026) [peer-reviewed] — 10.1021/acs.langmuir.6c00247",
+            "doi": "https://doi.org/10.1021/acs.langmuir.6c00247"
+          },
+          {
+            "text": "Wang, Weifeng , Huang, X., Wang, K., Hao, G., Luo, X., Teng, L. and Jiang, L. “Flow and electric field affect ammonia absorption into evaporating sessile water droplets” Chemical Engineering Science , Vol. 327, 123571 (2026) [peer-reviewed] — 10.1016/j.ces.2026.123571",
+            "doi": "https://doi.org/10.1016/j.ces.2026.123571"
+          },
           {
             "text": "Wang, Weifeng , Huang, X., Wang, L., Teng, L., Luo, X., Li, W., Li, J., Yin, P., Luo, Y. and Jiang, L. “Study on the mechanism of sessile droplets evaporation enhanced by the electric field” Chemical Engineering Science , Vol. 288, 119768 (2024) [peer-reviewed] — 10.1016/j.ces.2024.119768",
             "doi": "https://doi.org/10.1016/j.ces.2024.119768"
@@ -3310,38 +3318,39 @@
         ],
         "conferences": [
           {
-            "text": "Teng, L., Wang, Weifeng , Huang, X., Li, W., Luo, Y. and Jiang, L. “Study on the mechanism of droplet evaporation on substrates with different wettability” 2022 Chinese Society of Engineering Thermophysics — Multiphase Flow Annual Conference , Zhuhai, China (2023/02) [Domestic, Oral]",
+            "text": "Wang, Weifeng , Karapetsas, G., Kita, Y. and Wang, Z. “Solar radiation reshapes the deposition patterns of plasmonic nanosuspension droplets” 63rd National Heat Transfer Symposium of Japan (第63回日本伝熱シンポジウム) , Sapporo, Japan (2026/05) [Domestic, Oral, accepted]",
             "doi": null
           },
           {
-            "text": "Teng, L., Wang, F., Wang, Weifeng , Luo, X. and Huang, X. “Study on the mechanism of suspended droplet evaporation under the direct current electric field” 2023 Chinese Society of Engineering Thermophysics — Multiphase Flow Annual Conference , Shanghai, China (2023/10) [Domestic, Oral]",
+            "text": "Wang, Weifeng , Karapetsas, G., Kita, Y. and Wang, Z. “Solar radiation reshapes deposition patterns from drying plasmonic colloidal droplets” Heat Transfer Society of Japan, Kyushu Branch — 64th Young Researchers’ Meeting (日本伝熱学会九州支部 第64期若手発表) , Online (2026/03) [Domestic, Oral]",
             "doi": null
           }
         ],
-        "awards": [],
+        "awards": [
+          {
+            "text": "Outstanding Master’s Thesis Award (優秀修士論文賞) — Fuzhou University (2025)",
+            "doi": null
+          },
+          {
+            "text": "MEXT Honors Scholarship for Privately-Financed International Students (文部科学省外国人留学生学習奨励費) — JASSO (2025)",
+            "doi": null
+          },
+          {
+            "text": "Outstanding Graduate (優秀卒業生) — Fuzhou University (2025)",
+            "doi": null
+          },
+          {
+            "text": "Academic Excellence Scholarship (学業優秀特待生奨学金) — Fuzhou University (2025)",
+            "doi": null
+          },
+          {
+            "text": "National Scholarship for Graduate Students (大学院生国家奨学金) (2023, 2024)",
+            "doi": null
+          }
+        ],
         "other": [
           {
-            "text": "Graduate with Honors — 1st place, College of Chemical Engineering, Fuzhou University (1/285) (2025)",
-            "doi": null
-          },
-          {
-            "text": "Merit Student (Top 1%) — Fuzhou University (2023)",
-            "doi": null
-          },
-          {
-            "text": "2nd Prize, Academic Poster Exhibition — Fuzhou University (2023)",
-            "doi": null
-          },
-          {
-            "text": "3rd National Prize, 1st Oil & Gas Storage and Transportation Engineering Numerical Simulation Competition (2022)",
-            "doi": null
-          },
-          {
-            "text": "National Recommendation of Excellent Undergraduate Students for Exemption from Graduate Entrance Examination (2021)",
-            "doi": null
-          },
-          {
-            "text": "Merit Student — Fuzhou University (2021)",
+            "text": "Huang, X., Wang, Weifeng and Teng, L. “An experimental device and test method for the heat and mass transfer characteristics of ammonia gas absorbed by a sessile droplet” (in Chinese) — China Invention Patent, ZL 202310040998.7 [granted]",
             "doi": null
           }
         ]
@@ -3358,7 +3367,7 @@
       "supervisor_name": "Prof. Susumu FUJII",
       "supervisor_name_jp": "藤井 進 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%e8%97%a4%e4%ba%95-%e9%80%b2/",
-      "photo": "assets/photos/placeholder-portrait.svg",
+      "photo": "assets/photos/2026/yoshida_shotaro.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Specifying Proton-Conductor Requirements for Stable Mass Production of Solid Oxide Fuel Cells",
@@ -3437,7 +3446,7 @@
       "supervisor_name": "Prof. Kosei YAMAUCHI",
       "supervisor_name_jp": "山内 幸正 教授",
       "supervisor_url": "https://q-pit.kyushu-u.ac.jp/teacher/%e5%b1%b1%e5%86%85%e3%80%80%e5%b9%b8%e6%ad%a3/",
-      "photo": "assets/photos/placeholder-portrait.svg",
+      "photo": "assets/photos/2026/zheng_qingen.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Design of an Electron-Rich Co–NHC Catalyst for Mild-Condition Nitrogen Reduction",
@@ -3490,7 +3499,7 @@
       "supervisor_name": "Prof. Hiroaki WATANABE",
       "supervisor_name_jp": "渡邊 裕章 教授",
       "supervisor_url": "https://hyoka.ofc.kyushu-u.ac.jp/html/100021709_en.html",
-      "photo": "assets/photos/placeholder-portrait.svg",
+      "photo": "assets/photos/2026/zou_zeyu.jpg",
       "source_url": null,
       "k2spring": {
         "title_en": "Machine-Learning-Enhanced Reactive Molecular Dynamics for Ammonia Combustion",
