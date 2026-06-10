@@ -2289,15 +2289,15 @@
       "photo": "assets/photos/2025/sawada_kohei.jpg",
       "source_url": null,
       "k2spring": {
-        "title_en": "Development of high-efficiency photocatalytic water-splitting systems using gallium-indium compounds",
-        "title_jp": "ガリウムインジウム系化合物を用いた高効率光水分解系の開発",
-        "abstract_en": "This research synthesises InGaN and GaN/InGaN powders via solid-phase and liquid-phase reaction methods to develop economically viable photocatalysts for solar-driven water splitting. Both experimental and theoretical approaches are employed to elucidate the detailed catalytic mechanisms governing photoelectrochemical hydrogen production.",
-        "abstract_jp": "固相・液相反応法によるInGaNおよびGaN/InGaN粉末の合成を通じて、経済的に実現可能な光水分解用光触媒の開発を行う研究です。実験と理論の両アプローチにより光電気化学的水素生成を支配する触媒機構の詳細解明を目指します。"
+        "title_en": "Development of photocatalytic water splitting on nitride-based thin films",
+        "title_jp": "窒化物系薄膜デバイスの光触媒水分解への応用",
+        "abstract_en": "Photocatalytic water splitting is strongly required as a practical green-hydrogen production route for achieving a carbon-neutral society. In this study, I investigate the development of nitride-based materials for photocatalytic water splitting. These materials have attracted attention as high-performance materials in electronic and semiconductor devices, and they possess redox potentials suitable for water-splitting reactions as well as band gaps that enable visible-light response.",
+        "abstract_jp": "光触媒水分解は、カーボンニュートラル社会へ向けてのグリーン水素製造法として実用化が期待されている。本研究では、電子デバイス・半導体デバイスにおいて高性能材料として注目されている、水分解反応に適した酸化還元電位を有し、かつ可視光に応答するバンドギャップを備えた窒化物系デバイスの光触媒水分解への応用を検討する。"
       },
       "phd": {
-        "title_en": "Development of high-efficiency photocatalytic water-splitting systems using gallium-indium compounds",
-        "title_jp": "ガリウムインジウム系化合物を用いた高効率光水分解系の開発",
-        "abstract_en": "This research synthesises InGaN and GaN/InGaN powders via solid-phase and liquid-phase reaction methods to develop economically viable photocatalysts for solar-driven water splitting. Both experimental and theoretical approaches are employed to elucidate the detailed catalytic mechanisms governing photoelectrochemical hydrogen production.",
+        "title_en": "Study on the photocatalytic activities of gallium–indium-based materials",
+        "title_jp": "ガリウム-インジウム系化合物を用いた光触媒反応に関する研究",
+        "abstract_en": "Gallium–indium-based semiconductors have attracted attention as highly efficient photocatalysts; however, their detailed reaction mechanisms remain insufficiently understood. In this study, powdered catalysts based on gallium–indium materials such as InGaO3 and InGaN are synthesised using simple solid-state and liquid-phase reaction methods. Their photocatalytic performance is evaluated in water-splitting reactions and various oxidation reactions under light irradiation, and the detailed reaction mechanisms are investigated.",
         "abstract_jp": null
       },
       "achievements": {
@@ -2325,7 +2325,12 @@
             "doi": null
           }
         ],
-        "awards": [],
+        "awards": [
+          {
+            "text": "Junichi Miyamoto Hydrogen Research Award 宮本淳弌水素研究奨励賞",
+            "doi": null
+          }
+        ],
         "other": []
       }
     },

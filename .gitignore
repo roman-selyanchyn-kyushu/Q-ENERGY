@@ -15,3 +15,7 @@ data/news.json
 assets/photos/*/README.md
 assets/photos/PHOTO-GUIDE.md
 data/students-private.json
+scripts/email-drafts/
+
+# Raw student submissions (keep local)
+docs/*.docx
