@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-09",
+  "generated": "2026-06-10",
   "total": 71,
   "students": [
     {
@@ -2875,10 +2875,10 @@
         "abstract_jp": "Conventional analysis of droplet splashing — particularly in the small-droplet regime — has relied on visual inspection and manual measurement, limiting throughput, reproducibility, and objectivity. This project develops a deep-learning pipeline that automatically detects, classifies, and quantifies splashing morphologies and estimates splash boundaries with high precision from high-speed imaging. The framework will be benchmarked against the systematic experimental dataset built in the doctoral research, enabling objective, statistically robust comparison across a wide range of droplet temperatures and ambient pressures, and providing a transferable tool for the broader thermal-fluids community."
       },
       "phd": {
-        "title_en": "Systematic elucidation of the effects of droplet temperature and ambient pressure on droplet impact dynamics",
-        "title_jp": "Systematic elucidation of the effects of droplet temperature and ambient pressure on droplet impact dynamics",
-        "abstract_en": null,
-        "abstract_jp": null
+        "title_en": "Investigation of the Effects of Substrate Thermal Properties and Thickness on Inverse Analysis in Droplet Impact Cooling",
+        "title_jp": "Investigation of the Effects of Substrate Thermal Properties and Thickness on Inverse Analysis in Droplet Impact Cooling",
+        "abstract_en": "Inverse heat transfer analysis is widely used to estimate transient heat flux in droplet cooling experiments. This research systematically investigates how substrate thermal conductivity and thickness affect estimation accuracy and response delay. The findings will contribute to improving the reliability and applicability of inverse heat transfer methods in thermal-fluid engineering.",
+        "abstract_jp": "Inverse heat transfer analysis is widely used to estimate transient heat flux in droplet cooling experiments. This research systematically investigates how substrate thermal conductivity and thickness affect estimation accuracy and response delay. The findings will contribute to improving the reliability and applicability of inverse heat transfer methods in thermal-fluid engineering."
       },
       "achievements": {
         "papers": [
@@ -2919,8 +2919,8 @@
       "phd": {
         "title_en": "Design and optimization of an S-CPT wireless power transfer circuit model for in-motion EVs",
         "title_jp": "Design and optimization of an S-CPT wireless power transfer circuit model for in-motion EVs",
-        "abstract_en": null,
-        "abstract_jp": null
+        "abstract_en": "Develops a high-precision equivalent-circuit model of road-embedded shielded capacitive power transfer (S-CPT) electrodes for moving-vehicle wireless charging. Three-dimensional electromagnetic analysis is used to model lane-side primary electrode arrays and vehicle-side secondary electrodes, and to study the influence of lateral position, vehicle motion, and surrounding-environment variation on coupling efficiency.",
+        "abstract_jp": "Develops a high-precision equivalent-circuit model of road-embedded shielded capacitive power transfer (S-CPT) electrodes for moving-vehicle wireless charging. Three-dimensional electromagnetic analysis is used to model lane-side primary electrode arrays and vehicle-side secondary electrodes, and to study the influence of lateral position, vehicle motion, and surrounding-environment variation on coupling efficiency."
       },
       "achievements": {
         "papers": [],
@@ -2956,8 +2956,8 @@
       "phd": {
         "title_en": "Battery aging electrochemical mechanisms and their influence on thermal safety",
         "title_jp": "Battery aging electrochemical mechanisms and their influence on thermal safety",
-        "abstract_en": null,
-        "abstract_jp": null
+        "abstract_en": "Develops high-fidelity Pseudo-Two-Dimensional (P2D) electrochemical–thermal models in COMSOL Multiphysics to investigate the kinetic behavior of distinct aging pathways under varied operating conditions. The work integrates SEI growth, lithium plating, and electrode structural changes, and compares aging trajectories triggered by different external stressors — supporting the design of effective accelerated-aging tests and improved thermal-safety prediction for lithium-ion batteries.",
+        "abstract_jp": "Develops high-fidelity Pseudo-Two-Dimensional (P2D) electrochemical–thermal models in COMSOL Multiphysics to investigate the kinetic behavior of distinct aging pathways under varied operating conditions. The work integrates SEI growth, lithium plating, and electrode structural changes, and compares aging trajectories triggered by different external stressors — supporting the design of effective accelerated-aging tests and improved thermal-safety prediction for lithium-ion batteries."
       },
       "achievements": {
         "papers": [
@@ -3039,8 +3039,8 @@
       "phd": {
         "title_en": "Liquefaction-based recycling of refractory carbon waste and high-functional carbon materials development",
         "title_jp": "Liquefaction-based recycling of refractory carbon waste and high-functional carbon materials development",
-        "abstract_en": null,
-        "abstract_jp": null
+        "abstract_en": "Targets the establishment of a 'carbon-resource circulation system' by treating refractory carbon waste — previously valorizable only by combustion — as a feedstock for liquid carbon resources and high-functional carbon materials. The work covers (i) optimization of liquefaction conditions, (ii) mechanistic analysis of the decomposition–liquefaction reaction, and (iii) fabrication of high-functional carbon materials from the resulting liquefied product, thereby contributing to resource-supply security and industrial decarbonization.",
+        "abstract_jp": "Targets the establishment of a 'carbon-resource circulation system' by treating refractory carbon waste — previously valorizable only by combustion — as a feedstock for liquid carbon resources and high-functional carbon materials. The work covers (i) optimization of liquefaction conditions, (ii) mechanistic analysis of the decomposition–liquefaction reaction, and (iii) fabrication of high-functional carbon materials from the resulting liquefied product, thereby contributing to resource-supply security and industrial decarbonization."
       },
       "achievements": {
         "papers": [],
@@ -3076,8 +3076,8 @@
       "phd": {
         "title_en": "Integrated state estimation and adaptive control of floating offshore wind turbine systems",
         "title_jp": "Integrated state estimation and adaptive control of floating offshore wind turbine systems",
-        "abstract_en": null,
-        "abstract_jp": null
+        "abstract_en": "Builds a comprehensive control framework for floating offshore wind turbines that simultaneously maximizes power output and reduces structural fatigue. A six-degree-of-freedom nonlinear state-space model couples aerodynamic, hydrodynamic, and mooring forces. State estimation extends the master-program nonlinear Kalman filter to multivariable systems, treating wind and waves as unknown inputs and compensating in real time. Nonlinear optimal control based on the Hamilton–Jacobi equation and stable-manifold method coordinates blade pitch and platform attitude under severe sea states; adaptive parameters track changing ocean conditions. Validation uses NREL's high-fidelity OpenFAST simulator.",
+        "abstract_jp": "Builds a comprehensive control framework for floating offshore wind turbines that simultaneously maximizes power output and reduces structural fatigue. A six-degree-of-freedom nonlinear state-space model couples aerodynamic, hydrodynamic, and mooring forces. State estimation extends the master-program nonlinear Kalman filter to multivariable systems, treating wind and waves as unknown inputs and compensating in real time. Nonlinear optimal control based on the Hamilton–Jacobi equation and stable-manifold method coordinates blade pitch and platform attitude under severe sea states; adaptive parameters track changing ocean conditions. Validation uses NREL's high-fidelity OpenFAST simulator."
       },
       "achievements": {
         "papers": [],
@@ -3108,8 +3108,8 @@
       "phd": {
         "title_en": "Thermo-informatics-based advanced analysis, prediction, and optimization of refrigeration and HVAC systems",
         "title_jp": "Thermo-informatics-based advanced analysis, prediction, and optimization of refrigeration and HVAC systems",
-        "abstract_en": null,
-        "abstract_jp": null
+        "abstract_en": "Develops a digital-twin platform for heat pumps that integrates physics-grounded interpretable analysis, transient prediction of non-stationary behavior, and real-time operational optimization. The platform is positioned as foundational infrastructure for carbon-neutral refrigeration and air-conditioning systems.",
+        "abstract_jp": "Develops a digital-twin platform for heat pumps that integrates physics-grounded interpretable analysis, transient prediction of non-stationary behavior, and real-time operational optimization. The platform is positioned as foundational infrastructure for carbon-neutral refrigeration and air-conditioning systems."
       },
       "achievements": {
         "papers": [
@@ -3171,8 +3171,8 @@
       "phd": {
         "title_en": "Development of high-reliability solid-oxide cells for a hydrogen-circulation society",
         "title_jp": "Development of high-reliability solid-oxide cells for a hydrogen-circulation society",
-        "abstract_en": null,
-        "abstract_jp": null
+        "abstract_en": "Builds on metal-supported SOFC fabrication established during the master's program — including selective reduction of Ni–Fe oxides for porous metal substrates and WIP-based dense electrolyte deposition — and extends it to metal-supported reversible solid-oxide cells (MS-SORC), which combine power generation and steam electrolysis modes. Focus is on controlling reactions at the metal/oxide interface under reducing and humidified-oxidizing atmospheres, including chemical-reaction-suppression layers and oxidation-resistant substrates, to reconcile manufacturability and long-term reliability.",
+        "abstract_jp": "Builds on metal-supported SOFC fabrication established during the master's program — including selective reduction of Ni–Fe oxides for porous metal substrates and WIP-based dense electrolyte deposition — and extends it to metal-supported reversible solid-oxide cells (MS-SORC), which combine power generation and steam electrolysis modes. Focus is on controlling reactions at the metal/oxide interface under reducing and humidified-oxidizing atmospheres, including chemical-reaction-suppression layers and oxidation-resistant substrates, to reconcile manufacturability and long-term reliability."
       },
       "achievements": {
         "papers": [],
@@ -3203,8 +3203,8 @@
       "phd": {
         "title_en": "Gas–liquid transport mechanisms inside porous transport layers in PEM water electrolyzers and their structural design",
         "title_jp": "Gas–liquid transport mechanisms inside porous transport layers in PEM water electrolyzers and their structural design",
-        "abstract_en": null,
-        "abstract_jp": null
+        "abstract_en": "Investigates gas–liquid transport in the porous transport layers of polymer-electrolyte-membrane water electrolyzers (PEMWE) and uses the resulting insight to design optimal porous structures that achieve efficient gas/liquid transport and stable electrochemical reaction. The work covers (i) coupled analysis of dynamic gas–liquid interfacial behavior with the electrochemical reaction, and (ii) structural design and validation under realistic operating conditions, contributing to high-efficiency green-hydrogen production.",
+        "abstract_jp": "Investigates gas–liquid transport in the porous transport layers of polymer-electrolyte-membrane water electrolyzers (PEMWE) and uses the resulting insight to design optimal porous structures that achieve efficient gas/liquid transport and stable electrochemical reaction. The work covers (i) coupled analysis of dynamic gas–liquid interfacial behavior with the electrochemical reaction, and (ii) structural design and validation under realistic operating conditions, contributing to high-efficiency green-hydrogen production."
       },
       "achievements": {
         "papers": [],
@@ -3235,8 +3235,8 @@
       "phd": {
         "title_en": "Hydrogen recovery from gaseous hydrogen compounds using plasma decomposition",
         "title_jp": "Hydrogen recovery from gaseous hydrogen compounds using plasma decomposition",
-        "abstract_en": null,
-        "abstract_jp": null
+        "abstract_en": "Develops a fuel-recovery system for fusion reactors based on plasma decomposition. A palladium–silver (Pd–Ag) tube is integrated into an ICP plasma reactor to exploit the alloy's selective permeability for hydrogen and its isotopes (including tritium). Few-shot machine-learning is applied to the limited experimental data to model the decomposition process and inform future fuel-cycle design.",
+        "abstract_jp": "Develops a fuel-recovery system for fusion reactors based on plasma decomposition. A palladium–silver (Pd–Ag) tube is integrated into an ICP plasma reactor to exploit the alloy's selective permeability for hydrogen and its isotopes (including tritium). Few-shot machine-learning is applied to the limited experimental data to model the decomposition process and inform future fuel-cycle design."
       },
       "achievements": {
         "papers": [
@@ -3286,8 +3286,8 @@
       "phd": {
         "title_en": "Fundamental theories of wetting phenomena and multicomponent droplet dynamics",
         "title_jp": "Fundamental theories of wetting phenomena and multicomponent droplet dynamics",
-        "abstract_en": null,
-        "abstract_jp": null
+        "abstract_en": "Combines state-of-the-art laser-/optical-based experiments with CFD simulations using interface-tracking methods to reveal the flow and wetting behavior of complex droplets. Core themes are: multiphase flow with contaminant transport (nanoparticles, surfactants, salts); wetting and evaporation of binary and multi-fluid mixtures; and flow-structure control near the three-phase contact line. The findings provide a basis for renewable-energy harvesting, desalination, and other thermal-fluids applications.",
+        "abstract_jp": "Combines state-of-the-art laser-/optical-based experiments with CFD simulations using interface-tracking methods to reveal the flow and wetting behavior of complex droplets. Core themes are: multiphase flow with contaminant transport (nanoparticles, surfactants, salts); wetting and evaporation of binary and multi-fluid mixtures; and flow-structure control near the three-phase contact line. The findings provide a basis for renewable-energy harvesting, desalination, and other thermal-fluids applications."
       },
       "achievements": {
         "papers": [
@@ -3378,8 +3378,8 @@
       "phd": {
         "title_en": "Systematic understanding of defect chemistry in non-perovskite proton conductors",
         "title_jp": "Systematic understanding of defect chemistry in non-perovskite proton conductors",
-        "abstract_en": null,
-        "abstract_jp": null
+        "abstract_en": "Extends defect-chemistry research into non-perovskite proton-conducting materials. By clarifying how dopants control proton concentration and diffusion, the work seeks performance improvements for proton conductors and contributes to the materials foundation of a hydrogen-based energy society.",
+        "abstract_jp": "Extends defect-chemistry research into non-perovskite proton-conducting materials. By clarifying how dopants control proton concentration and diffusion, the work seeks performance improvements for proton conductors and contributes to the materials foundation of a hydrogen-based energy society."
       },
       "achievements": {
         "papers": [
@@ -3457,8 +3457,8 @@
       "phd": {
         "title_en": "Development of MOF-supported Co–NHC catalysts for photocatalytic hydrogen evolution in strongly alkaline media",
         "title_jp": "Development of MOF-supported Co–NHC catalysts for photocatalytic hydrogen evolution in strongly alkaline media",
-        "abstract_en": null,
-        "abstract_jp": null
+        "abstract_en": "Develops MOF-supported Co–NHC molecular catalysts for photocatalytic water splitting and hydrogen evolution under strongly alkaline conditions, addressing limitations of current photocatalytic systems in light-absorption range, solar-to-hydrogen efficiency, and material stability under realistic operating environments.",
+        "abstract_jp": "Develops MOF-supported Co–NHC molecular catalysts for photocatalytic water splitting and hydrogen evolution under strongly alkaline conditions, addressing limitations of current photocatalytic systems in light-absorption range, solar-to-hydrogen efficiency, and material stability under realistic operating environments."
       },
       "achievements": {
         "papers": [],
@@ -3510,8 +3510,8 @@
       "phd": {
         "title_en": "Combustion kinetic mechanism of ammonia fuel and combustion optimization",
         "title_jp": "Combustion kinetic mechanism of ammonia fuel and combustion optimization",
-        "abstract_en": null,
-        "abstract_jp": null
+        "abstract_en": "Applies high-fidelity molecular simulations (ReaxFF MD in LAMMPS) to clarify the microscopic reaction kinetics governing macroscopic ammonia combustion across a range of equivalence ratios and temperatures. The work is then extended to the blended combustion of ammonia with high-reactivity fuels to reveal co-combustion mechanisms and identify pathways toward higher efficiency and lower NO x emissions.",
+        "abstract_jp": "Applies high-fidelity molecular simulations (ReaxFF MD in LAMMPS) to clarify the microscopic reaction kinetics governing macroscopic ammonia combustion across a range of equivalence ratios and temperatures. The work is then extended to the blended combustion of ammonia with high-reactivity fuels to reveal co-combustion mechanisms and identify pathways toward higher efficiency and lower NO x emissions."
       },
       "achievements": {
         "papers": [
