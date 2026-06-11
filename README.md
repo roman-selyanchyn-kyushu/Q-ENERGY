@@ -1,29 +1,56 @@
-# Q-ENERGY Student Site Remake
+# Q-ENERGY Innovator Unit — Student Site
 
-Local static prototype for Roman Selyanchyn / Q-PIT.
+Bilingual (Japanese / English) static website profiling the fellowship students of the
+**Q-ENERGY Innovator Unit / K2-SPRING** programme at Q-PIT, Kyushu University.
 
-Preview locally:
+Pure HTML/CSS/JS — no build step, no framework. All paths are relative, so the whole
+tree can be served from any subpath. Currently published via GitHub Pages.
+
+## Preview locally
+
+From the repository root:
 
 ```bash
-cd "/Users/romanselyanchyn/Library/CloudStorage/Dropbox/00-QPIT/Q-fellowship/QENERGY-STUDENT-SITE-REMAKE"
 python3 -m http.server 8765
 ```
 
-Then open: http://localhost:8765/
+Then open <http://localhost:8765/>.
 
-Main files:
-- `index.html` — English prototype top page
-- `ja/index.html` — Japanese prototype top page
-- `students/2026/` — copied local FY2026 student pages and assets
-- `students/2021`–`students/2025` — prototype cohort card pages
-- `assets/css/main.css` — shared prototype styling
-- `docs/INVENTORY-AND-PLAN.md` — source inventory and implementation plan
+## Structure
 
-Safety:
-- The live Q-PIT website was not modified.
-- The original `FOR-HERMES` reference folder was not modified; files were only copied into this prototype.
+| Path | What it is |
+|---|---|
+| `index.html` | Landing page (photo grid of all students, with JP/EN toggle) |
+| `students/2021`–`students/2026/` | Individual student profile pages — 71 students across six cohorts |
+| `activities.html` | Programme activities (photo sliders) |
+| `publications.html` | Aggregated publications list |
+| `news.html`, `news/` | News index + individual article pages |
+| `assets/css/main.css` | Landing-page styles (student pages are self-contained) |
+| `assets/js/main.js` | Landing-page language toggle + video switcher |
+| `assets/logos/`, `assets/photos/` | Logos and web-sized portraits |
+| `data/` | `students.json`, `news.json`, etc. (build sources / indexes) |
+| `docs/` | Project documentation (see below) |
 
-Current limitations:
-- 2021–2025 detail pages are not fully converted yet.
-- Some romanizations/Japanese names require confirmation.
-- Public images are not bulk-downloaded yet; placeholders/cards are used for older cohorts.
+**Programmes:** 2021–2023 = Q-ENERGY Fellowship; 2024–2026 = K2-SPRING / Q-ENERGY Innovator Unit.
+
+**Bilingual mechanism:** an in-page toggle (no separate `/ja/` pages). Student pages swap
+`data-lang-en` / `data-lang-jp` elements via CSS; the landing page swaps `data-en` / `data-ja`
+text in JS. Preference is stored in `localStorage` (`k2spring_lang`).
+
+## Documentation (`docs/`)
+
+- `STUDENT-UPDATE-PROCEDURE.md` — step-by-step for applying a student's content update.
+- `STUDENT-UPDATE-LOG.md` — running record of every student update applied.
+- `INVENTORY-AND-PLAN.md` — original source inventory and design plan.
+
+## Local-only files (not published)
+
+Working material that never goes to the server lives in **`_local/`** (source spreadsheets,
+Scopus exports, raw student submissions, internal notes) and **`scripts/`** (Python helpers
+that regenerate `data/` from the HTML). Both are gitignored, along with photo originals
+(`_originals/`, `_Original/`) and private `data/*.json`.
+
+## Safety
+
+- Do **not** modify the live Q-PIT WordPress site.
+- The full working filebase stays local; only the git-tracked, viewable subset is published.
