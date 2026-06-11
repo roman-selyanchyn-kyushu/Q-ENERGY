@@ -9,8 +9,9 @@ _local/
 scripts/
 docs/
 
-# Master content database — the hand-built single source of truth. NEVER publish.
-data/students-master.json
+# Master content database — the hand-built single source of truth (one file per
+# student: data/master/<cohort>/<slug>.json). NEVER publish.
+data/master/
 _originals/
 _Original/
 data/public_sections_extracted.json
