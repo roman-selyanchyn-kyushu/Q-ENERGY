@@ -2,13 +2,13 @@
 __pycache__/
 *.pyc
 .DS_Store
-Scopus/
-LIST/
-scripts/
 PROGRESS.md
+
+# Local-only working files (sources, scripts, raw submissions) — never published
+_local/
+scripts/
 _originals/
 _Original/
-supervisor-check.html
 data/public_sections_extracted.json
 data/public_site_extracted.json
 data/cohorts.json

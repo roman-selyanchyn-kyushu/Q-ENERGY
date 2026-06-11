@@ -2,7 +2,7 @@
 
 A running record of **student-submitted content updates** applied to profile pages, so we always know what has been processed (and never re-do or lose track of a request again).
 
-**How to use:** every time you apply a student's revision request (new photo, research text, achievements, award, etc.), add a row to the top of the table. Mark the commit hash so it's traceable. Source files for requests live in `docs/student revision requests/` (local-only, not on GitHub).
+**How to use:** every time you apply a student's revision request (new photo, research text, achievements, award, etc.), add a row to the top of the table. Mark the commit hash so it's traceable. Source files for requests live in `_local/student-revision-requests/` (local-only, not on GitHub).
 
 **Status key:** ✅ done & pushed · 🟡 done locally, not pushed · ⏳ received, not yet applied
 
