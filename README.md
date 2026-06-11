@@ -29,7 +29,6 @@ Then open <http://localhost:8765/>.
 | `assets/js/main.js` | Landing-page language toggle + video switcher |
 | `assets/logos/`, `assets/photos/` | Logos and web-sized portraits |
 | `data/` | `students.json`, `news.json`, etc. (build sources / indexes) |
-| `docs/` | Project documentation (see below) |
 
 **Programmes:** 2021–2023 = Q-ENERGY Fellowship; 2024–2026 = K2-SPRING / Q-ENERGY Innovator Unit.
 
@@ -37,18 +36,15 @@ Then open <http://localhost:8765/>.
 `data-lang-en` / `data-lang-jp` elements via CSS; the landing page swaps `data-en` / `data-ja`
 text in JS. Preference is stored in `localStorage` (`k2spring_lang`).
 
-## Documentation (`docs/`)
-
-- `STUDENT-UPDATE-PROCEDURE.md` — step-by-step for applying a student's content update.
-- `STUDENT-UPDATE-LOG.md` — running record of every student update applied.
-- `INVENTORY-AND-PLAN.md` — original source inventory and design plan.
-
 ## Local-only files (not published)
 
-Working material that never goes to the server lives in **`_local/`** (source spreadsheets,
-Scopus exports, raw student submissions, internal notes) and **`scripts/`** (Python helpers
-that regenerate `data/` from the HTML). Both are gitignored, along with photo originals
-(`_originals/`, `_Original/`) and private `data/*.json`.
+Working material that never goes to the server is kept out of the published tree and
+gitignored:
+
+- **`_local/`** — source spreadsheets, Scopus exports, raw student submissions, internal notes.
+- **`scripts/`** — Python helpers that regenerate `data/` from the HTML.
+- **`docs/`** — project documentation (update procedure, student-update log, inventory/plan).
+- Photo originals (`_originals/`, `_Original/`) and private `data/*.json`.
 
 ## Safety
 

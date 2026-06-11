@@ -4,9 +4,10 @@ __pycache__/
 .DS_Store
 PROGRESS.md
 
-# Local-only working files (sources, scripts, raw submissions) — never published
+# Local-only working files (sources, scripts, docs, raw submissions) — never published
 _local/
 scripts/
+docs/
 _originals/
 _Original/
 data/public_sections_extracted.json
