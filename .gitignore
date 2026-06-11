@@ -8,6 +8,9 @@ PROGRESS.md
 _local/
 scripts/
 docs/
+
+# Master content database — the hand-built single source of truth. NEVER publish.
+data/students-master.json
 _originals/
 _Original/
 data/public_sections_extracted.json
