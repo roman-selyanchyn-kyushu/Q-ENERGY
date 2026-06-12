@@ -183,6 +183,11 @@
   .fnav-btn svg{width:13px;height:13px;flex-shrink:0;}
   @media(max-width:600px){.fnav-label{display:inline;}}
   @media(max-width:820px){.eyebrow{display:none;}}
+
+  /* Research figure (image embedded in a research abstract) */
+  .research-figure{margin:22px auto 6px;max-width:520px;}
+  .research-figure img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:var(--r-md);background:#fff;}
+  .research-figure figcaption{margin-top:10px;font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--ink-3);text-align:center;}
 </style>
 </head>
 <body>
@@ -213,7 +218,7 @@
     <img src="../../assets/photos/2026/wang_weifeng.jpg" alt="Weifeng Wang"
          onload="this.closest('.portrait-frame').classList.remove('no-photo')"
          onerror="this.remove()">
-    <span>Photo<br>wang_weifeng.jpeg</span>
+    <span>Photo<br>wang_weifeng.jpg</span>
     <div class="portrait-tag">
       <span data-lang-en="">2026 Cohort</span>
       <span data-lang-jp="">2026年度</span>
@@ -301,7 +306,7 @@
   </div>
 </section>
 
-<!-- ACHIEVEMENTS -->
+<!-- RESEARCH ACHIEVEMENTS -->
 <section>
   <div class="section-head">
     <div class="section-num"><span>§ 03</span></div>
@@ -310,7 +315,6 @@
       <h2 class="section-title" data-lang-jp="">研究 <span class="em">業績</span></h2>
     </div>
   </div>
-
   <div class="ach-card">
     <div class="ach-group">
       <div class="ach-label"><span data-lang-en="">Research Papers</span><span data-lang-jp="">論文</span></div>
@@ -445,7 +449,7 @@
 
 (function(){
   if (!('IntersectionObserver' in window)) return;
-  var els = document.querySelectorAll('.research-primary, .phd-card, .supervisor-row');
+  var els = document.querySelectorAll('.research-primary, .phd-card, .ach-card');
   els.forEach(function(el){
     el.style.opacity = '0';
     el.style.transform = 'translateY(16px)';

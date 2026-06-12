@@ -183,6 +183,11 @@
   .fnav-btn svg{width:13px;height:13px;flex-shrink:0;}
   @media(max-width:600px){.fnav-label{display:inline;}}
   @media(max-width:820px){.eyebrow{display:none;}}
+
+  /* Research figure (image embedded in a research abstract) */
+  .research-figure{margin:22px auto 6px;max-width:520px;}
+  .research-figure img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:var(--r-md);background:#fff;}
+  .research-figure figcaption{margin-top:10px;font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--ink-3);text-align:center;}
 </style>
 </head>
 <body>
@@ -213,7 +218,7 @@
     <img src="../../assets/photos/2026/omoto_shinnosuke.jpg" alt="Shinnosuke Omoto"
          onload="this.closest('.portrait-frame').classList.remove('no-photo')"
          onerror="this.remove()">
-    <span>Photo<br>omoto_shinnosuke.jpeg</span>
+    <span>Photo<br>omoto_shinnosuke.jpg</span>
     <div class="portrait-tag">
       <span data-lang-en="">2026 Cohort</span>
       <span data-lang-jp="">2026年度</span>
