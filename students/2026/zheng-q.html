@@ -183,6 +183,11 @@
   .fnav-btn svg{width:13px;height:13px;flex-shrink:0;}
   @media(max-width:600px){.fnav-label{display:inline;}}
   @media(max-width:820px){.eyebrow{display:none;}}
+
+  /* Research figure (image embedded in a research abstract) */
+  .research-figure{margin:22px auto 6px;max-width:520px;}
+  .research-figure img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:var(--r-md);background:#fff;}
+  .research-figure figcaption{margin-top:10px;font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--ink-3);text-align:center;}
 </style>
 </head>
 <body>
@@ -213,7 +218,7 @@
     <img src="../../assets/photos/2026/zheng_qingen.jpg" alt="Qingen Zheng"
          onload="this.closest('.portrait-frame').classList.remove('no-photo')"
          onerror="this.remove()">
-    <span>Photo<br>zheng_qingen.jpeg</span>
+    <span>Photo<br>zheng_qingen.jpg</span>
     <div class="portrait-tag">
       <span data-lang-en="">2026 Cohort</span>
       <span data-lang-jp="">2026年度</span>
@@ -331,26 +336,18 @@
         <span data-lang-jp="">学会発表</span>
       </div>
       <ol class="ach-list">
-        <li>
-          <span class="ach-authors">Qingen Zheng</span>, Kosei Yamauchi, Ken Sakai,
+        <li><span class="ach-authors">Qingen Zheng</span>, Kosei Yamauchi, Ken Sakai,
           "Improved Photocatalytic H<sub>2</sub> Evolution Using Novel UiO67-bpy-RuPt MOFs under Visible Light,"
-          The 10th Asian Conference on Coordination Chemistry, Oct. 2025. [International, Poster]
-        </li>
-        <li>
-          <span class="ach-authors">Qingen Zheng</span>, Kosei Yamauchi, Ken Sakai,
+          The 10th Asian Conference on Coordination Chemistry, Oct. 2025. [International, Poster]</li>
+        <li><span class="ach-authors">Qingen Zheng</span>, Kosei Yamauchi, Ken Sakai,
           "Synthesis and Characterization of UiO-67 MOFs Incorporated with Photocatalytic Components for Solar Energy Conversion,"
-          The 104th Annual Meeting of the Chemical Society of Japan, Mar. 2024. [Domestic, Poster]
-        </li>
-        <li>
-          <span class="ach-authors">Qingen Zheng</span>, Kosei Yamauchi, Ken Sakai,
+          The 104th Annual Meeting of the Chemical Society of Japan, Mar. 2024. [Domestic, Poster]</li>
+        <li><span class="ach-authors">Qingen Zheng</span>, Kosei Yamauchi, Ken Sakai,
           "Improved Photocatalytic H<sub>2</sub> Evolution Using Novel UiO67-bpy-RuPt MOFs under Visible Light,"
-          The 74th Conference of the Japan Society of Coordination Chemistry, Sep. 2024. [Domestic, Oral]
-        </li>
-        <li>
-          <span class="ach-authors">Qingen Zheng</span>, Kosei Yamauchi, Ken Sakai,
+          The 74th Conference of the Japan Society of Coordination Chemistry, Sep. 2024. [Domestic, Oral]</li>
+        <li><span class="ach-authors">Qingen Zheng</span>, Kosei Yamauchi, Ken Sakai,
           "Improved Photocatalytic H<sub>2</sub> Evolution Using Novel UiO67-bpy-RuPt MOFs under Visible Light,"
-          The 105th Annual Meeting of the Chemical Society of Japan, Mar. 2025. [Domestic, Poster]
-        </li>
+          The 105th Annual Meeting of the Chemical Society of Japan, Mar. 2025. [Domestic, Poster]</li>
       </ol>
     </div>
 
@@ -362,9 +359,7 @@
         <span data-lang-jp="">受賞・その他の業績</span>
       </div>
       <ol class="ach-list">
-        <li>
-          Outstanding Volunteer Contribution to COVID-19, Beijing University of Chemical Technology.
-        </li>
+        <li>Outstanding Volunteer Contribution to COVID-19, Beijing University of Chemical Technology.</li>
         <li data-lang-en="">
           12 internal research seminar presentations in English at Kyushu University (Apr. 2023 – May 2025), covering MOF synthesis, photocatalytic H<sub>2</sub> evolution, CO<sub>2</sub> reduction, and electrocatalysis topics.
         </li>
