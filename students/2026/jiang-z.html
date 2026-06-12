@@ -183,6 +183,11 @@
   .fnav-btn svg{width:13px;height:13px;flex-shrink:0;}
   @media(max-width:600px){.fnav-label{display:inline;}}
   @media(max-width:820px){.eyebrow{display:none;}}
+
+  /* Research figure (image embedded in a research abstract) */
+  .research-figure{margin:22px auto 6px;max-width:520px;}
+  .research-figure img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:var(--r-md);background:#fff;}
+  .research-figure figcaption{margin-top:10px;font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--ink-3);text-align:center;}
 </style>
 </head>
 <body>
@@ -213,7 +218,7 @@
     <img src="../../assets/photos/2026/jiang_ziqi.jpg" alt="Ziqi Jiang"
          onload="this.closest('.portrait-frame').classList.remove('no-photo')"
          onerror="this.remove()">
-    <span>Photo<br>jiang_ziqi.jpeg</span>
+    <span>Photo<br>jiang_ziqi.jpg</span>
     <div class="portrait-tag">
       <span data-lang-en="">2026 Cohort</span>
       <span data-lang-jp="">2026年度</span>
@@ -267,10 +272,18 @@
       <span data-lang-en="">K2-SPRING Project &middot; Primary focus</span>
       <span data-lang-jp="">K2-SPRINGプロジェクト &middot; 主題</span>
     </div>
-    <h3 class="research-title" data-lang-en="">Reactive-Step Molecular Dynamics for Mechanistic Understanding of SEI Formation in Lithium-Ion Batteries</h3>
-    <h3 class="research-title" data-lang-jp="">Reactive-Step Molecular Dynamics for Mechanistic Understanding of SEI Formation in Lithium-Ion Batteries</h3>
-    <div class="research-abstract" data-lang-en=""><p>Macro-scale battery aging models rely on empirical parameters to describe Solid Electrolyte Interphase (SEI) growth — a picosecond-timescale electrochemical phenomenon that classical molecular dynamics cannot reach and ab-initio MD cannot sustain. This project closes that gap by implementing a reactive-step molecular-dynamics (rs@md) framework that couples classical MD with reaction probabilities derived from transition-state theory. Density-functional theory is used to compute activation barriers for elementary SEI-formation reactions starting from electron transfer at the graphite anode; rs@md simulations of a graphite/electrolyte cell then track SEI film growth and yield effective reaction and Li-ion diffusion rates. The extracted micro-kinetic parameters serve as physics-based inputs to the macroscopic P2D model used in the doctoral research.</p></div>
-    <div class="research-abstract" data-lang-jp=""><p>Macro-scale battery aging models rely on empirical parameters to describe Solid Electrolyte Interphase (SEI) growth — a picosecond-timescale electrochemical phenomenon that classical molecular dynamics cannot reach and ab-initio MD cannot sustain. This project closes that gap by implementing a reactive-step molecular-dynamics (rs@md) framework that couples classical MD with reaction probabilities derived from transition-state theory. Density-functional theory is used to compute activation barriers for elementary SEI-formation reactions starting from electron transfer at the graphite anode; rs@md simulations of a graphite/electrolyte cell then track SEI film growth and yield effective reaction and Li-ion diffusion rates. The extracted micro-kinetic parameters serve as physics-based inputs to the macroscopic P2D model used in the doctoral research.</p></div>
+    <h3 class="research-title" data-lang-en="">Molecular Dynamics Investigation of Li-ion Transport Properties in Battery Electrolytes</h3>
+    <h3 class="research-title" data-lang-jp="">Molecular Dynamics Investigation of Li-ion Transport Properties in Battery Electrolytes</h3>
+    <div class="research-abstract" data-lang-en=""><p>Macro-scale battery models often rely on empirical electrolyte transport parameters, which limits their predictive capability under practical operating conditions such as fast charging, low temperature, high salt concentration, and long-term aging. This K2-SPRING project addresses this limitation by using molecular dynamics (MD) and density functional theory (DFT) calculations to investigate Li-ion transport mechanisms in liquid electrolytes at the molecular scale. The work focuses on how salt concentration, temperature, solvent composition, solvation structure, and ion-pair formation influence key electrolyte properties, including Li-ion diffusivity, viscosity, dielectric response, coordination number, and local ion–solvent interactions. These molecular-scale properties are then used to provide physics-based, condition-dependent transport parameters for macroscopic electrochemical models, supporting more reliable state-of-health prediction and safer battery-management-system design.</p>
+      <figure class="research-figure">
+        <img src="../../assets/figures/2026/jiang_ziqi_k2.png" alt="Schematic: molecular structures of electrolyte components and DFT analysis of an electrolyte feeding transport-property and solvation-structure analysis for Li-ion transport">
+        <figcaption>Fig. Molecular dynamics and DFT workflow for Li-ion transport properties in battery electrolytes</figcaption>
+      </figure></div>
+    <div class="research-abstract" data-lang-jp=""><p>Macro-scale battery models often rely on empirical electrolyte transport parameters, which limits their predictive capability under practical operating conditions such as fast charging, low temperature, high salt concentration, and long-term aging. This K2-SPRING project addresses this limitation by using molecular dynamics (MD) and density functional theory (DFT) calculations to investigate Li-ion transport mechanisms in liquid electrolytes at the molecular scale. The work focuses on how salt concentration, temperature, solvent composition, solvation structure, and ion-pair formation influence key electrolyte properties, including Li-ion diffusivity, viscosity, dielectric response, coordination number, and local ion–solvent interactions. These molecular-scale properties are then used to provide physics-based, condition-dependent transport parameters for macroscopic electrochemical models, supporting more reliable state-of-health prediction and safer battery-management-system design.</p>
+      <figure class="research-figure">
+        <img src="../../assets/figures/2026/jiang_ziqi_k2.png" alt="Schematic: molecular structures of electrolyte components and DFT analysis of an electrolyte feeding transport-property and solvation-structure analysis for Li-ion transport">
+        <figcaption>Fig. Molecular dynamics and DFT workflow for Li-ion transport properties in battery electrolytes</figcaption>
+      </figure></div>
   </article>
 </section>
 
@@ -293,15 +306,15 @@
       <span data-lang-jp="">博士課程主研究</span>
     </div>
     <div class="phd-body">
-      <h3 data-lang-en="">Battery aging electrochemical mechanisms and their influence on thermal safety</h3>
-      <h3 data-lang-jp="">Battery aging electrochemical mechanisms and their influence on thermal safety</h3>
-      <p data-lang-en="">Develops high-fidelity Pseudo-Two-Dimensional (P2D) electrochemical–thermal models in COMSOL Multiphysics to investigate the kinetic behavior of distinct aging pathways under varied operating conditions. The work integrates SEI growth, lithium plating, and electrode structural changes, and compares aging trajectories triggered by different external stressors — supporting the design of effective accelerated-aging tests and improved thermal-safety prediction for lithium-ion batteries.</p>
-      <p data-lang-jp="">Develops high-fidelity Pseudo-Two-Dimensional (P2D) electrochemical–thermal models in COMSOL Multiphysics to investigate the kinetic behavior of distinct aging pathways under varied operating conditions. The work integrates SEI growth, lithium plating, and electrode structural changes, and compares aging trajectories triggered by different external stressors — supporting the design of effective accelerated-aging tests and improved thermal-safety prediction for lithium-ion batteries.</p>
+      <h3 data-lang-en="">Multi-scale modeling of battery degradation from electrolyte transport to state-of-health prediction</h3>
+      <h3 data-lang-jp="">Multi-scale modeling of battery degradation from electrolyte transport to state-of-health prediction</h3>
+      <p data-lang-en="">This project uses molecular dynamics (MD) and density functional theory (DFT) simulations to investigate Li-ion transport properties in battery electrolytes under different salt concentrations, temperatures, and solvent environments. The work extracts molecular-level properties such as diffusivity, viscosity, dielectric response, solvation structure, coordination number, and ion-pair formation, which are difficult to represent using empirical parameters alone. These condition-dependent transport properties are then linked to macroscopic pseudo-two-dimensional (P2D) electrochemical–thermal aging models. By connecting molecular electrolyte behavior with battery-level degradation modeling, this research aims to improve state-of-health prediction, thermal-safety assessment, and battery-management-system reliability for long-life lithium-ion batteries.</p>
+      <p data-lang-jp="">This project uses molecular dynamics (MD) and density functional theory (DFT) simulations to investigate Li-ion transport properties in battery electrolytes under different salt concentrations, temperatures, and solvent environments. The work extracts molecular-level properties such as diffusivity, viscosity, dielectric response, solvation structure, coordination number, and ion-pair formation, which are difficult to represent using empirical parameters alone. These condition-dependent transport properties are then linked to macroscopic pseudo-two-dimensional (P2D) electrochemical–thermal aging models. By connecting molecular electrolyte behavior with battery-level degradation modeling, this research aims to improve state-of-health prediction, thermal-safety assessment, and battery-management-system reliability for long-life lithium-ion batteries.</p>
     </div>
   </div>
 </section>
 
-<!-- ACHIEVEMENTS -->
+<!-- RESEARCH ACHIEVEMENTS -->
 <section>
   <div class="section-head">
     <div class="section-num"><span>§ 03</span></div>
@@ -310,7 +323,6 @@
       <h2 class="section-title" data-lang-jp="">研究 <span class="em">業績</span></h2>
     </div>
   </div>
-
   <div class="ach-card">
     <div class="ach-group">
       <div class="ach-label"><span data-lang-en="">Research Papers</span><span data-lang-jp="">論文</span></div>
@@ -429,7 +441,7 @@
 
 (function(){
   if (!('IntersectionObserver' in window)) return;
-  var els = document.querySelectorAll('.research-primary, .phd-card, .supervisor-row');
+  var els = document.querySelectorAll('.research-primary, .phd-card, .ach-card');
   els.forEach(function(el){
     el.style.opacity = '0';
     el.style.transform = 'translateY(16px)';
