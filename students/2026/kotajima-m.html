@@ -183,6 +183,11 @@
   .fnav-btn svg{width:13px;height:13px;flex-shrink:0;}
   @media(max-width:600px){.fnav-label{display:inline;}}
   @media(max-width:820px){.eyebrow{display:none;}}
+
+  /* Research figure (image embedded in a research abstract) */
+  .research-figure{margin:22px auto 6px;max-width:520px;}
+  .research-figure img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:var(--r-md);background:#fff;}
+  .research-figure figcaption{margin-top:10px;font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--ink-3);text-align:center;}
 </style>
 </head>
 <body>
@@ -213,7 +218,7 @@
     <img src="../../assets/photos/2026/kotajima_masaru.jpg" alt="Masaru Kotajima"
          onload="this.closest('.portrait-frame').classList.remove('no-photo')"
          onerror="this.remove()">
-    <span>Photo<br>kotajima_masaru.jpeg</span>
+    <span>Photo<br>kotajima_masaru.jpg</span>
     <div class="portrait-tag">
       <span data-lang-en="">2026 Cohort</span>
       <span data-lang-jp="">2026年度</span>
@@ -320,11 +325,9 @@
         <span data-lang-jp="">論文</span>
       </div>
       <ol class="ach-list">
-        <li>
-          Taisei Tomaru, Yasufumi Awakura, <span class="ach-authors">Masaru Kotajima</span>, Toshihira Irisawa, Seung-Jae Ha, Young-Pyo Jeon, Koji Nakabayashi, Jin Miyawaki, Seong-Ho Yoon,
+        <li>Taisei Tomaru, Yasufumi Awakura, <span class="ach-authors">Masaru Kotajima</span>, Toshihira Irisawa, Seung-Jae Ha, Young-Pyo Jeon, Koji Nakabayashi, Jin Miyawaki, Seong-Ho Yoon,
           "Effects of chemical structure of mesogenic components on the mechanical properties of mesophase pitch-based carbon fiber,"
-          <em>Carbon</em>, 242, 120428 (2025). DOI: <a href="https://doi.org/10.1016/j.carbon.2025.120428" target="_blank" rel="noopener" style="color:inherit;">10.1016/j.carbon.2025.120428</a>
-        </li>
+          <em>Carbon</em>, 242, 120428 (2025). DOI: <a href="https://doi.org/10.1016/j.carbon.2025.120428" target="_blank" rel="noopener" style="color:inherit;">10.1016/j.carbon.2025.120428</a></li>
       </ol>
     </div>
 
