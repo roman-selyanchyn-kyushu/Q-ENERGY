@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Siyu Shen — K2-SPRING Fellow 2024</title>
+<title>Siyu Shen — K2-SPRING Fellow</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -172,16 +172,9 @@
 
   .partner-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;}
   .partner-caption{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);text-align:center;line-height:1.4;}
-
-  .source-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;}
-  .source-pill{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.5);color:var(--accent);text-decoration:none;font-family:var(--sans);font-weight:600;font-size:13px;transition:background .25s,transform .25s;}
+  .source-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;padding:0 var(--pad);}
+  .source-pill{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border:1px solid var(--clr-line, #d8d3c8);border-radius:999px;background:rgba(255,255,255,.5);color:var(--clr-accent, #1a3a5c);text-decoration:none;font-weight:600;font-size:13px;transition:background .25s,transform .25s;}
   .source-pill:hover{background:rgba(255,255,255,.95);transform:translateY(-1px);}
-  .meta-card{border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(20px,3vw,32px);background:rgba(255,255,255,.38);}
-  .meta-list{display:grid;grid-template-columns:190px 1fr;gap:12px 24px;margin:0;}
-  .meta-list dt{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);}
-  .meta-list dd{margin:0;font-family:var(--serif);font-size:16px;color:var(--ink);line-height:1.55;}
-  .placeholder-note{font-family:var(--serif);font-style:italic;color:var(--ink-4);}
-  @media(max-width:680px){.meta-list{grid-template-columns:1fr;gap:4px 0}.meta-list dd{margin-bottom:12px}}
 
   /* Fellow navigator */
   .fellow-nav{display:flex;align-items:center;gap:4px;}
@@ -190,50 +183,93 @@
   .fnav-btn svg{width:13px;height:13px;flex-shrink:0;}
   @media(max-width:600px){.fnav-label{display:inline;}}
   @media(max-width:820px){.eyebrow{display:none;}}
+
+  /* Research figure (image embedded in a research abstract) */
+  .research-figure{margin:22px auto 6px;max-width:520px;}
+  .research-figure img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:var(--r-md);background:#fff;}
+  .research-figure figcaption{margin-top:10px;font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--ink-3);text-align:center;}
 </style>
 </head>
 <body>
+
+<!-- TOP BAR -->
 <header class="topbar">
   <div class="topbar-inner">
-    <a href="../../index.html" class="program-mark" aria-label="K2-SPRING Q-ENERGY home"><span class="dot" aria-hidden="true"></span><span>K2&#8209;SPRING</span><small data-lang-en="">Q-ENERGY Innovator Unit</small><small data-lang-jp="">グリーンイノベーションユニット</small></a>
+    <a href="https://k-spring.kyushu-u.ac.jp" class="program-mark" aria-label="K2-SPRING program">
+      <span class="dot" aria-hidden="true"></span>
+      <span>K2&#8209;SPRING</span>
+      <small data-lang-en="">Q-ENERGY Innovator Unit</small>
+      <small data-lang-jp="">グリーンイノベーションユニット</small>
+    </a>
     
     <div class="fellow-nav"><a href="ryudai-ueno.html" class="fnav-btn" title="Previous fellow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12L6 8l4-4"/></svg></a><a href="../../index.html#students" class="fnav-btn" title="All Fellows"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="5" height="5"/><rect x="9" y="2" width="5" height="5"/><rect x="2" y="9" width="5" height="5"/><rect x="9" y="9" width="5" height="5"/></svg><span class="fnav-label">&ensp;40&thinsp;/&thinsp;71</span></a><a href="shogo-nakamura.html" class="fnav-btn" title="Next fellow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l4 4-4 4"/></svg></a></div>
     
-    <div class="lang-toggle" data-lang="en" role="group" aria-label="Language"><span class="pill" aria-hidden="true"></span><button type="button" data-set-lang="en" class="is-active" aria-pressed="true">EN</button><button type="button" data-set-lang="jp" aria-pressed="false">日本語</button></div>
+    <div class="lang-toggle" data-lang="en" role="group" aria-label="Language">
+      <span class="pill" aria-hidden="true"></span>
+      <button type="button" data-set-lang="en" class="is-active" aria-pressed="true">EN</button>
+      <button type="button" data-set-lang="jp" aria-pressed="false">日本語</button>
+    </div>
   </div>
 </header>
+
+<!-- HERO -->
 <section class="hero">
   <div class="portrait-frame no-photo reveal" id="portrait">
-    <img src="../../assets/photos/2024/shen_siyu.jpg" alt="SHEN Siyu" onload="this.closest('.portrait-frame').classList.remove('no-photo')" onerror="this.remove()">
-    <span>Photo<br>SHEN Siyu</span>
-    <div class="portrait-tag"><span data-lang-en="">2024 Cohort</span><span data-lang-jp="">2024年度</span></div>
+    <img src="../../assets/photos/2024/shen_siyu.jpg" alt="SHEN Siyu"
+         onload="this.closest('.portrait-frame').classList.remove('no-photo')"
+         onerror="this.remove()">
+    <span>Photo<br>shen_siyu.jpg</span>
+    <div class="portrait-tag">
+      <span data-lang-en="">2024 Cohort</span>
+      <span data-lang-jp="">2024年度</span>
+    </div>
   </div>
+
   <div class="hero-meta reveal">
-    <div class="eyebrow"><span data-lang-en="">K2-SPRING &middot; Q-ENERGY Innovator Unit &middot; Cohort 2024</span><span data-lang-jp="">K2-SPRING &middot; グリーンイノベーションユニット &middot; 2024年度</span></div>
+    <div class="eyebrow">
+      <span data-lang-en="">K2-SPRING &middot; Q-ENERGY Innovator Unit &middot; Admission 2024</span>
+      <span data-lang-jp="">K2-SPRING &middot; グリーンイノベーションユニット &middot; 2024年度入学</span>
+    </div>
     <h1 class="name" data-lang-en="">Siyu <span class="em">Shen</span></h1>
     <h1 class="name name-jp" data-lang-jp="">Siyu Shen</h1>
     <div class="hero-subline">
-      <dl><dt data-lang-en="">Affiliation</dt><dt data-lang-jp="">所属</dt><dd data-lang-en="">Graduate School of Economics</dd><dd data-lang-jp="">経済学府</dd></dl>
-      <dl><dt data-lang-en="">Major / Department</dt><dt data-lang-jp="">専攻・部局</dt><dd data-lang-en="">Department of Economic Systems</dd><dd data-lang-jp="">経済システム専攻</dd></dl>
-      <dl><dt data-lang-en="">Supervisor</dt><dt data-lang-jp="">指導教員</dt><dd><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E8%97%A4%E4%BA%95-%E7%A7%80%E9%81%93/" target="_blank" rel="noopener" data-lang-en="">Prof. Hidemichi FUJII</a><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E8%97%A4%E4%BA%95-%E7%A7%80%E9%81%93/" target="_blank" rel="noopener" data-lang-jp="">藤井 秀道 教授</a></dd></dl>
+      <dl>
+        <dt data-lang-en="">Affiliation</dt>
+        <dt data-lang-jp="">所属</dt>
+        <dd data-lang-en="">Graduate School of Economics</dd>
+        <dd data-lang-jp="">経済学府</dd>
+      </dl>
+      <dl>
+        <dt data-lang-en="">Major / Department</dt>
+        <dt data-lang-jp="">専攻</dt>
+        <dd data-lang-en="">Department of Economic Systems</dd>
+        <dd data-lang-jp="">経済システム専攻</dd>
+      </dl>
+      <dl>
+        <dt data-lang-en="">Supervisor</dt>
+        <dt data-lang-jp="">指導教員</dt>
+        <dd>
+          <a href="https://q-pit.kyushu-u.ac.jp/teacher/%E8%97%A4%E4%BA%95-%E7%A7%80%E9%81%93/" target="_blank" rel="noopener" data-lang-en="">Prof. Hidemichi FUJII</a><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E8%97%A4%E4%BA%95-%E7%A7%80%E9%81%93/" target="_blank" rel="noopener" data-lang-jp="">藤井 秀道 教授</a>
+        </dd>
+      </dl>
     </div>
   </div>
 </section>
 
+<!-- K2-SPRING RESEARCH -->
 <section>
-
   <div class="section-head">
     <div class="section-num"><span>§ 01</span></div>
     <div>
-      <h2 class="section-title" data-lang-en="">K2-SPRING <span class="em">research topic</span></h2>
-      <h2 class="section-title" data-lang-jp="">K2-SPRING <span class="em">研究テーマ</span></h2>
+      <h2 class="section-title" data-lang-en="">K2-SPRING <span class="em">research</span></h2>
+      <h2 class="section-title" data-lang-jp="">K2-SPRING <span class="em">研究</span></h2>
     </div>
   </div>
   <article class="research-primary reveal">
     <div class="research-banner">
       <svg viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M6 0l1.5 4.5L12 6 7.5 7.5 6 12 4.5 7.5 0 6l4.5-1.5z"/></svg>
-      <span data-lang-en="">K2-SPRING topic &middot; 2024</span>
-      <span data-lang-jp="">K2-SPRINGテーマ &middot; 2024年度</span>
+      <span data-lang-en="">K2-SPRING Project &middot; Primary focus</span>
+      <span data-lang-jp="">K2-SPRINGプロジェクト &middot; 主題</span>
     </div>
     <h3 class="research-title" data-lang-en="">Environmental-economic trade-offs of membrane-based direct air capture technologies using life cycle assessment</h3>
     <h3 class="research-title" data-lang-jp="">Environmental-economic trade-offs of membrane-based direct air capture technologies using life cycle assessment</h3>
@@ -241,27 +277,36 @@
     <div class="research-abstract" data-lang-jp=""><p>Climate change is primarily driven by CO₂ emissions. Achieving the Paris Agreement's target of limiting global warming to 1.5 °C requires not only reducing current emissions but also removing existing CO₂ from the atmosphere. This study explores the potential of Direct Air Capture combined with utilisation (DAC-U) at a household scale. Using Life Cycle Assessment (LCA), the research evaluates the environmental and economic feasibility of a small-scale DAC-U system that converts CO₂ into household fuel and generates carbon credits. If environmentally and economically viable, decentralised DAC-U units could provide a socially acceptable means for households to contribute to carbon neutrality.</p></div>
   </article>
 </section>
-<section>
 
+<!-- PHD RESEARCH -->
+<section>
   <div class="section-head">
     <div class="section-num"><span>§ 02</span></div>
     <div>
-      <h2 class="section-title" data-lang-en="">Doctoral <span class="em">research</span></h2>
-      <h2 class="section-title" data-lang-jp="">博士 <span class="em">研究</span></h2>
+      <h2 class="section-title" data-lang-en="">Doctoral <span class="em">research</span>
+        <span style="font-size:.55em;color:var(--ink-3);font-style:italic;font-weight:300;display:block;margin-top:6px;">— context for the K2-SPRING project</span>
+      </h2>
+      <h2 class="section-title" data-lang-jp="">博士 <span class="em">研究</span>
+        <span style="font-size:.55em;color:var(--ink-3);font-style:italic;font-weight:300;display:block;margin-top:6px;">— K2-SPRINGプロジェクトの背景</span>
+      </h2>
     </div>
   </div>
-  <div class="phd-card reveal">
-    <div class="phd-aside"><span data-lang-en="">Main PhD work</span><span data-lang-jp="">博士課程主研究</span></div>
+  <div class="phd-card">
+    <div class="phd-aside">
+      <span data-lang-en="">Main PhD work</span>
+      <span data-lang-jp="">博士課程主研究</span>
+    </div>
     <div class="phd-body">
       <h3 data-lang-en="">Environmental-economic trade-offs of membrane-based direct air capture technologies using life cycle assessment</h3>
       <h3 data-lang-jp="">Environmental-economic trade-offs of membrane-based direct air capture technologies using life cycle assessment</h3>
-      <div data-lang-en=""><p>Climate change is primarily driven by CO<sub>2</sub> emissions. Achieving the Paris Agreement’s target of limiting global warming to 1.5°C requires not only reducing current emissions but also removing existing CO<sub>2</sub> from the atmosphere. This study explores the potential of Direct Air Capture (DAC) combined with utilization (DAC-U) at a household scale. Using Life Cycle Assessment (LCA), we evaluate the environmental and economic feasibility of a small-scale DAC-U system that converts CO<sub>2</sub> into household fuel and generates carbon credits. The analysis considers energy consumption, fuel production, carbon reduction, and carbon credit trading. If environmentally and economically viable, decentralized DAC-U units could provide a socially acceptable means for households to contribute to carbon neutrality.</p></div>
-      <div data-lang-jp=""><p>Climate change is primarily driven by CO<sub>2</sub> emissions. Achieving the Paris Agreement’s target of limiting global warming to 1.5°C requires not only reducing current emissions but also removing existing CO<sub>2</sub> from the atmosphere. This study explores the potential of Direct Air Capture (DAC) combined with utilization (DAC-U) at a household scale. Using Life Cycle Assessment (LCA), we evaluate the environmental and economic feasibility of a small-scale DAC-U system that converts CO<sub>2</sub> into household fuel and generates carbon credits. The analysis considers energy consumption, fuel production, carbon reduction, and carbon credit trading. If environmentally and economically viable, decentralized DAC-U units could provide a socially acceptable means for households to contribute to carbon neutrality.</p></div>
+      <p data-lang-en=""><em>Doctoral research details &mdash; coming soon.</em></p>
+      <p data-lang-jp=""><em>博士研究の詳細は準備中です。</em></p>
     </div>
   </div>
 </section>
-<section>
 
+<!-- RESEARCH ACHIEVEMENTS -->
+<section>
   <div class="section-head">
     <div class="section-num"><span>§ 03</span></div>
     <div>
@@ -270,43 +315,81 @@
     </div>
   </div>
   <div class="ach-card">
-  <div class="ach-group">
-    <div class="ach-label"><span data-lang-en="">Research Papers</span><span data-lang-jp="">論文</span></div>
-    <ol class="ach-list"><li>Tianhui Fan, <span class="ach-authors">Siyu Shen</span>, Chun Yat (Benjamin) Sit, Paul J.A. Kenis, Andrew Chapman. &ldquo;Environmental, economic and social trade-offs of membrane-based direct air capture technologies integrated with CO<sub>2</sub> conversion using life cycle assessment&rdquo; <em>Journal of CO<sub>2</sub> Utilization (Volume 91, January 2025, 103002)</em> <a href="https://doi.org/10.1016/j.jcou.2024.103002" target="_blank" rel="noopener">doi:10.1016/j.jcou.2024.103002</a></li>
+    <div class="ach-group">
+      <div class="ach-label"><span data-lang-en="">Research Papers</span><span data-lang-jp="">論文</span></div>
+      <ol class="ach-list">
+        <li>Tianhui Fan, <span class="ach-authors">Siyu Shen</span>, Chun Yat (Benjamin) Sit, Paul J.A. Kenis, Andrew Chapman. &ldquo;Environmental, economic and social trade-offs of membrane-based direct air capture technologies integrated with CO<sub>2</sub> conversion using life cycle assessment&rdquo; <em>Journal of CO<sub>2</sub> Utilization (Volume 91, January 2025, 103002)</em> <a href="https://doi.org/10.1016/j.jcou.2024.103002" target="_blank" rel="noopener">doi:10.1016/j.jcou.2024.103002</a></li>
         <li>Wang, X., <span class="ach-authors">Shen, S.</span>, Xie, J., Fujii, H., Keeley, A. R., &amp; Managi, S.. &ldquo;Environmental, Social, and Governance Factors as Tools for Improving Market Efficiency: A Study on Equity Misvaluation&rdquo; <em>Business Strategy and the Environment (January 2026)</em> <a href="https://doi.org/10.1002/bse.70486Digital Object Identifier (DOI)" target="_blank" rel="noopener">doi:10.1002/bse.70486Digital Object Identifier (DOI)</a></li>
-        <li><span class="ach-authors">Shen, S.</span>, Wang, X.,Xie, J., Fujii, H., Keeley, A. R., &amp; Managi, S.. &ldquo;Assessing financial materiality for environmental issues:impacts on cost of capital in diverse national contexts&rdquo; <em>Humanities and Social Sciences Communications</em> (2025) [submitted]</li></ol>
-  </div>
-  <div class="ach-group">
-    <div class="ach-label"><span data-lang-en="">Conference Presentations</span><span data-lang-jp="">学会発表</span></div>
-    <ol class="ach-list"><li><span class="ach-authors">Shen siyu</span>, Fujii hidemichi. &ldquo;Does financial materiality for environmental issues matter to investors&rdquo; <em>2025 Green Innovation &amp; Engineering International Conference (2025 GREENIE)</em>, Taiwan (2025/09) [international, poster]</li>
+        <li><span class="ach-authors">Shen, S.</span>, Wang, X.,Xie, J., Fujii, H., Keeley, A. R., &amp; Managi, S.. &ldquo;Assessing financial materiality for environmental issues:impacts on cost of capital in diverse national contexts&rdquo; <em>Humanities and Social Sciences Communications</em> (2025) [submitted]</li>
+      </ol>
+    </div>
+
+    <div class="ach-group">
+      <div class="ach-label"><span data-lang-en="">Conference Presentations</span><span data-lang-jp="">学会発表</span></div>
+      <ol class="ach-list">
+        <li><span class="ach-authors">Shen siyu</span>, Fujii hidemichi. &ldquo;Does financial materiality for environmental issues matter to investors&rdquo; <em>2025 Green Innovation &amp; Engineering International Conference (2025 GREENIE)</em>, Taiwan (2025/09) [international, poster]</li>
         <li><span class="ach-authors">Shen siyu</span>, Fujii hidemichi. &ldquo;Is Financial Materiality for Environmental Issues Shaping the Cost of Capital across National Contexts?&rdquo; <em>14th International Symposium on Environmentally Conscious Design and Inverse Manufacturing (EcoDesign2025)</em>, tokyo, Japan (2025/11) [international, oral]</li>
-        <li><span class="ach-authors">沈 思語</span>、藤井 秀道. &ldquo;Does financial materiality matter to investors: a cross-national analysis&rdquo; <em>第20回日本LCA学会研究発表会</em>, 広島 (2025/03) [oral]</li></ol>
+        <li><span class="ach-authors">沈 思語</span>、藤井 秀道. &ldquo;Does financial materiality matter to investors: a cross-national analysis&rdquo; <em>第20回日本LCA学会研究発表会</em>, 広島 (2025/03) [oral]</li>
+      </ol>
+    </div>
+
+    <div class="ach-group">
+      <div class="ach-label"><span data-lang-en="">Other Achievements</span><span data-lang-jp="">その他の業績</span></div>
+      <ol class="ach-list">
+        <li><span class="ach-soon"><span data-lang-en="">Coming soon</span><span data-lang-jp="">準備中</span></span></li>
+      </ol>
+    </div>
   </div>
-  <div class="ach-group">
-    <div class="ach-label"><span data-lang-en="">Other Achievements</span><span data-lang-jp="">その他の業績</span></div>
-    <ol class="ach-list"><li><span class="ach-soon"><span data-lang-en="">Coming soon</span><span data-lang-jp="">準備中</span></span></li></ol>
-  </div>
-</div>
 </section>
 
+<!-- PARTNER LOGOS -->
 <section class="partners">
-  <div class="partners-head" style="max-width:var(--maxw);margin:0 auto;"><span data-lang-en="">Programme &amp; institutional affiliation</span><span data-lang-jp="">プログラム・機関情報</span></div>
+  <div class="partners-head" style="max-width:var(--maxw);margin:0 auto;">
+    <span data-lang-en="">Programme &amp; institutional affiliation</span>
+    <span data-lang-jp="">プログラム・機関情報</span>
+  </div>
   <div class="partners-row" style="max-width:var(--maxw);margin:0 auto;">
-    <div class="partner-wrap"><a class="partner" href="https://k-spring.kyushu-u.ac.jp" target="_blank" rel="noopener"><img src="../../assets/logos/logo-k2spring.svg" alt="K2-SPRING"></a><span class="partner-caption"><span data-lang-en="">JST SPRING programme</span><span data-lang-jp="">JSTスプリングプログラム</span></span></div>
-    <div class="partner-wrap"><a class="partner" href="https://q-pit.kyushu-u.ac.jp/" target="_blank" rel="noopener"><img src="../../assets/logos/logo-qpit.png" alt="Q-PIT"></a><span class="partner-caption"><span data-lang-en="">Unit coordinator</span><span data-lang-jp="">ユニットコーディネーター</span></span></div>
-    <div class="partner-wrap"><a class="partner" href="https://q-pit.kyushu-u.ac.jp/fellow-ship-en/" target="_blank" rel="noopener"><img src="../../assets/logos/logo-qenergy.png" alt="Q-Energy Innovator Unit"></a><span class="partner-caption"><span data-lang-en="">Q-Energy Innovator Unit</span><span data-lang-jp="">グリーンイノベーションユニット</span></span></div>
-    <div class="partner-wrap"><a class="partner" href="https://www.kyushu-u.ac.jp/en/" target="_blank" rel="noopener"><img src="../../assets/logos/logo-kyushu.png" alt="Kyushu University" class="ku-tall"></a><span class="partner-caption"><span data-lang-en="">Host university</span><span data-lang-jp="">ホスト大学</span></span></div>
+    <div class="partner-wrap">
+    <a class="partner" href="https://k-spring.kyushu-u.ac.jp" target="_blank" rel="noopener">
+      <img src="../../assets/logos/logo-k2spring.svg" alt="K2-SPRING">
+    </a>
+    <span class="partner-caption"><span data-lang-en="">JST SPRING programme</span><span data-lang-jp="">JSTスプリングプログラム</span></span>
+    </div>
+    <div class="partner-wrap">
+    <a class="partner" href="https://q-pit.kyushu-u.ac.jp/" target="_blank" rel="noopener">
+      <img src="../../assets/logos/logo-qpit.png" alt="Q-PIT">
+    </a>
+    <span class="partner-caption"><span data-lang-en="">Unit coordinator</span><span data-lang-jp="">ユニットコーディネーター</span></span>
+    </div>
+    <div class="partner-wrap">
+    <a class="partner" href="https://q-pit.kyushu-u.ac.jp/fellow-ship-en/" target="_blank" rel="noopener" data-lang-en="">
+      <img src="../../assets/logos/logo-qenergy.png" alt="Q-Energy Innovator Unit">
+    </a>
+    <a class="partner" href="https://q-pit.kyushu-u.ac.jp/fellow-ship/" target="_blank" rel="noopener" data-lang-jp="">
+      <img src="../../assets/logos/logo-qenergy.png" alt="Q-Energy Innovator Unit">
+    </a>
+    <span class="partner-caption"><span data-lang-en="">Q-Energy Innovator Unit</span><span data-lang-jp="">グリーンイノベーションユニット</span></span>
+    </div>
+    <div class="partner-wrap">
+    <a class="partner" href="https://www.kyushu-u.ac.jp/en/" target="_blank" rel="noopener">
+      <img src="../../assets/logos/logo-kyushu.png" alt="Kyushu University" class="ku-tall">
+    </a>
+    <span class="partner-caption"><span data-lang-en="">Host university</span><span data-lang-jp="">ホスト大学</span></span>
+    </div>
   </div>
 </section>
+
+
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-meta">K2&#8209;SPRING &middot; Q-ENERGY Innovator Unit (coordinated by Q-PIT, Kyushu University)</div>
   <div class="footer-meta">&copy; 2026 Q-PIT, Kyushu University. Designed &amp; built by Roman Selyanchyn.</div>
 </footer>
+
 <script>
 (function(){
   var html = document.documentElement;
   var toggle = document.querySelector('.lang-toggle');
-  if (!toggle) return;
   var buttons = toggle.querySelectorAll('button[data-set-lang]');
   var stored = null;
   try { stored = localStorage.getItem('k2spring_lang'); } catch(e){}
@@ -321,11 +404,14 @@
     });
     try { localStorage.setItem('k2spring_lang', lang); } catch(e){}
   }
-  buttons.forEach(function(b){ b.addEventListener('click', function(){ setLang(b.dataset.setLang); }); });
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.dataset.setLang); });
+  });
 })();
+
 (function(){
   if (!('IntersectionObserver' in window)) return;
-  var els = document.querySelectorAll('.research-primary, .phd-card, .supervisor-row, .ach-group, .meta-card');
+  var els = document.querySelectorAll('.research-primary, .phd-card, .ach-card');
   els.forEach(function(el){
     el.style.opacity = '0';
     el.style.transform = 'translateY(16px)';
@@ -333,7 +419,11 @@
   });
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
-      if (e.isIntersecting){ e.target.style.opacity = '1'; e.target.style.transform = 'none'; io.unobserve(e.target); }
+      if (e.isIntersecting){
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'none';
+        io.unobserve(e.target);
+      }
     });
   }, { threshold: 0.12 });
   els.forEach(function(el){ io.observe(el); });
