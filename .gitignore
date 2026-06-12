@@ -25,3 +25,6 @@ scripts/email-drafts/
 
 # Raw student submissions (keep local)
 docs/*.docx
+
+# Phase 2 scratch output (generated HTML for diff-verification only)
+_build/
