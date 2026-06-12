@@ -183,6 +183,11 @@
   .fnav-btn svg{width:13px;height:13px;flex-shrink:0;}
   @media(max-width:600px){.fnav-label{display:inline;}}
   @media(max-width:820px){.eyebrow{display:none;}}
+
+  /* Research figure (image embedded in a research abstract) */
+  .research-figure{margin:22px auto 6px;max-width:520px;}
+  .research-figure img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:var(--r-md);background:#fff;}
+  .research-figure figcaption{margin-top:10px;font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--ink-3);text-align:center;}
 </style>
 </head>
 <body>
@@ -213,7 +218,7 @@
     <img src="../../assets/photos/2026/chen_hao.jpg" alt="Hao Chen"
          onload="this.closest('.portrait-frame').classList.remove('no-photo')"
          onerror="this.remove()">
-    <span>Photo<br>chen_hao.jpeg</span>
+    <span>Photo<br>chen_hao.jpg</span>
     <div class="portrait-tag">
       <span data-lang-en="">2026 Cohort</span>
       <span data-lang-jp="">2026年度</span>
@@ -267,10 +272,20 @@
       <span data-lang-en="">K2-SPRING Project &middot; Primary focus</span>
       <span data-lang-jp="">K2-SPRINGプロジェクト &middot; 主題</span>
     </div>
-    <h3 class="research-title" data-lang-en="">Hybrid Electromagnetic System for Highway Dynamic Charging: S-CPT × Planar Antennas × Energy Harvesting</h3>
-    <h3 class="research-title" data-lang-jp="">Hybrid Electromagnetic System for Highway Dynamic Charging: S-CPT × Planar Antennas × Energy Harvesting</h3>
-    <div class="research-abstract" data-lang-en=""><p>This project goes beyond pure power-transfer optimization by integrating shielded capacitive power transfer (S-CPT) with planar antennas and energy-harvesting elements into a single roadway-embedded electromagnetic system. The aim is to simultaneously realize high-efficiency dynamic charging for in-motion electric vehicles, controlled near-field leakage, and self-powering of roadside sensors. Cross-disciplinary collaboration with antenna and electromagnetic-compatibility researchers within Kyushu University supports unified design of the electrode array, antenna layout, and harvesting subsystem, building a foundation for Japan-led smart-road infrastructure.</p></div>
-    <div class="research-abstract" data-lang-jp=""><p>This project goes beyond pure power-transfer optimization by integrating shielded capacitive power transfer (S-CPT) with planar antennas and energy-harvesting elements into a single roadway-embedded electromagnetic system. The aim is to simultaneously realize high-efficiency dynamic charging for in-motion electric vehicles, controlled near-field leakage, and self-powering of roadside sensors. Cross-disciplinary collaboration with antenna and electromagnetic-compatibility researchers within Kyushu University supports unified design of the electrode array, antenna layout, and harvesting subsystem, building a foundation for Japan-led smart-road infrastructure.</p></div>
+    <h3 class="research-title" data-lang-en="">Near-Field Control and Energy Harvesting for Self-Powered Sensors in Capacitive Dynamic Charging Roads</h3>
+    <h3 class="research-title" data-lang-jp="">容量結合型走行中給電道路における自立電源型センサのための近傍界制御とエネルギーハーベスティング</h3>
+    <div class="research-abstract" data-lang-en=""><p>Capacitive dynamic charging roads can transfer power to Electric Vehicles (EVs) while driving. In road-integrated Capacitive Power Transfer (CPT) systems, near-field E-Fields around road electrodes are usually treated as leakage fields to be suppressed for safety. However, previous studies suggest that such electric fields can be controlled and even harvested to power low-power wireless sensors.</p>
+      <p>This project explores a new use of controlled near-field energy in capacitive charging roads. Instead of simply eliminating leakage fields, the near-field energy is harvested to power self-powered roadside micro-sensors. By combining CPT, field control, and energy harvesting, this project aims to support smart road infrastructure, green mobility, and environmental monitoring (Fig.&thinsp;1).</p>
+      <figure class="research-figure">
+        <img src="../../assets/figures/2026/chen_hao_k2.jpg" alt="Conceptual illustration: an S-CPT road electrode as a controllable near-field EM platform that powers a self-powered roadside micro-sensor">
+        <figcaption>Fig.&thinsp;1 Controllable near-field energy harvesting from CPT road electrodes [AI-generated image]</figcaption>
+      </figure></div>
+    <div class="research-abstract" data-lang-jp=""><p>容量結合型走行中給電道路は，電気自動車（EV）の走行中に電力を伝送することができる。道路一体型の容量結合型電力伝送（Capacitive Power Transfer: CPT）システムでは，道路電極周辺に発生する近傍電界は，通常，安全性の観点から抑制すべき漏洩電界として扱われる。しかし，先行研究では，このような電界を制御でき，さらに低消費電力の無線センサの電源として利用できる可能性が示唆されている。</p>
+      <p>本研究では，容量結合型給電道路における制御された近傍界エネルギーの新たな利用方法を検討する。漏洩電界を単に除去するのではなく，近傍界エネルギーを収穫し，道路側に設置される自立電源型マイクロセンサの電源として活用する。CPT，電界制御，エネルギーハーベスティングを組み合わせることで，本研究はスマート道路インフラ，グリーンモビリティ，および環境モニタリングへの貢献を目指す（図1）。</p>
+      <figure class="research-figure">
+        <img src="../../assets/figures/2026/chen_hao_k2.jpg" alt="概念図：自立電源型の路側マイクロセンサに給電する、制御可能な近傍界EMプラットフォームとしてのS-CPT道路電極">
+        <figcaption>図1　CPT道路電極からの制御可能な近傍界エネルギーハーベスティング［AI生成画像］</figcaption>
+      </figure></div>
   </article>
 </section>
 
@@ -293,10 +308,20 @@
       <span data-lang-jp="">博士課程主研究</span>
     </div>
     <div class="phd-body">
-      <h3 data-lang-en="">Design and optimization of an S-CPT wireless power transfer circuit model for in-motion EVs</h3>
-      <h3 data-lang-jp="">Design and optimization of an S-CPT wireless power transfer circuit model for in-motion EVs</h3>
-      <p data-lang-en="">Develops a high-precision equivalent-circuit model of road-embedded shielded capacitive power transfer (S-CPT) electrodes for moving-vehicle wireless charging. Three-dimensional electromagnetic analysis is used to model lane-side primary electrode arrays and vehicle-side secondary electrodes, and to study the influence of lateral position, vehicle motion, and surrounding-environment variation on coupling efficiency.</p>
-      <p data-lang-jp="">Develops a high-precision equivalent-circuit model of road-embedded shielded capacitive power transfer (S-CPT) electrodes for moving-vehicle wireless charging. Three-dimensional electromagnetic analysis is used to model lane-side primary electrode arrays and vehicle-side secondary electrodes, and to study the influence of lateral position, vehicle motion, and surrounding-environment variation on coupling efficiency.</p>
+      <h3 data-lang-en="">Coupling-Structure Optimization and Broadband Matching for Capacitive Dynamic Wireless Power Transfer in EVs</h3>
+      <h3 data-lang-jp="">電気自動車向け容量結合型動的無線電力伝送における結合構造最適化と広帯域整合</h3>
+      <p data-lang-en="">Electric Vehicles (EVs) are important for reducing carbon emissions from road transportation. However, limited charging infrastructure and long charging waiting times still cause range anxiety, especially during long-distance driving. Dynamic Wireless Power Transfer can supply power to EVs while they are moving and is a promising solution to this issue. Capacitive power transfer (CPT) enables thin and lightweight road-embedded electrodes and can reduce heating caused by metallic foreign objects compared with inductive power transfer.</p>
+      <p data-lang-en="">The purpose of this doctoral research is to establish a design methodology for efficient, safe, and stable CPT-based dynamic charging systems, especially under vehicle misalignment and resonance-frequency shifts (Fig.&thinsp;2). This research contributes to affordable and clean energy infrastructure for future EV transportation.</p>
+      <figure class="research-figure" data-lang-en="">
+        <img src="../../assets/figures/2026/chen_hao_phd.jpg" alt="Conceptual illustration of a highway capacitive dynamic wireless power transfer system charging EVs while they drive">
+        <figcaption>Fig.&thinsp;2 Highway CPT system concept [AI-generated image]</figcaption>
+      </figure></p>
+      <p data-lang-jp="">電気自動車（EV）は、道路交通から排出される二酸化炭素を削減するうえで重要な役割を担っています。しかし、充電インフラの不足や充電待ち時間の長さにより、特に長距離走行時には「途中で電池が切れるのではないか」という不安が依然として残っています。走行中ワイヤレス給電は、EVが走行している間に電力を供給できる技術であり、この問題を解決する有望な方法の一つです。中でも容量性電力伝送（CPT）は、道路に埋め込む電極を薄く、軽く設計できるという特徴があります。また、磁界結合方式のワイヤレス給電と比べて、金属異物による発熱を抑えられる可能性があります。</p>
+      <p data-lang-jp="">本博士研究の目的は、CPTを用いた走行中給電システムについて、高効率で安全かつ安定した設計方法を確立することです。特に、車両の位置ずれや共振周波数の変動が発生した場合でも、安定して動作するシステムの実現を目指します（図2）。本研究は、将来のEV交通に向けた、安価でクリーンなエネルギーインフラの構築に貢献するものです。</p>
+      <figure class="research-figure" data-lang-jp="">
+        <img src="../../assets/figures/2026/chen_hao_phd.jpg" alt="走行中のEVに給電する高速道路向け容量結合型動的無線電力伝送システムの概念図">
+        <figcaption>図2　高速道路におけるシステム概念図［AI生成画像］</figcaption>
+      </figure></p>
     </div>
   </div>
 </section>
@@ -320,11 +345,10 @@
         <span data-lang-jp="">論文</span>
       </div>
       <ol class="ach-list">
-        <li>
-          <span class="ach-authors">Chen Hao</span>, Eiichi Tateishi, Naoki Kojo, Nobuhiro Kai, Toru Hashimoto, Kota Uchio, Tatsuya Yamaguchi, Reiji Hattori, Haruichi Kanaya,
-          "Optimization of Shielded Capacitive Power Transfer (S-CPT) Systems Using Slotted Electrodes,"
-          <em>IEEE 27th Electronics Packaging Technology Conference (EPTC 2025)</em>, pp. TBD (2025).
-        </li>
+        <li><span class="ach-authors">Chen Hao</span>, Eiichi Tateishi, Naoki Kojo, Nobuhiro Kai, Toru Hashimoto, Kota Uchio, Tatsuya Yamaguchi, Reiji Hattori, Haruichi Kanaya,
+          &ldquo;Optimization of Shielded Capacitive Power Transfer Systems Using Slotted Electrodes,&rdquo;
+          <em>2025 IEEE 27th Electronics Packaging Technology Conference (EPTC)</em>, Singapore, 2025, pp.&thinsp;1&ndash;5
+          &mdash; <a href="https://doi.org/10.1109/EPTC67330.2025.11392236" target="_blank" rel="noopener">10.1109/EPTC67330.2025.11392236</a></li>
       </ol>
     </div>
 
@@ -337,34 +361,34 @@
       </div>
       <ol class="ach-list">
         <li data-lang-en="">
-          <span class="ach-authors">Chen Hao</span> et al.,
-          "Optimization of Shielded Capacitive Power Transfer (S-CPT) Systems Using Slotted Electrodes,"
-          IEEE 27th Electronics Packaging Technology Conference (EPTC 2025), Singapore, Dec. 2025. [International, Oral]
+          <span class="ach-authors">Chen Hao</span>, Eiichi Tateishi, Naoki Kojo, Nobuhiro Kai, Toru Hashimoto, Kota Uchio, Tatsuya Yamaguchi, Reiji Hattori, Haruichi Kanaya,
+          &ldquo;Optimization of Shielded Capacitive Power Transfer Systems Using Slotted Electrodes,&rdquo;
+          <em>2025 IEEE 27th Electronics Packaging Technology Conference (EPTC)</em>, Singapore, Dec. 2025. [International, Oral]
         </li>
         <li data-lang-jp="">
-          <span class="ach-authors">陳 昊</span> 他,
-          "Optimization of Shielded Capacitive Power Transfer (S-CPT) Systems Using Slotted Electrodes,"
-          IEEE 27th Electronics Packaging Technology Conference (EPTC 2025), シンガポール, 2025年12月. [国際, 口頭発表]
+          <span class="ach-authors">陳 昊</span>, Eiichi Tateishi, Naoki Kojo, Nobuhiro Kai, Toru Hashimoto, Kota Uchio, Tatsuya Yamaguchi, Reiji Hattori, Haruichi Kanaya,
+          &ldquo;Optimization of Shielded Capacitive Power Transfer Systems Using Slotted Electrodes,&rdquo;
+          <em>2025 IEEE 27th Electronics Packaging Technology Conference (EPTC)</em>, シンガポール, 2025年12月. [国際, 口頭発表]
         </li>
         <li data-lang-en="">
           <span class="ach-authors">Chen Hao</span>, Zihao Rong, Ryoya Matsuzaki, Naoki Kojo, Reiji Hattori, Haruichi Kanaya, Eiichi Tateishi, Nobuhiro Kai, Toru Hashimoto, Kota Uchio, Tatsuya Yamaguchi,
-          "Verification of the S-CPT (Shielded-Capacitive Power Transfer) Circuit and Feasibility Assessment,"
-          第77回 電気・情報関係学会九州支部連合大会, Sep. 2024. [Domestic, Oral]
+          &ldquo;Analysis of Power Transmission Efficiency in S-CPT (Shielded-Capacitive Power Transfer) Systems with Different Electrode Shapes,&rdquo;
+          <em>第39回エレクトロニクス実装学会春季講演大会</em>, Mar. 2025. [Domestic, Oral]
         </li>
         <li data-lang-jp="">
           <span class="ach-authors">陳 昊</span>, Zihao Rong, Ryoya Matsuzaki, Naoki Kojo, Reiji Hattori, Haruichi Kanaya, Eiichi Tateishi, Nobuhiro Kai, Toru Hashimoto, Kota Uchio, Tatsuya Yamaguchi,
-          "Verification of the S-CPT (Shielded-Capacitive Power Transfer) Circuit and Feasibility Assessment,"
-          第77回 電気・情報関係学会九州支部連合大会, 2024年9月. [国内, 口頭発表]
+          &ldquo;Analysis of Power Transmission Efficiency in S-CPT (Shielded-Capacitive Power Transfer) Systems with Different Electrode Shapes,&rdquo;
+          <em>第39回エレクトロニクス実装学会春季講演大会</em>, 2025年3月. [国内, 口頭発表]
         </li>
         <li data-lang-en="">
           <span class="ach-authors">Chen Hao</span>, Zihao Rong, Ryoya Matsuzaki, Naoki Kojo, Reiji Hattori, Haruichi Kanaya, Eiichi Tateishi, Nobuhiro Kai, Toru Hashimoto, Kota Uchio, Tatsuya Yamaguchi,
-          "Analysis of Power Transmission Efficiency in S-CPT (Shielded-Capacitive Power Transfer) Systems with Different Electrode Shapes,"
-          第39回 エレクトロニクス実装学会春季講演大会, Mar. 2025. [Domestic, Oral]
+          &ldquo;Verification of the S-CPT (Shielded-Capacitive Power Transfer) Circuit and Feasibility Assessment,&rdquo;
+          <em>第77回電気・情報関係学会九州支部連合大会</em>, Sep. 2024. [Domestic, Oral]
         </li>
         <li data-lang-jp="">
           <span class="ach-authors">陳 昊</span>, Zihao Rong, Ryoya Matsuzaki, Naoki Kojo, Reiji Hattori, Haruichi Kanaya, Eiichi Tateishi, Nobuhiro Kai, Toru Hashimoto, Kota Uchio, Tatsuya Yamaguchi,
-          "Analysis of Power Transmission Efficiency in S-CPT (Shielded-Capacitive Power Transfer) Systems with Different Electrode Shapes,"
-          第39回 エレクトロニクス実装学会春季講演大会, 2025年3月. [国内, 口頭発表]
+          &ldquo;Verification of the S-CPT (Shielded-Capacitive Power Transfer) Circuit and Feasibility Assessment,&rdquo;
+          <em>第77回電気・情報関係学会九州支部連合大会</em>, 2024年9月. [国内, 口頭発表]
         </li>
       </ol>
     </div>

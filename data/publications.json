@@ -1,6 +1,6 @@
 {
-  "generated": "2026-06-10",
-  "total_papers": 195,
+  "generated": "2026-06-12",
+  "total_papers": 197,
   "years": [
     2026,
     2025,
@@ -13,7 +13,7 @@
     0
   ],
   "year_counts": {
-    "2026": 27,
+    "2026": 28,
     "2025": 69,
     "2024": 45,
     "2023": 26,
@@ -21,7 +21,7 @@
     "2021": 8,
     "2020": 5,
     "2019": 1,
-    "0": 1
+    "0": 2
   },
   "papers": [
     {
@@ -502,6 +502,25 @@
           "name_jp": "澤田 光平",
           "slug": "kohei-sawada",
           "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "html": "Kinjo T., <span class=\"ach-authors\">Mochizuki T.</span>, Nakano H., Enoki K., Sei Y. &ldquo;Machine-Learning and Experimental Study on Predicting the Heat Transfer Coefficient in Vertical and Microgravity Flow Boiling Using Horizontal Flow Data&rdquo;\n          <em>Journal of Thermal Science and Engineering Applications</em>, Vol.&thinsp;76, TSEA-25-1724 (2026)\n          &mdash; <a href=\"https://doi.org/10.1115/1.4071502\" target=\"_blank\" rel=\"noopener\">10.1115/1.4071502</a>",
+      "doi": "https://doi.org/10.1115/1.4071502",
+      "student_slug": "mochizuki-t",
+      "student_name": "Takeshi Mochizuki",
+      "student_name_jp": "望月 建志",
+      "cohort": 2026,
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Takeshi Mochizuki",
+          "name_jp": "望月 建志",
+          "slug": "mochizuki-t",
+          "cohort": 2026,
           "programme": "K2-SPRING"
         }
       ]
@@ -1807,8 +1826,8 @@
     },
     {
       "year": 2025,
-      "html": "Okwiri L.A., <span class=\"ach-authors\">Mochizuki T.</span>, Koito K., Fukui N., Enoki K. &ldquo;Enhanced Pool Boiling via Binder Jetting 3D-Printed Porous Copper Structures: CHF and HTC Investigation&rdquo;\n          <em>Applied Sciences</em>, Vol.&thinsp;15, 7892 (2025)",
-      "doi": "",
+      "html": "Okwiri L.A., <span class=\"ach-authors\">Mochizuki T.</span>, Koito K., Fukui N., Enoki K. &ldquo;Enhanced Pool Boiling via Binder Jetting 3D-Printed Porous Copper Structures: CHF and HTC Investigation&rdquo;\n          <em>Applied Sciences</em>, Vol.&thinsp;15, 7892 (2025)\n          &mdash; <a href=\"https://doi.org/10.3390/app15147892\" target=\"_blank\" rel=\"noopener\">10.3390/app15147892</a>",
+      "doi": "https://doi.org/10.3390/app15147892",
       "student_slug": "mochizuki-t",
       "student_name": "Takeshi Mochizuki",
       "student_name_jp": "望月 建志",
@@ -3728,6 +3747,25 @@
           "slug": "yin-kan-phua",
           "cohort": 2022,
           "programme": "Q-ENERGY Fellowship"
+        }
+      ]
+    },
+    {
+      "year": 0,
+      "html": "<span class=\"ach-authors\">Mochizuki T.</span>, Nishida K., Akada I., Mamori H., Enoki K. &ldquo;Experimental Study of Flow Boiling Characteristics in Wavy-Shaped Mini-channel&rdquo;\n          <em>Applied Thermal Engineering</em>, manuscript no.&thinsp;ATE-D-26-04350R1 [Under Review]",
+      "doi": "",
+      "student_slug": "mochizuki-t",
+      "student_name": "Takeshi Mochizuki",
+      "student_name_jp": "望月 建志",
+      "cohort": 2026,
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Takeshi Mochizuki",
+          "name_jp": "望月 建志",
+          "slug": "mochizuki-t",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
         }
       ]
     },

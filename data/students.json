@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-10",
+  "generated": "2026-06-12",
   "total": 71,
   "students": [
     {
@@ -2916,16 +2916,16 @@
       "photo": "assets/photos/2026/chen_hao.jpg",
       "source_url": null,
       "k2spring": {
-        "title_en": "Hybrid Electromagnetic System for Highway Dynamic Charging: S-CPT × Planar Antennas × Energy Harvesting",
-        "title_jp": "Hybrid Electromagnetic System for Highway Dynamic Charging: S-CPT × Planar Antennas × Energy Harvesting",
-        "abstract_en": "This project goes beyond pure power-transfer optimization by integrating shielded capacitive power transfer (S-CPT) with planar antennas and energy-harvesting elements into a single roadway-embedded electromagnetic system. The aim is to simultaneously realize high-efficiency dynamic charging for in-motion electric vehicles, controlled near-field leakage, and self-powering of roadside sensors. Cross-disciplinary collaboration with antenna and electromagnetic-compatibility researchers within Kyushu University supports unified design of the electrode array, antenna layout, and harvesting subsystem, building a foundation for Japan-led smart-road infrastructure.",
-        "abstract_jp": "This project goes beyond pure power-transfer optimization by integrating shielded capacitive power transfer (S-CPT) with planar antennas and energy-harvesting elements into a single roadway-embedded electromagnetic system. The aim is to simultaneously realize high-efficiency dynamic charging for in-motion electric vehicles, controlled near-field leakage, and self-powering of roadside sensors. Cross-disciplinary collaboration with antenna and electromagnetic-compatibility researchers within Kyushu University supports unified design of the electrode array, antenna layout, and harvesting subsystem, building a foundation for Japan-led smart-road infrastructure."
+        "title_en": "Near-Field Control and Energy Harvesting for Self-Powered Sensors in Capacitive Dynamic Charging Roads",
+        "title_jp": "容量結合型走行中給電道路における自立電源型センサのための近傍界制御とエネルギーハーベスティング",
+        "abstract_en": "Capacitive dynamic charging roads can transfer power to Electric Vehicles (EVs) while driving. In road-integrated Capacitive Power Transfer (CPT) systems, near-field E-Fields around road electrodes are usually treated as leakage fields to be suppressed for safety. However, previous studies suggest that such electric fields can be controlled and even harvested to power low-power wireless sensors. This project explores a new use of controlled near-field energy in capacitive charging roads. Instead of simply eliminating leakage fields, the near-field energy is harvested to power self-powered roadside micro-sensors. By combining CPT, field control, and energy harvesting, this project aims to support smart road infrastructure, green mobility, and environmental monitoring (Fig. 1). Fig. 1 Controllable near-field energy harvesting from CPT road electrodes [AI-generated image]",
+        "abstract_jp": "容量結合型走行中給電道路は，電気自動車（EV）の走行中に電力を伝送することができる。道路一体型の容量結合型電力伝送（Capacitive Power Transfer: CPT）システムでは，道路電極周辺に発生する近傍電界は，通常，安全性の観点から抑制すべき漏洩電界として扱われる。しかし，先行研究では，このような電界を制御でき，さらに低消費電力の無線センサの電源として利用できる可能性が示唆されている。 本研究では，容量結合型給電道路における制御された近傍界エネルギーの新たな利用方法を検討する。漏洩電界を単に除去するのではなく，近傍界エネルギーを収穫し，道路側に設置される自立電源型マイクロセンサの電源として活用する。CPT，電界制御，エネルギーハーベスティングを組み合わせることで，本研究はスマート道路インフラ，グリーンモビリティ，および環境モニタリングへの貢献を目指す（図1）。 図1 CPT道路電極からの制御可能な近傍界エネルギーハーベスティング［AI生成画像］"
       },
       "phd": {
-        "title_en": "Design and optimization of an S-CPT wireless power transfer circuit model for in-motion EVs",
-        "title_jp": "Design and optimization of an S-CPT wireless power transfer circuit model for in-motion EVs",
-        "abstract_en": "Develops a high-precision equivalent-circuit model of road-embedded shielded capacitive power transfer (S-CPT) electrodes for moving-vehicle wireless charging. Three-dimensional electromagnetic analysis is used to model lane-side primary electrode arrays and vehicle-side secondary electrodes, and to study the influence of lateral position, vehicle motion, and surrounding-environment variation on coupling efficiency.",
-        "abstract_jp": "Develops a high-precision equivalent-circuit model of road-embedded shielded capacitive power transfer (S-CPT) electrodes for moving-vehicle wireless charging. Three-dimensional electromagnetic analysis is used to model lane-side primary electrode arrays and vehicle-side secondary electrodes, and to study the influence of lateral position, vehicle motion, and surrounding-environment variation on coupling efficiency."
+        "title_en": "Coupling-Structure Optimization and Broadband Matching for Capacitive Dynamic Wireless Power Transfer in EVs",
+        "title_jp": "電気自動車向け容量結合型動的無線電力伝送における結合構造最適化と広帯域整合",
+        "abstract_en": "Electric Vehicles (EVs) are important for reducing carbon emissions from road transportation. However, limited charging infrastructure and long charging waiting times still cause range anxiety, especially during long-distance driving. Dynamic Wireless Power Transfer can supply power to EVs while they are moving and is a promising solution to this issue. Capacitive power transfer (CPT) enables thin and lightweight road-embedded electrodes and can reduce heating caused by metallic foreign objects compared with inductive power transfer.",
+        "abstract_jp": "電気自動車（EV）は、道路交通から排出される二酸化炭素を削減するうえで重要な役割を担っています。しかし、充電インフラの不足や充電待ち時間の長さにより、特に長距離走行時には「途中で電池が切れるのではないか」という不安が依然として残っています。走行中ワイヤレス給電は、EVが走行している間に電力を供給できる技術であり、この問題を解決する有望な方法の一つです。中でも容量性電力伝送（CPT）は、道路に埋め込む電極を薄く、軽く設計できるという特徴があります。また、磁界結合方式のワイヤレス給電と比べて、金属異物による発熱を抑えられる可能性があります。"
       },
       "achievements": {
         "papers": [],
@@ -2933,8 +2933,8 @@
         "awards": [],
         "other": [
           {
-            "text": "Chen Hao , Eiichi Tateishi, Naoki Kojo, Nobuhiro Kai, Toru Hashimoto, Kota Uchio, Tatsuya Yamaguchi, Reiji Hattori, Haruichi Kanaya, \"Optimization of Shielded Capacitive Power Transfer (S-CPT) Systems Using Slotted Electrodes,\" IEEE 27th Electronics Packaging Technology Conference (EPTC 2025) , pp. TBD (2025).",
-            "doi": null
+            "text": "Chen Hao , Eiichi Tateishi, Naoki Kojo, Nobuhiro Kai, Toru Hashimoto, Kota Uchio, Tatsuya Yamaguchi, Reiji Hattori, Haruichi Kanaya, “Optimization of Shielded Capacitive Power Transfer Systems Using Slotted Electrodes,” 2025 IEEE 27th Electronics Packaging Technology Conference (EPTC) , Singapore, 2025, pp. 1–5 — 10.1109/EPTC67330.2025.11392236",
+            "doi": "https://doi.org/10.1109/EPTC67330.2025.11392236"
           }
         ]
       }
@@ -3070,19 +3070,19 @@
       "supervisor_name": "Prof. Tomoaki UTSUNOMIYA",
       "supervisor_name_jp": "宇都宮 智昭 教授",
       "supervisor_url": "https://hyoka.ofc.kyushu-u.ac.jp/html/100020525_en.html",
-      "photo": "assets/photos/placeholder-portrait.svg",
+      "photo": "assets/photos/2026/minoda_kohei.jpg",
       "source_url": null,
       "k2spring": {
-        "title_en": "Advancing Floating Offshore Wind Turbines via Fusion of Fluid Physics and Control Theory: Heave-Plate Damping Mechanism",
-        "title_jp": "Advancing Floating Offshore Wind Turbines via Fusion of Fluid Physics and Control Theory: Heave-Plate Damping Mechanism",
-        "abstract_en": "Standard control models of floating offshore wind turbines treat heave-plate hydrodynamic forces with simplified drag coefficients, but real sea states are dominated by complex vortex-shedding phenomena that conventional formulations cannot capture. This project deliberately steps outside the doctoral 'control/theory' framework to interrogate the underlying fluid-physics — specifically the damping mechanism driven by vortex shedding around heave plates in the low Keulegan–Carpenter (KC) regime. CFD simulations (Code_Saturne) carried out at Kyushu University are paired with tank experiments at ENSTA Paris (Institut Polytechnique de Paris), under a collaboration with Prof. Luc Pastur initiated by the applicant. PIV-based visualization quantifies vortex shedding under irregular waves and at low frequencies. The outcome is a more general, physics-grounded heave-plate design formula that can be embedded as a parameter in the doctoral state-space model, closing the loop between physical understanding and control design.",
-        "abstract_jp": "Standard control models of floating offshore wind turbines treat heave-plate hydrodynamic forces with simplified drag coefficients, but real sea states are dominated by complex vortex-shedding phenomena that conventional formulations cannot capture. This project deliberately steps outside the doctoral 'control/theory' framework to interrogate the underlying fluid-physics — specifically the damping mechanism driven by vortex shedding around heave plates in the low Keulegan–Carpenter (KC) regime. CFD simulations (Code_Saturne) carried out at Kyushu University are paired with tank experiments at ENSTA Paris (Institut Polytechnique de Paris), under a collaboration with Prof. Luc Pastur initiated by the applicant. PIV-based visualization quantifies vortex shedding under irregular waves and at low frequencies. The outcome is a more general, physics-grounded heave-plate design formula that can be embedded as a parameter in the doctoral state-space model, closing the loop between physical understanding and control design."
+        "title_en": "Visualizing Vortex Dynamics around Perforated Heave Plates",
+        "title_jp": "穿孔ヒープレート周りの渦動力学の可視化",
+        "abstract_en": "This project focuses on resolving and characterizing the three-dimensional vortex structures generated around oscillating perforated heave plates in low-KC oscillatory flow. Despite the recognized importance of heave plates in suppressing vertical motion of floating offshore wind turbine (FOWT) foundations, the simultaneous spatial and temporal evolution of perforation-induced jets and outer-edge vortices has not been systematically visualized. High-fidelity CFD simulations are conducted using an Arbitrary Lagrangian–Eulerian (ALE) finite-volume framework in Code_Saturne, with results validated against Particle Image Velocimetry (PIV) data from the ENSTA–EDF water-tank experiments. By comparing vorticity fields from both methods, the project aims to clarify how hole geometry, plate thickness, and edge shape govern vortex formation, interaction, and energy dissipation over an oscillation cycle. The emphasis is on physical intuition rather than engineering correlations, providing the fundamental flow insight needed to connect plate geometry to damping performance.",
+        "abstract_jp": "本プロジェクトは，低KC数の振動流中において振動する多孔質ヒープレート周りに生成される三次元渦構造の解明と特性評価を目的としている．浮体式洋上風車（FOWT）底部に取り付けられるヒープレートの動揺抑制の効果は先行研究によって認識されているが，穿孔部を通過するジェットとプレートの縁で生成される渦の同時発展は，これまで体系的に可視化されていない．本研究では，Code_SaturneのALE有限体積フレームワークを用いた高精度CFDシミュレーションを実施し，ENSTA–EDF水槽実験で得られたPIVデータと比較することで結果を検証する．両手法から得られた渦度場を比較することにより，プレート形状における厚み／孔のサイズなどのパラメータが振動サイクルを通じた渦の生成・干渉・エネルギー散逸にどのように寄与するのかを明らかにすることが目的である．本プロジェクトは工学的相関式の導出よりも流体力学の理論的な知見の獲得を重視している．"
       },
       "phd": {
-        "title_en": "Integrated state estimation and adaptive control of floating offshore wind turbine systems",
-        "title_jp": "Integrated state estimation and adaptive control of floating offshore wind turbine systems",
-        "abstract_en": "Builds a comprehensive control framework for floating offshore wind turbines that simultaneously maximizes power output and reduces structural fatigue. A six-degree-of-freedom nonlinear state-space model couples aerodynamic, hydrodynamic, and mooring forces. State estimation extends the master-program nonlinear Kalman filter to multivariable systems, treating wind and waves as unknown inputs and compensating in real time. Nonlinear optimal control based on the Hamilton–Jacobi equation and stable-manifold method coordinates blade pitch and platform attitude under severe sea states; adaptive parameters track changing ocean conditions. Validation uses NREL's high-fidelity OpenFAST simulator.",
-        "abstract_jp": "Builds a comprehensive control framework for floating offshore wind turbines that simultaneously maximizes power output and reduces structural fatigue. A six-degree-of-freedom nonlinear state-space model couples aerodynamic, hydrodynamic, and mooring forces. State estimation extends the master-program nonlinear Kalman filter to multivariable systems, treating wind and waves as unknown inputs and compensating in real time. Nonlinear optimal control based on the Hamilton–Jacobi equation and stable-manifold method coordinates blade pitch and platform attitude under severe sea states; adaptive parameters track changing ocean conditions. Validation uses NREL's high-fidelity OpenFAST simulator."
+        "title_en": "Damping Mechanisms of Perforated Heave Plates",
+        "title_jp": "多孔質ヒープレートの減衰機構",
+        "abstract_en": "This PhD project investigates the hydrodynamic damping mechanisms of perforated heave plates attached to FOWT foundations, with the central goal of physically separating and quantifying the distinct contributions of perforation-induced (“hole”) damping and outer-edge vortex (“edge”) damping to the total non-dimensional damping coefficient C b . Existing models treat the plate as a single effective device, providing no decomposition of damping sources. Using a validated ALE CFD framework built in Code_Saturne and calibrated against tank experiments, parametric simulations will systematically vary porosity, hole pattern, plate thickness, and edge geometry across a range of KC numbers. The total damping coefficient will be decomposed as C b = C b,hole + C b,edge , where each term is expressed as a compact non-dimensional function of KC number, porosity, and edge-shape parameters. The resulting simplified models will be embedded in an optimisation framework for heave plate design and validated against new water-tank experiments. The ultimate goal is to integrate these physics-informed damping formulas into full FOWT simulations.",
+        "abstract_jp": "本博士研究は，FOWT底部に取り付けられた多孔質ヒープレートの流体力学的減衰機構を調査し，無次元減衰係数 C b に対する孔で生成されるジェットに起因する減衰とプレート縁で生成される渦に起因する減衰の寄与を物理的に分離・定量化することを目標としている．既存モデルはプレートを単一の有効デバイスとして扱っており，減衰源の分解はまだ明確になっていない．Code_SaturneによるALE CFDフレームワークを水槽実験と照らし合わせて妥当性を検証し，広範囲のKC数にわたって体系的に変化させたパラメトリックシミュレーションを実施する．全減衰係数を C b = C b,hole + C b,edge と分解し，各項をプレート形状パラメータの無次元関数として表現する．得られた簡易モデルをヒープレート設計の最適化フレームワークに組み込み，新たな水槽実験によって検証する．最終目標は，これらの物理に基づく減衰式を通じてFOWT全体シミュレーションに統合し，風車全体への影響を研究することである．"
       },
       "achievements": {
         "papers": [],
@@ -3105,21 +3105,29 @@
       "photo": "assets/photos/2026/mochizuki_takeshi.jpg",
       "source_url": null,
       "k2spring": {
-        "title_en": "Thermo-Informatics Elucidation of Heat-Transfer Enhancement Mechanisms in Flow Boiling",
-        "title_jp": "Thermo-Informatics Elucidation of Heat-Transfer Enhancement Mechanisms in Flow Boiling",
-        "abstract_en": "Flow boiling is a fundamental physical phenomenon in heat-exchanger design, yet its complex multiphase, multiscale heat-transfer mechanisms remain only partially systematized. This project uses thermo-informatics — the fusion of thermal engineering and information science — to organize heat-transfer mechanisms in flow boiling. By combining experimental observation with data-driven analysis, the project aims to deliver foundational knowledge that supports refrigerant transition for environmental conservation and informs the design of next-generation heat exchangers in the refrigeration and HVAC field.",
-        "abstract_jp": "Flow boiling is a fundamental physical phenomenon in heat-exchanger design, yet its complex multiphase, multiscale heat-transfer mechanisms remain only partially systematized. This project uses thermo-informatics — the fusion of thermal engineering and information science — to organize heat-transfer mechanisms in flow boiling. By combining experimental observation with data-driven analysis, the project aims to deliver foundational knowledge that supports refrigerant transition for environmental conservation and informs the design of next-generation heat exchangers in the refrigeration and HVAC field."
+        "title_en": "Elucidation of Heat Transfer Enhancement Mechanisms in Flow Boiling via Thermo-Informatics",
+        "title_jp": "サーモインフォマティクスによる流動沸騰現象の伝熱促進メカニズム解明",
+        "abstract_en": "Thermo-informatics is an emerging research field that integrates thermal engineering with informatics. Specifically, this research combines experimental approaches with machine learning to systematize the mechanisms of heat-transfer enhancement in in-tube flow-boiling phenomena. This approach is expected to lead to foundational technologies for optimizing heat transport and designing high-performance heat exchangers. Fig. Predicted boiling heat transfer coefficient from the ML model Moving forward, the aim is to further enhance the versatility and reliability of the machine-learning models. Through the advanced harmonization of thermal engineering and informatics, this research will contribute to the realization of a sustainable society.",
+        "abstract_jp": "「サーモインフォマティクス」とは、熱を扱う「熱工学」と、データを扱う「情報工学」を融合させた新しい研究領域です。本研究では、特に、「実験」と「機械学習」を掛け合わせ、管内の流動沸騰現象における伝熱促進メカニズムの体系化を目指しています。 本研究アプローチは、熱輸送を最適化し、高性能な熱交換器を設計するための基盤技術の創出に繋がると考えています。 Fig. 機械学習モデルによる沸騰熱伝達率の予測 今後は、さらに機械学習モデルの汎用性と信頼性を高め、「熱工学×情報工学」の高度な調和から持続可能な社会の実現に貢献いたします。"
       },
       "phd": {
-        "title_en": "Thermo-informatics-based advanced analysis, prediction, and optimization of refrigeration and HVAC systems",
-        "title_jp": "Thermo-informatics-based advanced analysis, prediction, and optimization of refrigeration and HVAC systems",
-        "abstract_en": "Develops a digital-twin platform for heat pumps that integrates physics-grounded interpretable analysis, transient prediction of non-stationary behavior, and real-time operational optimization. The platform is positioned as foundational infrastructure for carbon-neutral refrigeration and air-conditioning systems.",
-        "abstract_jp": "Develops a digital-twin platform for heat pumps that integrates physics-grounded interpretable analysis, transient prediction of non-stationary behavior, and real-time operational optimization. The platform is positioned as foundational infrastructure for carbon-neutral refrigeration and air-conditioning systems."
+        "title_en": "Study of Heat Transfer Mechanisms in Vapor-Liquid Two-Phase Flow via Thermo-Informatics",
+        "title_jp": "サーモインフォマティクスによる気液二相流伝熱メカニズムの研究",
+        "abstract_en": "In the HVAC&R field, a transition to alternative refrigerants responsible for heat transport is required. Although this initiative is essential for reducing environmental impact, immediate changes are difficult due to the high penetration rate of air conditioners and high thermal demand, necessitating a phased transition. As a phased strategy, “non-azeotropic refrigerant mixtures” — which blend conventional refrigerants with low-environmental-impact next-generation refrigerants — are currently being developed and evaluated. However, differing boiling points among the constituent refrigerants give rise to a unique thermal characteristic known as “temperature glide,” which presents a technical barrier to the practical application of these new refrigerants.",
+        "abstract_jp": "エアコンをはじめとする冷凍空調分野では、熱輸送を担う冷媒の転換が求められています。環境負荷軽減のために必要な取り組みですが、エアコンなどの普及率および熱需要の高さから、急激な変更は難しく、段階的な転換が必要になります。段階的な策として従来の冷媒と環境負荷の低い次世代冷媒を混ぜ合わせた冷媒「非共沸混合冷媒」が開発・検討されています。しかし、冷媒の沸点が異なるため「温度グライド」と呼ばれる特有の熱的特性が生じ、新規冷媒を実用化する上での技術的障壁となっています。そこで、博士課程の研究では、この新規冷媒を用いた沸騰・凝縮実験を行い、伝熱特性（気液二相流伝熱メカニズム）を明らかにします。本研究は、実験を中心に進め新規冷媒に関する知見を増やすと同時に、取得データの分析に機械学習を活用することで、データが示す傾向から背後にある物理メカニズムまで深く解き明かしていきます。本研究を通じて、温度グライドという技術障壁を克服し、地球環境と調和する次世代冷媒へのスムーズな移行を支える設計・運用指針の構築に貢献いたします。"
       },
       "achievements": {
         "papers": [
           {
-            "text": "Lilian Aketch Okwiri, Takeshi Mochizuki , Kairi Koito, Noriaki Fukui, Koji Enoki “Enhanced Pool Boiling via Binder Jetting 3D-Printed Porous Copper Structures: CHF and HTC Investigation” Applied Sciences , Vol. 15, 7892 (2025)",
+            "text": "Lilian Aketch Okwiri, Takeshi Mochizuki , Kairi Koito, Noriaki Fukui, Koji Enoki “Enhanced Pool Boiling via Binder Jetting 3D-Printed Porous Copper Structures: CHF and HTC Investigation” Applied Sciences , Vol. 15, 7892 (2025) — 10.3390/app15147892",
+            "doi": "https://doi.org/10.3390/app15147892"
+          },
+          {
+            "text": "Tomihiro Kinjo, Takeshi Mochizuki , Hayato Nakano, Koji Enoki, Yuichi Sei “Machine-Learning and Experimental Study on Predicting the Heat Transfer Coefficient in Vertical and Microgravity Flow Boiling Using Horizontal Flow Data” Journal of Thermal Science and Engineering Applications , Vol. 76, TSEA-25-1724 (2026) — 10.1115/1.4071502",
+            "doi": "https://doi.org/10.1115/1.4071502"
+          },
+          {
+            "text": "Takeshi Mochizuki , Kosaku Nishida, Ikuro Akada, Hiroya Mamori, Koji Enoki “Experimental Study of Flow Boiling Characteristics in Wavy-Shaped Mini-channel” Applied Thermal Engineering , manuscript no. ATE-D-26-04350R1 [Under Review]",
             "doi": null
           }
         ],
@@ -3130,6 +3138,10 @@
           },
           {
             "text": "Takeshi Mochizuki , Kosaku Nishida, Ikuro Akada, Takafumi Ouchi, Koji Enoki “Experimental Study of Flow Boiling Characteristics in Wavy-Shaped Mini-Channel” 35th International Symposium on Transport Phenomena (2025/09) [International, Oral]",
+            "doi": null
+          },
+          {
+            "text": "Takeshi Mochizuki , Yuma Koriki, Hiroya Mamori, Wang Menglei, Takeshi Miyazaki “Heat Transfer Enhancement by Traveling Wave Control in Turbulent Channel Flow” The 9th Asian Pacific Congress on Computational Mechanics & 7th Australasian Conference on Computational Mechanics (2025/12) [International, Oral]",
             "doi": null
           },
           {
@@ -3149,6 +3161,10 @@
         "other": [
           {
             "text": "Student Commendation Award (学生表彰) — University of Electro-Communications (2025/03)",
+            "doi": null
+          },
+          {
+            "text": "Student Commendation Award (学生表彰) — University of Electro-Communications (2026/03)",
             "doi": null
           }
         ]
