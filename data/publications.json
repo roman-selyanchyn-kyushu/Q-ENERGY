@@ -1,6 +1,6 @@
 {
   "generated": "2026-06-12",
-  "total_papers": 197,
+  "total_papers": 198,
   "years": [
     2026,
     2025,
@@ -14,7 +14,7 @@
   ],
   "year_counts": {
     "2026": 28,
-    "2025": 69,
+    "2025": 70,
     "2024": 45,
     "2023": 26,
     "2022": 13,
@@ -1237,7 +1237,7 @@
     },
     {
       "year": 2025,
-      "html": "<span class=\"ach-authors\">Tomaru T.</span>, Awakura Y., Kotajima M., Irisawa T., Ha S.-J., Jeon Y.-P., Nakabayashi K., Miyawaki J., Yoon S.-H. &ldquo;Effects of chemical structure of mesogenic components on the mechanical properties of mesophase pitch-based carbon fiber&rdquo; <em>Carbon</em>, Vol. 242, 120428 (2025) <a href=\"https://doi.org/10.1016/j.carbon.2025.120428\" target=\"_blank\" rel=\"noopener\">doi:10.1016/j.carbon.2025.120428</a>",
+      "html": "<span class=\"ach-authors\">Tomaru T.</span>, Awakura Y., <span class=\"ach-authors\">Kotajima M.</span>, Irisawa T., Ha S.-J., Jeon Y.-P., Nakabayashi K., Miyawaki J., Yoon S.-H. &ldquo;Effects of chemical structure of mesogenic components on the mechanical properties of mesophase pitch-based carbon fiber&rdquo; <em>Carbon</em>, Vol. 242, 120428 (2025) <a href=\"https://doi.org/10.1016/j.carbon.2025.120428\" target=\"_blank\" rel=\"noopener\">doi:10.1016/j.carbon.2025.120428</a>",
       "doi": "https://doi.org/10.1016/j.carbon.2025.120428",
       "student_slug": "taisei-tomaru",
       "student_name": "Taisei Tomaru",
@@ -1251,6 +1251,13 @@
           "slug": "taisei-tomaru",
           "cohort": 2023,
           "programme": "Q-ENERGY Fellowship"
+        },
+        {
+          "name": "Masaru Kotajima",
+          "name_jp": "古田島 勝",
+          "slug": "kotajima-m",
+          "cohort": 2026,
+          "programme": "K2-SPRING"
         }
       ]
     },
@@ -1801,6 +1808,25 @@
           "name_jp": "西村 勇輝",
           "slug": "yuki-nishimura",
           "cohort": 2025,
+          "programme": "K2-SPRING"
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "html": "<span class=\"ach-authors\">Hao C.</span>, Tateishi E., Kojo N., Kai N., Hashimoto T., Uchio K., Yamaguchi T., Hattori R., Kanaya H. &ldquo;Optimization of Shielded Capacitive Power Transfer Systems Using Slotted Electrodes,&rdquo;\n          <em>2025 IEEE 27th Electronics Packaging Technology Conference (EPTC)</em>, Singapore, 2025, pp.&thinsp;1&ndash;5\n          &mdash; <a href=\"https://doi.org/10.1109/EPTC67330.2025.11392236\" target=\"_blank\" rel=\"noopener\">10.1109/EPTC67330.2025.11392236</a>",
+      "doi": "https://doi.org/10.1109/EPTC67330.2025.11392236",
+      "student_slug": "chen-h",
+      "student_name": "Hao Chen",
+      "student_name_jp": "陳 昊",
+      "cohort": 2026,
+      "programme": "K2-SPRING",
+      "attributions": [
+        {
+          "name": "Hao Chen",
+          "name_jp": "陳 昊",
+          "slug": "chen-h",
+          "cohort": 2026,
           "programme": "K2-SPRING"
         }
       ]

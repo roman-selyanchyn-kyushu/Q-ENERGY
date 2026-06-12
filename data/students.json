@@ -2928,15 +2928,15 @@
         "abstract_jp": "電気自動車（EV）は、道路交通から排出される二酸化炭素を削減するうえで重要な役割を担っています。しかし、充電インフラの不足や充電待ち時間の長さにより、特に長距離走行時には「途中で電池が切れるのではないか」という不安が依然として残っています。走行中ワイヤレス給電は、EVが走行している間に電力を供給できる技術であり、この問題を解決する有望な方法の一つです。中でも容量性電力伝送（CPT）は、道路に埋め込む電極を薄く、軽く設計できるという特徴があります。また、磁界結合方式のワイヤレス給電と比べて、金属異物による発熱を抑えられる可能性があります。"
       },
       "achievements": {
-        "papers": [],
-        "conferences": [],
-        "awards": [],
-        "other": [
+        "papers": [
           {
             "text": "Chen Hao , Eiichi Tateishi, Naoki Kojo, Nobuhiro Kai, Toru Hashimoto, Kota Uchio, Tatsuya Yamaguchi, Reiji Hattori, Haruichi Kanaya, “Optimization of Shielded Capacitive Power Transfer Systems Using Slotted Electrodes,” 2025 IEEE 27th Electronics Packaging Technology Conference (EPTC) , Singapore, 2025, pp. 1–5 — 10.1109/EPTC67330.2025.11392236",
             "doi": "https://doi.org/10.1109/EPTC67330.2025.11392236"
           }
-        ]
+        ],
+        "conferences": [],
+        "awards": [],
+        "other": []
       }
     },
     {
@@ -3048,15 +3048,15 @@
         "abstract_jp": "Targets the establishment of a 'carbon-resource circulation system' by treating refractory carbon waste — previously valorizable only by combustion — as a feedstock for liquid carbon resources and high-functional carbon materials. The work covers (i) optimization of liquefaction conditions, (ii) mechanistic analysis of the decomposition–liquefaction reaction, and (iii) fabrication of high-functional carbon materials from the resulting liquefied product, thereby contributing to resource-supply security and industrial decarbonization."
       },
       "achievements": {
-        "papers": [],
-        "conferences": [],
-        "awards": [],
-        "other": [
+        "papers": [
           {
             "text": "Taisei Tomaru, Yasufumi Awakura, Masaru Kotajima , Toshihira Irisawa, Seung-Jae Ha, Young-Pyo Jeon, Koji Nakabayashi, Jin Miyawaki, Seong-Ho Yoon, \"Effects of chemical structure of mesogenic components on the mechanical properties of mesophase pitch-based carbon fiber,\" Carbon , 242, 120428 (2025). DOI: 10.1016/j.carbon.2025.120428",
             "doi": "https://doi.org/10.1016/j.carbon.2025.120428"
           }
-        ]
+        ],
+        "conferences": [],
+        "awards": [],
+        "other": []
       }
     },
     {
@@ -3482,10 +3482,7 @@
         "abstract_jp": "Develops MOF-supported Co–NHC molecular catalysts for photocatalytic water splitting and hydrogen evolution under strongly alkaline conditions, addressing limitations of current photocatalytic systems in light-absorption range, solar-to-hydrogen efficiency, and material stability under realistic operating environments."
       },
       "achievements": {
-        "papers": [],
-        "conferences": [],
-        "awards": [],
-        "other": [
+        "papers": [
           {
             "text": "Qingen Zheng , Kosei Yamauchi, Ken Sakai, \"Improved Photocatalytic H 2 Evolution Using Novel UiO67-bpy-RuPt MOFs under Visible Light,\" The 10th Asian Conference on Coordination Chemistry, Oct. 2025. [International, Poster]",
             "doi": null
@@ -3506,7 +3503,10 @@
             "text": "Outstanding Volunteer Contribution to COVID-19, Beijing University of Chemical Technology.",
             "doi": null
           }
-        ]
+        ],
+        "conferences": [],
+        "awards": [],
+        "other": []
       }
     },
     {
