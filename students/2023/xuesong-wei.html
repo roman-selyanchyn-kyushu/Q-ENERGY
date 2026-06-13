@@ -216,6 +216,24 @@
   .fnav-menu-all{display:block;margin-top:5px;padding:8px 10px;border-top:1px solid var(--line);font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.03em;color:var(--ink-3);text-decoration:none;}
   .fnav-menu-all:hover{color:var(--accent);}
   @media(max-width:820px){.eyebrow{display:none;}}
+  /* Mobile de-zoom: the hero/sections are sized for desktop and feel heavy on a
+     phone — shrink the portrait, tighten vertical rhythm, trim oversized headings. */
+  @media(max-width:560px){
+    .hero{padding-top:30px;padding-bottom:24px;gap:22px;}
+    .portrait-frame{max-width:208px;}
+    .name{font-size:40px;}
+    html[lang="ja"] .name{font-size:33px;}
+    .hero-subline{margin-top:22px;padding-top:18px;gap:16px 28px;}
+    .hero-subline dd{font-size:16.5px;}
+    section{padding-top:26px;padding-bottom:26px;}
+    .section-title{font-size:25px;}
+    .section-head{margin-bottom:18px;}
+    .research-primary{padding:22px;}
+    .research-title{font-size:20px;margin-bottom:16px;}
+    .phd-card{padding:20px;}
+    .ach-group{padding:20px;}
+    .ach-list li{font-size:15.5px;}
+  }
 
   /* Research figure (image embedded in a research abstract) */
   .research-figure{margin:22px auto 6px;max-width:520px;}
