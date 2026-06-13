@@ -41,9 +41,9 @@
   /* Top bar */
   .topbar{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(10px);-webkit-backdrop-filter:saturate(140%) blur(10px);background:rgba(246,243,236,.78);border-bottom:1px solid var(--line);}
   .topbar-inner{max-width:var(--maxw);margin:0 auto;padding:14px var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:16px;}
-  .program-mark{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:500;font-size:18px;letter-spacing:.01em;color:var(--ink);text-decoration:none;}
+  .program-mark{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:500;font-size:18px;letter-spacing:.01em;color:var(--ink);text-decoration:none;flex-shrink:0;}
   .program-mark .dot{width:10px;height:10px;background:linear-gradient(135deg,var(--accent-3) 0%,var(--accent) 50%,var(--accent-2) 100%);border-radius:2px;transform:rotate(45deg);}
-  .program-mark small{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-left:4px;}
+  .program-mark small{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-left:4px;white-space:nowrap;writing-mode:horizontal-tb;}
   .lang-toggle{display:flex;padding:3px;background:var(--paper-2);border:1px solid var(--line);border-radius:999px;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.06em;position:relative;}
   .lang-toggle button{appearance:none;border:0;background:transparent;padding:7px 16px;border-radius:999px;color:var(--ink-3);cursor:pointer;font:inherit;letter-spacing:inherit;transition:color .25s ease;z-index:1;}
   .lang-toggle button.is-active{color:var(--paper);}
@@ -182,6 +182,15 @@
   .fnav-btn:hover{background:var(--paper-2);color:var(--accent);border-color:var(--accent);}
   .fnav-btn svg{width:13px;height:13px;flex-shrink:0;}
   @media(max-width:600px){.fnav-label{display:inline;}}
+  /* Mobile topbar: hide the unit subtitle (its space-less JP string wrapped per-character
+     into a vertical column), and drop the fellow-nav onto its own centered second row so
+     the wordmark + language toggle never get squeezed off-screen. */
+  @media(max-width:760px){
+    html[lang] .program-mark small{display:none;}  /* beat html[lang="ja"] [data-lang-jp]{display:revert} */
+    .topbar-inner{flex-wrap:wrap;row-gap:10px;padding-top:11px;padding-bottom:11px;}
+    .fellow-nav{order:1;flex-basis:100%;justify-content:center;}
+    .fnav-btn{min-height:40px;padding:8px 14px;}
+  }
   .fnav-jump{position:relative;}
   .fnav-toggle{cursor:pointer;font:inherit;}
   .fnav-caret{margin-left:1px;transition:transform .2s;}
