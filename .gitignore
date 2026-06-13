@@ -23,6 +23,12 @@ assets/photos/PHOTO-GUIDE.md
 data/students-private.json
 scripts/email-drafts/
 
+# Publications data — LOCAL-ONLY source. publications.html is now pre-baked static
+# HTML (no runtime fetch), so these never go to the web. (publications-data.js is
+# obsolete — the page no longer loads it.)
+data/publications.json
+data/publications-data.js
+
 # Raw student submissions (keep local)
 docs/*.docx
 
