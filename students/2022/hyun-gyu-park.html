@@ -172,16 +172,9 @@
 
   .partner-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;}
   .partner-caption{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);text-align:center;line-height:1.4;}
-
-  .source-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;}
-  .source-pill{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.5);color:var(--accent);text-decoration:none;font-family:var(--sans);font-weight:600;font-size:13px;transition:background .25s,transform .25s;}
+  .source-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;padding:0 var(--pad);}
+  .source-pill{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border:1px solid var(--clr-line, #d8d3c8);border-radius:999px;background:rgba(255,255,255,.5);color:var(--clr-accent, #1a3a5c);text-decoration:none;font-weight:600;font-size:13px;transition:background .25s,transform .25s;}
   .source-pill:hover{background:rgba(255,255,255,.95);transform:translateY(-1px);}
-  .meta-card{border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(20px,3vw,32px);background:rgba(255,255,255,.38);}
-  .meta-list{display:grid;grid-template-columns:190px 1fr;gap:12px 24px;margin:0;}
-  .meta-list dt{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);}
-  .meta-list dd{margin:0;font-family:var(--serif);font-size:16px;color:var(--ink);line-height:1.55;}
-  .placeholder-note{font-family:var(--serif);font-style:italic;color:var(--ink-4);}
-  @media(max-width:680px){.meta-list{grid-template-columns:1fr;gap:4px 0}.meta-list dd{margin-bottom:12px}}
 
   /* Fellow navigator */
   .fellow-nav{display:flex;align-items:center;gap:4px;}
@@ -190,38 +183,81 @@
   .fnav-btn svg{width:13px;height:13px;flex-shrink:0;}
   @media(max-width:600px){.fnav-label{display:inline;}}
   @media(max-width:820px){.eyebrow{display:none;}}
+
+  /* Research figure (image embedded in a research abstract) */
+  .research-figure{margin:22px auto 6px;max-width:520px;}
+  .research-figure img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:var(--r-md);background:#fff;}
+  .research-figure figcaption{margin-top:10px;font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--ink-3);text-align:center;}
 </style>
 </head>
 <body>
+
+<!-- TOP BAR -->
 <header class="topbar">
   <div class="topbar-inner">
-    <a href="../../index.html" class="program-mark" aria-label="K2-SPRING Q-ENERGY home"><span class="dot" aria-hidden="true"></span><span>K2&#8209;SPRING</span><small data-lang-en="">Q-ENERGY Innovator Unit</small><small data-lang-jp="">グリーンイノベーションユニット</small></a>
+    <a href="https://k-spring.kyushu-u.ac.jp" class="program-mark" aria-label="K2-SPRING program">
+      <span class="dot" aria-hidden="true"></span>
+      <span>K2&#8209;SPRING</span>
+      <small data-lang-en="">Q-ENERGY Innovator Unit</small>
+      <small data-lang-jp="">グリーンイノベーションユニット</small>
+    </a>
     
     <div class="fellow-nav"><a href="daisuke-yoshizawa.html" class="fnav-btn" title="Previous fellow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12L6 8l4-4"/></svg></a><a href="../../index.html#students" class="fnav-btn" title="All Fellows"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="5" height="5"/><rect x="9" y="2" width="5" height="5"/><rect x="2" y="9" width="5" height="5"/><rect x="9" y="9" width="5" height="5"/></svg><span class="fnav-label">&ensp;14&thinsp;/&thinsp;71</span></a><a href="jacqueline-andrea-hidalgo-jim-nez.html" class="fnav-btn" title="Next fellow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l4 4-4 4"/></svg></a></div>
     
-    <div class="lang-toggle" data-lang="en" role="group" aria-label="Language"><span class="pill" aria-hidden="true"></span><button type="button" data-set-lang="en" class="is-active" aria-pressed="true">EN</button><button type="button" data-set-lang="jp" aria-pressed="false">日本語</button></div>
+    <div class="lang-toggle" data-lang="en" role="group" aria-label="Language">
+      <span class="pill" aria-hidden="true"></span>
+      <button type="button" data-set-lang="en" class="is-active" aria-pressed="true">EN</button>
+      <button type="button" data-set-lang="jp" aria-pressed="false">日本語</button>
+    </div>
   </div>
 </header>
+
+<!-- HERO -->
 <section class="hero">
   <div class="portrait-frame no-photo reveal" id="portrait">
-    <img src="../../assets/photos/2022/park_hyungyu.jpg" alt="Park Hyun-Gyu" onload="this.closest('.portrait-frame').classList.remove('no-photo')" onerror="this.remove()">
-    <span>Photo<br>Hyun-Gyu Park</span>
-    <div class="portrait-tag"><span data-lang-en="">2022 Cohort</span><span data-lang-jp="">2022年度</span></div>
+    <img src="../../assets/photos/2022/park_hyungyu.jpg" alt="Park Hyun-Gyu"
+         onload="this.closest('.portrait-frame').classList.remove('no-photo')"
+         onerror="this.remove()">
+    <span>Photo<br>park_hyungyu.jpg</span>
+    <div class="portrait-tag">
+      <span data-lang-en="">2022 Cohort</span>
+      <span data-lang-jp="">2022年度</span>
+    </div>
   </div>
+
   <div class="hero-meta reveal">
-    <div class="eyebrow"><span data-lang-en="">Q-ENERGY Fellowship &middot; Cohort 2022</span><span data-lang-jp="">Q-ENERGYフェローシップ &middot; 2022年度</span></div>
+    <div class="eyebrow">
+      <span data-lang-en="">Q-ENERGY Fellowship &middot; Cohort 2022</span>
+      <span data-lang-jp="">Q-ENERGYフェローシップ &middot; 2022年度</span>
+    </div>
     <h1 class="name" data-lang-en="">Hyun-Gyu <span class="em">Park</span></h1>
     <h1 class="name name-jp" data-lang-jp="">Hyun-Gyu Park</h1>
     <div class="hero-subline">
-      <dl><dt data-lang-en="">Affiliation</dt><dt data-lang-jp="">所属</dt><dd data-lang-en="">Interdisciplinary Graduate School of Engineering Sciences</dd><dd data-lang-jp="">総合理工学府</dd></dl>
-      <dl><dt data-lang-en="">Major / Department</dt><dt data-lang-jp="">専攻・部局</dt><dd data-lang-en="">Department of Interdisciplinary Science and Engineering</dd><dd data-lang-jp="">総合理工学専攻</dd></dl>
-      <dl><dt data-lang-en="">Supervisor</dt><dt data-lang-jp="">指導教員</dt><dd><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BC%8A%E8%97%A4-%E4%B8%80%E7%A7%80/" target="_blank" rel="noopener" data-lang-en="">Prof. Kazuhide ITO</a><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BC%8A%E8%97%A4-%E4%B8%80%E7%A7%80/" target="_blank" rel="noopener" data-lang-jp="">伊藤 一秀 教授</a></dd></dl>
+      <dl>
+        <dt data-lang-en="">Affiliation</dt>
+        <dt data-lang-jp="">所属</dt>
+        <dd data-lang-en="">Interdisciplinary Graduate School of Engineering Sciences</dd>
+        <dd data-lang-jp="">総合理工学府</dd>
+      </dl>
+      <dl>
+        <dt data-lang-en="">Major / Department</dt>
+        <dt data-lang-jp="">専攻</dt>
+        <dd data-lang-en="">Department of Interdisciplinary Science and Engineering</dd>
+        <dd data-lang-jp="">総合理工学専攻</dd>
+      </dl>
+      <dl>
+        <dt data-lang-en="">Supervisor</dt>
+        <dt data-lang-jp="">指導教員</dt>
+        <dd>
+          <a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BC%8A%E8%97%A4-%E4%B8%80%E7%A7%80/" target="_blank" rel="noopener" data-lang-en="">Prof. Kazuhide ITO</a><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BC%8A%E8%97%A4-%E4%B8%80%E7%A7%80/" target="_blank" rel="noopener" data-lang-jp="">伊藤 一秀 教授</a>
+        </dd>
+      </dl>
     </div>
   </div>
 </section>
 
+<!-- PHD RESEARCH -->
 <section>
-
   <div class="section-head">
     <div class="section-num"><span>§ 01</span></div>
     <div>
@@ -229,18 +265,22 @@
       <h2 class="section-title" data-lang-jp="">博士 <span class="em">研究</span></h2>
     </div>
   </div>
-  <div class="phd-card reveal">
-    <div class="phd-aside"><span data-lang-en="">Main PhD work</span><span data-lang-jp="">博士課程主研究</span></div>
+  <div class="phd-card">
+    <div class="phd-aside">
+      <span data-lang-en="">Main PhD work</span>
+      <span data-lang-jp="">博士課程主研究</span>
+    </div>
     <div class="phd-body">
       <h3 data-lang-en="">Development of Advanced Computer Simulated Person for Indoor Thermal Comfort and Air Quality Assessment</h3>
       <h3 data-lang-jp="">Development of Advanced Computer Simulated Person for Indoor Thermal Comfort and Air Quality Assessment</h3>
-      <div data-lang-en=""><p>Many comprehensive evaluation methods for IEQ (Indoor Environmental Quality) using numerical analysis such as Computational Fluid Dynamics (CFD) have been proposed.<br>Also, the reproduction of human in indoor space is regarded as a key point to evaluate IEQ with high accuracy.<br>Against this background, the Computer-Simulated Person (CSP), which can treat specific characteristics of the human body, has been suggested as a “digital twin” for CFD simulation. However, previous research simplified or ignored the clothing on CSP and heat and mass transfer around cloth.<br>So, my research aims to develop a new CSP with clothing and advanced estimation method of IEQ. This research focused on the 3 major tasks: 1) To establish an advanced thermal comfort analysis method with clothing 2) Integration of developed CSP with the human airway model 3) To suggest energy-efficient HVAC control method using the developed CSP.</p></div>
-      <div data-lang-jp=""><p>Many comprehensive evaluation methods for IEQ (Indoor Environmental Quality) using numerical analysis such as Computational Fluid Dynamics (CFD) have been proposed.<br>Also, the reproduction of human in indoor space is regarded as a key point to evaluate IEQ with high accuracy.<br>Against this background, the Computer-Simulated Person (CSP), which can treat specific characteristics of the human body, has been suggested as a “digital twin” for CFD simulation. However, previous research simplified or ignored the clothing on CSP and heat and mass transfer around cloth.<br>So, my research aims to develop a new CSP with clothing and advanced estimation method of IEQ. This research focused on the 3 major tasks: 1) To establish an advanced thermal comfort analysis method with clothing 2) Integration of developed CSP with the human airway model 3) To suggest energy-efficient HVAC control method using the developed CSP.</p></div>
+      <p data-lang-en="">Many comprehensive evaluation methods for IEQ (Indoor Environmental Quality) using numerical analysis such as Computational Fluid Dynamics (CFD) have been proposed.<br>Also, the reproduction of human in indoor space is regarded as a key point to evaluate IEQ with high accuracy.<br>Against this background, the Computer-Simulated Person (CSP), which can treat specific characteristics of the human body, has been suggested as a “digital twin” for CFD simulation. However, previous research simplified or ignored the clothing on CSP and heat and mass transfer around cloth.<br>So, my research aims to develop a new CSP with clothing and advanced estimation method of IEQ. This research focused on the 3 major tasks: 1) To establish an advanced thermal comfort analysis method with clothing 2) Integration of developed CSP with the human airway model 3) To suggest energy-efficient HVAC control method using the developed CSP.</p>
+      <p data-lang-jp="">Many comprehensive evaluation methods for IEQ (Indoor Environmental Quality) using numerical analysis such as Computational Fluid Dynamics (CFD) have been proposed.<br>Also, the reproduction of human in indoor space is regarded as a key point to evaluate IEQ with high accuracy.<br>Against this background, the Computer-Simulated Person (CSP), which can treat specific characteristics of the human body, has been suggested as a “digital twin” for CFD simulation. However, previous research simplified or ignored the clothing on CSP and heat and mass transfer around cloth.<br>So, my research aims to develop a new CSP with clothing and advanced estimation method of IEQ. This research focused on the 3 major tasks: 1) To establish an advanced thermal comfort analysis method with clothing 2) Integration of developed CSP with the human airway model 3) To suggest energy-efficient HVAC control method using the developed CSP.</p>
     </div>
   </div>
 </section>
-<section>
 
+<!-- RESEARCH ACHIEVEMENTS -->
+<section>
   <div class="section-head">
     <div class="section-num"><span>§ 02</span></div>
     <div>
@@ -248,7 +288,7 @@
       <h2 class="section-title" data-lang-jp="">研究 <span class="em">成果</span></h2>
     </div>
   </div>
-    <div class="ach-card">
+  <div class="ach-card">
     <div class="ach-group">
       <div class="ach-label"><span data-lang-en="">Research Papers</span><span data-lang-jp="">論文</span></div>
       <ol class="ach-list">
@@ -260,37 +300,73 @@
         <li><span class="ach-authors">Park H.</span>, Park S., Seo J. &ldquo;Evaluation on air purifier's performance in reducing the concentration of fine particulate matter&rdquo; <em>International Journal of Environmental Research and Public Health</em>, Vol.&thinsp;17, pp.&thinsp;1&ndash;14 (2020) <a href="https://doi.org/10.3390/ijerph17155561" target="_blank" rel="noopener">doi:10.3390/ijerph17155561</a></li>
       </ol>
     </div>
+
     <div class="ach-group">
       <div class="ach-label"><span data-lang-en="">Conference Presentations</span><span data-lang-jp="">学会発表</span></div>
-      <ol class="ach-list">        <li><span class="ach-authors">Hyun-Gyu P.</span>, Sung-Jun Y., Eisaku S., Hiroshi H., Ito K. &ldquo;Numerical Thermal Comfort Analysis Using Combined Computer-Simulated Person and Thermoregulation Model&rdquo; <em>E3S Web of Conferences</em>, Vol.&thinsp;396, 01019 (2023) <a href="https://doi.org/10.1051/e3sconf/202339601019" target="_blank" rel="noopener">doi:10.1051/e3sconf/202339601019</a></li>
+      <ol class="ach-list">
+        <li><span class="ach-authors">Hyun-Gyu P.</span>, Sung-Jun Y., Eisaku S., Hiroshi H., Ito K. &ldquo;Numerical Thermal Comfort Analysis Using Combined Computer-Simulated Person and Thermoregulation Model&rdquo; <em>E3S Web of Conferences</em>, Vol.&thinsp;396, 01019 (2023) <a href="https://doi.org/10.1051/e3sconf/202339601019" target="_blank" rel="noopener">doi:10.1051/e3sconf/202339601019</a></li>
         <li><span class="ach-authors">Park H.</span>, Yoo S.-J., Kuga K., Ito K. &ldquo;The effect of micro-movement of a computer-simulated person on the formation of thermal plume&rdquo; <em>18th Conference of the International Society of Indoor Air Quality and Climate</em>, Vol.&thinsp;&mdash;, &mdash; (2024)</li>
-        <li><span class="ach-authors">Park H.</span>, Park S., Seo J. &ldquo;Evaluation of the PM<sub>2.5</sub> reduction performance of air purifier considering human movement&rdquo; <em>16th Conference of the International Society of Indoor Air Quality and Climate</em>, Vol.&thinsp;&mdash;, &mdash; (2020)</li></ol>
+        <li><span class="ach-authors">Park H.</span>, Park S., Seo J. &ldquo;Evaluation of the PM<sub>2.5</sub> reduction performance of air purifier considering human movement&rdquo; <em>16th Conference of the International Society of Indoor Air Quality and Climate</em>, Vol.&thinsp;&mdash;, &mdash; (2020)</li>
+      </ol>
     </div>
+
     <div class="ach-group">
       <div class="ach-label"><span data-lang-en="">Other Achievements</span><span data-lang-jp="">その他の業績</span></div>
-      <ol class="ach-list"><li><span class="ach-soon"><span data-lang-en="">Coming soon</span><span data-lang-jp="">準備中</span></span></li></ol>
+      <ol class="ach-list">
+        <li><span class="ach-soon"><span data-lang-en="">Coming soon</span><span data-lang-jp="">準備中</span></span></li>
+      </ol>
     </div>
   </div>
 </section>
 
+<!-- PARTNER LOGOS -->
 <section class="partners">
-  <div class="partners-head" style="max-width:var(--maxw);margin:0 auto;"><span data-lang-en="">Programme &amp; institutional affiliation</span><span data-lang-jp="">プログラム・機関情報</span></div>
+  <div class="partners-head" style="max-width:var(--maxw);margin:0 auto;">
+    <span data-lang-en="">Programme &amp; institutional affiliation</span>
+    <span data-lang-jp="">プログラム・機関情報</span>
+  </div>
   <div class="partners-row" style="max-width:var(--maxw);margin:0 auto;">
-    <div class="partner-wrap"><a class="partner" href="https://k-spring.kyushu-u.ac.jp" target="_blank" rel="noopener"><img src="../../assets/logos/logo-k2spring.svg" alt="K2-SPRING"></a><span class="partner-caption"><span data-lang-en="">JST SPRING programme</span><span data-lang-jp="">JSTスプリングプログラム</span></span></div>
-    <div class="partner-wrap"><a class="partner" href="https://q-pit.kyushu-u.ac.jp/" target="_blank" rel="noopener"><img src="../../assets/logos/logo-qpit.png" alt="Q-PIT"></a><span class="partner-caption"><span data-lang-en="">Unit coordinator</span><span data-lang-jp="">ユニットコーディネーター</span></span></div>
-    <div class="partner-wrap"><a class="partner" href="https://q-pit.kyushu-u.ac.jp/fellow-ship-en/" target="_blank" rel="noopener"><img src="../../assets/logos/logo-qenergy.png" alt="Q-Energy Innovator Unit"></a><span class="partner-caption"><span data-lang-en="">Q-Energy Innovator Unit</span><span data-lang-jp="">グリーンイノベーションユニット</span></span></div>
-    <div class="partner-wrap"><a class="partner" href="https://www.kyushu-u.ac.jp/en/" target="_blank" rel="noopener"><img src="../../assets/logos/logo-kyushu.png" alt="Kyushu University" class="ku-tall"></a><span class="partner-caption"><span data-lang-en="">Host university</span><span data-lang-jp="">ホスト大学</span></span></div>
+    <div class="partner-wrap">
+    <a class="partner" href="https://k-spring.kyushu-u.ac.jp" target="_blank" rel="noopener">
+      <img src="../../assets/logos/logo-k2spring.svg" alt="K2-SPRING">
+    </a>
+    <span class="partner-caption"><span data-lang-en="">JST SPRING programme</span><span data-lang-jp="">JSTスプリングプログラム</span></span>
+    </div>
+    <div class="partner-wrap">
+    <a class="partner" href="https://q-pit.kyushu-u.ac.jp/" target="_blank" rel="noopener">
+      <img src="../../assets/logos/logo-qpit.png" alt="Q-PIT">
+    </a>
+    <span class="partner-caption"><span data-lang-en="">Unit coordinator</span><span data-lang-jp="">ユニットコーディネーター</span></span>
+    </div>
+    <div class="partner-wrap">
+    <a class="partner" href="https://q-pit.kyushu-u.ac.jp/fellow-ship-en/" target="_blank" rel="noopener" data-lang-en="">
+      <img src="../../assets/logos/logo-qenergy.png" alt="Q-Energy Innovator Unit">
+    </a>
+    <a class="partner" href="https://q-pit.kyushu-u.ac.jp/fellow-ship/" target="_blank" rel="noopener" data-lang-jp="">
+      <img src="../../assets/logos/logo-qenergy.png" alt="Q-Energy Innovator Unit">
+    </a>
+    <span class="partner-caption"><span data-lang-en="">Q-Energy Innovator Unit</span><span data-lang-jp="">グリーンイノベーションユニット</span></span>
+    </div>
+    <div class="partner-wrap">
+    <a class="partner" href="https://www.kyushu-u.ac.jp/en/" target="_blank" rel="noopener">
+      <img src="../../assets/logos/logo-kyushu.png" alt="Kyushu University" class="ku-tall">
+    </a>
+    <span class="partner-caption"><span data-lang-en="">Host university</span><span data-lang-jp="">ホスト大学</span></span>
+    </div>
   </div>
 </section>
+
+
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-meta">K2&#8209;SPRING &middot; Q-ENERGY Innovator Unit (coordinated by Q-PIT, Kyushu University)</div>
   <div class="footer-meta">&copy; 2026 Q-PIT, Kyushu University. Designed &amp; built by Roman Selyanchyn.</div>
 </footer>
+
 <script>
 (function(){
   var html = document.documentElement;
   var toggle = document.querySelector('.lang-toggle');
-  if (!toggle) return;
   var buttons = toggle.querySelectorAll('button[data-set-lang]');
   var stored = null;
   try { stored = localStorage.getItem('k2spring_lang'); } catch(e){}
@@ -305,11 +381,14 @@
     });
     try { localStorage.setItem('k2spring_lang', lang); } catch(e){}
   }
-  buttons.forEach(function(b){ b.addEventListener('click', function(){ setLang(b.dataset.setLang); }); });
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.dataset.setLang); });
+  });
 })();
+
 (function(){
   if (!('IntersectionObserver' in window)) return;
-  var els = document.querySelectorAll('.research-primary, .phd-card, .supervisor-row, .ach-group, .meta-card');
+  var els = document.querySelectorAll('.research-primary, .phd-card, .ach-card');
   els.forEach(function(el){
     el.style.opacity = '0';
     el.style.transform = 'translateY(16px)';
@@ -317,7 +396,11 @@
   });
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
-      if (e.isIntersecting){ e.target.style.opacity = '1'; e.target.style.transform = 'none'; io.unobserve(e.target); }
+      if (e.isIntersecting){
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'none';
+        io.unobserve(e.target);
+      }
     });
   }, { threshold: 0.12 });
   els.forEach(function(el){ io.observe(el); });
