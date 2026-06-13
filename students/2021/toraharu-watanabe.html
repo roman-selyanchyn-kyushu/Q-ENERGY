@@ -40,7 +40,7 @@
 
   /* Top bar */
   .topbar{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(10px);-webkit-backdrop-filter:saturate(140%) blur(10px);background:rgba(246,243,236,.78);border-bottom:1px solid var(--line);}
-  .topbar-inner{max-width:var(--maxw);margin:0 auto;padding:14px var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .topbar-inner{max-width:var(--maxw);margin:0 auto;padding:14px var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;}
   .program-mark{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:500;font-size:18px;letter-spacing:.01em;color:var(--ink);text-decoration:none;flex-shrink:0;}
   .program-mark .dot{width:10px;height:10px;background:linear-gradient(135deg,var(--accent-3) 0%,var(--accent) 50%,var(--accent-2) 100%);border-radius:2px;transform:rotate(45deg);}
   .program-mark small{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-left:4px;white-space:nowrap;writing-mode:horizontal-tb;}
@@ -49,6 +49,18 @@
   .lang-toggle button.is-active{color:var(--paper);}
   .lang-toggle .pill{position:absolute;top:3px;bottom:3px;width:calc(50% - 3px);background:var(--accent);border-radius:999px;transition:transform .35s cubic-bezier(.5,.15,.2,1);z-index:0;}
   .lang-toggle[data-lang="jp"] .pill{transform:translateX(100%);}
+  /* Mobile hamburger: site-section menu (shared topbar.js toggles .open on #site-nav) */
+  .menu-btn{display:none;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;padding:0;border:1px solid var(--line);border-radius:10px;background:var(--paper-2);color:var(--ink);cursor:pointer;}
+  .menu-btn svg{width:20px;height:20px;display:block;}
+  .menu-btn[aria-expanded="true"]{background:var(--accent);color:var(--paper);border-color:var(--accent);}
+  .site-menu{display:none;}
+  @media(max-width:760px){
+    .menu-btn{display:inline-flex;}
+    .site-menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 14px 30px rgba(26,31,28,.13);padding:10px;z-index:60;}
+    .site-menu.open{display:flex;}
+    .site-menu a{padding:13px 14px;border-radius:8px;font-family:var(--sans);font-size:15px;font-weight:500;color:var(--ink-2);text-decoration:none;}
+    .site-menu a:hover{background:var(--paper-2);color:var(--accent);}
+  }
 
   /* Hero */
   .hero{max-width:var(--maxw);margin:0 auto;padding:clamp(40px,7vw,96px) var(--gutter) clamp(32px,5vw,56px);display:grid;grid-template-columns:minmax(220px,280px) 1fr;gap:clamp(28px,5vw,64px);align-items:end;}
@@ -230,6 +242,15 @@
       <button type="button" data-set-lang="en" class="is-active" aria-pressed="true">EN</button>
       <button type="button" data-set-lang="jp" aria-pressed="false">日本語</button>
     </div>
+    <button type="button" class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <nav class="site-menu" id="site-nav">
+      <a href="../../index.html#recruitment"><span data-lang-en="">Admissions</span><span data-lang-jp="">学生募集</span></a>
+      <a href="../../index.html#activities"><span data-lang-en="">Activities</span><span data-lang-jp="">活動内容</span></a>
+      <a href="../../index.html#pamphlets"><span data-lang-en="">Pamphlets</span><span data-lang-jp="">パンフレット</span></a>
+      <a href="../../index.html#students"><span data-lang-en="">Fellows</span><span data-lang-jp="">ユニット生</span></a>
+      <a href="../../index.html#publications"><span data-lang-en="">Achievements</span><span data-lang-jp="">研究成果</span></a>
+      <a href="../../news.html"><span data-lang-en="">News</span><span data-lang-jp="">ニュース</span></a>
+    </nav>
   </div>
 </header>
 
@@ -437,5 +458,6 @@
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
 })();
 </script>
+<script src="../../assets/js/topbar.js"></script>
 </body>
 </html>
