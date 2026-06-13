@@ -23,11 +23,14 @@ assets/photos/PHOTO-GUIDE.md
 data/students-private.json
 scripts/email-drafts/
 
-# Publications data — LOCAL-ONLY source. publications.html is now pre-baked static
-# HTML (no runtime fetch), so these never go to the web. (publications-data.js is
-# obsolete — the page no longer loads it.)
+# Derived data — LOCAL-ONLY. The published pages are now self-contained (student
+# pages + publications.html are pre-baked static HTML; activities.html embeds its
+# photo data inline). These JSON files are sources/build-inputs only, regenerable
+# locally, and NEVER published — they hold the curated dataset.
 data/publications.json
 data/publications-data.js
+data/activities-photos.json
+data/students.json
 
 # Raw student submissions (keep local)
 docs/*.docx
