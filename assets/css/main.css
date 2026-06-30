@@ -10,6 +10,10 @@ a{color:var(--blue);text-underline-offset:3px}
 .program-mark{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:500;font-size:18px;letter-spacing:.01em;color:var(--ink);text-decoration:none;flex-shrink:0}
 .program-mark .dot{width:10px;height:10px;background:linear-gradient(135deg,var(--wine),var(--blue),var(--green));border-radius:2px;transform:rotate(45deg);flex-shrink:0}
 .program-mark small{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:4px;white-space:nowrap;writing-mode:horizontal-tb}
+.qpit-uplink{display:inline-flex;align-items:center;gap:4px;flex-shrink:0;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding-right:14px;border-right:1px solid var(--line);white-space:nowrap;transition:color .2s}
+.qpit-uplink:hover{color:var(--blue)}
+.qpit-uplink .arr{font-size:12px;line-height:1}
+.nav-qpit{display:none}
 .landing-nav{display:flex;align-items:center;gap:2px;flex:1;justify-content:center}
 .landing-nav a{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:6px;transition:color .2s,background .2s}
 .landing-nav a:hover{color:var(--blue);background:rgba(31,58,107,.06)}
@@ -27,6 +31,8 @@ a{color:var(--blue);text-underline-offset:3px}
   .program-mark small{display:none}
   .menu-btn{display:inline-flex}
   .lang-toggle,.lang-pill{margin-left:auto}
+  .qpit-uplink{display:none}
+  .landing-nav .nav-qpit{display:block;margin-top:6px;border-top:1px solid var(--line);padding-top:14px;color:var(--blue)}
   .landing-nav{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 14px 30px rgba(25,33,29,.13);padding:10px;z-index:60}
   .landing-nav.open{display:flex}
   .landing-nav a{padding:13px 14px;border-radius:8px;font-size:15px}
@@ -135,3 +141,5 @@ a{color:var(--blue);text-underline-offset:3px}
 
 /* ── Footer ─────────────────────────────────────────────── */
 .footer{max-width:var(--max);margin:0 auto;padding:clamp(28px,4vw,44px) var(--g);border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-family:var(--serif);font-style:italic;font-size:13px;color:var(--muted)}
+.footer a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:2px;transition:color .2s}
+.footer a:hover{color:var(--blue)}
