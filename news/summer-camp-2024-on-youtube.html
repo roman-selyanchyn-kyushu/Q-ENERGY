@@ -37,6 +37,11 @@
   .article-figure { margin:40px 0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;text-align:center }
   .article-figure img { max-width:100%;height:auto;display:block;margin:0 auto;border-radius:6px }
   .article-figure figcaption { font-family:var(--sans);font-size:12px;color:var(--muted);margin-top:14px;line-height:1.6;text-align:left }
+  .article-video { margin:0 0 40px }
+  .article-video-frame { position:relative;aspect-ratio:16/9;background:#000;border:1px solid var(--line);border-radius:14px;overflow:hidden }
+  .article-video-frame iframe { width:100%;height:100%;border:0;display:block }
+  .article-video figcaption { font-family:var(--sans);font-size:12px;color:var(--muted);margin-top:14px;line-height:1.6 }
+  .article-video figcaption a { color:var(--blue);white-space:nowrap }
   .event-details { background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:24px 28px;margin:32px 0 }
   .event-details-label { font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px }
   .event-row { display:grid;grid-template-columns:90px 1fr;gap:4px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.6;margin-bottom:6px;align-items:baseline }
@@ -88,6 +93,17 @@
     <span data-lang-jp="">佐賀県唐津市・玄海町で開催されたQ-ENERGYイノベーターユニット夏合宿2024の動画をYouTubeチャンネルで公開しました。</span>
   </p>
 </header>
+
+<figure class="article-video">
+  <div class="article-video-frame">
+    <iframe src="https://www.youtube-nocookie.com/embed/0SzLgqBV_yI?rel=0" title="Summer Camp 2024 — Q-ENERGY Innovator Unit" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+  </div>
+  <figcaption>
+    <span data-lang-en="">Summer Camp 2024 — Karatsu and Genkai, Saga Prefecture, September 3&ndash;4, 2024. <a href="https://www.youtube.com/watch?v=0SzLgqBV_yI" target="_blank" rel="noopener">Watch on YouTube &rarr;</a></span>
+    <span data-lang-jp="">夏合宿2024 — 佐賀県唐津市・玄海町、2024年9月3〜4日。<a href="https://www.youtube.com/watch?v=0SzLgqBV_yI" target="_blank" rel="noopener">YouTubeで見る &rarr;</a></span>
+  </figcaption>
+</figure>
+
 <div class="event-details">
   <div class="event-details-label"><span data-lang-en="">Camp details</span><span data-lang-jp="">合宿概要</span></div>
   <div class="event-row"><span class="event-key">Date</span><span class="event-val">September 3–4, 2024</span></div>
