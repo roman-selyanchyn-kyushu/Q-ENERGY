@@ -151,7 +151,7 @@
           <button class="year-tab" type="button" data-video-year="2023" aria-selected="false">2023</button>
           <button class="year-tab" type="button" data-video-year="2022" aria-selected="false">2022</button>
         </div>
-        <a class="video-thumb" href="https://www.youtube.com/watch?v=srLEu440lV8" target="_blank" rel="noopener" aria-label="Watch Summer camp 2025 on YouTube" data-video-link>
+        <a class="video-thumb" href="https://www.youtube.com/watch?v=srLEu440lV8" target="_blank" rel="noopener" aria-label="Watch Summer camp 2025 on YouTube" data-video-link data-video-id="srLEu440lV8">
           <img src="assets/video/summer-camp-2025.jpg" alt="Summer camp 2025 video thumbnail" loading="lazy" data-video-image>
           <span class="play-button" aria-hidden="true"></span>
         </a>
@@ -529,6 +529,12 @@
   <span>K2&#8209;SPRING &middot; Q-ENERGY Innovator Unit (coordinated by <a href="https://q-pit.kyushu-u.ac.jp/">Q-PIT, Kyushu University</a>)</span>
   <span>&copy; 2026 Q-PIT, Kyushu University. Designed &amp; built by Roman Selyanchyn.</span>
 </footer>
+
+<div class="video-modal" role="dialog" aria-modal="true" aria-label="Summer camp video" data-video-modal>
+  <button class="video-modal-close" type="button" aria-label="Close video" data-video-modal-close>&times;</button>
+  <div class="video-modal-frame" data-video-modal-slot></div>
+</div>
+
 <script src="assets/js/main.js"></script>
 <script src="assets/js/topbar.js"></script>
 </body>

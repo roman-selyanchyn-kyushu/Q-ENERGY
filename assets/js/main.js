@@ -32,6 +32,7 @@
     const caption = document.querySelector('[data-video-caption]');
     if (!link || !img || !caption) return;
     link.href = `https://www.youtube.com/watch?v=${data.id}`;
+    link.dataset.videoId = data.id;
     link.setAttribute('aria-label', `Watch Summer camp ${year} on YouTube`);
     img.src = data.image;
     img.alt = `Summer camp ${year} video thumbnail`;
@@ -44,9 +45,53 @@
       button.setAttribute('aria-selected', active ? 'true' : 'false');
     });
   };
+  // Play the summer-camp videos in an on-page lightbox instead of sending people to
+  // YouTube. The thumbnail stays a real <a href> so no-JS, cmd-click and middle-click
+  // still open YouTube normally — only a plain left-click is intercepted.
+  const modal = document.querySelector('[data-video-modal]');
+  const modalSlot = modal && modal.querySelector('[data-video-modal-slot]');
+  let lastFocused = null;
+  const closeVideo = () => {
+    if (!modal || !modal.classList.contains('open')) return;
+    modal.classList.remove('open');
+    modalSlot.replaceChildren(); // dropping the iframe is what stops playback
+    document.body.classList.remove('modal-open');
+    if (lastFocused) lastFocused.focus();
+  };
+  const openVideo = (id, label) => {
+    if (!modal || !id) return;
+    lastFocused = document.activeElement;
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+    iframe.title = label;
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+    modalSlot.replaceChildren(iframe);
+    modal.setAttribute('aria-label', label);
+    modal.classList.add('open');
+    document.body.classList.add('modal-open');
+    const closeBtn = modal.querySelector('[data-video-modal-close]');
+    if (closeBtn) closeBtn.focus();
+  };
   document.addEventListener('DOMContentLoaded', () => {
     applyLang(getInitialLang());
     setSummerVideo('2025');
+    const videoLink = document.querySelector('[data-video-link]');
+    if (videoLink && modal) {
+      videoLink.addEventListener('click', (event) => {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        openVideo(videoLink.dataset.videoId, videoLink.getAttribute('aria-label') || 'Summer camp video');
+      });
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) closeVideo();
+      });
+      const closeBtn = modal.querySelector('[data-video-modal-close]');
+      if (closeBtn) closeBtn.addEventListener('click', closeVideo);
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeVideo();
+      });
+    }
     document.querySelectorAll('#lang-toggle button[data-set-lang]').forEach((button) => {
       button.addEventListener('click', () => applyLang(button.dataset.setLang === 'jp' ? 'ja' : 'en'));
     });
