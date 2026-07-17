@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Q-DeCS 20th Workshop — July 22, 2026 — Q-ENERGY News</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+<style>
+  [data-lang-jp]                  { display: none; }
+  html[lang="ja"] [data-lang-en]  { display: none; }
+  html[lang="ja"] [data-lang-jp]  { display: inline; }
+  html[lang="ja"] [data-lang-jp-block] { display: block; }
+  html[lang="ja"] [data-lang-en-block] { display: none; }
+  [data-lang-jp-block] { display: none; }
+  .article-wrap { max-width:740px;margin:0 auto;padding:64px var(--g) 96px }
+  .article-back { display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;letter-spacing:.04em;text-transform:uppercase;margin-bottom:48px;transition:color .2s }
+  .article-back:hover { color:var(--blue) }
+  .article-back::before { content:"←";font-size:14px }
+  .article-header { margin-bottom:40px }
+  .article-meta { display:flex;align-items:center;gap:12px;margin-bottom:20px }
+  .article-date { font-family:var(--sans);font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.04em }
+  .article-tag { display:inline-flex;align-items:center;border-radius:999px;padding:3px 11px;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.04em;border:1px solid var(--line);background:var(--paper2);color:var(--blue) }
+  .article-tag.event  { color:var(--gold);border-color:rgba(212,168,75,.3);background:rgba(212,168,75,.07) }
+  .article-headline { font-family:var(--serif);font-weight:400;font-size:clamp(24px,3.5vw,38px);line-height:1.18;letter-spacing:-.02em;color:var(--ink);margin:0 0 16px }
+  .article-lead { font-family:var(--serif);font-size:clamp(16px,1.6vw,19px);color:var(--muted);line-height:1.7;margin:0 }
+  .article-body { font-family:var(--serif);font-size:clamp(15px,1.4vw,17px);color:var(--ink);line-height:1.85 }
+  .article-body p { margin:0 0 20px }
+  .article-body p:last-child { margin:0 }
+  .article-body a { color:var(--blue) }
+  .event-details { background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:24px 28px;margin:32px 0 }
+  .event-details-label { font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px }
+  .event-row { display:grid;grid-template-columns:90px 1fr;gap:4px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.6;margin-bottom:6px;align-items:baseline }
+  .event-row:last-child { margin-bottom:0 }
+  .event-key { color:var(--muted);font-weight:500;font-size:11.5px;letter-spacing:.03em }
+  .event-val { color:var(--ink) }
+
+  /* ── Programme outline ───────────────────────────────────── */
+  .programme { margin:40px 0 }
+  .programme-label { font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px }
+  .prog-row { display:grid;grid-template-columns:104px 1fr;gap:4px 16px;padding:16px 0;border-top:1px solid var(--line);align-items:baseline }
+  .prog-row:last-child { border-bottom:1px solid var(--line) }
+  .prog-time { font-family:var(--sans);font-size:11.5px;font-weight:500;color:var(--muted);letter-spacing:.03em;white-space:nowrap }
+  .prog-session { font-family:var(--sans);font-size:12.5px;font-weight:700;letter-spacing:.03em;color:var(--ink);margin-bottom:2px }
+  .prog-chair { font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-bottom:10px }
+  .prog-talk { font-family:var(--serif);font-size:15.5px;font-style:italic;color:var(--ink);line-height:1.55;margin:10px 0 2px }
+  .prog-speaker { font-family:var(--sans);font-size:11.5px;color:var(--muted);line-height:1.5 }
+  .prog-break { color:var(--muted);font-family:var(--sans);font-size:12.5px;font-style:italic }
+  @media (max-width:560px){
+    .prog-row { grid-template-columns:1fr;gap:6px }
+  }
+
+  /* ── Presenters block (joint-seminar convention) ─────────── */
+  .seminar-presenters { margin:40px 0 }
+  .seminar-presenters-label { font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px }
+  .presenter-entry { padding:22px 0;border-top:1px solid var(--line) }
+  .presenter-entry:last-child { border-bottom:1px solid var(--line) }
+  .presenter { display:flex;gap:20px;align-items:center;text-decoration:none;color:inherit }
+  .presenter:hover .presenter-name { color:var(--blue) }
+  .presenter-photo { width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:50% 22%;flex-shrink:0;background:var(--paper2);border:1px solid var(--line) }
+  .presenter-info { min-width:0 }
+  .presenter-name { font-family:var(--sans);font-size:15px;font-weight:600;color:var(--ink);margin-bottom:5px;transition:color .2s }
+  .presenter-title { font-family:var(--serif);font-size:15.5px;font-style:italic;color:var(--muted);line-height:1.5 }
+  .presenter-abstract { font-family:var(--serif);font-size:14.5px;color:var(--muted);line-height:1.8;margin:14px 0 0 96px }
+  @media (max-width:560px){
+    .presenter { gap:16px }
+    .presenter-photo { width:60px;height:60px }
+    .presenter-abstract { margin-left:0 }
+  }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="program-mark" href="../index.html"><span class="dot" aria-hidden="true"></span><span>K2&#8209;SPRING</span><small>Q-ENERGY Innovator Unit</small></a>
+    <nav class="landing-nav">
+      <a href="../index.html#recruitment" data-lang-en="">Admissions</a><a href="../index.html#recruitment" data-lang-jp="">学生募集</a>
+      <a href="../activities.html" data-lang-en="">Activities</a><a href="../activities.html" data-lang-jp="">活動内容</a>
+      <a href="../index.html#pamphlets" data-lang-en="">Pamphlets</a><a href="../index.html#pamphlets" data-lang-jp="">パンフレット</a>
+      <a href="../index.html#students" data-lang-en="">Fellows</a><a href="../index.html#students" data-lang-jp="">ユニット生</a>
+      <a href="../publications.html" data-lang-en="">Achievements</a><a href="../publications.html" data-lang-jp="">研究成果</a>
+      <a href="../news.html" data-lang-en="" style="color:var(--blue)">News</a><a href="../news.html" data-lang-jp="" style="color:var(--blue)">ニュース</a>
+    </nav>
+    <button class="lang-pill" id="lang-toggle" type="button" aria-label="Switch language">EN</button>
+  </div>
+</header>
+<main><div class="article-wrap">
+<a class="article-back" href="../news.html"><span data-lang-en="">All news</span><span data-lang-jp="">ニュース一覧</span></a>
+
+<header class="article-header">
+  <div class="article-meta">
+    <span class="article-date">July 17, 2026</span>
+    <span class="article-tag event"><span data-lang-en="">Event</span><span data-lang-jp="">イベント</span></span>
+  </div>
+  <h1 class="article-headline">
+    <span data-lang-en="">Two Fellows to Present at the 20th Q-DeCS Workshop — July 22, 2026</span>
+    <span data-lang-jp="">九州脱炭素化研究会 第20回ワークショップ（2026年7月22日）— ユニット生2名が研究発表</span>
+  </h1>
+  <p class="article-lead">
+    <span data-lang-en="">Nozomu Goto and Ryudai Ueno will present their doctoral research at the 20th Workshop of the Decarbonization Society in Kyushu (Q-DeCS), held on Wednesday, 22 July 2026 at Inamori Hall on the Ito Campus and streamed online.</span>
+    <span data-lang-jp="">2026年7月22日（水）に九州大学伊都キャンパス・稲盛ホールにてハイブリッド開催される「九州脱炭素化研究会（Q-DeCS）第20回ワークショップ」にて、ユニット生の後藤希さんと上野竜大生さんが博士研究の発表を行います。</span>
+  </p>
+</header>
+
+<div class="article-body">
+  <p data-lang-en-block="">The Decarbonization Society in Kyushu (Q-DeCS) holds its 20th workshop on Wednesday, 22 July 2026, from 14:00 to 16:50 at Inamori Hall, Inamori Center, Kyushu University Ito Campus. The afternoon runs from university project research through an industry perspective on financing to individual research seeds, and closes with a doctoral research session in which two fellows of the Q-ENERGY Innovator Unit present: <a href="../students/2025/nozomi-goto.html">Nozomu Goto</a>, of the Department of Materials Science and Engineering, and <a href="../students/2024/ryudai-ueno.html">Ryudai Ueno</a>, of the Department of Agricultural and Environmental Biology. That session is chaired by Associate Prof. Roman Selyanchyn of Q-PIT.</p>
+  <p data-lang-jp-block="">2026年7月22日（水）14:00〜16:50、九州大学伊都キャンパス・稲盛財団記念館 稲盛ホールにて、九州脱炭素化研究会（Q-DeCS）第20回ワークショップが開催されます。プロジェクト研究の紹介にはじまり、金融機関から見た社会実装の課題、個別の研究シーズ紹介と続き、最後の「博士研究紹介」では、Q-ENERGYイノベーターユニットから2名が登壇します。工学府 材料工学専攻の<a href="../students/2025/nozomi-goto.html">後藤 希</a>さんと、生物資源環境科学府 環境農学専攻の<a href="../students/2024/ryudai-ueno.html">上野 竜大生</a>さんです。同セッションの座長は、Q-PIT 准教授 セリャンチン・ロマンが務めます。</p>
+
+  <p data-lang-en-block="">The two approach decarbonization from opposite ends. Goto, supervised by <a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B1%B1%E5%B4%8E-%E4%BB%81%E4%B8%88/" target="_blank" rel="noopener">Prof. Yoshihiro YAMAZAKI</a>, works on the materials side, on the durability of proton-conducting fuel cells at low operating temperatures. Ueno, supervised by <a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100022030_en.html" target="_blank" rel="noopener">Prof. Noriko SATO</a>, works on the land-use side, on what grows back after Japan's post-war plantation forests are harvested. Pairing them in one session is characteristic of Q-DeCS, which brings the region's decarbonization researchers together across disciplines.</p>
+  <p data-lang-jp-block="">2名の研究は、脱炭素という課題を対照的な角度から捉えています。<a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B1%B1%E5%B4%8E-%E4%BB%81%E4%B8%88/" target="_blank" rel="noopener">山崎 仁丈 教授</a>のもとで研究する後藤さんは材料の側から、低温動作におけるプロトン伝導性燃料電池の耐久性に取り組んでいます。<a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100022030_ja.html" target="_blank" rel="noopener">佐藤 宣子 教授</a>のもとで研究する上野さんは土地利用の側から、戦後造成された人工林の伐採後に何が再生するのかを追っています。異分野の研究者が一堂に会するQ-DeCSならではの組み合わせといえます。</p>
+
+  <p data-lang-en-block="">The workshop is held in hybrid format. Because seating at the venue is limited, unit members and supervisors are asked to join by online viewing; the details were circulated by the IQ Office by email.</p>
+  <p data-lang-jp-block="">本ワークショップはハイブリッド開催ですが、会場の都合により、ユニット生・指導教員の皆さまにはオンライン視聴でのご参加をお願いしております。視聴方法はIQ支援室よりメールにてご案内済みです。</p>
+</div>
+
+<div class="event-details">
+  <div class="event-details-label"><span data-lang-en="">Event Details</span><span data-lang-jp="">開催概要</span></div>
+  <div class="event-row"><span class="event-key" data-lang-en="">Date</span><span class="event-key" data-lang-jp="">日時</span><span class="event-val"><span data-lang-en="">Wednesday, 22 July 2026, 14:00–16:50 (JST)</span><span data-lang-jp="">令和8年7月22日（水）14:00〜16:50</span></span></div>
+  <div class="event-row"><span class="event-key" data-lang-en="">Venue</span><span class="event-key" data-lang-jp="">場所</span><span class="event-val"><span data-lang-en="">Inamori Hall, Inamori Center, Kyushu University Ito Campus — hybrid (online viewing for unit members)</span><span data-lang-jp="">九州大学伊都キャンパス 稲盛財団記念館 稲盛ホール ※ハイブリッド開催（ユニット生はオンライン視聴）</span></span></div>
+  <div class="event-row"><span class="event-key" data-lang-en="">Event</span><span class="event-key" data-lang-jp="">名称</span><span class="event-val"><span data-lang-en="">Decarbonization Society in Kyushu (Q-DeCS), 20th Workshop</span><span data-lang-jp="">九州脱炭素化研究会 第20回ワークショップ</span></span></div>
+</div>
+
+<div class="programme">
+  <div class="programme-label"><span data-lang-en="">Programme</span><span data-lang-jp="">次第</span></div>
+
+  <div class="prog-row">
+    <div class="prog-time">14:00–14:05</div>
+    <div>
+      <div class="prog-session"><span data-lang-en="">Opening remarks</span><span data-lang-jp="">開会あいさつ</span></div>
+    </div>
+  </div>
+
+  <div class="prog-row">
+    <div class="prog-time">14:05–14:45</div>
+    <div>
+      <div class="prog-session"><span data-lang-en="">Project research</span><span data-lang-jp="">プロジェクト研究</span></div>
+      <div class="prog-chair"><span data-lang-en="">Chair: Assoc. Prof. Munekazu Motoyama (Q-PIT)</span><span data-lang-jp="">座長：Q-PIT 准教授 本山 宗主</span></div>
+      <div class="prog-talk"><span data-lang-en="">Building a multi-scale control and evaluation model spanning buildings, grids and cities, in anticipation of large-scale VRE deployment</span><span data-lang-jp="">VRE大量導入を見据えた建物・グリッド・都市マルチスケール制御・評価モデルの構築</span></div>
+      <div class="prog-speaker"><span data-lang-en="">Prof. Daisuke Sumiyoshi — Department of Architecture and Urban Design, Faculty of Human-Environment Studies</span><span data-lang-jp="">九州大学 人間環境学研究院 都市・建築学部門 教授 住吉 大輔 氏</span></div>
+      <div class="prog-talk"><span data-lang-en="">A new approach to materials design based on a new principle, toward the discovery of the long-sought room-temperature superconductor</span><span data-lang-jp="">夢の室温超伝導体の発見につながる新原理に基づく材料設計の新アプローチ</span></div>
+      <div class="prog-speaker"><span data-lang-en="">Prof. Tomofumi Tada — Q-PIT, Kyushu University</span><span data-lang-jp="">九州大学 エネルギー研究教育機構 教授 多田 朋史 氏</span></div>
+    </div>
+  </div>
+
+  <div class="prog-row">
+    <div class="prog-time">14:45–15:00</div>
+    <div class="prog-break"><span data-lang-en="">Coffee break / networking</span><span data-lang-jp="">コーヒーブレイク・名刺交換など</span></div>
+  </div>
+
+  <div class="prog-row">
+    <div class="prog-time">15:00–15:30</div>
+    <div>
+      <div class="prog-session"><span data-lang-en="">Efforts and challenges toward decarbonization</span><span data-lang-jp="">脱炭素化に向けた取組・課題</span></div>
+      <div class="prog-chair"><span data-lang-en="">Chair: Prof. Yoshio Matsuzaki (Q-PIT)</span><span data-lang-jp="">座長：Q-PIT 教授 松崎 良雄</span></div>
+      <div class="prog-talk"><span data-lang-en="">What financial institutions are doing to bring technology into society — a deployment-support model based on raising the Adoption Readiness Level (ARL)</span><span data-lang-jp="">技術の社会実装に向けた金融機関の取組 — ARL向上による社会実装支援モデル —</span></div>
+      <div class="prog-speaker"><span data-lang-en="">Mr. Yosuke Suzuki — Senior Analyst, Sustainability Promotion Department, Sumitomo Mitsui Trust Bank</span><span data-lang-jp="">三井住友信託銀行 サステナビリティ推進部 上席調査役 鈴木 洋介 氏</span></div>
+    </div>
+  </div>
+
+  <div class="prog-row">
+    <div class="prog-time">15:30–16:00</div>
+    <div>
+      <div class="prog-session"><span data-lang-en="">Research seeds</span><span data-lang-jp="">研究シーズ紹介</span></div>
+      <div class="prog-chair"><span data-lang-en="">Chair: Assoc. Prof. Sungjun Yoo (Q-PIT)</span><span data-lang-jp="">座長：Q-PIT 准教授 劉 城準</span></div>
+      <div class="prog-talk"><span data-lang-en="">Toward management practices that drive decarbonized economic growth: empirical research through corporate data analysis</span><span data-lang-jp="">企業データ分析による実証研究を通じた脱炭素型経済成長の経営促進を目指して</span></div>
+      <div class="prog-speaker"><span data-lang-en="">Prof. Hidemichi Fujii — Department of International Economics and Business Administration, Faculty of Economics</span><span data-lang-jp="">九州大学 経済学研究院 国際経済経営部門 教授 藤井 秀道 氏</span></div>
+      <div class="prog-talk"><span data-lang-en="">Natural hydrogen for a decarbonized society: elucidating its generation mechanism and evaluating its energy balance</span><span data-lang-jp="">脱炭素社会に向けた天然水素の生成機構解明とエネルギー評価</span></div>
+      <div class="prog-speaker"><span data-lang-en="">Assist. Prof. Katsuaki Hashikuni — Department of Mechanical Engineering, Faculty of Engineering</span><span data-lang-jp="">九州大学 工学研究院 機械工学部門 助教 橋國 克明 氏</span></div>
+    </div>
+  </div>
+
+  <div class="prog-row">
+    <div class="prog-time">16:00–16:15</div>
+    <div class="prog-break"><span data-lang-en="">Coffee break / networking</span><span data-lang-jp="">コーヒーブレイク・名刺交換など</span></div>
+  </div>
+
+  <div class="prog-row">
+    <div class="prog-time">16:15–16:45</div>
+    <div>
+      <div class="prog-session"><span data-lang-en="">Doctoral research</span><span data-lang-jp="">博士研究紹介</span></div>
+      <div class="prog-chair"><span data-lang-en="">Chair: Assoc. Prof. Roman Selyanchyn (Q-PIT) — presenters below</span><span data-lang-jp="">座長：Q-PIT 准教授 セリャンチン・ロマン ／ 発表者は下記</span></div>
+    </div>
+  </div>
+
+  <div class="prog-row">
+    <div class="prog-time">16:45–16:50</div>
+    <div>
+      <div class="prog-session"><span data-lang-en="">Closing remarks</span><span data-lang-jp="">閉会あいさつ</span></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="seminar-presenters">
+  <div class="seminar-presenters-label"><span data-lang-en="">Presenters from the Unit</span><span data-lang-jp="">ユニットからの発表者</span></div>
+
+  <div class="presenter-entry">
+    <a class="presenter" href="../students/2025/nozomi-goto.html">
+      <img class="presenter-photo" src="../assets/photos/2025/goto_nozomi.jpg" alt="Portrait of Nozomu Goto" loading="lazy">
+      <div class="presenter-info">
+        <div class="presenter-name"><span data-lang-en="">Nozomu Goto</span><span data-lang-jp="">後藤 希</span></div>
+        <div class="presenter-title">
+          <span data-lang-en="">Elucidating the degradation mechanism of proton-conducting solid oxide fuel cells operating at 300 °C, and proposing improvements</span>
+          <span data-lang-jp="">300℃動作プロトン伝導性固体酸化物燃料電池の劣化機構の解明と改善策の提案</span>
+        </div>
+      </div>
+    </a>
+    <p class="presenter-abstract">
+      <span data-lang-en-block="">Fuel cells convert hydrogen and other fuels to electricity at high efficiency. Among them, proton-conducting solid oxide fuel cells (PCFCs) operate in the intermediate range around 400 °C, which makes them attractive on convenience and cost: they need neither the platinum electrode catalysts of polymer fuel cells nor the heat-resistant materials of oxide-ion-conducting solid oxide fuel cells. An electrolyte material capable of operating at 400 °C has recently been developed. Lower operating temperatures generally hold the promise of suppressing material degradation, and so of long-term stable operation. This research uses that electrolyte to fabricate PCFCs, then elucidates their durability and degradation mechanisms under low-temperature operation and attempts to improve them.</span>
+      <span data-lang-jp-block="">燃料電池は水素などの燃料を高効率に電気に変換できるエネルギーデバイスとして注目されています。その中でもプロトン伝導性固体酸化物燃料電池（PCFC）は400℃付近の中温域で動作可能であり、ポリマー型燃料電池で必要な白金電極触媒や、酸化物イオン伝導性固体酸化物燃料電池で必要な高耐熱材料が不要であることから、利便性やコストの面で優れています。近年、400℃動作可能な電解質材料が開発されました。一般に低温動作は材料劣化の抑制につながる可能性があり、長期安定動作の実現が期待されます。本研究では、この電解質材料を用いて作製したPCFCを低温で動作させた際の耐久性と劣化機構を解明しその改善を試みます。</span>
+    </p>
+  </div>
+
+  <div class="presenter-entry">
+    <a class="presenter" href="../students/2024/ryudai-ueno.html">
+      <img class="presenter-photo" src="../assets/photos/2024/ueno_ryudai.jpg" alt="Portrait of Ryudai Ueno" loading="lazy">
+      <div class="presenter-info">
+        <div class="presenter-name"><span data-lang-en="">Ryudai Ueno</span><span data-lang-jp="">上野 竜大生</span></div>
+        <div class="presenter-title">
+          <span data-lang-en="">Using historical statistics to reconstruct the pre-existing vegetation of plantation forests, and to identify sites suited to natural regeneration and replanting</span>
+          <span data-lang-jp="">歴史統計を活用した人工林前生植生の解明と天然更新・植林適地の探索</span>
+        </div>
+      </div>
+    </a>
+    <p class="presenter-abstract">
+      <span data-lang-en-block="">Forests absorb and fix atmospheric carbon through photosynthesis, so sound forest management and replanting have an important part to play in reaching a decarbonized society. Japan's post-war plantation forests are now reaching harvest age and are being felled across the country. For the land they leave behind, natural regeneration is drawing attention alongside replanting. Whether natural regeneration succeeds, however, is known to depend heavily on the vegetation that stood before felling — the pre-existing vegetation — through the seed stock it leaves in the soil. This research uses historical statistical data to reconstruct that pre-existing vegetation nationwide, and evaluates its distribution quantitatively using spatial statistics. The findings provide broad, foundational information for deciding appropriate land use on felled sites.</span>
+      <span data-lang-jp-block="">森林は光合成により大気中の炭素を吸収・固定するため、適切な森林管理や植林は脱炭素社会の実現に向けて重要な役割を担います。現在、戦後に造成された人工林が収穫期を迎え、各地で伐採が進んでいます。伐採跡地の土地利用として、再植林に加えて天然更新が注目されています。しかし天然更新の成否は、土壌中に蓄積された種子量を通じて、伐採前の植生（前生植生）の影響を強く受けることが知られています。本研究では、歴史統計データを用いて全国の前生植生を復元し、空間統計手法によってその分布特性を定量的に評価しました。得られた知見は、伐採跡地における適正な土地利用の策定に向けた広域的・基礎的情報を提供します。</span>
+    </p>
+  </div>
+
+</div>
+
+</div></main>
+<footer class="footer">
+  <span>K2&#8209;SPRING &middot; Q-ENERGY Innovator Unit (coordinated by Q-PIT, Kyushu University)</span>
+  <span>&copy; 2026 Q-PIT, Kyushu University. Designed &amp; built by Roman Selyanchyn.</span>
+</footer>
+<script>
+const LANG_KEY='k2spring_lang';
+function applyLang(lang){document.documentElement.lang=lang;document.getElementById('lang-toggle').textContent=lang==='ja'?'EN':'JP';localStorage.setItem(LANG_KEY,lang);}
+document.getElementById('lang-toggle').addEventListener('click',()=>{applyLang(document.documentElement.lang==='ja'?'en':'ja');});
+const saved=localStorage.getItem(LANG_KEY);if(saved==='en')applyLang('en');
+</script>
+</body></html>
