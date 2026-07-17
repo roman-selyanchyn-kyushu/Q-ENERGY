@@ -1,0 +1,1766 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Profile status board — Q-ENERGY (internal)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#f6f3ec;--paper2:#efeae0;--ink:#19211d;--muted:#68716b;--line:#d9d3c4;--blue:#1f3a6b;--green:#2a8a86;--wine:#8a2347;--gold:#d4a84b;--serif:"Newsreader",Georgia,serif;--sans:"Inter","Noto Sans JP",system-ui,sans-serif}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;font-size:14px}
+  .wrap{max-width:1500px;margin:0 auto;padding:36px clamp(16px,3vw,40px) 80px}
+  h1{font-family:var(--serif);font-weight:400;font-size:30px;margin:0 0 6px}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:24px}
+  .sub a{color:var(--blue)}
+
+  .stats{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:112px}
+  .stat b{display:block;font-size:22px;font-family:var(--serif);font-weight:400;line-height:1.1}
+  .stat span{font-size:11px;color:var(--muted);letter-spacing:.02em}
+  .stat.warn b{color:var(--wine)}
+  .stat.note b{color:var(--gold)}
+
+  .controls{display:flex;gap:8px;align-items:center;margin-bottom:22px;flex-wrap:wrap}
+  .controls button{appearance:none;border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:7px 15px;font:600 12px var(--sans);cursor:pointer;transition:all .15s}
+  .controls button:hover{border-color:var(--ink)}
+  .controls button.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .legend{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--muted);align-items:center}
+
+  .cohort{margin-bottom:34px}
+  .cohort h2{display:flex;align-items:baseline;gap:12px;margin:0 0 4px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+  .yr{font-family:var(--serif);font-weight:400;font-size:24px}
+  .cnt{font-size:11px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+
+  .row{display:grid;grid-template-columns:1.15fr 1.15fr 2fr 2fr;gap:18px;padding:14px 8px;border-bottom:1px solid var(--line);align-items:start}
+  .row:hover{background:rgba(255,255,255,.55)}
+  .row.needs-attention{background:rgba(138,35,71,.035)}
+  .row.needs-attention:hover{background:rgba(138,35,71,.06)}
+  .cell{min-width:0}
+  .k{display:none;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .nm{font-size:13.5px;font-weight:500;margin-bottom:2px;overflow-wrap:anywhere}
+  .nm-jp{font-weight:400;color:var(--muted)}
+  .nm a{color:var(--blue);text-decoration:none}
+  .nm a:hover{text-decoration:underline}
+  .prog{font-size:10.5px;color:var(--muted);letter-spacing:.03em;margin-top:3px}
+  .muted{color:var(--muted)}
+
+  .t{font-size:12.5px;line-height:1.55;margin-bottom:5px;overflow-wrap:anywhere}
+  .t:last-child{margin-bottom:0;color:var(--muted)}
+  .t-na{color:var(--line)}
+
+  .badge{display:inline-block;border-radius:4px;padding:1px 6px;font-size:10px;font-weight:700;letter-spacing:.04em;white-space:nowrap;vertical-align:1px}
+  .b-missing{background:rgba(138,35,71,.1);color:var(--wine);border:1px solid rgba(138,35,71,.25)}
+  .b-warn{background:rgba(212,168,75,.14);color:#8a6d22;border:1px solid rgba(212,168,75,.4)}
+  .sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+  .sw-missing{background:rgba(138,35,71,.35)}
+  .sw-warn{background:rgba(212,168,75,.55)}
+
+  body.only-attention .row[data-attention="0"]{display:none}
+
+  @media(max-width:1100px){
+    .row{grid-template-columns:1fr 1fr;gap:14px}
+    .k{display:block}
+  }
+  @media(max-width:640px){
+    .row{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Profile status board</h1>
+  <p class="sub">
+    Every fellow's bilingual name, supervisor and research titles, straight from
+    <code>data/master/</code>. Generated 2026-07-17 11:31 by <code>scripts/build_overview.py</code> — regenerate after editing any JSON.
+    Internal working page: not linked from the site, not indexed. &nbsp;<a href="index.html">&larr; site home</a>
+  </p>
+
+  <div class="stats">
+    <div class="stat"><b>71</b><span>fellows</span></div>
+    <div class="stat warn"><b>32</b><span>need attention</span></div>
+    <div class="stat warn"><b>12</b><span>PhD title missing</span></div>
+    <div class="stat note"><b>19</b><span>PhD JP slot = EN</span></div>
+    <div class="stat warn"><b>0</b><span>K2 title missing</span></div>
+    <div class="stat note"><b>15</b><span>K2 JP slot = EN</span></div>
+    <div class="stat warn"><b>1</b><span>no supervisor link</span></div>
+    <div class="stat"><b>37</b><span>Fellowship (no K2)</span></div>
+  </div>
+
+  <div class="controls">
+    <button type="button" id="f-all" class="on">All 71</button>
+    <button type="button" id="f-attn">Needs attention 32</button>
+    <div class="legend">
+      <span><i class="sw sw-missing"></i>placeholder — nobody wrote it yet</span>
+      <span><i class="sw sw-warn"></i>English sitting in the Japanese slot</span>
+      <span>&mdash; = Fellowship cohort, no K2 topic by design</span>
+    </div>
+  </div>
+
+    <section class="cohort" data-cohort="2026">
+      <h2><span class="yr">2026</span><span class="cnt">13 fellows &middot; 7 need attention</span></h2>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2026/chang-s.html">Shih-Peng Chang</a></div>
+          <div class="nm nm-jp"><a href="students/2026/chang-s.html">Shih-Peng Chang</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e6%b2%b3%e9%87%8e-%e6%ad%a3%e9%81%93/" target="_blank" rel="noopener">Prof. Masamichi KOHNO</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e6%b2%b3%e9%87%8e-%e6%ad%a3%e9%81%93/" target="_blank" rel="noopener">河野 正道 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Investigation of the Effects of Substrate Thermal Properties and Thickness on Inverse Analysis in Droplet Impact Cooling</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Investigation of the Effects of Substrate Thermal Properties and Thickness on Inverse Analysis in Droplet Impact Cooling</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Deep-Learning-Based Automated Analysis of Droplet-Impact Splashing Behavior and High-Precision Boundary Estimation</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Deep-Learning-Based Automated Analysis of Droplet-Impact Splashing Behavior and High-Precision Boundary Estimation</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2026/chen-h.html">Hao Chen</a></div>
+          <div class="nm nm-jp"><a href="students/2026/chen-h.html">陳 昊</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e9%87%91%e8%b0%b7-%e6%99%b4%e4%b8%80/" target="_blank" rel="noopener">Prof. Haruichi KANAYA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e9%87%91%e8%b0%b7-%e6%99%b4%e4%b8%80/" target="_blank" rel="noopener">金谷 晴一 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Coupling-Structure Optimization and Broadband Matching for Capacitive Dynamic Wireless Power Transfer in EVs</div>
+          <div class="t ">電気自動車向け容量結合型動的無線電力伝送における結合構造最適化と広帯域整合</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Near-Field Control and Energy Harvesting for Self-Powered Sensors in Capacitive Dynamic Charging Roads</div>
+          <div class="t ">容量結合型走行中給電道路における自立電源型センサのための近傍界制御とエネルギーハーベスティング</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2026/jiang-z.html">Ziqi Jiang</a></div>
+          <div class="nm nm-jp"><a href="students/2026/jiang-z.html">Ziqi Jiang</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/kyaw-thu/" target="_blank" rel="noopener">Prof. Kyaw THU</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/kyaw-thu/" target="_blank" rel="noopener">Kyaw Thu 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Multi-scale modeling of battery degradation from electrolyte transport to state-of-health prediction</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Multi-scale modeling of battery degradation from electrolyte transport to state-of-health prediction</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Molecular Dynamics Investigation of Li-ion Transport Properties in Battery Electrolytes</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Molecular Dynamics Investigation of Li-ion Transport Properties in Battery Electrolytes</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2026/kotajima-m.html">Masaru Kotajima</a></div>
+          <div class="nm nm-jp"><a href="students/2026/kotajima-m.html">古田島 勝</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e4%b8%ad%e6%9e%97-%e5%ba%b7%e6%b2%bb/" target="_blank" rel="noopener">Prof. Koji NAKABAYASHI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e4%b8%ad%e6%9e%97-%e5%ba%b7%e6%b2%bb/" target="_blank" rel="noopener">中林 康治 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Liquefaction of Hard-to-Decompose Carbon Wastes and Development of Upcycling Processes into High-Performance Carbon Materials</div>
+          <div class="t ">難分解性炭素廃棄物の液体資源化および高機能炭素材料へのアップサイクルプロセスへの展開</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Reaction Demonstration and Establishment of a Circular Carbon Resource System for Diverse Hard-to-Decompose Carbon Wastes</div>
+          <div class="t ">多様な難分解性炭素廃棄物の再資源化に向けた反応実証と循環基盤の構築</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2026/minoda-k.html">Kohei Minoda</a></div>
+          <div class="nm nm-jp"><a href="students/2026/minoda-k.html">簑田 康平</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100020525_en.html" target="_blank" rel="noopener">Prof. Tomoaki UTSUNOMIYA</a></div>
+          <div class="nm nm-jp"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100020525_ja.html" target="_blank" rel="noopener">宇都宮 智昭 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Damping Mechanisms of Perforated Heave Plates</div>
+          <div class="t ">多孔質ヒープレートの減衰機構</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Visualizing Vortex Dynamics around Perforated Heave Plates</div>
+          <div class="t ">穿孔ヒープレート周りの渦動力学の可視化</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2026/mochizuki-t.html">Takeshi Mochizuki</a></div>
+          <div class="nm nm-jp"><a href="students/2026/mochizuki-t.html">望月 建志</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e5%ae%ae%e5%b4%8e-%e9%9a%86%e5%bd%a6/" target="_blank" rel="noopener">Prof. Takahiko MIYAZAKI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e5%ae%ae%e5%b4%8e-%e9%9a%86%e5%bd%a6/" target="_blank" rel="noopener">宮崎 隆彦 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Study of Heat Transfer Mechanisms in Vapor-Liquid Two-Phase Flow via Thermo-Informatics</div>
+          <div class="t ">サーモインフォマティクスによる気液二相流伝熱メカニズムの研究</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Elucidation of Heat Transfer Enhancement Mechanisms in Flow Boiling via Thermo-Informatics</div>
+          <div class="t ">サーモインフォマティクスによる流動沸騰現象の伝熱促進メカニズム解明</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2026/nakagawa-n.html">Niki Nakagawa</a></div>
+          <div class="nm nm-jp"><a href="students/2026/nakagawa-n.html">中川 和</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e6%b8%a1%e9%82%8a-%e6%ba%90%e8%a6%8f/" target="_blank" rel="noopener">Prof. Motonori WATANABE</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e6%b8%a1%e9%82%8a-%e6%ba%90%e8%a6%8f/" target="_blank" rel="noopener">渡邊 源規 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Development of high-reliability solid-oxide cells for a hydrogen-circulation society</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Development of high-reliability solid-oxide cells for a hydrogen-circulation society</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">MS-SOFC Cell-Stack Fabrication and Structural Evaluation Toward Practical Implementation</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> MS-SOFC Cell-Stack Fabrication and Structural Evaluation Toward Practical Implementation</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2026/omoto-s.html">Shinnosuke Omoto</a></div>
+          <div class="nm nm-jp"><a href="students/2026/omoto-s.html">大元 紳ノ介</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e4%ba%95%e4%b8%8a-%e5%85%83/" target="_blank" rel="noopener">Prof. Gen INOUE</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e4%ba%95%e4%b8%8a-%e5%85%83/" target="_blank" rel="noopener">井上 元 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Elucidation of Gas-Liquid Transport Mechanisms Within Porous Transport Layers in Polymer Electrolyte Membrane Water Electrolyzer</div>
+          <div class="t ">固体高分子形水電解槽における多孔質輸送膜内部の気液輸送メカニズムの解明と構造設計</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Elucidation of PFAS Transport and Adsorption–Desorption Characteristics in Soil</div>
+          <div class="t ">土壌中におけるPFASの輸送および吸脱着特性の解明</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2026/sun-h.html">Haonan Sun</a></div>
+          <div class="nm nm-jp"><a href="students/2026/sun-h.html">Haonan Sun</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e7%89%87%e5%b1%b1-%e4%b8%80%e6%88%90/" target="_blank" rel="noopener">Prof. Kazunari KATAYAMA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e7%89%87%e5%b1%b1-%e4%b8%80%e6%88%90/" target="_blank" rel="noopener">片山 一成 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Hydrogen recovery from gaseous hydrogen compounds using plasma decomposition</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Hydrogen recovery from gaseous hydrogen compounds using plasma decomposition</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Numerical Modeling of Hydrogen Behavior in Pd–Ag Plasma Electrodes for Fusion Fuel-Cycle Systems</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Numerical Modeling of Hydrogen Behavior in Pd–Ag Plasma Electrodes for Fusion Fuel-Cycle Systems</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2026/wang-w.html">Weifeng Wang</a></div>
+          <div class="nm nm-jp"><a href="students/2026/wang-w.html">Weifeng Wang</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100020754_en.html" target="_blank" rel="noopener">Prof. Zhenying WANG</a></div>
+          <div class="nm nm-jp"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100020754_ja.html" target="_blank" rel="noopener">王 振英 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Fundamental theories of wetting phenomena and multicomponent droplet dynamics</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Fundamental theories of wetting phenomena and multicomponent droplet dynamics</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Photothermal Nanoparticle-Enhanced Liquid Evaporation for Solar-Driven Energy and Water Harvest</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Photothermal Nanoparticle-Enhanced Liquid Evaporation for Solar-Driven Energy and Water Harvest</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2026/yoshida-s.html">Shotaro Yoshida</a></div>
+          <div class="nm nm-jp"><a href="students/2026/yoshida-s.html">吉田 昇太郎</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e8%97%a4%e4%ba%95-%e9%80%b2/" target="_blank" rel="noopener">Prof. Susumu FUJII</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e8%97%a4%e4%ba%95-%e9%80%b2/" target="_blank" rel="noopener">藤井 進 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Elucidation of Percolation Formation Mechanisms for the Development of Low-Concentration, High-Diffusion Proton Conductors</div>
+          <div class="t ">低濃度・高拡散系プロトン伝導体開発に向けた、パーコレーション形成機構の解明</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Establishing Requirements for Proton Conductors to Enable Stable Production of Solid Oxide Fuel Cells</div>
+          <div class="t ">固体酸化物燃料電池の安定生産に向けた、プロトン伝導体の要求条件の策定</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2026/zheng-q.html">Qingen Zheng</a></div>
+          <div class="nm nm-jp"><a href="students/2026/zheng-q.html">Qingen Zheng</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e5%b1%b1%e5%86%85%e3%80%80%e5%b9%b8%e6%ad%a3/" target="_blank" rel="noopener">Prof. Kosei YAMAUCHI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e5%b1%b1%e5%86%85%e3%80%80%e5%b9%b8%e6%ad%a3/" target="_blank" rel="noopener">山内 幸正 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Development of MOF-supported Co–NHC catalysts for photocatalytic hydrogen evolution in strongly alkaline media</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Development of MOF-supported Co–NHC catalysts for photocatalytic hydrogen evolution in strongly alkaline media</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Design of an Electron-Rich Co–NHC Catalyst for Mild-Condition Nitrogen Reduction</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Design of an Electron-Rich Co–NHC Catalyst for Mild-Condition Nitrogen Reduction</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2026/zou-z.html">Zeyu Zou</a></div>
+          <div class="nm nm-jp"><a href="students/2026/zou-z.html">Zeyu Zou</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100021709_en.html" target="_blank" rel="noopener">Prof. Hiroaki WATANABE</a></div>
+          <div class="nm nm-jp"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100021709_ja.html" target="_blank" rel="noopener">渡邊 裕章 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Combustion kinetic mechanism of ammonia fuel and combustion optimization</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Combustion kinetic mechanism of ammonia fuel and combustion optimization</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Machine-Learning-Enhanced Reactive Molecular Dynamics for Ammonia Combustion</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Machine-Learning-Enhanced Reactive Molecular Dynamics for Ammonia Combustion</div>
+        </div>
+      </div>
+    </section>
+    <section class="cohort" data-cohort="2025">
+      <h2><span class="yr">2025</span><span class="cnt">12 fellows &middot; 10 need attention</span></h2>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2025/kohei-sawada.html">Kohei Sawada</a></div>
+          <div class="nm nm-jp"><a href="students/2025/kohei-sawada.html">澤田 光平</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%B8%A1%E9%82%8A-%E6%BA%90%E8%A6%8F/" target="_blank" rel="noopener">Prof. Motonori WATANABE</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%B8%A1%E9%82%8A-%E6%BA%90%E8%A6%8F/" target="_blank" rel="noopener">渡邊 源規 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Study on the photocatalytic activities of gallium–indium-based materials</div>
+          <div class="t ">ガリウム-インジウム系化合物を用いた光触媒反応に関する研究</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Development of photocatalytic water splitting on nitride-based thin films</div>
+          <div class="t ">窒化物系薄膜デバイスの光触媒水分解への応用</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2025/nozomi-goto.html">Nozomu Goto</a></div>
+          <div class="nm nm-jp"><a href="students/2025/nozomi-goto.html">後藤 希</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B1%B1%E5%B4%8E-%E4%BB%81%E4%B8%88/" target="_blank" rel="noopener">Prof. Yoshihiro YAMAZAKI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B1%B1%E5%B4%8E-%E4%BB%81%E4%B8%88/" target="_blank" rel="noopener">山崎 仁丈 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
+          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Accelerated exploration of proton-conducting solid oxide fuel cell cathode materials using machine learning</div>
+          <div class="t ">機械学習を用いたプロトン伝導性固体酸化物燃料電池カソード材料の加速的探索</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2025/qi-shi.html">Qi Shi</a></div>
+          <div class="nm nm-jp"><a href="students/2025/qi-shi.html">チーシー</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%B8%A1%E9%82%8A-%E6%BA%90%E8%A6%8F/" target="_blank" rel="noopener">Prof. Motonori WATANABE</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%B8%A1%E9%82%8A-%E6%BA%90%E8%A6%8F/" target="_blank" rel="noopener">渡邊 源規 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
+          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Improvement of tubular solid oxide reversible cells using LSGM electrolyte via dip coating</div>
+          <div class="t ">ディップコーティング法によるLSGM電解質を用いたチューブ型固体酸化物可逆セルの改良</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2025/rika-iriguchi.html">Rika Iriguchi</a></div>
+          <div class="nm nm-jp"><a href="students/2025/rika-iriguchi.html">入口 梨佳</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B3%B6%E7%94%B0-%E8%8B%B1%E6%A8%B9/" target="_blank" rel="noopener">Prof. Hideki SHIMADA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B3%B6%E7%94%B0-%E8%8B%B1%E6%A8%B9/" target="_blank" rel="noopener">島田 英樹 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
+          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Development of low environmental impact hydrogen production technology from biomass fermentation processes</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Development of low environmental impact hydrogen production technology from biomass fermentation processes</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2025/ryoshi-oda.html">Ryoshi Oda</a></div>
+          <div class="nm nm-jp"><a href="students/2025/ryoshi-oda.html">小田 亮志</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%B8%AD%E6%9E%97-%E5%BA%B7%E6%B2%BB/" target="_blank" rel="noopener">Prof. Koji NAKABAYASHI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%B8%AD%E6%9E%97-%E5%BA%B7%E6%B2%BB/" target="_blank" rel="noopener">中林 康治 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
+          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Research on turquoise hydrogen synthesis using carbon-based catalysts and effective utilisation of byproduct carbon</div>
+          <div class="t ">炭素系触媒を用いたターコイズ水素の合成および副生炭素の有効利用に関する研究</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2025/takahiro-yamaguchi.html">Takahiro Yamaguchi</a></div>
+          <div class="nm nm-jp"><a href="students/2025/takahiro-yamaguchi.html">山口 貴大</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100022671_en.html" target="_blank" rel="noopener">Prof. Hiroshi IDEI</a></div>
+          <div class="nm nm-jp"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100022671_ja.html" target="_blank" rel="noopener">出射 浩 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
+          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Application of machine learning for real-time control of tokamak plasma configuration</div>
+          <div class="t ">トカマクプラズマ配位の実時間制御のための機械学習の活用</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2025/wang-sheng.html">Sheng Wang</a></div>
+          <div class="nm nm-jp"><a href="students/2025/wang-sheng.html">Sheng Wang</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B3%B6%E7%94%B0-%E8%8B%B1%E6%A8%B9/" target="_blank" rel="noopener">Prof. Hideki SHIMADA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B3%B6%E7%94%B0-%E8%8B%B1%E6%A8%B9/" target="_blank" rel="noopener">島田 英樹 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
+          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Investigation of gas-liquid two-phase flow mechanisms in microscopic fractures under reservoir in-situ thermo-pressure conditions</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Investigation of gas-liquid two-phase flow mechanisms in microscopic fractures under reservoir in-situ thermo-pressure conditions</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2025/yan-chenyu.html">Chenyu Yan</a></div>
+          <div class="nm nm-jp"><a href="students/2025/yan-chenyu.html">Chenyu Yan</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%B0%B8%E9%95%B7-%E4%B9%85%E5%AF%9B/" target="_blank" rel="noopener">Prof. Hisahiro EINAGA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%B0%B8%E9%95%B7-%E4%B9%85%E5%AF%9B/" target="_blank" rel="noopener">永長 久寛 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
+          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Microwave-assisted catalytic degradation of plastics and other organic wastes</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Microwave-assisted catalytic degradation of plastics and other organic wastes</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2025/yuki-nishimura.html">Yuki Nishimura</a></div>
+          <div class="nm nm-jp"><a href="students/2025/yuki-nishimura.html">西村 勇輝</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100022629_en.html" target="_blank" rel="noopener">Prof. Naohiro KASUYA</a></div>
+          <div class="nm nm-jp"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100022629_ja.html" target="_blank" rel="noopener">糟谷 直宏 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Investigation of 3D structure and fluctuations in linear plasmas using multi-wavelength tomography</div>
+          <div class="t ">多波長トモグラフィを用いた直線プラズマの3次元構造と揺動の研究</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Research on basic plasma structure and fluctuations using tomography systems</div>
+          <div class="t ">トモグラフィシステムを用いた基礎プラズマの構造と揺動に関する研究</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2025/zhai-xiazhe.html">Xiazhe Zhai</a></div>
+          <div class="nm nm-jp"><a href="students/2025/zhai-xiazhe.html">Xiazhe Zhai</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%AE%AE%E8%84%87-%E4%BB%81/" target="_blank" rel="noopener">Prof. Jin MIYAWAKI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%AE%AE%E8%84%87-%E4%BB%81/" target="_blank" rel="noopener">宮脇 仁 准教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
+          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Creating high-value carbon materials from carbonised products and byproducts of locally-sourced Japanese biomass</div>
+          <div class="t ">日本近域産バイオマスを原料とした炭素化物および副産物からの高付加価値カーボン材料の創製</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2025/zhang-jingxuan.html">Jingxuan Zhang</a></div>
+          <div class="nm nm-jp"><a href="students/2025/zhang-jingxuan.html">Jingxuan Zhang</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/chapman-andrew-john/" target="_blank" rel="noopener">Prof. Andrew CHAPMAN</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/chapman-andrew-john/" target="_blank" rel="noopener">アンドリュー・チャップマン 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
+          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Decarbonizing Compact Cities: Strategic Planning for AEV-Based Public Transport</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Decarbonizing Compact Cities: Strategic Planning for AEV-Based Public Transport</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2025/zhanyi-xiang.html">Zhanyi Xiang</a></div>
+          <div class="nm nm-jp"><a href="students/2025/zhanyi-xiang.html">Zhanyi Xiang</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BC%8A%E8%97%A4-%E8%A1%A1%E5%B9%B3/" target="_blank" rel="noopener">Prof. Kohei ITO</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BC%8A%E8%97%A4-%E8%A1%A1%E5%B9%B3/" target="_blank" rel="noopener">伊藤 衡平 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
+          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Elucidation of electrochemical reaction mechanisms in H₂O–CO₂ co-electrolysis of SOEC and construction of numerical analysis methods</div>
+          <div class="t ">固体酸化物電解セル（SOEC）の共電解における化学反応を伴う電気化学反応の原理解明および数値解析手法の構築</div>
+        </div>
+      </div>
+    </section>
+    <section class="cohort" data-cohort="2024">
+      <h2><span class="yr">2024</span><span class="cnt">11 fellows &middot; 4 need attention</span></h2>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2024/haomin-fu.html">Haomin Fu</a></div>
+          <div class="nm nm-jp"><a href="students/2024/haomin-fu.html">Haomin Fu</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100017974_en.html" target="_blank" rel="noopener">Prof. Takefumi MOKUDAI</a></div>
+          <div class="nm nm-jp"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100017974_ja.html" target="_blank" rel="noopener">目代 武史 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">The Changing Landscape of China's EV Business Ecosystem: A Downstream Value Chain Analysis</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> The Changing Landscape of China's EV Business Ecosystem: A Downstream Value Chain Analysis</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">The Impact of Digital Transformation in Japan's EV Industry on Carbon Emission Reduction</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> The Impact of Digital Transformation in Japan's EV Industry on Carbon Emission Reduction</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2024/itsuki-oyama.html">Itsuki Oyama</a></div>
+          <div class="nm nm-jp"><a href="students/2024/itsuki-oyama.html">小山 一輝</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100022633_en.html" target="_blank" rel="noopener">Prof. Yusuke KOSUGA</a></div>
+          <div class="nm nm-jp"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100022633_ja.html" target="_blank" rel="noopener">小菅 佑輔 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Modelling of heat transport driven by plasma turbulence</div>
+          <div class="t ">プラズマ乱流による熱輸送のモデリング</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Optimal design of plasma-facing materials using topology optimisation</div>
+          <div class="t ">トポロジー最適化を用いたプラズマ対向材の最適設計</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2024/kodai-matsumoto.html">Kodai Matsumoto</a></div>
+          <div class="nm nm-jp"><a href="students/2024/kodai-matsumoto.html">松本 昂大</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E8%97%A4%E5%B7%9D-%E8%8C%82%E7%B4%80/" target="_blank" rel="noopener">Prof. Shigenori FUJIKAWA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E8%97%A4%E5%B7%9D-%E8%8C%82%E7%B4%80/" target="_blank" rel="noopener">藤川 茂紀 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Luminescence enhancement of photon upconversion via spatial molecular arrangement control on plasmonic nano-interfaces</div>
+          <div class="t ">プラズモニックナノ界面上の空間的分子配置制御によるフォトンアップコンバージョンの発光増強</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Development of Three-Dimensional Chiral Plasmonic Meta-clusters with Circular Polarization Characteristics for Effective Utilization of Sunlight</div>
+          <div class="t ">太陽光有効活用に向けた円偏光特性を有する三次元キラルプラズモニックメタクラスターの開発</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2024/ryudai-ueno.html">Ryudai Ueno</a></div>
+          <div class="nm nm-jp"><a href="students/2024/ryudai-ueno.html">上野 竜大生</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100022030_en.html" target="_blank" rel="noopener">Prof. Noriko SATO</a></div>
+          <div class="nm nm-jp"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100022030_ja.html" target="_blank" rel="noopener">佐藤 宣子 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Elucidating the vegetation history of post-war plantation forests using agriculture and forestry statistics, and examining suitable sites for reforestation</div>
+          <div class="t ">農林業統計を活用した戦後造林地の植生履歴の解明と再造林適地の検討</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Prediction of Future Afforestation Sites and Sustainable Forest Management in Kyushu</div>
+          <div class="t ">九州における将来の造林適地予測と持続可能な森林管理</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2024/shen-siyu.html">Siyu Shen</a></div>
+          <div class="nm nm-jp"><a href="students/2024/shen-siyu.html">Siyu Shen</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E8%97%A4%E4%BA%95-%E7%A7%80%E9%81%93/" target="_blank" rel="noopener">Prof. Hidemichi FUJII</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E8%97%A4%E4%BA%95-%E7%A7%80%E9%81%93/" target="_blank" rel="noopener">藤井 秀道 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">The impact of environmental materiality on corporate financial performance</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> The impact of environmental materiality on corporate financial performance</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Environmental-economic trade-offs of membrane-based direct air capture technologies using life cycle assessment</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Environmental-economic trade-offs of membrane-based direct air capture technologies using life cycle assessment</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2024/shogo-nakamura.html">Shogo Nakamura</a></div>
+          <div class="nm nm-jp"><a href="students/2024/shogo-nakamura.html">中村 省吾</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BD%90%E3%80%85%E6%9C%A8-%E4%B8%80%E6%88%90/" target="_blank" rel="noopener">Prof. Kazunari SASAKI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BD%90%E3%80%85%E6%9C%A8-%E4%B8%80%E6%88%90/" target="_blank" rel="noopener">佐々木 一成 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Study on the chemical durability of polymer electrolyte fuel cells</div>
+          <div class="t ">固体高分子形燃料電池の化学的耐久性に関する研究</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Design and Evaluation of PtW-Based Catalysts for Enhancing Fuel Starvation Tolerance in PEFCs</div>
+          <div class="t ">水素欠乏耐性向上に向けたPtW系触媒の設計と評価</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2024/tomomi-shoda.html">Tomomi Shoda</a></div>
+          <div class="nm nm-jp"><a href="students/2024/tomomi-shoda.html">庄田 朋申</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/" target="_blank" rel="noopener">Prof. Shigemi KAGAWA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/" target="_blank" rel="noopener">加河 茂美 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">CO₂ Reduction Potential of Global Supply Chain Networks: An MRIO Approach Incorporating Maritime Network Structures</div>
+          <div class="t ">国際海運活動を組み込んだ新たなグローバルサプライチェーン分析の開発とその実証分析</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2024/xianzhe-yang.html">Xianzhe Yang</a></div>
+          <div class="nm nm-jp"><a href="students/2024/xianzhe-yang.html">楊 賢哲</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B0%BE%E5%B4%8E-%E6%98%8E%E4%BB%81/" target="_blank" rel="noopener">Prof. Akihito OZAKI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B0%BE%E5%B4%8E-%E6%98%8E%E4%BB%81/" target="_blank" rel="noopener">尾崎 明仁 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Research on the digital twin of building thermal environment utilizing digital transformation technology</div>
+          <div class="t ">Dx技術を活用した建築熱環境のデジタルツインに関する研究</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2024/yuki-noguchi.html">Yuki Noguchi</a></div>
+          <div class="nm nm-jp"><a href="students/2024/yuki-noguchi.html">野口 湧喜</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://www.aees.kyushu-u.ac.jp/~dkato/members.html" target="_blank" rel="noopener">Prof. Daiji KATO</a></div>
+          <div class="nm nm-jp"><a href="https://www.aees.kyushu-u.ac.jp/~dkato/members.html" target="_blank" rel="noopener">加藤 太治 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Elucidating the structural stability and hydrogen behaviour of vacancy clusters and surfaces in tungsten using machine-learning force fields</div>
+          <div class="t ">機械学習型力場を用いたタングステン中の空孔集合体と表面における構造安定性と水素挙動の解明</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Study of F82H precipitate amorphisation in a DEMO fusion reactor</div>
+          <div class="t ">核融合原型炉材料F82H中における析出物非晶質化現象の解明</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2024/yuki-tomita.html">Yuki Tomita</a></div>
+          <div class="nm nm-jp"><a href="students/2024/yuki-tomita.html">冨田 侑樹</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B0%8F%E6%BE%A4-%E5%BC%98%E5%AE%9C/" target="_blank" rel="noopener">Prof. Hironobu OZAWA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B0%8F%E6%BE%A4-%E5%BC%98%E5%AE%9C/" target="_blank" rel="noopener">小澤 弘宜 准教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
+          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Highly Efficient Ammonia Oxidation by a Macrocyclic Molecular Catalyst</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Highly Efficient Ammonia Oxidation by a Macrocyclic Molecular Catalyst</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2024/zhang-kaili.html">Kaili Zhang</a></div>
+          <div class="nm nm-jp"><a href="students/2024/zhang-kaili.html">Kaili Zhang</a></div>
+          <div class="prog">K2-SPRING</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/divigalpitiya/" target="_blank" rel="noopener">Prof. Prasanna DIVIGALPITIYA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/divigalpitiya/" target="_blank" rel="noopener">Prasanna Divigalpitiya 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
+          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">The impact mechanism of multi-scale urban built environment on health and well-being of residents</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> The impact mechanism of multi-scale urban built environment on health and well-being of residents</div>
+        </div>
+      </div>
+    </section>
+    <section class="cohort" data-cohort="2023">
+      <h2><span class="yr">2023</span><span class="cnt">11 fellows &middot; 1 need attention</span></h2>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2023/go-yokuhou.html">Go Yokuhou</a></div>
+          <div class="nm nm-jp"><a href="students/2023/go-yokuhou.html">呉 翼峰</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BC%8A%E8%97%A4-%E8%A1%A1%E5%B9%B3/" target="_blank" rel="noopener">Prof. Kohei ITO</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BC%8A%E8%97%A4-%E8%A1%A1%E5%B9%B3/" target="_blank" rel="noopener">伊藤 衡平 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Exploration of rate-limiting factors and development of design guidelines for MH alloy systems</div>
+          <div class="t ">MH合金システムの速度律速因子の探求と設計指針の構築</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2023/hiroki-isogawa.html">Hiroki Isogawa</a></div>
+          <div class="nm nm-jp"><a href="students/2023/hiroki-isogawa.html">五十川 浩希</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E7%89%87%E5%B1%B1-%E4%B8%80%E6%88%90/" target="_blank" rel="noopener">Prof. Kazunari KATAYAMA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E7%89%87%E5%B1%B1-%E4%B8%80%E6%88%90/" target="_blank" rel="noopener">片山 一成 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Analysis of Tritium permeation behavior of Li rod simulant for development of Tritium confinement technology</div>
+          <div class="t ">トリチウム閉じ込め技術開発に向けた、Liロッド模擬試験体のトリチウム透過挙動解析</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2023/kentaro-wada.html">Kentaro Wada</a></div>
+          <div class="nm nm-jp"><a href="students/2023/kentaro-wada.html">和田 健太郎</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%B9%85%E4%BF%9D%E7%94%B0-%E7%A5%90%E4%BF%A1/" target="_blank" rel="noopener">Prof. Masanobu KUBOTA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%B9%85%E4%BF%9D%E7%94%B0-%E7%A5%90%E4%BF%A1/" target="_blank" rel="noopener">久保田 祐信 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Elucidating the mechanisms of reduce creep life in hydrogen to ensure the safety of advanced high-temperature hydrogen technologies</div>
+          <div class="t ">高温水素利用機器の安全性を確実にするための水素中クリープ寿命低下の機構解明に関する研究</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2023/kotaro-shinozaki.html">Kotaro Shinozaki</a></div>
+          <div class="nm nm-jp"><a href="students/2023/kotaro-shinozaki.html">篠崎 航太朗</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100020578_en.html" target="_blank" rel="noopener">Prof. Jun NISHIJIMA</a></div>
+          <div class="nm nm-jp"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100020578_ja.html" target="_blank" rel="noopener">西島 潤 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">An Analysis and System Proposal Regarding Social Acceptance of Geothermal Development with Mathematical-Sociology Approach</div>
+          <div class="t ">地熱発電の社会受容性に関する数理社会学的分析と制度提案</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2023/narmandakh-khongorzul.html">Narmandakh Khongorzul</a></div>
+          <div class="nm nm-jp"><a href="students/2023/narmandakh-khongorzul.html">Narmandakh Khongorzul</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E7%9F%B3%E5%8E%9F-%E9%81%94%E5%B7%B1/" target="_blank" rel="noopener">Prof. Tatsumi ISHIHARA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E7%9F%B3%E5%8E%9F-%E9%81%94%E5%B7%B1/" target="_blank" rel="noopener">石原 達己 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Nanoparticle modified oxide as model air electrode for oxygen reduction site</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Nanoparticle modified oxide as model air electrode for oxygen reduction site</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2023/seiya-imada.html">Seiya Imada</a></div>
+          <div class="nm nm-jp"><a href="students/2023/seiya-imada.html">今田 青冶</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/" target="_blank" rel="noopener">Prof. Shigemi KAGAWA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/" target="_blank" rel="noopener">加河 茂美 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Carbon Footprint Analysis of Japanese Wooden Houses</div>
+          <div class="t ">日本の木造住宅のカーボンフットプリント分析</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2023/taisei-tomaru.html">Taisei Tomaru</a></div>
+          <div class="nm nm-jp"><a href="students/2023/taisei-tomaru.html">都丸 大晟</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%B8%AD%E6%9E%97-%E5%BA%B7%E6%B2%BB/" target="_blank" rel="noopener">Prof. Koji NAKABAYASHI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%B8%AD%E6%9E%97-%E5%BA%B7%E6%B2%BB/" target="_blank" rel="noopener">中林 康治 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Research on the production of high-performance carbon fiber using stranded resources</div>
+          <div class="t ">座礁資源を利用した高機能炭素繊維の製造に関する研究</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2023/xuesong-wei.html">Xuesong Wei</a></div>
+          <div class="nm nm-jp"><a href="students/2023/xuesong-wei.html">韋 雪淞</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%A3%AE-%E6%98%8C%E5%8F%B8/" target="_blank" rel="noopener">Prof. Shoji MORI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%A3%AE-%E6%98%8C%E5%8F%B8/" target="_blank" rel="noopener">森 昌司 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Dramatic improvement of critical current density based on the analogy of boiling and water electrolysis</div>
+          <div class="t ">沸騰と水電解のアナロジーに基づく水電解性能の飛躍的な向上</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2023/yusuke-oga.html">Yusuke Oga</a></div>
+          <div class="nm nm-jp"><a href="students/2023/yusuke-oga.html">大賀 雄介</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/" target="_blank" rel="noopener">Prof. Shigemi KAGAWA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/" target="_blank" rel="noopener">加河 茂美 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Carbon footprint analysis for tourism in Japan using environmentally extended input-output approach.</div>
+          <div class="t ">環境・観光分析用産業連関分析を用いた旅行者のカーボンフットプリント分析</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2023/yuta-takaoka.html">Yuta Takaoka</a></div>
+          <div class="nm nm-jp"><a href="students/2023/yuta-takaoka.html">髙岡 祐太</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E7%9F%B3%E5%8E%9F-%E9%81%94%E5%B7%B1/" target="_blank" rel="noopener">Prof. Tatsumi ISHIHARA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E7%9F%B3%E5%8E%9F-%E9%81%94%E5%B7%B1/" target="_blank" rel="noopener">石原 達己 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Electrochemical CO<sub>2</sub> Reduction Catalyst for Multi-carbon Products</div>
+          <div class="t ">マルチカーボン生成を目指した電気化学CO₂還元触媒の検討</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2023/yutong-chen.html">Yutong Chen</a></div>
+          <div class="nm nm-jp"><a href="students/2023/yutong-chen.html">陳 昱通</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BD%8F%E5%90%89-%E5%A4%A7%E8%BC%94/" target="_blank" rel="noopener">Prof. Daisuke SUMIYOSHI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BD%8F%E5%90%89-%E5%A4%A7%E8%BC%94/" target="_blank" rel="noopener">住吉 大輔 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Development of energy-saving performance and indoor health environment diagnosis system based on BI-Tech</div>
+          <div class="t ">再生可能エネルギーを利用して室内温湿度を自然調節するPSEシステムの開発</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+    </section>
+    <section class="cohort" data-cohort="2022">
+      <h2><span class="yr">2022</span><span class="cnt">12 fellows &middot; 6 need attention</span></h2>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2022/daisuke-yoshizawa.html">Daisuke Yoshizawa</a></div>
+          <div class="nm nm-jp"><a href="students/2022/daisuke-yoshizawa.html">吉澤 大佑</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/" target="_blank" rel="noopener">Prof. Shigemi KAGAWA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/" target="_blank" rel="noopener">加河 茂美 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">CO<sub>2</sub> Reduction Potential of Expanding Car Sharing Services</div>
+          <div class="t ">カーシェアリング普及のCO<sub>2</sub>排出削減効果</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2022/hyun-gyu-park.html">Hyun-Gyu Park</a></div>
+          <div class="nm nm-jp"><a href="students/2022/hyun-gyu-park.html">Hyun-Gyu Park</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100021701_en.html" target="_blank" rel="noopener">Prof. Kazuhide ITO</a></div>
+          <div class="nm nm-jp"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100021701_ja.html" target="_blank" rel="noopener">伊藤 一秀 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Development of Advanced Computer Simulated Person for Indoor Thermal Comfort and Air Quality Assessment</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Development of Advanced Computer Simulated Person for Indoor Thermal Comfort and Air Quality Assessment</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2022/jacqueline-andrea-hidalgo-jim-nez.html">Jacqueline Andrea Hidalgo Jiménez</a></div>
+          <div class="nm nm-jp"><a href="students/2022/jacqueline-andrea-hidalgo-jim-nez.html">Jacqueline Andrea Hidalgo Jiménez</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/edalati-kaveh/" target="_blank" rel="noopener">Prof. Kaveh EDALATI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/edalati-kaveh/" target="_blank" rel="noopener">Edalati Kaveh 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">High-entropy ceramics as new family of photocatalysts for hydrogen production and CO<sub>2</sub> conversion: Ab initio calculations and experiments</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> High-entropy ceramics as new family of photocatalysts for hydrogen production and CO<sub>2</sub> conversion: Ab initio calculations and experiments</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2022/muhammad-irfan-maulana-kusdhany.html">Muhammad Irfan Maulana Kusdhany</a></div>
+          <div class="nm nm-jp"><a href="students/2022/muhammad-irfan-maulana-kusdhany.html">Muhammad Irfan Maulana Kusdhany</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E8%A5%BF%E5%8E%9F-%E6%AD%A3%E9%80%9A/" target="_blank" rel="noopener">Prof. Masamichi NISHIHARA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E8%A5%BF%E5%8E%9F-%E6%AD%A3%E9%80%9A/" target="_blank" rel="noopener">西原 正通 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Data-Driven Design of Carbon Materials for Hydrogen Storage</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Data-Driven Design of Carbon Materials for Hydrogen Storage</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2022/qingyi-he.html">Qingyi He</a></div>
+          <div class="nm nm-jp"><a href="students/2022/qingyi-he.html">何 清怡</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BD%8F%E5%90%89-%E5%A4%A7%E8%BC%94/" target="_blank" rel="noopener">Prof. Daisuke SUMIYOSHI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BD%8F%E5%90%89-%E5%A4%A7%E8%BC%94/" target="_blank" rel="noopener">住吉 大輔 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">人間の省エネ意識と省エネ行動の関係分析に基づく建物エネルギーシミュレーションツールの開発</div>
+          <div class="t ">人間の省エネ意識と省エネ行動の関係分析に基づく建物エネルギーシミュレーションツールの開発</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2022/ryoma-sato.html">Ryoma Sato</a></div>
+          <div class="nm nm-jp"><a href="students/2022/ryoma-sato.html">佐藤 稜真</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100021933_en.html" target="_blank" rel="noopener">Prof. Sakae AGARIE</a></div>
+          <div class="nm nm-jp"><a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100021933_ja.html" target="_blank" rel="noopener">東江 栄 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Realization of decarbonization coexisting with food production: Creation of environmentally resilient biomass energy resource crops through photosynthetic modification based on functional genomics.</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Realization of decarbonization coexisting with food production: Creation of environmentally resilient biomass energy resource crops through photosynthetic modification based on functional genomics.</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2022/shinichi-takeno.html">Shinichi Takeno</a></div>
+          <div class="nm nm-jp"><a href="students/2022/shinichi-takeno.html">竹野 慎一</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%B8%A1%E9%82%89-%E8%B3%A2/" target="_blank" rel="noopener">Prof. Ken WATANABE</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%B8%A1%E9%82%89-%E8%B3%A2/" target="_blank" rel="noopener">渡邉 賢 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Development of new electronic-Li-ionic conductors and their battery application</div>
+          <div class="t ">新規電子・Liイオン混合伝導性酸化物の探索とその電池応用</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2022/sora-matsushima.html">Sora Matsushima</a></div>
+          <div class="nm nm-jp"><a href="students/2022/sora-matsushima.html">松嶋 そら</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/" target="_blank" rel="noopener">Prof. Shigemi KAGAWA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/" target="_blank" rel="noopener">加河 茂美 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Development and Empirical Analysis of a Comprehensive LCA Assessment Framework Considering Housing Stock Dynamics.</div>
+          <div class="t ">住宅ストックの動態を考慮した包括的LCA評価フレームワークの開発と実証分析</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2022/tatsuya-hamashima.html">Tatsuya Hamashima</a></div>
+          <div class="nm nm-jp"><a href="students/2022/tatsuya-hamashima.html">濱島 達也</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%B0%B8%E9%95%B7-%E4%B9%85%E5%AF%9B/" target="_blank" rel="noopener">Prof. Hisahiro EINAGA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%B0%B8%E9%95%B7-%E4%B9%85%E5%AF%9B/" target="_blank" rel="noopener">永長 久寛 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Development of a high-efficient DRM system and elucidation of the reaction mechanisms</div>
+          <div class="t ">高効率な反応を可能にするマイクロ波援用DRMシステムの開発と反応メカニズムの解明</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2022/yin-kan-phua.html">Yin Kan Phua</a></div>
+          <div class="nm nm-jp"><a href="students/2022/yin-kan-phua.html">Yin Kan Phua</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E8%97%A4-%E5%B9%B8%E4%B8%80%E9%83%8E/" target="_blank" rel="noopener">Prof. Koichiro KATO</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E8%97%A4-%E5%B9%B8%E4%B8%80%E9%83%8E/" target="_blank" rel="noopener">加藤 幸一郎 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Development of a Chemically Explainable Machine Learning Model that Allows Membrane Materials Exploration for Anion Exchange Membrane Fuel Cell</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Development of a Chemically Explainable Machine Learning Model that Allows Membrane Materials Exploration for Anion Exchange Membrane Fuel Cell</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2022/yixin-chen.html">Yixin Chen</a></div>
+          <div class="nm nm-jp"><a href="students/2022/yixin-chen.html">陳 伊新</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E3%82%A2%E3%83%AB%E3%83%96%E3%83%AC%E3%83%92%E3%83%88-%E5%BB%BA/" target="_blank" rel="noopener">Prof. Ken ALBRECHT</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E3%82%A2%E3%83%AB%E3%83%96%E3%83%AC%E3%83%92%E3%83%88-%E5%BB%BA/" target="_blank" rel="noopener">アルブレヒト 建 准教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Construction of high-capacity all-solid-state battery using hydride negative electrode</div>
+          <div class="t ">水素化物負極を用いた高容量全固体電池の構築</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2022/zifei-nie.html">Zifei Nie</a></div>
+          <div class="nm nm-jp"><a href="students/2022/zifei-nie.html">Zifei Nie</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/hooman/" target="_blank" rel="noopener">Prof. Farzaneh HOOMAN</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/hooman/" target="_blank" rel="noopener">Farzaneh Hooman 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Toward Safer, Smarter, and Decarbonized Mobility: Personalized Energy-efficient Driving for Intelligent Vehicles</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Toward Safer, Smarter, and Decarbonized Mobility: Personalized Energy-efficient Driving for Intelligent Vehicles</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+    </section>
+    <section class="cohort" data-cohort="2021">
+      <h2><span class="yr">2021</span><span class="cnt">12 fellows &middot; 4 need attention</span></h2>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2021/daiki-nishimura.html">Daiki Nishimura</a></div>
+          <div class="nm nm-jp"><a href="students/2021/daiki-nishimura.html">西村 大輝</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><span class="badge b-missing">no supervisor on file</span></div>
+          <div class="nm nm-jp"><span class="badge b-missing">no supervisor on file</span></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Experimental research of non-locality of turbulence in magnetized plasma.</div>
+          <div class="t ">磁化プラズマにおける乱流の大域性の実験研究</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2021/haruka-mitoma.html">Haruka Mitoma</a></div>
+          <div class="nm nm-jp"><a href="students/2021/haruka-mitoma.html">三苫 春香</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/" target="_blank" rel="noopener">Prof. Shigemi KAGAWA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/" target="_blank" rel="noopener">加河 茂美 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">A carbon footprint analysis considering the production activities of the informal sector</div>
+          <div class="t ">インフォーマルセクターの生産活動を考慮したカーボンフットプリントの実証分析</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2021/keitaro-maeno.html">Keitaro Maeno</a></div>
+          <div class="nm nm-jp"><a href="students/2021/keitaro-maeno.html">前野 啓太郎</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/" target="_blank" rel="noopener">Prof. Shigemi KAGAWA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%8A%A0%E6%B2%B3-%E8%8C%82%E7%BE%8E/" target="_blank" rel="noopener">加河 茂美 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">CO<sub>2</sub> mitigation through global supply chain restructuring</div>
+          <div class="t ">グローバルサプライチェーンの再構築を通したCO<sub>2</sub>排出削減</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2021/kento-komatsubara.html">Kento Komatsubara</a></div>
+          <div class="nm nm-jp"><a href="students/2021/kento-komatsubara.html">小松原 建人</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E9%A6%AC%E5%A5%88%E6%9C%A8-%E4%BF%8A%E4%BB%8B/" target="_blank" rel="noopener">Prof. Shunsuke MANAGI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E9%A6%AC%E5%A5%88%E6%9C%A8-%E4%BF%8A%E4%BB%8B/" target="_blank" rel="noopener">馬奈木 俊介 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Environmental sustainability assessment using high-resolution spatial information</div>
+          <div class="t ">空間情報を用いた高分解能での環境持続可能性評価</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2021/likhith-manjunatha.html">Likhith Manjunatha</a></div>
+          <div class="nm nm-jp"><a href="students/2021/likhith-manjunatha.html">Likhith Manjunatha</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%9E%97-%E7%81%AF/" target="_blank" rel="noopener">Prof. Akari HAYASHI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%9E%97-%E7%81%AF/" target="_blank" rel="noopener">林 灯 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Addressing fuel starvation based degradation in polymer electrolyte fuel cells</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Addressing fuel starvation based degradation in polymer electrolyte fuel cells</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2021/masatoshi-tashima.html">Masatoshi Tashima</a></div>
+          <div class="nm nm-jp"><a href="students/2021/masatoshi-tashima.html">田島 正俊</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E3%82%A2%E3%83%AB%E3%83%96%E3%83%AC%E3%83%92%E3%83%88-%E5%BB%BA/" target="_blank" rel="noopener">Prof. Ken ALBRECHT</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E3%82%A2%E3%83%AB%E3%83%96%E3%83%AC%E3%83%92%E3%83%88-%E5%BB%BA/" target="_blank" rel="noopener">アルブレヒト 建 准教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Curved Organic Molecules as Electrode Active Material</div>
+          <div class="t ">湾曲活物質を用いた電池の創成</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2021/mingxu-sun.html">Mingxu Sun</a></div>
+          <div class="nm nm-jp"><a href="students/2021/mingxu-sun.html">Mingxu Sun</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B1%B1%E5%86%85-%E7%BE%8E%E7%A9%82/" target="_blank" rel="noopener">Prof. Miho YAMAUCHI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B1%B1%E5%86%85-%E7%BE%8E%E7%A9%82/" target="_blank" rel="noopener">山内 美穂 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Electrochemical CO<sub>2</sub> Conversion to Value-added Chemicals</div>
+          <div class="t ">電気化学二酸化炭素を付加価値化学物質に変換する</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2021/tianhui-fan.html">Tianhui Fan</a></div>
+          <div class="nm nm-jp"><a href="students/2021/tianhui-fan.html">Tianhui Fan</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/chapman-andrew-john/" target="_blank" rel="noopener">Prof. Andrew CHAPMAN</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/chapman-andrew-john/" target="_blank" rel="noopener">アンドリュー・チャップマン 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">The impact of compact cities on carbon emissions</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> The impact of compact cities on carbon emissions</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row needs-attention" data-attention="1">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2021/timothee-redarce.html">Timothee Redarce</a></div>
+          <div class="nm nm-jp"><a href="students/2021/timothee-redarce.html">Timothee Redarce</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%9D%BE%E6%B0%B8-%E4%B9%85%E7%94%9F/" target="_blank" rel="noopener">Prof. Hisao MATSUNAGA</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%9D%BE%E6%B0%B8-%E4%B9%85%E7%94%9F/" target="_blank" rel="noopener">松永 久生 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Breakthrough of 900MPa barrier of fatigue crack growth resistance in BCC steels in high-pressure hydrogen environment</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Breakthrough of 900MPa barrier of fatigue crack growth resistance in BCC steels in high-pressure hydrogen environment</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2021/toraharu-watanabe.html">Toraharu Watanabe</a></div>
+          <div class="nm nm-jp"><a href="students/2021/toraharu-watanabe.html">渡邊 虎春</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="http://researchmap.jp/takeshi-shinoda" target="_blank" rel="noopener">Prof. Takeshi SHINODA</a></div>
+          <div class="nm nm-jp"><a href="http://researchmap.jp/takeshi-shinoda" target="_blank" rel="noopener">篠田 岳思 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">The research on ventilation control of ship engine room considering ammonia fuel</div>
+          <div class="t ">アンモニア燃料を考慮した船舶機関室の換気制御に関する研究</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2021/xiaofeng-shen.html">Xiaofeng Shen</a></div>
+          <div class="nm nm-jp"><a href="students/2021/xiaofeng-shen.html">沈 小烽</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%B8%A1%E9%82%8A-%E6%BA%90%E8%A6%8F/" target="_blank" rel="noopener">Prof. Motonori WATANABE</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E6%B8%A1%E9%82%8A-%E6%BA%90%E8%A6%8F/" target="_blank" rel="noopener">渡邊 源規 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Highly activated single-layer nanosheet dye-sensitized photocatalyst for overall water splitting</div>
+          <div class="t ">高活性化単層ナノシート色素増感型光触媒による水の完全分解</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+      <div class="row" data-attention="0">
+        <div class="cell c-student">
+          <div class="k">Student</div>
+          <div class="nm"><a href="students/2021/yulu-chen.html">Yulu Chen</a></div>
+          <div class="nm nm-jp"><a href="students/2021/yulu-chen.html">陳 雨露</a></div>
+          <div class="prog">Q-ENERGY Fellowship</div>
+        </div>
+        <div class="cell c-sup">
+          <div class="k">Supervisor</div>
+          <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B0%BE%E5%B4%8E-%E6%98%8E%E4%BB%81/" target="_blank" rel="noopener">Prof. Akihito OZAKI</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E5%B0%BE%E5%B4%8E-%E6%98%8E%E4%BB%81/" target="_blank" rel="noopener">尾崎 明仁 教授</a></div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">PhD research</div>
+          <div class="t ">Performance study of a passive dehumidification system naturally controls the indoor hygrothermal environment using renewable energy.</div>
+          <div class="t ">再生可能エネルギーを利用して室内温湿度を自然調節するPSEシステムの開発</div>
+        </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t t-na">—</div>
+          <div class="t t-na">—</div>
+        </div>
+      </div>
+    </section>
+
+</div>
+<script>
+  const all = document.getElementById('f-all'), attn = document.getElementById('f-attn');
+  const setMode = (only) => {
+    document.body.classList.toggle('only-attention', only);
+    attn.classList.toggle('on', only);
+    all.classList.toggle('on', !only);
+  };
+  all.addEventListener('click', () => setMode(false));
+  attn.addEventListener('click', () => setMode(true));
+</script>
+</body></html>
