@@ -12,7 +12,7 @@
   :root{--paper:#f6f3ec;--paper2:#efeae0;--ink:#19211d;--muted:#68716b;--line:#d9d3c4;--blue:#1f3a6b;--green:#2a8a86;--wine:#8a2347;--gold:#d4a84b;--serif:"Newsreader",Georgia,serif;--sans:"Inter","Noto Sans JP",system-ui,sans-serif}
   *{box-sizing:border-box}
   body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5;font-size:14px}
-  .wrap{max-width:1500px;margin:0 auto;padding:36px clamp(16px,3vw,40px) 80px}
+  .wrap{max-width:1780px;margin:0 auto;padding:36px clamp(16px,3vw,40px) 80px}
   h1{font-family:var(--serif);font-weight:400;font-size:30px;margin:0 0 6px}
   .sub{color:var(--muted);font-size:13px;margin-bottom:24px}
   .sub a{color:var(--blue)}
@@ -35,7 +35,7 @@
   .yr{font-family:var(--serif);font-weight:400;font-size:24px}
   .cnt{font-size:11px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
 
-  .row{display:grid;grid-template-columns:1.15fr 1.15fr 2fr 2fr;gap:18px;padding:14px 8px;border-bottom:1px solid var(--line);align-items:start}
+  .row{display:grid;grid-template-columns:1fr 1fr 1.8fr 1.8fr 1.5fr;gap:18px;padding:14px 8px;border-bottom:1px solid var(--line);align-items:start}
   .row:hover{background:rgba(255,255,255,.55)}
   .row.needs-attention{background:rgba(138,35,71,.035)}
   .row.needs-attention:hover{background:rgba(138,35,71,.06)}
@@ -55,12 +55,21 @@
   .badge{display:inline-block;border-radius:4px;padding:1px 6px;font-size:10px;font-weight:700;letter-spacing:.04em;white-space:nowrap;vertical-align:1px}
   .b-missing{background:rgba(138,35,71,.1);color:var(--wine);border:1px solid rgba(138,35,71,.25)}
   .b-warn{background:rgba(212,168,75,.14);color:#8a6d22;border:1px solid rgba(212,168,75,.4)}
+  .b-ok{background:rgba(42,138,134,.12);color:var(--green);border:1px solid rgba(42,138,134,.35)}
   .sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px}
   .sw-missing{background:rgba(138,35,71,.35)}
   .sw-warn{background:rgba(212,168,75,.55)}
+  .sw-ok{background:rgba(42,138,134,.45)}
+
+  .c-note .note-body{font-size:11.5px;line-height:1.5;color:var(--muted)}
+  .c-note .src{font-size:10.5px;color:var(--line);margin-top:4px;font-style:italic}
 
   body.only-attention .row[data-attention="0"]{display:none}
 
+  @media(max-width:1560px){
+    .row{grid-template-columns:1fr 1fr 1fr;gap:14px}
+    .k{display:block}
+  }
   @media(max-width:1100px){
     .row{grid-template-columns:1fr 1fr;gap:14px}
     .k{display:block}
@@ -75,7 +84,7 @@
   <h1>Profile status board</h1>
   <p class="sub">
     Every fellow's bilingual name, supervisor and research titles, straight from
-    <code>data/master/</code>. Generated 2026-07-17 11:31 by <code>scripts/build_overview.py</code> — regenerate after editing any JSON.
+    <code>data/master/</code>. Generated 2026-07-19 08:03 by <code>scripts/build_overview.py</code> — regenerate after editing any JSON.
     Internal working page: not linked from the site, not indexed. &nbsp;<a href="index.html">&larr; site home</a>
   </p>
 
@@ -83,11 +92,13 @@
     <div class="stat"><b>71</b><span>fellows</span></div>
     <div class="stat warn"><b>32</b><span>need attention</span></div>
     <div class="stat warn"><b>12</b><span>PhD title missing</span></div>
-    <div class="stat note"><b>19</b><span>PhD JP slot = EN</span></div>
+    <div class="stat note"><b>17</b><span>PhD JP slot = EN</span></div>
     <div class="stat warn"><b>0</b><span>K2 title missing</span></div>
-    <div class="stat note"><b>15</b><span>K2 JP slot = EN</span></div>
+    <div class="stat note"><b>13</b><span>K2 JP slot = EN</span></div>
     <div class="stat warn"><b>1</b><span>no supervisor link</span></div>
     <div class="stat"><b>37</b><span>Fellowship (no K2)</span></div>
+    <div class="stat warn"><b>3</b><span>roster &ne; student</span></div>
+    <div class="stat"><b>6</b><span>set from roster</span></div>
   </div>
 
   <div class="controls">
@@ -96,13 +107,14 @@
     <div class="legend">
       <span><i class="sw sw-missing"></i>placeholder — nobody wrote it yet</span>
       <span><i class="sw sw-warn"></i>English sitting in the Japanese slot</span>
+      <span><i class="sw sw-ok"></i>title taken from Kashiwagi-san's roster</span>
       <span>&mdash; = Fellowship cohort, no K2 topic by design</span>
     </div>
   </div>
 
     <section class="cohort" data-cohort="2026">
       <h2><span class="yr">2026</span><span class="cnt">13 fellows &middot; 7 need attention</span></h2>
-      <div class="row needs-attention" data-attention="1">
+      <div class="row" data-attention="0">
         <div class="cell c-student">
           <div class="k">Student</div>
           <div class="nm"><a href="students/2026/chang-s.html">Shih-Peng Chang</a></div>
@@ -116,16 +128,20 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t ">Investigation of the Effects of Substrate Thermal Properties and Thickness on Inverse Analysis in Droplet Impact Cooling</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Investigation of the Effects of Substrate Thermal Properties and Thickness on Inverse Analysis in Droplet Impact Cooling</div>
+          <div class="t ">Systematic Elucidation of the Effects of Droplet Temperature and Ambient Pressure on Droplet Dynamics</div>
+          <div class="t ">液滴温度と周囲圧力が液滴の動的挙動に与える影響の体系的解明</div>
         </div>
         <div class="cell c-title">
           <div class="k">K2-SPRING research</div>
           <div class="t ">Deep-Learning-Based Automated Analysis of Droplet-Impact Splashing Behavior and High-Precision Boundary Estimation</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Deep-Learning-Based Automated Analysis of Droplet-Impact Splashing Behavior and High-Precision Boundary Estimation</div>
+          <div class="t ">深層学習を用いた液滴衝突スプラッシュ挙動の自動解析と高精度境界線推定の研究</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Japanese titles are hers. The K2 English was kept — it already renders her Japanese. The PhD English is a new provisional translation, because her Japanese describes a different topic from the English we had; confirm with the student.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
-      <div class="row" data-attention="0">
+      <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
           <div class="k">Student</div>
           <div class="nm"><a href="students/2026/chen-h.html">Hao Chen</a></div>
@@ -146,6 +162,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t ">Near-Field Control and Energy Harvesting for Self-Powered Sensors in Capacitive Dynamic Charging Roads</div>
           <div class="t ">容量結合型走行中給電道路における自立電源型センサのための近傍界制御とエネルギーハーベスティング</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t"><span class="badge b-missing">differs from student</span></div><div class="t note-body">Kashiwagi-san&#x27;s list does not match what the student submitted. The page shows his 12 June bilingual docx; her PhD title is an older, shorter form and she holds no Japanese for him.</div><div class="src">his docx, 12 Jun</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -170,6 +190,10 @@
           <div class="t ">Molecular Dynamics Investigation of Li-ion Transport Properties in Battery Electrolytes</div>
           <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Molecular Dynamics Investigation of Li-ion Transport Properties in Battery Electrolytes</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t"><span class="badge b-missing">differs from student</span></div><div class="t note-body">Kashiwagi-san&#x27;s list does not match what the student submitted. The page shows his 12 June docx, which rewrote both titles to a new topic; her record predates it and was not updated. She also has him in 総合理工学専攻, the page says 機械システム工学専攻.</div><div class="src">his docx, 12 Jun</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -193,8 +217,12 @@
           <div class="t ">Reaction Demonstration and Establishment of a Circular Carbon Resource System for Diverse Hard-to-Decompose Carbon Wastes</div>
           <div class="t ">多様な難分解性炭素廃棄物の再資源化に向けた反応実証と循環基盤の構築</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
-      <div class="row" data-attention="0">
+      <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
           <div class="k">Student</div>
           <div class="nm"><a href="students/2026/minoda-k.html">Kohei Minoda</a></div>
@@ -209,12 +237,16 @@
         <div class="cell c-title">
           <div class="k">PhD research</div>
           <div class="t ">Damping Mechanisms of Perforated Heave Plates</div>
-          <div class="t ">多孔質ヒープレートの減衰機構</div>
+          <div class="t ">多孔質ヒーブプレートの減衰機構</div>
         </div>
         <div class="cell c-title">
           <div class="k">K2-SPRING research</div>
           <div class="t ">Visualizing Vortex Dynamics around Perforated Heave Plates</div>
-          <div class="t ">穿孔ヒープレート周りの渦動力学の可視化</div>
+          <div class="t ">多孔質ヒーブプレート周りの渦動力学の可視化</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t"><span class="badge b-missing">differs from student</span></div><div class="t note-body">Kashiwagi-san&#x27;s list does not match what the student submitted. The page is verbatim from his 11 June docx. Titles are his, with two corrections taken from her list: ヒープレート → ヒーブプレート (the correct rendering of &quot;heave plate&quot;) throughout, and 穿孔 → 多孔質 in the K2 title, matching the wording his own abstract already used.</div><div class="src">his docx, 11 Jun</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -239,8 +271,12 @@
           <div class="t ">Elucidation of Heat Transfer Enhancement Mechanisms in Flow Boiling via Thermo-Informatics</div>
           <div class="t ">サーモインフォマティクスによる流動沸騰現象の伝熱促進メカニズム解明</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
-      <div class="row needs-attention" data-attention="1">
+      <div class="row" data-attention="0">
         <div class="cell c-student">
           <div class="k">Student</div>
           <div class="nm"><a href="students/2026/nakagawa-n.html">Niki Nakagawa</a></div>
@@ -254,13 +290,17 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t ">Development of high-reliability solid-oxide cells for a hydrogen-circulation society</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Development of high-reliability solid-oxide cells for a hydrogen-circulation society</div>
+          <div class="t ">Selective reduction method for metal support SOFC using YSZ film prepared by WIP process</div>
+          <div class="t ">選択還元法を用いた金属基板支持固体酸化物型燃料電池の作製</div>
         </div>
         <div class="cell c-title">
           <div class="k">K2-SPRING research</div>
-          <div class="t ">MS-SOFC Cell-Stack Fabrication and Structural Evaluation Toward Practical Implementation</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> MS-SOFC Cell-Stack Fabrication and Structural Evaluation Toward Practical Implementation</div>
+          <div class="t ">3D Design of the Air-Electrode Interface Reaction Field</div>
+          <div class="t ">プロトン伝導固体酸化物燃料電池の高性能化に向けた空気極界面反応場の三次元設計と反応機構の解明</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Titles from her 0622 sheet, which carries English as well; her 0717 sheet dropped it. Her Japanese read 個体酸化物 in both titles; corrected here to 固体酸化物 (solid oxide), the field term.</div><div class="src">0622 roster (初稿0622) — both languages</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -285,6 +325,10 @@
           <div class="t ">Elucidation of PFAS Transport and Adsorption–Desorption Characteristics in Soil</div>
           <div class="t ">土壌中におけるPFASの輸送および吸脱着特性の解明</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -300,13 +344,17 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t ">Hydrogen recovery from gaseous hydrogen compounds using plasma decomposition</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Hydrogen recovery from gaseous hydrogen compounds using plasma decomposition</div>
+          <div class="t ">Study on Hydrogen Compounds Decomposition Using Plasma</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Study on Hydrogen Compounds Decomposition Using Plasma</div>
         </div>
         <div class="cell c-title">
           <div class="k">K2-SPRING research</div>
-          <div class="t ">Numerical Modeling of Hydrogen Behavior in Pd–Ag Plasma Electrodes for Fusion Fuel-Cycle Systems</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Numerical Modeling of Hydrogen Behavior in Pd–Ag Plasma Electrodes for Fusion Fuel-Cycle Systems</div>
+          <div class="t ">Plasma–Material Science: Modeling of Hydrogen Isotope Recovery in Fusion Fuel-cycle System</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Plasma–Material Science: Modeling of Hydrogen Isotope Recovery in Fusion Fuel-cycle System</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Marked 未提出 on her sheet — he has submitted nothing to either side. Titles are hers; no Japanese on file. Our old abstracts remain.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -323,13 +371,17 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t ">Fundamental theories of wetting phenomena and multicomponent droplet dynamics</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Fundamental theories of wetting phenomena and multicomponent droplet dynamics</div>
+          <div class="t ">Fundamental Theories of Wetting Phenomena and Multicomponent Droplet Dynamics</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Fundamental Theories of Wetting Phenomena and Multicomponent Droplet Dynamics</div>
         </div>
         <div class="cell c-title">
           <div class="k">K2-SPRING research</div>
-          <div class="t ">Photothermal Nanoparticle-Enhanced Liquid Evaporation for Solar-Driven Energy and Water Harvest</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Photothermal Nanoparticle-Enhanced Liquid Evaporation for Solar-Driven Energy and Water Harvest</div>
+          <div class="t ">Photothermal Nanoparticle-Enhanced Liquid Evaporation for Solar-Driven Energy/Water Harvest</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Photothermal Nanoparticle-Enhanced Liquid Evaporation for Solar-Driven Energy/Water Harvest</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Only his achievements were ever submitted, not his titles, so both titles are hers. No Japanese on file. Our old abstracts remain.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -354,6 +406,10 @@
           <div class="t ">Establishing Requirements for Proton Conductors to Enable Stable Production of Solid Oxide Fuel Cells</div>
           <div class="t ">固体酸化物燃料電池の安定生産に向けた、プロトン伝導体の要求条件の策定</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -369,13 +425,17 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t ">Development of MOF-supported Co–NHC catalysts for photocatalytic hydrogen evolution in strongly alkaline media</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Development of MOF-supported Co–NHC catalysts for photocatalytic hydrogen evolution in strongly alkaline media</div>
+          <div class="t ">Auxiliary Linker Effects in UiO67-RuPt for Photocatalytic Hydrogen Evolution</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Auxiliary Linker Effects in UiO67-RuPt for Photocatalytic Hydrogen Evolution</div>
         </div>
         <div class="cell c-title">
           <div class="k">K2-SPRING research</div>
-          <div class="t ">Design of an Electron-Rich Co–NHC Catalyst for Mild-Condition Nitrogen Reduction</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Design of an Electron-Rich Co–NHC Catalyst for Mild-Condition Nitrogen Reduction</div>
+          <div class="t ">Design of Electron-Rich Co-NHC Catalyst for Nitrogen Reduction under mild conditions</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Design of Electron-Rich Co-NHC Catalyst for Nitrogen Reduction under mild conditions</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">No submission from the student on file, so both titles are hers. She holds no Japanese, so the JP slots still show English. Her K2 wording read &quot;under Mild condition&quot;; corrected here to &quot;under mild conditions&quot;. Our old abstracts remain and no longer match the new PhD title.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -392,13 +452,17 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t ">Combustion kinetic mechanism of ammonia fuel and combustion optimization</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Combustion kinetic mechanism of ammonia fuel and combustion optimization</div>
+          <div class="t ">ReaxFF MD Study on the Pyrolysis and Combustion Mechanisms of Ammonia-based Fuels</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> ReaxFF MD Study on the Pyrolysis and Combustion Mechanisms of Ammonia-based Fuels</div>
         </div>
         <div class="cell c-title">
           <div class="k">K2-SPRING research</div>
-          <div class="t ">Machine-Learning-Enhanced Reactive Molecular Dynamics for Ammonia Combustion</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Machine-Learning-Enhanced Reactive Molecular Dynamics for Ammonia Combustion</div>
+          <div class="t ">Development of Machine Learning Based Reactive Force Field for Ammonia Combustion</div>
+          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Development of Machine Learning Based Reactive Force Field for Ammonia Combustion</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">No submission from the student on file, so both titles are hers. She holds no Japanese, so the JP slots still show English. Our old abstracts remain.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
     </section>
@@ -426,6 +490,10 @@
           <div class="t ">Development of photocatalytic water splitting on nitride-based thin films</div>
           <div class="t ">窒化物系薄膜デバイスの光触媒水分解への応用</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -448,6 +516,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t ">Accelerated exploration of proton-conducting solid oxide fuel cell cathode materials using machine learning</div>
           <div class="t ">機械学習を用いたプロトン伝導性固体酸化物燃料電池カソード材料の加速的探索</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -472,6 +544,10 @@
           <div class="t ">Improvement of tubular solid oxide reversible cells using LSGM electrolyte via dip coating</div>
           <div class="t ">ディップコーティング法によるLSGM電解質を用いたチューブ型固体酸化物可逆セルの改良</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -494,6 +570,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t ">Development of low environmental impact hydrogen production technology from biomass fermentation processes</div>
           <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Development of low environmental impact hydrogen production technology from biomass fermentation processes</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -518,6 +598,10 @@
           <div class="t ">Research on turquoise hydrogen synthesis using carbon-based catalysts and effective utilisation of byproduct carbon</div>
           <div class="t ">炭素系触媒を用いたターコイズ水素の合成および副生炭素の有効利用に関する研究</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -540,6 +624,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t ">Application of machine learning for real-time control of tokamak plasma configuration</div>
           <div class="t ">トカマクプラズマ配位の実時間制御のための機械学習の活用</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -564,6 +652,10 @@
           <div class="t ">Investigation of gas-liquid two-phase flow mechanisms in microscopic fractures under reservoir in-situ thermo-pressure conditions</div>
           <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Investigation of gas-liquid two-phase flow mechanisms in microscopic fractures under reservoir in-situ thermo-pressure conditions</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -586,6 +678,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t ">Microwave-assisted catalytic degradation of plastics and other organic wastes</div>
           <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Microwave-assisted catalytic degradation of plastics and other organic wastes</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -610,6 +706,10 @@
           <div class="t ">Research on basic plasma structure and fluctuations using tomography systems</div>
           <div class="t ">トモグラフィシステムを用いた基礎プラズマの構造と揺動に関する研究</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -632,6 +732,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t ">Creating high-value carbon materials from carbonised products and byproducts of locally-sourced Japanese biomass</div>
           <div class="t ">日本近域産バイオマスを原料とした炭素化物および副産物からの高付加価値カーボン材料の創製</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -656,6 +760,10 @@
           <div class="t ">Decarbonizing Compact Cities: Strategic Planning for AEV-Based Public Transport</div>
           <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Decarbonizing Compact Cities: Strategic Planning for AEV-Based Public Transport</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -678,6 +786,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t ">Elucidation of electrochemical reaction mechanisms in H₂O–CO₂ co-electrolysis of SOEC and construction of numerical analysis methods</div>
           <div class="t ">固体酸化物電解セル（SOEC）の共電解における化学反応を伴う電気化学反応の原理解明および数値解析手法の構築</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
     </section>
@@ -705,6 +817,10 @@
           <div class="t ">The Impact of Digital Transformation in Japan's EV Industry on Carbon Emission Reduction</div>
           <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> The Impact of Digital Transformation in Japan's EV Industry on Carbon Emission Reduction</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -727,6 +843,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t ">Optimal design of plasma-facing materials using topology optimisation</div>
           <div class="t ">トポロジー最適化を用いたプラズマ対向材の最適設計</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -751,6 +871,10 @@
           <div class="t ">Development of Three-Dimensional Chiral Plasmonic Meta-clusters with Circular Polarization Characteristics for Effective Utilization of Sunlight</div>
           <div class="t ">太陽光有効活用に向けた円偏光特性を有する三次元キラルプラズモニックメタクラスターの開発</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -773,6 +897,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t ">Prediction of Future Afforestation Sites and Sustainable Forest Management in Kyushu</div>
           <div class="t ">九州における将来の造林適地予測と持続可能な森林管理</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -797,6 +925,10 @@
           <div class="t ">Environmental-economic trade-offs of membrane-based direct air capture technologies using life cycle assessment</div>
           <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Environmental-economic trade-offs of membrane-based direct air capture technologies using life cycle assessment</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -819,6 +951,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t ">Design and Evaluation of PtW-Based Catalysts for Enhancing Fuel Starvation Tolerance in PEFCs</div>
           <div class="t ">水素欠乏耐性向上に向けたPtW系触媒の設計と評価</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -843,6 +979,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -865,6 +1005,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -889,6 +1033,10 @@
           <div class="t ">Study of F82H precipitate amorphisation in a DEMO fusion reactor</div>
           <div class="t ">核融合原型炉材料F82H中における析出物非晶質化現象の解明</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -912,6 +1060,10 @@
           <div class="t ">Highly Efficient Ammonia Oxidation by a Macrocyclic Molecular Catalyst</div>
           <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Highly Efficient Ammonia Oxidation by a Macrocyclic Molecular Catalyst</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -934,6 +1086,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t ">The impact mechanism of multi-scale urban built environment on health and well-being of residents</div>
           <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> The impact mechanism of multi-scale urban built environment on health and well-being of residents</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
     </section>
@@ -961,6 +1117,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -983,6 +1143,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -1007,6 +1171,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -1029,6 +1197,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -1053,6 +1225,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -1075,6 +1251,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -1099,6 +1279,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -1121,6 +1305,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -1145,6 +1333,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -1168,6 +1360,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -1190,6 +1386,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
     </section>
@@ -1217,6 +1417,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -1239,6 +1443,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -1263,6 +1471,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -1285,6 +1497,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -1309,6 +1525,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -1331,6 +1551,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -1355,6 +1579,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -1377,6 +1605,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -1401,6 +1633,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -1423,6 +1659,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -1447,6 +1687,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -1469,6 +1713,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
     </section>
@@ -1496,6 +1744,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -1518,6 +1770,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -1542,6 +1798,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -1564,6 +1824,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -1588,6 +1852,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -1610,6 +1878,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -1634,6 +1906,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
@@ -1656,6 +1932,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -1680,6 +1960,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -1702,6 +1986,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -1726,6 +2014,10 @@
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
         </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
+        </div>
       </div>
       <div class="row" data-attention="0">
         <div class="cell c-student">
@@ -1748,6 +2040,10 @@
           <div class="k">K2-SPRING research</div>
           <div class="t t-na">—</div>
           <div class="t t-na">—</div>
+        </div>
+        <div class="cell c-note">
+          <div class="k">Title source</div>
+          <div class="t t-na">&mdash;</div>
         </div>
       </div>
     </section>
