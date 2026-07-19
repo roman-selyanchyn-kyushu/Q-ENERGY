@@ -112,6 +112,9 @@
   .phd-aside::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--ink-4);}
   .phd-body h3{margin:0 0 10px;font-family:var(--serif);font-size:20px;font-weight:500;color:var(--ink);line-height:1.3;}
   .phd-body p{margin:0;font-size:14.5px;color:var(--ink-3);line-height:1.65;text-wrap:pretty;}
+  /* Provenance footnote, shown only on the machine-translated side of a section.
+     Written as p.ai-note (not .ai-note) so it outranks .phd-body p above. */
+  p.ai-note{margin:12px 0 0;font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--ink-4);line-height:1.5;}
 
   /* Supervisor */
   .supervisor-row{display:flex;align-items:center;gap:18px;padding:18px 22px;border:1px solid var(--line);border-radius:var(--r-md);background:rgba(255,255,255,.4);transition:background .25s ease,transform .25s ease;text-decoration:none;color:inherit;max-width:560px;}
@@ -343,7 +346,7 @@
     <h3 class="research-title" data-lang-en="">Development of low-environmental-impact hydrogen production technology from unused woody biomass resources</h3>
     <h3 class="research-title" data-lang-jp="">未利用の木質バイオマス資源を原料とした低環境負荷な水素生産技術の開発</h3>
     <div class="research-abstract" data-lang-en=""><p>This research optimises biological hydrogen production from biomass through diverse microbial metabolic pathways, aiming to develop high-efficiency, low-environmental-impact hydrogen production technology. The approach contributes to both energy security and decarbonisation goals by establishing sustainable hydrogen supply chains from renewable organic feedstocks.</p></div>
-    <div class="research-abstract" data-lang-jp=""><p>本研究では、多様な微生物代謝経路を活用したバイオマスからの生物学的水素生産を最適化し、高効率かつ低環境負荷な水素製造技術の開発を目指している。再生可能な有機性資源から持続可能な水素サプライチェーンを構築することで、エネルギー安全保障と脱炭素化の双方に貢献する。</p></div>
+    <div class="research-abstract" data-lang-jp=""><p>本研究では、多様な微生物代謝経路を活用したバイオマスからの生物学的水素生産を最適化し、高効率かつ低環境負荷な水素製造技術の開発を目指している。再生可能な有機性資源から持続可能な水素サプライチェーンを構築することで、エネルギー安全保障と脱炭素化の双方に貢献する。</p></div><p class="ai-note" data-lang-en="">Translated by Claude</p>
   </article>
 </section>
 
@@ -369,7 +372,7 @@
       <h3 data-lang-en="">Research on hydrogen generation from unused coal resources in underground coal gasification systems</h3>
       <h3 data-lang-jp="">石炭地下ガス化システムにおける未利用石炭資源からの水素生成に関する研究</h3>
       <p data-lang-en=""><em>Doctoral research details to be added.</em></p>
-      <p data-lang-jp=""><em>博士研究の詳細は準備中です。</em></p>
+      <p data-lang-jp=""><em>博士研究の詳細は準備中です。</em></p><p class="ai-note" data-lang-en="">Translated by Claude</p>
     </div>
   </div>
 </section>

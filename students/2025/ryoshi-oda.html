@@ -112,6 +112,9 @@
   .phd-aside::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--ink-4);}
   .phd-body h3{margin:0 0 10px;font-family:var(--serif);font-size:20px;font-weight:500;color:var(--ink);line-height:1.3;}
   .phd-body p{margin:0;font-size:14.5px;color:var(--ink-3);line-height:1.65;text-wrap:pretty;}
+  /* Provenance footnote, shown only on the machine-translated side of a section.
+     Written as p.ai-note (not .ai-note) so it outranks .phd-body p above. */
+  p.ai-note{margin:12px 0 0;font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--ink-4);line-height:1.5;}
 
   /* Supervisor */
   .supervisor-row{display:flex;align-items:center;gap:18px;padding:18px 22px;border:1px solid var(--line);border-radius:var(--r-md);background:rgba(255,255,255,.4);transition:background .25s ease,transform .25s ease;text-decoration:none;color:inherit;max-width:560px;}
@@ -343,7 +346,7 @@
     <h3 class="research-title" data-lang-en="">Construction of a conversion system for high-grade carbon materials using waste byproduct carbon from methane pyrolysis</h3>
     <h3 class="research-title" data-lang-jp="">メタン熱分解による廃棄副生炭素を利用した高級炭素材料変換システムの構築</h3>
     <div class="research-abstract" data-lang-en=""><p>The solid carbon byproducts of methane pyrolysis are converted into high-value materials such as battery electrodes and carbon fibre, maximising the resource value of the process.</p></div>
-    <div class="research-abstract" data-lang-jp=""><p>メタン熱分解により副生する固体炭素を、バッテリー電極材料や炭素繊維などの高付加価値材料に転換し、プロセス全体の資源価値を最大化する研究です。</p></div>
+    <div class="research-abstract" data-lang-jp=""><p>メタン熱分解により副生する固体炭素を、バッテリー電極材料や炭素繊維などの高付加価値材料に転換し、プロセス全体の資源価値を最大化する研究です。</p></div><p class="ai-note" data-lang-en="">Translated by Claude</p>
   </article>
 </section>
 
@@ -369,7 +372,7 @@
       <h3 data-lang-en="">Research on elucidating the mechanisms of methane pyrolysis using carbon-based catalysts</h3>
       <h3 data-lang-jp="">炭素系触媒を用いたメタン熱分解におけるメカニズム解明に関する研究</h3>
       <p data-lang-en="">This study develops clean hydrogen production through methane pyrolysis using carbon-based catalysts, yielding turquoise hydrogen with no CO₂ emissions.</p>
-      <p data-lang-jp="">炭素系触媒を用いたメタン熱分解により、CO₂を排出しないターコイズ水素を合成する研究です。</p>
+      <p data-lang-jp="">炭素系触媒を用いたメタン熱分解により、CO₂を排出しないターコイズ水素を合成する研究です。</p><p class="ai-note" data-lang-en="">Translated by Claude</p>
     </div>
   </div>
 </section>
