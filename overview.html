@@ -62,7 +62,10 @@
   .sw-ok{background:rgba(42,138,134,.45)}
 
   .c-note .note-body{font-size:11.5px;line-height:1.5;color:var(--muted)}
+  .c-note .note-jp{margin-bottom:5px}
+  .c-note .note-en{padding-left:7px;border-left:2px solid var(--line);opacity:.8}
   .c-note .src{font-size:10.5px;color:var(--line);margin-top:4px;font-style:italic}
+  .badge-en{display:block;font-size:9px;font-weight:400;opacity:.75;letter-spacing:.02em}
 
   body.only-attention .row[data-attention="0"]{display:none}
 
@@ -84,7 +87,7 @@
   <h1>Profile status board</h1>
   <p class="sub">
     Every fellow's bilingual name, supervisor and research titles, straight from
-    <code>data/master/</code>. Generated 2026-07-19 13:00 by <code>scripts/build_overview.py</code> — regenerate after editing any JSON.
+    <code>data/master/</code>. Generated 2026-07-19 13:06 by <code>scripts/build_overview.py</code> — regenerate after editing any JSON.
     Internal working page: not linked from the site, not indexed. &nbsp;<a href="index.html">&larr; site home</a>
   </p>
 
@@ -138,7 +141,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Japanese titles are hers. The K2 English was kept — it already renders her Japanese. The PhD English is a new provisional translation, because her Japanese describes a different topic from the English we had; confirm with the student.</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">名簿の日本語課題名を採用しました。K2の英語は既存のものが名簿の日本語に対応するため維持しています。博士課題は名簿の日本語が既存の英語と異なる内容であったため、英語は暫定的に新規翻訳しております。ご本人の確認をお願いできれば幸いです。</div><div class="t note-body note-en" lang="en">The roster&#x27;s Japanese titles were adopted. The existing K2 English was kept, as it corresponds to the roster&#x27;s Japanese. For the doctoral title the roster&#x27;s Japanese describes a different topic from the English we held, so the English is a provisional new translation — the student&#x27;s confirmation would be welcome.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -165,7 +168,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-missing">differs from student</span></div><div class="t note-body">Kashiwagi-san&#x27;s list does not match what the student submitted. The page shows his 12 June bilingual docx; her PhD title is an older, shorter form and she holds no Japanese for him.</div><div class="src">his docx, 12 Jun</div>
+          <div class="t"><span class="badge b-missing">名簿と相違<span class="badge-en">differs from student</span></span></div><div class="t note-body note-jp" lang="ja">ご本人が6月12日に提出された原稿（日英・図表を含む）の方が新しいため、課題名は変更しておりません。名簿の博士課題はより短い旧版と思われ、日本語の記載もございません。</div><div class="t note-body note-en" lang="en">His own document of 12 June — bilingual, with figures — is more recent than the roster entry, so the titles are unchanged. The roster&#x27;s doctoral title appears to be an older, shorter form, and it holds no Japanese for him.</div><div class="src">his docx, 12 Jun</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -192,7 +195,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-missing">differs from student</span></div><div class="t note-body">Kashiwagi-san&#x27;s list does not match what the student submitted. The page shows his 12 June docx, which rewrote both titles to a new topic; her record predates it and was not updated. She also has him in 総合理工学専攻, the page says 機械システム工学専攻.</div><div class="src">his docx, 12 Jun</div>
+          <div class="t"><span class="badge b-missing">名簿と相違<span class="badge-en">differs from student</span></span></div><div class="t note-body note-jp" lang="ja">ご本人が6月12日に提出された原稿の方が新しいため、課題名は変更しておりません。また所属について、名簿は「総合理工学専攻」、当方掲載は「機械システム工学専攻」となっており相違がございます。ご確認いただけますでしょうか。</div><div class="t note-body note-en" lang="en">His own document of 12 June is more recent than the roster entry, so the titles are unchanged. Note also a discrepancy in affiliation: the roster has 総合理工学専攻 while our page has 機械システム工学専攻 — could this be checked?</div><div class="src">his docx, 12 Jun</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -246,7 +249,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-missing">differs from student</span></div><div class="t note-body">Kashiwagi-san&#x27;s list does not match what the student submitted. The page is verbatim from his 11 June docx. Titles are his, with two corrections taken from her list: ヒープレート → ヒーブプレート (the correct rendering of &quot;heave plate&quot;) throughout, and 穿孔 → 多孔質 in the K2 title, matching the wording his own abstract already used.</div><div class="src">his docx, 11 Jun</div>
+          <div class="t"><span class="badge b-missing">名簿と相違<span class="badge-en">differs from student</span></span></div><div class="t note-body note-jp" lang="ja">ご本人が6月11日に提出された原稿に基づく内容のため、課題名は基本的に変更しておりません。ただし名簿のご指摘どおり「ヒーブプレート」が正しい表記のため（原稿は「ヒープレート」）、全体を修正いたしました。あわせてK2課題の「穿孔」を、ご本人の概要と整合する「多孔質」に統一しております。</div><div class="t note-body note-en" lang="en">The page follows his own document of 11 June, so the titles are essentially unchanged. However the roster is right that ヒーブプレート is the correct rendering of &quot;heave plate&quot; — his document had ヒープレート throughout — so this was corrected. 穿孔 in the K2 title was also aligned to 多孔質, matching his own abstract.</div><div class="src">his docx, 11 Jun</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -300,7 +303,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Titles from her 0622 sheet, which carries English as well; her 0717 sheet dropped it. Her Japanese read 個体酸化物 in both titles; corrected here to 固体酸化物 (solid oxide), the field term.</div><div class="src">0622 roster (初稿0622) — both languages</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">K2・博士とも名簿（0622版）の課題名を採用しました。0717版では英語が削除されていたため、日英が揃う0622版を用いています。なお名簿の「個体酸化物」は「固体酸化物」の誤記と判断し修正しております（ご確認ください）。</div><div class="t note-body note-en" lang="en">Both titles come from the roster&#x27;s 0622 version, which carries English as well — the 0717 version had dropped it. Note: the roster reads 個体酸化物, which we judged to be a slip for 固体酸化物 (solid oxide) and corrected — please confirm.</div><div class="src">0622 roster (初稿0622) — both languages</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -354,7 +357,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Marked 未提出 on her sheet — he has submitted nothing to either side. Titles are hers; no Japanese on file. Our old abstracts remain.</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">本人からの提出がないため（名簿上も「未提出」）、K2・博士とも名簿の課題名を採用しました。名簿には英語のみのため日本語欄にも英語を表示しています。</div><div class="t note-body note-en" lang="en">No submission on file — the roster also marks him 未提出 — so both titles come from the roster. The roster holds English only, so the Japanese slots show English.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -381,7 +384,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Only his achievements were ever submitted, not his titles, so both titles are hers. No Japanese on file. Our old abstracts remain.</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">研究業績のみご提出いただいており、課題名の提出がないため、K2・博士とも名簿の課題名を採用しました。名簿には英語のみのため日本語欄にも英語を表示しています。</div><div class="t note-body note-en" lang="en">Only his achievements were ever submitted, never titles, so both titles come from the roster. The roster holds English only, so the Japanese slots show English.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -435,7 +438,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">No submission from the student on file, so both titles are hers. She holds no Japanese, so the JP slots still show English. Her K2 wording read &quot;under Mild condition&quot;; corrected here to &quot;under mild conditions&quot;. Our old abstracts remain and no longer match the new PhD title.</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">本人からの提出がないため、K2・博士とも名簿の課題名を採用しました。名簿には英語のみのため日本語欄にも英語を表示しています。なお名簿の &quot;under Mild condition&quot; は &quot;under mild conditions&quot; に修正しております。既存の概要は新しい博士課題と内容が一致しなくなっています。</div><div class="t note-body note-en" lang="en">No submission on file, so both titles come from the roster. The roster holds English only, so the Japanese slots show English. The roster&#x27;s &quot;under Mild condition&quot; was corrected to &quot;under mild conditions&quot;. The existing abstracts no longer match the new doctoral title.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row needs-attention" data-attention="1">
@@ -462,7 +465,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">No submission from the student on file, so both titles are hers. She holds no Japanese, so the JP slots still show English. Our old abstracts remain.</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">本人からの提出がないため、K2・博士とも名簿の課題名を採用しました。名簿には英語のみのため日本語欄にも英語を表示しています。</div><div class="t note-body note-en" lang="en">No submission on file, so both titles come from the roster. The roster holds English only, so the Japanese slots show English.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
     </section>
@@ -492,7 +495,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-warn">needs a decision</span></div><div class="t note-body">Left untouched — the only student in this cohort whose record is both his own and newer than the roster. His K2 and PhD were already distinct and bilingual (one of two students 85f5562 did not blank), and his content was applied from his own submission on 2026-06-10 (12a8540). The single discrepancy is one word in the doctoral title: ours reads 光触媒反応に関する研究, hers the shorter 光触媒に関する研究 — ours is kept, being his. ⚠ His roster row is flagged 変更・原稿あり but NO manuscript for him exists in _local/student-revision-requests/ — Kashiwagi-san holds source material we have never seen, same as rika-iriguchi. Marked &#x27;check&#x27; so the board keeps surfacing him until that document is obtained and this page verified against it.</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-warn">要確認<span class="badge-en">needs a decision</span></span></div><div class="t note-body note-jp" lang="ja">変更しておりません。ご本人からの提出（2026年6月適用）に基づく内容で、K2・博士とも既に別課題として日英揃っております。博士課題は当方が「光触媒反応に関する研究」、名簿が「光触媒に関する研究」と一語異なりますが、ご本人の表記を優先し当方のままとしています。⚠ 名簿に「変更・原稿あり」とございますが、該当の原稿を当方では受領しておりません。お手数ですがご共有いただけますでしょうか。</div><div class="t note-body note-en" lang="en">Left unchanged. The content comes from his own submission (applied June 2026); K2-SPRING and doctoral are already distinct and present in both languages. The doctoral title differs by one word — ours reads 光触媒反応に関する研究, the roster 光触媒に関する研究 — and his own wording was kept. ⚠ The roster marks him 変更・原稿あり but we have never received that manuscript — could it be shared?</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -519,7 +522,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Realigned to Kashiwagi-san&#x27;s record on Roman&#x27;s call — he submitted nothing, so our previous content was a guess. Our K2 title+abstract (ML for PCFC cathode materials) actually described her DOCTORAL project, so the abstract was moved to the PhD slot and her doctoral title used in place of our old K2 wording, which is dropped. Her stray space in &#x27;PCFC の&#x27; normalised. Her real K2 topic (PLD thin-film electrolytes) is new to us and has NO abstract from any source, so the K2 section falls back to the standard placeholder — a visible regression, but honest. Her titles are Japanese; the English is AI-translated. Note her PhD title ends in 研究構想 (&#x27;research concept&#x27;), which reads like a proposal heading rather than a project title — kept verbatim, worth confirming.</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">名簿の内容に合わせて全面的に修正しました。本人からの提出がなく、従来の掲載内容は推定によるものでした。掲載していたK2の内容（機械学習によるPCFCカソード材料探索）は名簿上の博士課題に該当するため、概要を博士欄へ移し、課題名も名簿の博士課題を採用しました。K2欄には名簿のK2課題（PLD薄膜電解質）を掲載していますが、概要は当方に資料がなく準備中の表示となります。英語はAIによる翻訳です。なお博士課題末尾の「研究構想」は提案書の見出しのようにも読めるため、表記をご確認いただけますと幸いです。</div><div class="t note-body note-en" lang="en">Realigned to the roster. Nothing had been submitted by the student, so our previous content was an inference. The K2 material we held (machine learning for PCFC cathode materials) in fact describes the doctoral project on the roster, so that abstract moved to the doctoral section and the roster&#x27;s doctoral title was adopted. The K2 section now carries the roster&#x27;s K2 topic (PLD thin-film electrolytes), but no abstract exists for it in any source, so it shows as pending. English is an AI translation. Note the doctoral title ends in 研究構想 (&quot;research concept&quot;), which reads like a proposal heading — worth confirming.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -546,7 +549,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Slot shift, her topics treated as true per Roman. Our existing abstract is wholly about dip-coating LSGM deposition and cell degradation mechanisms, which matches her doctoral title exactly and says nothing about thermal management, so it moved down to the PhD slot intact. Our previous K2 title is dropped in favour of her doctoral wording. Her new K2 topic (Thermal Management of Tubular SORCs) has no abstract from any source, so that section falls back to the placeholder. He does not speak Japanese and her cells are English-only, so all Japanese here is AI-translated — including the pre-existing Japanese, which was itself almost certainly a translation rather than his own writing; the doctoral Japanese title was re-translated from HER English rather than kept, since ours rendered our old wording. ⚠ Roman is asking this student directly — re-check against his reply.</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">名簿の課題を正として反映しました。従来の概要はディップコーティング法によるLSGM成膜と劣化機構に関するもので、名簿の博士課題に対応するため博士欄へ移しました。K2欄には名簿のK2課題（チューブ型SORCの熱マネジメント）を掲載していますが、概要は資料がなく準備中の表示となります。本人は日本語を解さないため、当ページの日本語はすべてAIによる翻訳です（従来掲載の日本語も翻訳と思われます）。博士課題の日本語は名簿の英語から訳し直しています。現在ご本人に直接確認中です。</div><div class="t note-body note-en" lang="en">The roster&#x27;s topics are treated as authoritative. The existing abstract concerns dip-coating LSGM deposition and degradation mechanisms, which corresponds to the roster&#x27;s doctoral title, so it moved to the doctoral section. The K2 section carries the roster&#x27;s K2 topic (thermal management of tubular SORCs); no abstract exists for it, so it shows as pending. He does not read Japanese, so all Japanese here is an AI translation — including the pre-existing Japanese, which was itself almost certainly translated. The doctoral Japanese title was re-translated from the roster&#x27;s English. Currently being confirmed with the student.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -573,7 +576,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Both titles applied from the roster on Roman&#x27;s call. Her K2 changes the feedstock to unused WOODY biomass; the existing abstract (microbial fermentation) was kept because the two are compatible — lignocellulosic biomass is a normal fermentation feedstock, so her title names the feedstock and the abstract the method. Her PhD cell ran two clauses together; only the first is used as the title, the trailing 「未利用資源を活用した大規模水素サプライチェーンの構築を目指す次世代型資源開発」 reads as a subtitle or stray note and was dropped. Doctoral topic is corroborated by her own research proposal — both underground coal gasification. She is Japanese and her titles are Japanese, so the English on both titles and the Japanese abstract are AI-translated; the English abstract predates us and is of unknown authorship. ⚠ Her roster row is flagged 変更・原稿あり but NO manuscript for her exists in _local/student-revision-requests/ — Kashiwagi-san holds source material we have never seen. Worth requesting and re-checking this page against it.</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">K2・博士とも名簿の課題名を反映しました。K2は原料が「未利用の木質バイオマス」に変わりましたが、既存の概要（微生物発酵による水素生産）は木質バイオマスの発酵利用と矛盾しないため、そのまま残しています（課題名が原料、概要が手法を示す形）。博士欄は名簿のセル内に二文が続いていたため、前半のみを課題名として採用し、後半の「未利用資源を活用した大規模水素サプライチェーン…」は副題と判断し省略しました。英語および日本語概要はAIによる翻訳です。⚠ 名簿に「変更・原稿あり」とございますが、該当の原稿を当方では受領しておりません。お手数ですがご共有いただけますでしょうか。</div><div class="t note-body note-en" lang="en">Both titles applied from the roster. The K2 feedstock changes to unused woody biomass; the existing abstract (microbial fermentation) was kept because lignocellulosic biomass is a normal fermentation feedstock — the title names the feedstock, the abstract the method. The doctoral cell contained two sentences run together; only the first is used as the title, the trailing clause reading as a subtitle. English and the Japanese abstract are AI translations. ⚠ The roster marks her 変更・原稿あり but we have never received that manuscript — could it be shared?</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -600,7 +603,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Both titles taken from the roster on Roman&#x27;s call; he submitted nothing. Unlike the Goto/Xiang slot shifts, his single abstract straddled BOTH of her titles — the methane-pyrolysis/turquoise-hydrogen half matches her doctoral title, the byproduct-carbon half matches her K2 title — so it was split rather than moved wholesale, leaving each section with text that matches its own heading. The English halves are verbatim from the original abstract; the Japanese was one clause chain joined by し and had to be rewritten as two standalone sentences, content preserved. Our previous K2 title (ターコイズ水素の合成および副生炭素の有効利用) is dropped — it was effectively a merger of her two projects. He works in Japanese, so her titles are the originals and the English is AI-translated.</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">K2・博士とも名簿の課題名を反映しました。本人からの提出はありません。従来の概要が名簿の二つの課題の内容をあわせ持っていたため、メタン熱分解・ターコイズ水素に関する部分を博士欄へ、副生炭素の高付加価値化に関する部分をK2欄へと分割しました。これにより双方の欄が課題名に対応した記述となっています。日本語は一文であったため二文に書き分けていますが、内容は変更しておりません。英語はAIによる翻訳です。</div><div class="t note-body note-en" lang="en">Both titles applied from the roster; nothing had been submitted by the student. The existing abstract covered both of the roster&#x27;s projects, so it was split: the methane-pyrolysis / turquoise-hydrogen part moved to the doctoral section and the byproduct-carbon part stayed with K2-SPRING. Both sections now carry text matching their own title. The Japanese was a single sentence and has been rewritten as two; the content is unchanged. English is an AI translation.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -627,7 +630,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">PhD title filled from the roster — the slot was a deliberate placeholder since 85f5562, where the PhD section was blanked for duplicating K2. He submitted nothing. His K2 was left untouched: it already matched the roster and was the first in this cohort to be genuinely bilingual rather than English-in-the-JP-slot. He works in Japanese, so her Japanese doctoral title is the original and the English is AI-translated.</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">博士研究課題を名簿より反映しました。本人からの提出がなく、当該欄は「準備中」の仮置きでした。K2欄は名簿と一致し、日本語の課題名・概要とも揃っていたため変更していません。日本語が原文で、英語はAIによる翻訳です。博士研究の概要は引き続き準備中です。</div><div class="t note-body note-en" lang="en">Doctoral title taken from the roster; the slot had been a placeholder as nothing had been submitted. The K2-SPRING section matched the roster and already had a proper Japanese title and abstract, so it is unchanged. Japanese is the original; the English is an AI translation. The doctoral abstract is still pending.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -654,7 +657,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">PhD title filled from the roster — the slot was a deliberate placeholder since 85f5562, where the PhD section was blanked for duplicating K2. His K2 matched the roster apart from capitalisation. He submitted in English (he does not speak Japanese), so English is the original source and the Japanese for the K2 title, K2 abstract and PhD title is AI-translated, pending his confirmation. PhD abstract stays the standard placeholder. The docx &#x27;Research achievements-WANG.docx&#x27; in student-revision-requests is Weifeng Wang (2026), not him.</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">博士研究課題を名簿より反映しました。本人からの提出がなく、当該欄は「準備中」の仮置きでした。K2課題は大文字小文字の違いのみで実質一致のため変更していません。本人は日本語を解さないため英語が原文で、日本語はAIによる翻訳です。ご本人の確認をお願いできれば幸いです。博士研究の概要は引き続き準備中です。</div><div class="t note-body note-en" lang="en">Doctoral title taken from the roster; the slot had been a placeholder as nothing had been submitted. The K2-SPRING title differed only in capitalisation and is unchanged. He works in English, so the Japanese is an AI translation awaiting his confirmation. The doctoral abstract is still pending.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -681,7 +684,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">PhD title filled from the roster — the slot was a deliberate placeholder since 85f5562, where the PhD section was blanked for duplicating K2. His K2 already matched the roster character-for-character, which is why this reads as a genuine second project rather than a slot shift: her sheet keeps our K2 wording and adds a narrower doctoral topic on top. He submitted in English (he does not speak Japanese), so English is the original source and the Japanese for the K2 title, K2 abstract and PhD title is AI-translated, pending his confirmation. PhD abstract stays the standard placeholder.</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">博士研究課題を名簿より反映しました。本人からの提出がなく、当該欄は「準備中」の仮置きでした。K2課題は名簿と完全一致のため変更していません。K2と博士は関連するものの別課題として扱っています。本人は日本語を解さないため英語が原文で、日本語はAIによる翻訳です。ご本人の確認をお願いできれば幸いです。</div><div class="t note-body note-en" lang="en">Doctoral title taken from the roster; the slot had been a placeholder as nothing had been submitted. The K2-SPRING title matched the roster exactly and is unchanged. The two are treated as related but separate projects. He works in English, so the Japanese is an AI translation awaiting his confirmation.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -735,7 +738,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Slot shift: her doctoral title is a shortened English-only form of our K2 title, so our existing content moved down to the PhD slot. Unlike Goto/Xiang, our text is almost certainly HIS OWN submission — it is fully bilingual and richer than her cell (it keeps 「日本近域産」/&#x27;locally-sourced Japanese&#x27;, which she drops) — so ours was kept as the doctoral title rather than replaced by hers, and it carries no translation markers because both languages are his. Her K2 read &#x27;into non-carbon materials&#x27;; corrected to &#x27;nano-carbon&#x27; on Roman&#x27;s call — non-carbon is incoherent in a carbon-materials group and nano-carbon fits the pyrolysis-byproduct context. Her K2 is English-only, so the Japanese is AI-translated; no abstract exists for it anywhere, so that section falls back to the placeholder. Also fixed a pre-existing typo in his Japanese abstract: 多孔賠炭素 -&gt; 多孔質炭素 (porous carbon; 賠 means &#x27;compensate&#x27;).</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">名簿の博士課題が当方掲載のK2課題の短縮形であったため、掲載内容を博士欄へ移しました。当該記述は本人提出と考えられ日英とも揃っているため、課題名も当方の表記（「日本近域産」を含む詳細な形）を維持しています。K2欄には名簿のK2課題を掲載しました。なお名簿の &quot;non-carbon materials&quot; は文脈上 &quot;nano-carbon materials&quot; の誤記と判断し修正しております（ご確認ください）。K2の概要は資料がなく準備中の表示です。英語が原文のため日本語はAIによる翻訳です。</div><div class="t note-body note-en" lang="en">The roster&#x27;s doctoral title is a shortened form of our K2-SPRING title, so our content moved to the doctoral section. That text appears to be the student&#x27;s own and exists in both languages, so our fuller wording (which keeps 「日本近域産」/&quot;locally-sourced Japanese&quot;) was kept as the doctoral title. The K2 section now carries the roster&#x27;s K2 topic. Note: the roster reads &quot;non-carbon materials&quot;, which we judged to be a slip for &quot;nano-carbon materials&quot; and corrected — please confirm. No abstract exists for the K2 topic, so it shows as pending. English is the original; Japanese is an AI translation.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -762,7 +765,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">PhD title filled from the roster — the slot was a deliberate placeholder since 85f5562, where the PhD section was blanked for duplicating K2. Her K2 already matched the roster character-for-character. She submitted everything in English (she does not speak Japanese), so English is the original source and the Japanese for the K2 title, K2 abstract and PhD title is AI-translated, pending her confirmation. PhD abstract stays the standard placeholder.</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">博士研究課題を名簿より反映しました。本人からの提出がなく、当該欄は「準備中」の仮置きでした。K2課題は名簿と完全一致のため変更していません。本人は日本語を解さないため英語が原文で、日本語（K2課題・概要・博士課題）はAIによる翻訳です。ご本人の確認をお願いできれば幸いです。博士研究の概要は引き続き準備中です。</div><div class="t note-body note-en" lang="en">Doctoral title taken from the roster; the slot had been a placeholder as nothing had been submitted. The K2-SPRING title matched the roster exactly and is unchanged. She works in English, so the Japanese (K2 title, K2 abstract, doctoral title) is an AI translation awaiting her confirmation. The doctoral abstract is still pending.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -789,7 +792,7 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Cleanest slot shift in the cohort: her doctoral title is our K2 title character-for-character, so our existing title and abstract were moved down to the PhD slot intact. He submitted nothing, so there was no competing record. Her real K2 topic (機械学習を用いたSOEC最適設計手法の構築) is new to us and has no abstract from any source, so the K2 section falls back to the standard placeholder. He speaks both languages but operates in Japanese: the new K2 English is AI-translated from her Japanese; the moved doctoral text is left unmarked because it predates us and we do not know which language he wrote it in.</div><div class="src">0717 roster (初校返し0717)</div>
+          <div class="t"><span class="badge b-ok">名簿より反映<span class="badge-en">from roster</span></span></div><div class="t note-body note-jp" lang="ja">名簿の博士課題が当方掲載のK2課題と完全に一致していたため、課題名と概要をそのまま博士欄へ移しました。本人からの提出はありません。K2欄には名簿のK2課題（機械学習によるSOEC最適設計手法）を掲載していますが、概要は当方に資料がなく準備中の表示となります。本人は日英とも解しますが日本語を主に使用されるため、新しいK2課題の英語はAIによる翻訳です。移設した博士欄の記述は元の日英表記をそのまま用いています。</div><div class="t note-body note-en" lang="en">The roster&#x27;s doctoral title matched our K2-SPRING title character-for-character, so that title and its abstract were moved to the doctoral section unchanged. Nothing had been submitted by the student. The K2 section now carries the roster&#x27;s K2 topic (machine learning for optimal SOEC design), but no abstract exists for it, so it shows as pending. He works in both languages but primarily in Japanese; the English on the new K2 title is an AI translation. The moved doctoral text keeps its original wording in both languages.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
     </section>
