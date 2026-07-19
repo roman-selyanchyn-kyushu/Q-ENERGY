@@ -84,26 +84,26 @@
   <h1>Profile status board</h1>
   <p class="sub">
     Every fellow's bilingual name, supervisor and research titles, straight from
-    <code>data/master/</code>. Generated 2026-07-19 08:03 by <code>scripts/build_overview.py</code> — regenerate after editing any JSON.
+    <code>data/master/</code>. Generated 2026-07-19 13:00 by <code>scripts/build_overview.py</code> — regenerate after editing any JSON.
     Internal working page: not linked from the site, not indexed. &nbsp;<a href="index.html">&larr; site home</a>
   </p>
 
   <div class="stats">
     <div class="stat"><b>71</b><span>fellows</span></div>
-    <div class="stat warn"><b>32</b><span>need attention</span></div>
-    <div class="stat warn"><b>12</b><span>PhD title missing</span></div>
+    <div class="stat warn"><b>23</b><span>need attention</span></div>
+    <div class="stat warn"><b>2</b><span>PhD title missing</span></div>
     <div class="stat note"><b>17</b><span>PhD JP slot = EN</span></div>
     <div class="stat warn"><b>0</b><span>K2 title missing</span></div>
-    <div class="stat note"><b>13</b><span>K2 JP slot = EN</span></div>
+    <div class="stat note"><b>9</b><span>K2 JP slot = EN</span></div>
     <div class="stat warn"><b>1</b><span>no supervisor link</span></div>
     <div class="stat"><b>37</b><span>Fellowship (no K2)</span></div>
     <div class="stat warn"><b>3</b><span>roster &ne; student</span></div>
-    <div class="stat"><b>6</b><span>set from roster</span></div>
+    <div class="stat"><b>16</b><span>set from roster</span></div>
   </div>
 
   <div class="controls">
     <button type="button" id="f-all" class="on">All 71</button>
-    <button type="button" id="f-attn">Needs attention 32</button>
+    <button type="button" id="f-attn">Needs attention 23</button>
     <div class="legend">
       <span><i class="sw sw-missing"></i>placeholder — nobody wrote it yet</span>
       <span><i class="sw sw-warn"></i>English sitting in the Japanese slot</span>
@@ -467,8 +467,8 @@
       </div>
     </section>
     <section class="cohort" data-cohort="2025">
-      <h2><span class="yr">2025</span><span class="cnt">12 fellows &middot; 10 need attention</span></h2>
-      <div class="row" data-attention="0">
+      <h2><span class="yr">2025</span><span class="cnt">12 fellows &middot; 1 need attention</span></h2>
+      <div class="row needs-attention" data-attention="1">
         <div class="cell c-student">
           <div class="k">Student</div>
           <div class="nm"><a href="students/2025/kohei-sawada.html">Kohei Sawada</a></div>
@@ -492,10 +492,10 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t t-na">&mdash;</div>
+          <div class="t"><span class="badge b-warn">needs a decision</span></div><div class="t note-body">Left untouched — the only student in this cohort whose record is both his own and newer than the roster. His K2 and PhD were already distinct and bilingual (one of two students 85f5562 did not blank), and his content was applied from his own submission on 2026-06-10 (12a8540). The single discrepancy is one word in the doctoral title: ours reads 光触媒反応に関する研究, hers the shorter 光触媒に関する研究 — ours is kept, being his. ⚠ His roster row is flagged 変更・原稿あり but NO manuscript for him exists in _local/student-revision-requests/ — Kashiwagi-san holds source material we have never seen, same as rika-iriguchi. Marked &#x27;check&#x27; so the board keeps surfacing him until that document is obtained and this page verified against it.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
-      <div class="row needs-attention" data-attention="1">
+      <div class="row" data-attention="0">
         <div class="cell c-student">
           <div class="k">Student</div>
           <div class="nm"><a href="students/2025/nozomi-goto.html">Nozomu Goto</a></div>
@@ -509,20 +509,20 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
-          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+          <div class="t ">Research concept for applying machine learning to low-temperature operation of PCFCs and wide-ranging exploration of new materials</div>
+          <div class="t ">PCFCの低温操作による機械学習への応用と新規材料広域探索研究構想</div>
         </div>
         <div class="cell c-title">
           <div class="k">K2-SPRING research</div>
-          <div class="t ">Accelerated exploration of proton-conducting solid oxide fuel cell cathode materials using machine learning</div>
-          <div class="t ">機械学習を用いたプロトン伝導性固体酸化物燃料電池カソード材料の加速的探索</div>
+          <div class="t ">Elucidation of conductivity-degradation factors and performance improvement of PLD thin-film proton-conducting electrolytes for hydrogen-permeable metal-supported fuel cells</div>
+          <div class="t ">水素透過性金属支持燃料電池用PLD薄膜プロトン伝導性電解質の伝導度低下要因の解明と性能向上</div>
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t t-na">&mdash;</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Realigned to Kashiwagi-san&#x27;s record on Roman&#x27;s call — he submitted nothing, so our previous content was a guess. Our K2 title+abstract (ML for PCFC cathode materials) actually described her DOCTORAL project, so the abstract was moved to the PhD slot and her doctoral title used in place of our old K2 wording, which is dropped. Her stray space in &#x27;PCFC の&#x27; normalised. Her real K2 topic (PLD thin-film electrolytes) is new to us and has NO abstract from any source, so the K2 section falls back to the standard placeholder — a visible regression, but honest. Her titles are Japanese; the English is AI-translated. Note her PhD title ends in 研究構想 (&#x27;research concept&#x27;), which reads like a proposal heading rather than a project title — kept verbatim, worth confirming.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
-      <div class="row needs-attention" data-attention="1">
+      <div class="row" data-attention="0">
         <div class="cell c-student">
           <div class="k">Student</div>
           <div class="nm"><a href="students/2025/qi-shi.html">Qi Shi</a></div>
@@ -536,20 +536,20 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
-          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+          <div class="t ">Fabrication and Performance Improvement of Solid Oxide Reversible Cell by the Dip-coating Method</div>
+          <div class="t ">ディップコーティング法による固体酸化物可逆セルの作製と性能向上</div>
         </div>
         <div class="cell c-title">
           <div class="k">K2-SPRING research</div>
-          <div class="t ">Improvement of tubular solid oxide reversible cells using LSGM electrolyte via dip coating</div>
-          <div class="t ">ディップコーティング法によるLSGM電解質を用いたチューブ型固体酸化物可逆セルの改良</div>
+          <div class="t ">Thermal Management of Tubular Solid Oxide Reversible Cells</div>
+          <div class="t ">チューブ型固体酸化物可逆セルの熱マネジメント</div>
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t t-na">&mdash;</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Slot shift, her topics treated as true per Roman. Our existing abstract is wholly about dip-coating LSGM deposition and cell degradation mechanisms, which matches her doctoral title exactly and says nothing about thermal management, so it moved down to the PhD slot intact. Our previous K2 title is dropped in favour of her doctoral wording. Her new K2 topic (Thermal Management of Tubular SORCs) has no abstract from any source, so that section falls back to the placeholder. He does not speak Japanese and her cells are English-only, so all Japanese here is AI-translated — including the pre-existing Japanese, which was itself almost certainly a translation rather than his own writing; the doctoral Japanese title was re-translated from HER English rather than kept, since ours rendered our old wording. ⚠ Roman is asking this student directly — re-check against his reply.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
-      <div class="row needs-attention" data-attention="1">
+      <div class="row" data-attention="0">
         <div class="cell c-student">
           <div class="k">Student</div>
           <div class="nm"><a href="students/2025/rika-iriguchi.html">Rika Iriguchi</a></div>
@@ -563,20 +563,20 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
-          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+          <div class="t ">Research on hydrogen generation from unused coal resources in underground coal gasification systems</div>
+          <div class="t ">石炭地下ガス化システムにおける未利用石炭資源からの水素生成に関する研究</div>
         </div>
         <div class="cell c-title">
           <div class="k">K2-SPRING research</div>
-          <div class="t ">Development of low environmental impact hydrogen production technology from biomass fermentation processes</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Development of low environmental impact hydrogen production technology from biomass fermentation processes</div>
+          <div class="t ">Development of low-environmental-impact hydrogen production technology from unused woody biomass resources</div>
+          <div class="t ">未利用の木質バイオマス資源を原料とした低環境負荷な水素生産技術の開発</div>
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t t-na">&mdash;</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Both titles applied from the roster on Roman&#x27;s call. Her K2 changes the feedstock to unused WOODY biomass; the existing abstract (microbial fermentation) was kept because the two are compatible — lignocellulosic biomass is a normal fermentation feedstock, so her title names the feedstock and the abstract the method. Her PhD cell ran two clauses together; only the first is used as the title, the trailing 「未利用資源を活用した大規模水素サプライチェーンの構築を目指す次世代型資源開発」 reads as a subtitle or stray note and was dropped. Doctoral topic is corroborated by her own research proposal — both underground coal gasification. She is Japanese and her titles are Japanese, so the English on both titles and the Japanese abstract are AI-translated; the English abstract predates us and is of unknown authorship. ⚠ Her roster row is flagged 変更・原稿あり but NO manuscript for her exists in _local/student-revision-requests/ — Kashiwagi-san holds source material we have never seen. Worth requesting and re-checking this page against it.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
-      <div class="row needs-attention" data-attention="1">
+      <div class="row" data-attention="0">
         <div class="cell c-student">
           <div class="k">Student</div>
           <div class="nm"><a href="students/2025/ryoshi-oda.html">Ryoshi Oda</a></div>
@@ -590,20 +590,20 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
-          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+          <div class="t ">Research on elucidating the mechanisms of methane pyrolysis using carbon-based catalysts</div>
+          <div class="t ">炭素系触媒を用いたメタン熱分解におけるメカニズム解明に関する研究</div>
         </div>
         <div class="cell c-title">
           <div class="k">K2-SPRING research</div>
-          <div class="t ">Research on turquoise hydrogen synthesis using carbon-based catalysts and effective utilisation of byproduct carbon</div>
-          <div class="t ">炭素系触媒を用いたターコイズ水素の合成および副生炭素の有効利用に関する研究</div>
+          <div class="t ">Construction of a conversion system for high-grade carbon materials using waste byproduct carbon from methane pyrolysis</div>
+          <div class="t ">メタン熱分解による廃棄副生炭素を利用した高級炭素材料変換システムの構築</div>
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t t-na">&mdash;</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Both titles taken from the roster on Roman&#x27;s call; he submitted nothing. Unlike the Goto/Xiang slot shifts, his single abstract straddled BOTH of her titles — the methane-pyrolysis/turquoise-hydrogen half matches her doctoral title, the byproduct-carbon half matches her K2 title — so it was split rather than moved wholesale, leaving each section with text that matches its own heading. The English halves are verbatim from the original abstract; the Japanese was one clause chain joined by し and had to be rewritten as two standalone sentences, content preserved. Our previous K2 title (ターコイズ水素の合成および副生炭素の有効利用) is dropped — it was effectively a merger of her two projects. He works in Japanese, so her titles are the originals and the English is AI-translated.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
-      <div class="row needs-attention" data-attention="1">
+      <div class="row" data-attention="0">
         <div class="cell c-student">
           <div class="k">Student</div>
           <div class="nm"><a href="students/2025/takahiro-yamaguchi.html">Takahiro Yamaguchi</a></div>
@@ -617,8 +617,8 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
-          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+          <div class="t ">Establishment of a core-plasma start-up method using multiple resonance layers and elucidation of the heating absorption and relaxation processes</div>
+          <div class="t ">複数共鳴層を用いた炉心プラズマ立ち上げ手法の確立と加熱吸収・緩和過程の機構解明</div>
         </div>
         <div class="cell c-title">
           <div class="k">K2-SPRING research</div>
@@ -627,10 +627,10 @@
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t t-na">&mdash;</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">PhD title filled from the roster — the slot was a deliberate placeholder since 85f5562, where the PhD section was blanked for duplicating K2. He submitted nothing. His K2 was left untouched: it already matched the roster and was the first in this cohort to be genuinely bilingual rather than English-in-the-JP-slot. He works in Japanese, so her Japanese doctoral title is the original and the English is AI-translated.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
-      <div class="row needs-attention" data-attention="1">
+      <div class="row" data-attention="0">
         <div class="cell c-student">
           <div class="k">Student</div>
           <div class="nm"><a href="students/2025/wang-sheng.html">Sheng Wang</a></div>
@@ -644,20 +644,20 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
-          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+          <div class="t ">Stress Superposition in Opposing Mining Faces and Support Optimization of Dynamic-Pressure Roadways</div>
+          <div class="t ">対向切羽における応力の重畳と動圧坑道の支保最適化</div>
         </div>
         <div class="cell c-title">
           <div class="k">K2-SPRING research</div>
           <div class="t ">Investigation of gas-liquid two-phase flow mechanisms in microscopic fractures under reservoir in-situ thermo-pressure conditions</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Investigation of gas-liquid two-phase flow mechanisms in microscopic fractures under reservoir in-situ thermo-pressure conditions</div>
+          <div class="t ">貯留層の原位置温度・圧力条件下における微小亀裂内の気液二相流機構の解明</div>
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t t-na">&mdash;</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">PhD title filled from the roster — the slot was a deliberate placeholder since 85f5562, where the PhD section was blanked for duplicating K2. His K2 matched the roster apart from capitalisation. He submitted in English (he does not speak Japanese), so English is the original source and the Japanese for the K2 title, K2 abstract and PhD title is AI-translated, pending his confirmation. PhD abstract stays the standard placeholder. The docx &#x27;Research achievements-WANG.docx&#x27; in student-revision-requests is Weifeng Wang (2026), not him.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
-      <div class="row needs-attention" data-attention="1">
+      <div class="row" data-attention="0">
         <div class="cell c-student">
           <div class="k">Student</div>
           <div class="nm"><a href="students/2025/yan-chenyu.html">Chenyu Yan</a></div>
@@ -671,17 +671,17 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
-          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+          <div class="t ">Morphology- and Dimensionality-Dependent Microwave Heating Behavior and Catalytic Performance</div>
+          <div class="t ">形態および次元性に依存するマイクロ波加熱挙動と触媒性能</div>
         </div>
         <div class="cell c-title">
           <div class="k">K2-SPRING research</div>
           <div class="t ">Microwave-assisted catalytic degradation of plastics and other organic wastes</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Microwave-assisted catalytic degradation of plastics and other organic wastes</div>
+          <div class="t ">マイクロ波を利用したプラスチックおよび有機廃棄物の触媒分解</div>
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t t-na">&mdash;</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">PhD title filled from the roster — the slot was a deliberate placeholder since 85f5562, where the PhD section was blanked for duplicating K2. His K2 already matched the roster character-for-character, which is why this reads as a genuine second project rather than a slot shift: her sheet keeps our K2 wording and adds a narrower doctoral topic on top. He submitted in English (he does not speak Japanese), so English is the original source and the Japanese for the K2 title, K2 abstract and PhD title is AI-translated, pending his confirmation. PhD abstract stays the standard placeholder.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
       <div class="row" data-attention="0">
@@ -711,7 +711,7 @@
           <div class="t t-na">&mdash;</div>
         </div>
       </div>
-      <div class="row needs-attention" data-attention="1">
+      <div class="row" data-attention="0">
         <div class="cell c-student">
           <div class="k">Student</div>
           <div class="nm"><a href="students/2025/zhai-xiazhe.html">Xiazhe Zhai</a></div>
@@ -725,20 +725,20 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
-          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
-        </div>
-        <div class="cell c-title">
-          <div class="k">K2-SPRING research</div>
           <div class="t ">Creating high-value carbon materials from carbonised products and byproducts of locally-sourced Japanese biomass</div>
           <div class="t ">日本近域産バイオマスを原料とした炭素化物および副産物からの高付加価値カーボン材料の創製</div>
         </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Valorizing Japanese biomass pyrolysis byproducts into nano-carbon materials for energy, chemical, and pharmaceutical applications</div>
+          <div class="t ">日本産バイオマス熱分解副産物の高付加価値化：エネルギー・化学・医薬用途に向けたナノカーボン材料への転換</div>
+        </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t t-na">&mdash;</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Slot shift: her doctoral title is a shortened English-only form of our K2 title, so our existing content moved down to the PhD slot. Unlike Goto/Xiang, our text is almost certainly HIS OWN submission — it is fully bilingual and richer than her cell (it keeps 「日本近域産」/&#x27;locally-sourced Japanese&#x27;, which she drops) — so ours was kept as the doctoral title rather than replaced by hers, and it carries no translation markers because both languages are his. Her K2 read &#x27;into non-carbon materials&#x27;; corrected to &#x27;nano-carbon&#x27; on Roman&#x27;s call — non-carbon is incoherent in a carbon-materials group and nano-carbon fits the pyrolysis-byproduct context. Her K2 is English-only, so the Japanese is AI-translated; no abstract exists for it anywhere, so that section falls back to the placeholder. Also fixed a pre-existing typo in his Japanese abstract: 多孔賠炭素 -&gt; 多孔質炭素 (porous carbon; 賠 means &#x27;compensate&#x27;).</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
-      <div class="row needs-attention" data-attention="1">
+      <div class="row" data-attention="0">
         <div class="cell c-student">
           <div class="k">Student</div>
           <div class="nm"><a href="students/2025/zhang-jingxuan.html">Jingxuan Zhang</a></div>
@@ -752,20 +752,20 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
-          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
+          <div class="t ">Penetration of hydrogen fuel cell buses modeling and environmental impact assessment</div>
+          <div class="t ">水素燃料電池バスの普及モデリングおよび環境影響評価</div>
         </div>
         <div class="cell c-title">
           <div class="k">K2-SPRING research</div>
           <div class="t ">Decarbonizing Compact Cities: Strategic Planning for AEV-Based Public Transport</div>
-          <div class="t t-warn"><span class="badge b-warn" title="No Japanese characters in the JP slot">EN in JP slot</span> Decarbonizing Compact Cities: Strategic Planning for AEV-Based Public Transport</div>
+          <div class="t ">コンパクトシティの脱炭素化：代替エネルギー車両（AEV）を活用した公共交通の戦略的計画</div>
         </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t t-na">&mdash;</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">PhD title filled from the roster — the slot was a deliberate placeholder since 85f5562, where the PhD section was blanked for duplicating K2. Her K2 already matched the roster character-for-character. She submitted everything in English (she does not speak Japanese), so English is the original source and the Japanese for the K2 title, K2 abstract and PhD title is AI-translated, pending her confirmation. PhD abstract stays the standard placeholder.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
-      <div class="row needs-attention" data-attention="1">
+      <div class="row" data-attention="0">
         <div class="cell c-student">
           <div class="k">Student</div>
           <div class="nm"><a href="students/2025/zhanyi-xiang.html">Zhanyi Xiang</a></div>
@@ -779,17 +779,17 @@
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
-          <div class="t t-missing"><span class="badge b-missing">not written yet</span></div>
-          <div class="t t-missing"><span class="badge b-missing">未記入</span></div>
-        </div>
-        <div class="cell c-title">
-          <div class="k">K2-SPRING research</div>
           <div class="t ">Elucidation of electrochemical reaction mechanisms in H₂O–CO₂ co-electrolysis of SOEC and construction of numerical analysis methods</div>
           <div class="t ">固体酸化物電解セル（SOEC）の共電解における化学反応を伴う電気化学反応の原理解明および数値解析手法の構築</div>
         </div>
+        <div class="cell c-title">
+          <div class="k">K2-SPRING research</div>
+          <div class="t ">Construction of an optimal design methodology for SOECs using machine learning</div>
+          <div class="t ">機械学習を用いたSOEC最適設計手法の構築</div>
+        </div>
         <div class="cell c-note">
           <div class="k">Title source</div>
-          <div class="t t-na">&mdash;</div>
+          <div class="t"><span class="badge b-ok">from roster</span></div><div class="t note-body">Cleanest slot shift in the cohort: her doctoral title is our K2 title character-for-character, so our existing title and abstract were moved down to the PhD slot intact. He submitted nothing, so there was no competing record. Her real K2 topic (機械学習を用いたSOEC最適設計手法の構築) is new to us and has no abstract from any source, so the K2 section falls back to the standard placeholder. He speaks both languages but operates in Japanese: the new K2 English is AI-translated from her Japanese; the moved doctoral text is left unmarked because it predates us and we do not know which language he wrote it in.</div><div class="src">0717 roster (初校返し0717)</div>
         </div>
       </div>
     </section>
