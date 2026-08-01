@@ -1,0 +1,45 @@
+.claude/
+__pycache__/
+*.pyc
+.DS_Store
+PROGRESS.md
+
+# Local-only working files (sources, scripts, docs, raw submissions) — never published
+_local/
+scripts/
+docs/
+
+# Master content database — the hand-built single source of truth (one file per
+# student: data/master/<cohort>/<slug>.json). NEVER publish.
+data/master/
+_originals/
+_Original/
+data/public_sections_extracted.json
+data/public_site_extracted.json
+data/cohorts.json
+data/news.json
+assets/photos/*/README.md
+assets/photos/PHOTO-GUIDE.md
+data/students-private.json
+scripts/email-drafts/
+
+# Derived data — LOCAL-ONLY. The published pages are now self-contained (student
+# pages + publications.html are pre-baked static HTML; activities.html embeds its
+# photo data inline). These JSON files are sources/build-inputs only, regenerable
+# locally, and NEVER published — they hold the curated dataset.
+data/publications.json
+data/publications-data.js
+data/activities-photos.json
+data/students.json
+
+# Raw student submissions (keep local)
+docs/*.docx
+
+# Phase 2 scratch output (generated HTML for diff-verification only)
+_build/
+
+# Internal working docs — NEVER publish. These are the instructions Roman and Claude
+# work from: hosting/SSH/deploy details, the update loops, the source-of-truth model.
+# The tracked README.md is the thin public one; README.internal.md is the working copy.
+CLAUDE.md
+README.internal.md
