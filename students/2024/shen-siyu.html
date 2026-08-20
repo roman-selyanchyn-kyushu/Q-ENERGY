@@ -251,6 +251,14 @@
   .research-figure{margin:22px auto 6px;max-width:520px;}
   .research-figure img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:var(--r-md);background:#fff;}
   .research-figure figcaption{margin-top:10px;font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--ink-3);text-align:center;}
+
+  /* Name badges (JSPS DC2 / alumni) */
+  .name-badges{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 2px;}
+  .name-badges:empty{display:none;}
+  .name-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.07em;padding:4px 11px;border-radius:999px;border:1px solid;white-space:nowrap;}
+  .nb-dc2{color:#7d5e0c;background:rgba(198,158,42,.14);border-color:rgba(198,158,42,.45);}
+  .nb-alumni{color:var(--ink-3);background:rgba(0,0,0,.035);border-color:var(--line);}
+  .nb-dot{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.8;flex:none;}
 </style>
 </head>
 <body>
@@ -303,7 +311,7 @@
       <span data-lang-jp="">K2-SPRING &middot; グリーンイノベーションユニット &middot; 2024年度入学</span>
     </div>
     <h1 class="name" data-lang-en="">Siyu <span class="em">Shen</span></h1>
-    <h1 class="name name-jp" data-lang-jp="">Siyu Shen</h1>
+    <h1 class="name name-jp" data-lang-jp="">Siyu Shen</h1><div class="name-badges"><span class="name-badge nb-dc2"><span class="nb-dot"></span><span data-lang-en="">JSPS DC2</span><span data-lang-jp="">学振 DC2</span></span><span class="name-badge nb-alumni"><span class="nb-dot"></span><span data-lang-en="">Completed</span><span data-lang-jp="">修了</span></span></div>
     <div class="hero-subline">
       <dl>
         <dt data-lang-en="">Affiliation</dt>

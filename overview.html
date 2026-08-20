@@ -55,6 +55,8 @@
   .badge{display:inline-block;border-radius:4px;padding:1px 6px;font-size:10px;font-weight:700;letter-spacing:.04em;white-space:nowrap;vertical-align:1px}
   .b-missing{background:rgba(138,35,71,.1);color:var(--wine);border:1px solid rgba(138,35,71,.25)}
   .b-warn{background:rgba(212,168,75,.14);color:#8a6d22;border:1px solid rgba(212,168,75,.4)}
+  .b-dc2{background:rgba(198,158,42,.15);color:#7d5e0c;border:1px solid rgba(198,158,42,.45)}
+  .status-pills{margin-top:5px;display:flex;flex-wrap:wrap;gap:4px}
   .b-ok{background:rgba(42,138,134,.12);color:var(--green);border:1px solid rgba(42,138,134,.35)}
   .sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px}
   .sw-missing{background:rgba(138,35,71,.35)}
@@ -87,7 +89,7 @@
   <h1>Profile status board</h1>
   <p class="sub">
     Every fellow's bilingual name, supervisor and research titles, straight from
-    <code>data/master/</code>. Generated 2026-08-20 15:39 by <code>scripts/build_overview.py</code> — regenerate after editing any JSON.
+    <code>data/master/</code>. Generated 2026-08-20 16:46 by <code>scripts/build_overview.py</code> — regenerate after editing any JSON.
     Internal working page: not linked from the site, not indexed. &nbsp;<a href="index.html">&larr; site home</a>
   </p>
 
@@ -100,6 +102,9 @@
     <div class="stat note"><b>7</b><span>K2 JP slot = EN</span></div>
     <div class="stat warn"><b>1</b><span>no supervisor link</span></div>
     <div class="stat"><b>37</b><span>Fellowship (no K2)</span></div>
+    <div class="stat"><b>11</b><span>JSPS DC2 学振</span></div>
+    <div class="stat"><b>35</b><span>修了 completed</span></div>
+    <div class="stat warn"><b>32</b><span>completion INFERRED</span></div>
     <div class="stat warn"><b>7</b><span>roster &ne; student</span></div>
     <div class="stat"><b>17</b><span>set from roster</span></div>
   </div>
@@ -123,6 +128,7 @@
           <div class="nm"><a href="students/2026/chang-s.html">Shih-Peng Chang</a></div>
           <div class="nm nm-jp"><a href="students/2026/chang-s.html">Shih-Peng Chang</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -150,6 +156,7 @@
           <div class="nm"><a href="students/2026/chen-h.html">Hao Chen</a></div>
           <div class="nm nm-jp"><a href="students/2026/chen-h.html">陳 昊</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -177,6 +184,7 @@
           <div class="nm"><a href="students/2026/jiang-z.html">Ziqi Jiang</a></div>
           <div class="nm nm-jp"><a href="students/2026/jiang-z.html">Ziqi Jiang</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -204,11 +212,12 @@
           <div class="nm"><a href="students/2026/kotajima-m.html">Masaru Kotajima</a></div>
           <div class="nm nm-jp"><a href="students/2026/kotajima-m.html">古田島 勝</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
           <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e4%b8%ad%e6%9e%97-%e5%ba%b7%e6%b2%bb/" target="_blank" rel="noopener">Prof. Koji NAKABAYASHI</a></div>
-          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e4%b8%ad%e6%9e%97-%e5%ba%b7%e6%b2%bb/" target="_blank" rel="noopener">中林 康治 教授</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%e4%b8%ad%e6%9e%97-%e5%ba%b7%e6%b2%bb/" target="_blank" rel="noopener">中林 康治 准教授</a></div>
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
@@ -231,6 +240,7 @@
           <div class="nm"><a href="students/2026/minoda-k.html">Kohei Minoda</a></div>
           <div class="nm nm-jp"><a href="students/2026/minoda-k.html">簑田 康平</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -258,6 +268,7 @@
           <div class="nm"><a href="students/2026/mochizuki-t.html">Takeshi Mochizuki</a></div>
           <div class="nm nm-jp"><a href="students/2026/mochizuki-t.html">望月 建志</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -285,6 +296,7 @@
           <div class="nm"><a href="students/2026/nakagawa-n.html">Niki Nakagawa</a></div>
           <div class="nm nm-jp"><a href="students/2026/nakagawa-n.html">中川 和</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -312,6 +324,7 @@
           <div class="nm"><a href="students/2026/omoto-s.html">Shinnosuke Omoto</a></div>
           <div class="nm nm-jp"><a href="students/2026/omoto-s.html">大元 紳ノ介</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -339,6 +352,7 @@
           <div class="nm"><a href="students/2026/sun-h.html">Haonan Sun</a></div>
           <div class="nm nm-jp"><a href="students/2026/sun-h.html">Haonan Sun</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -366,6 +380,7 @@
           <div class="nm"><a href="students/2026/wang-w.html">Weifeng Wang</a></div>
           <div class="nm nm-jp"><a href="students/2026/wang-w.html">Weifeng Wang</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -393,6 +408,7 @@
           <div class="nm"><a href="students/2026/yoshida-s.html">Shotaro Yoshida</a></div>
           <div class="nm nm-jp"><a href="students/2026/yoshida-s.html">吉田 昇太郎</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -420,6 +436,7 @@
           <div class="nm"><a href="students/2026/zheng-q.html">Qingen Zheng</a></div>
           <div class="nm nm-jp"><a href="students/2026/zheng-q.html">Qingen Zheng</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -447,6 +464,7 @@
           <div class="nm"><a href="students/2026/zou-z.html">Zeyu Zou</a></div>
           <div class="nm nm-jp"><a href="students/2026/zou-z.html">Zeyu Zou</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -477,6 +495,7 @@
           <div class="nm"><a href="students/2025/kohei-sawada.html">Kohei Sawada</a></div>
           <div class="nm nm-jp"><a href="students/2025/kohei-sawada.html">澤田 光平</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -504,6 +523,7 @@
           <div class="nm"><a href="students/2025/nozomi-goto.html">Nozomu Goto</a></div>
           <div class="nm nm-jp"><a href="students/2025/nozomi-goto.html">後藤 希</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -531,6 +551,7 @@
           <div class="nm"><a href="students/2025/qi-shi.html">Qi Shi</a></div>
           <div class="nm nm-jp"><a href="students/2025/qi-shi.html">チーシー</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -558,6 +579,7 @@
           <div class="nm"><a href="students/2025/rika-iriguchi.html">Rika Iriguchi</a></div>
           <div class="nm nm-jp"><a href="students/2025/rika-iriguchi.html">入口 梨佳</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -585,11 +607,12 @@
           <div class="nm"><a href="students/2025/ryoshi-oda.html">Ryoshi Oda</a></div>
           <div class="nm nm-jp"><a href="students/2025/ryoshi-oda.html">小田 亮志</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
           <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%B8%AD%E6%9E%97-%E5%BA%B7%E6%B2%BB/" target="_blank" rel="noopener">Prof. Koji NAKABAYASHI</a></div>
-          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%B8%AD%E6%9E%97-%E5%BA%B7%E6%B2%BB/" target="_blank" rel="noopener">中林 康治 教授</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%B8%AD%E6%9E%97-%E5%BA%B7%E6%B2%BB/" target="_blank" rel="noopener">中林 康治 准教授</a></div>
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
@@ -612,6 +635,7 @@
           <div class="nm"><a href="students/2025/takahiro-yamaguchi.html">Takahiro Yamaguchi</a></div>
           <div class="nm nm-jp"><a href="students/2025/takahiro-yamaguchi.html">山口 貴大</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -639,6 +663,7 @@
           <div class="nm"><a href="students/2025/wang-sheng.html">Sheng Wang</a></div>
           <div class="nm nm-jp"><a href="students/2025/wang-sheng.html">Sheng Wang</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -666,6 +691,7 @@
           <div class="nm"><a href="students/2025/yan-chenyu.html">Chenyu Yan</a></div>
           <div class="nm nm-jp"><a href="students/2025/yan-chenyu.html">Chenyu Yan</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -693,6 +719,7 @@
           <div class="nm"><a href="students/2025/yuki-nishimura.html">Yuki Nishimura</a></div>
           <div class="nm nm-jp"><a href="students/2025/yuki-nishimura.html">西村 勇輝</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -720,6 +747,7 @@
           <div class="nm"><a href="students/2025/zhai-xiazhe.html">Xiazhe Zhai</a></div>
           <div class="nm nm-jp"><a href="students/2025/zhai-xiazhe.html">Xiazhe Zhai</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -747,6 +775,7 @@
           <div class="nm"><a href="students/2025/zhang-jingxuan.html">Jingxuan Zhang</a></div>
           <div class="nm nm-jp"><a href="students/2025/zhang-jingxuan.html">Jingxuan Zhang</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -774,6 +803,7 @@
           <div class="nm"><a href="students/2025/zhanyi-xiang.html">Zhanyi Xiang</a></div>
           <div class="nm nm-jp"><a href="students/2025/zhanyi-xiang.html">Zhanyi Xiang</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -804,6 +834,7 @@
           <div class="nm"><a href="students/2024/haomin-fu.html">Haomin Fu</a></div>
           <div class="nm nm-jp"><a href="students/2024/haomin-fu.html">Haomin Fu</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -831,6 +862,7 @@
           <div class="nm"><a href="students/2024/itsuki-oyama.html">Itsuki Oyama</a></div>
           <div class="nm nm-jp"><a href="students/2024/itsuki-oyama.html">小山 一輝</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -858,6 +890,7 @@
           <div class="nm"><a href="students/2024/kodai-matsumoto.html">Kodai Matsumoto</a></div>
           <div class="nm nm-jp"><a href="students/2024/kodai-matsumoto.html">松本 昂大</a></div>
           <div class="prog">K2-SPRING</div>
+          <div class="t status-pills"><span class="badge b-dc2">JSPS DC2 学振</span> <span class="badge b-ok">修了 completed · left for DC2</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -885,6 +918,7 @@
           <div class="nm"><a href="students/2024/ryudai-ueno.html">Ryudai Ueno</a></div>
           <div class="nm nm-jp"><a href="students/2024/ryudai-ueno.html">上野 竜大生</a></div>
           <div class="prog">K2-SPRING</div>
+          <div class="t status-pills"><span class="badge b-dc2">JSPS DC2 学振</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -912,6 +946,7 @@
           <div class="nm"><a href="students/2024/shen-siyu.html">Siyu Shen</a></div>
           <div class="nm nm-jp"><a href="students/2024/shen-siyu.html">Siyu Shen</a></div>
           <div class="prog">K2-SPRING</div>
+          <div class="t status-pills"><span class="badge b-dc2">JSPS DC2 学振</span> <span class="badge b-ok">修了 completed · left for DC2</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -939,6 +974,7 @@
           <div class="nm"><a href="students/2024/shogo-nakamura.html">Shogo Nakamura</a></div>
           <div class="nm nm-jp"><a href="students/2024/shogo-nakamura.html">中村 省吾</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -966,6 +1002,7 @@
           <div class="nm"><a href="students/2024/tomomi-shoda.html">Tomomi Shoda</a></div>
           <div class="nm nm-jp"><a href="students/2024/tomomi-shoda.html">庄田 朋申</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -993,6 +1030,7 @@
           <div class="nm"><a href="students/2024/xianzhe-yang.html">Xianzhe Yang</a></div>
           <div class="nm nm-jp"><a href="students/2024/xianzhe-yang.html">楊 賢哲</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1020,6 +1058,7 @@
           <div class="nm"><a href="students/2024/yuki-noguchi.html">Yuki Noguchi</a></div>
           <div class="nm nm-jp"><a href="students/2024/yuki-noguchi.html">野口 湧喜</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1047,6 +1086,7 @@
           <div class="nm"><a href="students/2024/yuki-tomita.html">Yuki Tomita</a></div>
           <div class="nm nm-jp"><a href="students/2024/yuki-tomita.html">冨田 侑樹</a></div>
           <div class="prog">K2-SPRING</div>
+          <div class="t status-pills"><span class="badge b-dc2">JSPS DC2 学振</span> <span class="badge b-ok">修了 completed · left for DC2</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1074,6 +1114,7 @@
           <div class="nm"><a href="students/2024/zhang-kaili.html">Kaili Zhang</a></div>
           <div class="nm nm-jp"><a href="students/2024/zhang-kaili.html">Kaili Zhang</a></div>
           <div class="prog">K2-SPRING</div>
+          
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1104,6 +1145,7 @@
           <div class="nm"><a href="students/2023/go-yokuhou.html">Go Yokuhou</a></div>
           <div class="nm nm-jp"><a href="students/2023/go-yokuhou.html">呉 翼峰</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">from FY2026 roster</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1131,6 +1173,7 @@
           <div class="nm"><a href="students/2023/hiroki-isogawa.html">Hiroki Isogawa</a></div>
           <div class="nm nm-jp"><a href="students/2023/hiroki-isogawa.html">五十川 浩希</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1158,6 +1201,7 @@
           <div class="nm"><a href="students/2023/kentaro-wada.html">Kentaro Wada</a></div>
           <div class="nm nm-jp"><a href="students/2023/kentaro-wada.html">和田 健太郎</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">from FY2026 roster</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1185,6 +1229,7 @@
           <div class="nm"><a href="students/2023/kotaro-shinozaki.html">Kotaro Shinozaki</a></div>
           <div class="nm nm-jp"><a href="students/2023/kotaro-shinozaki.html">篠崎 航太朗</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1212,6 +1257,7 @@
           <div class="nm"><a href="students/2023/narmandakh-khongorzul.html">Narmandakh Khongorzul</a></div>
           <div class="nm nm-jp"><a href="students/2023/narmandakh-khongorzul.html">Narmandakh Khongorzul</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">from FY2026 roster</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1239,6 +1285,7 @@
           <div class="nm"><a href="students/2023/seiya-imada.html">Seiya Imada</a></div>
           <div class="nm nm-jp"><a href="students/2023/seiya-imada.html">今田 青冶</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-dc2">JSPS DC2 学振</span> <span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1266,11 +1313,12 @@
           <div class="nm"><a href="students/2023/taisei-tomaru.html">Taisei Tomaru</a></div>
           <div class="nm nm-jp"><a href="students/2023/taisei-tomaru.html">都丸 大晟</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
           <div class="nm"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%B8%AD%E6%9E%97-%E5%BA%B7%E6%B2%BB/" target="_blank" rel="noopener">Prof. Koji NAKABAYASHI</a></div>
-          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%B8%AD%E6%9E%97-%E5%BA%B7%E6%B2%BB/" target="_blank" rel="noopener">中林 康治 教授</a></div>
+          <div class="nm nm-jp"><a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%B8%AD%E6%9E%97-%E5%BA%B7%E6%B2%BB/" target="_blank" rel="noopener">中林 康治 准教授</a></div>
         </div>
         <div class="cell c-title">
           <div class="k">PhD research</div>
@@ -1293,6 +1341,7 @@
           <div class="nm"><a href="students/2023/xuesong-wei.html">Xuesong Wei</a></div>
           <div class="nm nm-jp"><a href="students/2023/xuesong-wei.html">韋 雪淞</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1320,6 +1369,7 @@
           <div class="nm"><a href="students/2023/yusuke-oga.html">Yusuke Oga</a></div>
           <div class="nm nm-jp"><a href="students/2023/yusuke-oga.html">大賀 雄介</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-dc2">JSPS DC2 学振</span> <span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1347,6 +1397,7 @@
           <div class="nm"><a href="students/2023/yuta-takaoka.html">Yuta Takaoka</a></div>
           <div class="nm nm-jp"><a href="students/2023/yuta-takaoka.html">髙岡 祐太</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-dc2">JSPS DC2 学振</span> <span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1374,6 +1425,7 @@
           <div class="nm"><a href="students/2023/yutong-chen.html">Yutong Chen</a></div>
           <div class="nm nm-jp"><a href="students/2023/yutong-chen.html">陳 昱通</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1404,6 +1456,7 @@
           <div class="nm"><a href="students/2022/daisuke-yoshizawa.html">Daisuke Yoshizawa</a></div>
           <div class="nm nm-jp"><a href="students/2022/daisuke-yoshizawa.html">吉澤 大佑</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1431,6 +1484,7 @@
           <div class="nm"><a href="students/2022/hyun-gyu-park.html">Hyun-Gyu Park</a></div>
           <div class="nm nm-jp"><a href="students/2022/hyun-gyu-park.html">Hyun-Gyu Park</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1458,6 +1512,7 @@
           <div class="nm"><a href="students/2022/jacqueline-andrea-hidalgo-jim-nez.html">Jacqueline Andrea Hidalgo Jiménez</a></div>
           <div class="nm nm-jp"><a href="students/2022/jacqueline-andrea-hidalgo-jim-nez.html">Jacqueline Andrea Hidalgo Jiménez</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1485,6 +1540,7 @@
           <div class="nm"><a href="students/2022/muhammad-irfan-maulana-kusdhany.html">Muhammad Irfan Maulana Kusdhany</a></div>
           <div class="nm nm-jp"><a href="students/2022/muhammad-irfan-maulana-kusdhany.html">Muhammad Irfan Maulana Kusdhany</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1512,6 +1568,7 @@
           <div class="nm"><a href="students/2022/qingyi-he.html">Qingyi He</a></div>
           <div class="nm nm-jp"><a href="students/2022/qingyi-he.html">何 清怡</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1539,6 +1596,7 @@
           <div class="nm"><a href="students/2022/ryoma-sato.html">Ryoma Sato</a></div>
           <div class="nm nm-jp"><a href="students/2022/ryoma-sato.html">佐藤 稜真</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1566,6 +1624,7 @@
           <div class="nm"><a href="students/2022/shinichi-takeno.html">Shinichi Takeno</a></div>
           <div class="nm nm-jp"><a href="students/2022/shinichi-takeno.html">竹野 慎一</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1593,6 +1652,7 @@
           <div class="nm"><a href="students/2022/sora-matsushima.html">Sora Matsushima</a></div>
           <div class="nm nm-jp"><a href="students/2022/sora-matsushima.html">松嶋 そら</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-dc2">JSPS DC2 学振</span> <span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1620,6 +1680,7 @@
           <div class="nm"><a href="students/2022/tatsuya-hamashima.html">Tatsuya Hamashima</a></div>
           <div class="nm nm-jp"><a href="students/2022/tatsuya-hamashima.html">濱島 達也</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1647,6 +1708,7 @@
           <div class="nm"><a href="students/2022/yin-kan-phua.html">Yin Kan Phua</a></div>
           <div class="nm nm-jp"><a href="students/2022/yin-kan-phua.html">Yin Kan Phua</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1674,6 +1736,7 @@
           <div class="nm"><a href="students/2022/yixin-chen.html">Yixin Chen</a></div>
           <div class="nm nm-jp"><a href="students/2022/yixin-chen.html">陳 伊新</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1701,6 +1764,7 @@
           <div class="nm"><a href="students/2022/zifei-nie.html">Zifei Nie</a></div>
           <div class="nm nm-jp"><a href="students/2022/zifei-nie.html">Zifei Nie</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1731,6 +1795,7 @@
           <div class="nm"><a href="students/2021/daiki-nishimura.html">Daiki Nishimura</a></div>
           <div class="nm nm-jp"><a href="students/2021/daiki-nishimura.html">西村 大輝</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-dc2">JSPS DC2 学振</span> <span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1758,6 +1823,7 @@
           <div class="nm"><a href="students/2021/haruka-mitoma.html">Haruka Mitoma</a></div>
           <div class="nm nm-jp"><a href="students/2021/haruka-mitoma.html">三苫 春香</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-dc2">JSPS DC2 学振</span> <span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1785,6 +1851,7 @@
           <div class="nm"><a href="students/2021/keitaro-maeno.html">Keitaro Maeno</a></div>
           <div class="nm nm-jp"><a href="students/2021/keitaro-maeno.html">前野 啓太郎</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-dc2">JSPS DC2 学振</span> <span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1812,6 +1879,7 @@
           <div class="nm"><a href="students/2021/kento-komatsubara.html">Kento Komatsubara</a></div>
           <div class="nm nm-jp"><a href="students/2021/kento-komatsubara.html">小松原 建人</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1839,6 +1907,7 @@
           <div class="nm"><a href="students/2021/likhith-manjunatha.html">Likhith Manjunatha</a></div>
           <div class="nm nm-jp"><a href="students/2021/likhith-manjunatha.html">Likhith Manjunatha</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1866,6 +1935,7 @@
           <div class="nm"><a href="students/2021/masatoshi-tashima.html">Masatoshi Tashima</a></div>
           <div class="nm nm-jp"><a href="students/2021/masatoshi-tashima.html">田島 正俊</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1893,6 +1963,7 @@
           <div class="nm"><a href="students/2021/mingxu-sun.html">Mingxu Sun</a></div>
           <div class="nm nm-jp"><a href="students/2021/mingxu-sun.html">Mingxu Sun</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1920,6 +1991,7 @@
           <div class="nm"><a href="students/2021/tianhui-fan.html">Tianhui Fan</a></div>
           <div class="nm nm-jp"><a href="students/2021/tianhui-fan.html">Tianhui Fan</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1947,6 +2019,7 @@
           <div class="nm"><a href="students/2021/timothee-redarce.html">Timothee Redarce</a></div>
           <div class="nm nm-jp"><a href="students/2021/timothee-redarce.html">Timothee Redarce</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -1974,6 +2047,7 @@
           <div class="nm"><a href="students/2021/toraharu-watanabe.html">Toraharu Watanabe</a></div>
           <div class="nm nm-jp"><a href="students/2021/toraharu-watanabe.html">渡邊 虎春</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -2001,6 +2075,7 @@
           <div class="nm"><a href="students/2021/xiaofeng-shen.html">Xiaofeng Shen</a></div>
           <div class="nm nm-jp"><a href="students/2021/xiaofeng-shen.html">沈 小烽</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
@@ -2028,6 +2103,7 @@
           <div class="nm"><a href="students/2021/yulu-chen.html">Yulu Chen</a></div>
           <div class="nm nm-jp"><a href="students/2021/yulu-chen.html">陳 雨露</a></div>
           <div class="prog">Q-ENERGY Fellowship</div>
+          <div class="t status-pills"><span class="badge b-ok">修了 completed</span> <span class="badge b-warn">INFERRED — not confirmed</span></div>
         </div>
         <div class="cell c-sup">
           <div class="k">Supervisor</div>
