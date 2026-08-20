@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Q-DeCS Workshop Presentations — Q-ENERGY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+  [data-lang-jp]                  { display: none; }
+  html[lang="ja"] [data-lang-en]  { display: none; }
+  html[lang="ja"] [data-lang-jp]  { display: inline; }
+  html[lang="ja"] [data-lang-jp-block] { display: block; }
+  html[lang="ja"] [data-lang-en-block] { display: none; }
+  [data-lang-jp-block] { display: none; }
+  .article-wrap { max-width:740px;margin:0 auto;padding:64px var(--g) 96px }
+  .article-back { display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;letter-spacing:.04em;text-transform:uppercase;margin-bottom:48px;transition:color .2s }
+  .article-back:hover { color:var(--blue) }
+  .article-back::before { content:"←";font-size:14px }
+  .article-header { margin-bottom:40px }
+  .article-meta { display:flex;align-items:center;gap:12px;margin-bottom:20px }
+  .article-date { font-family:var(--sans);font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.04em }
+  .article-tag { display:inline-flex;align-items:center;border-radius:999px;padding:3px 11px;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.04em;border:1px solid var(--line);background:var(--paper2);color:var(--blue) }
+  .article-tag.event  { color:var(--gold);border-color:rgba(212,168,75,.3);background:rgba(212,168,75,.07) }
+  .article-headline { font-family:var(--serif);font-weight:400;font-size:clamp(24px,3.5vw,38px);line-height:1.18;letter-spacing:-.02em;color:var(--ink);margin:0 0 16px }
+  .article-lead { font-family:var(--serif);font-size:clamp(16px,1.6vw,19px);color:var(--muted);line-height:1.7;margin:0 }
+  .article-body { font-family:var(--serif);font-size:clamp(15px,1.4vw,17px);color:var(--ink);line-height:1.85 }
+  .article-body p { margin:0 0 20px }
+  .article-body p:last-child { margin:0 }
+  .article-body a { color:var(--blue) }
+
+  /* ── Joint-seminar presenters block (convention) ─────────── */
+  .seminar-presenters { margin:40px 0 }
+  .seminar-presenters-label { font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px }
+  .presenter { display:flex;gap:20px;align-items:center;padding:20px 0;border-top:1px solid var(--line);text-decoration:none;color:inherit }
+  .presenter:last-child { border-bottom:1px solid var(--line) }
+  .presenter:hover .presenter-name { color:var(--blue) }
+  .presenter-photo { width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:50% 22%;flex-shrink:0;background:var(--paper2);border:1px solid var(--line) }
+  .presenter-info { min-width:0 }
+  .presenter-name { font-family:var(--sans);font-size:15px;font-weight:600;color:var(--ink);margin-bottom:5px;transition:color .2s }
+  .presenter-title { font-family:var(--serif);font-size:15.5px;font-style:italic;color:var(--muted);line-height:1.5 }
+  @media (max-width:560px){
+    .presenter { gap:16px }
+    .presenter-photo { width:60px;height:60px }
+  }
+
+  /* ── Q-DeCS presentation list ─────────────────────────────── */
+  .qd-list { margin:40px 0 }
+  .qd-ws { border-top:1px solid var(--line);padding:22px 0 }
+  .qd-ws:last-child { border-bottom:1px solid var(--line) }
+  .qd-ws-head { display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px }
+  .qd-no { font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--gold) }
+  .qd-date { font-family:var(--sans);font-size:12.5px;color:var(--muted) }
+  .qd-talk { padding:9px 0 9px 18px;border-left:2px solid var(--line) }
+  .qd-talk + .qd-talk { margin-top:4px }
+  .qd-who { font-family:var(--sans);font-size:14.5px;font-weight:600;color:var(--ink);text-decoration:none }
+  .qd-who:hover { color:var(--blue) }
+  .qd-title { font-family:var(--serif);font-size:15px;font-style:italic;color:var(--muted);line-height:1.55;margin-top:3px }
+  .qd-foot { font-family:var(--sans);font-size:12px;color:var(--muted);margin-top:26px;line-height:1.7 }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="program-mark" href="index.html"><span class="dot" aria-hidden="true"></span><span>K2&#8209;SPRING</span><small>Q-ENERGY Innovator Unit</small></a>
+    <nav class="landing-nav">
+      <a href="index.html#recruitment" data-lang-en="">Admissions</a><a href="index.html#recruitment" data-lang-jp="">学生募集</a>
+      <a href="activities.html" data-lang-en="">Activities</a><a href="activities.html" data-lang-jp="">活動内容</a>
+      <a href="index.html#pamphlets" data-lang-en="">Pamphlets</a><a href="index.html#pamphlets" data-lang-jp="">パンフレット</a>
+      <a href="index.html#students" data-lang-en="">Fellows</a><a href="index.html#students" data-lang-jp="">ユニット生</a>
+      <a href="publications.html" data-lang-en="">Achievements</a><a href="publications.html" data-lang-jp="">研究成果</a>
+      <a href="news.html" data-lang-en="" style="color:var(--blue)">News</a><a href="news.html" data-lang-jp="" style="color:var(--blue)">ニュース</a>
+    </nav>
+    <button class="lang-pill" id="lang-toggle" type="button" aria-label="Switch language">EN</button>
+  </div>
+</header>
+<main><div class="article-wrap">
+<a class="article-back" href="activities.html"><span data-lang-en="">Activities</span><span data-lang-jp="">活動内容</span></a>
+
+<header class="article-header">
+  <div class="article-meta">
+    <span class="article-tag event"><span data-lang-en="">Outreach for Industry</span><span data-lang-jp="">産業界向け成果報告</span></span>
+  </div>
+  <h1 class="article-headline">
+    <span data-lang-en="">Q-DeCS Workshop <span class="em">Presentations</span></span>
+    <span data-lang-jp="">Q-DeCSワークショップ <span class="em">発表一覧</span></span>
+  </h1>
+  <p class="article-lead">
+    <span data-lang-en="">Every fellow who has presented their doctoral research at a workshop of the <a href="https://q-decs.kyushu-u.net/" target="_blank" rel="noopener">Decarbonization Society in Kyushu (Q-DeCS)</a> — 23 talks across 12 workshops since 2023.</span>
+    <span data-lang-jp="">これまでに<a href="https://q-decs.kyushu-u.net/" target="_blank" rel="noopener">九州脱炭素化研究会（Q-DeCS）</a>のワークショップで博士研究を発表したユニット生の一覧です。2023年以降、12回のワークショップで計23件。</span>
+  </p>
+</header>
+
+<div class="qd-list">
+  <div class="qd-ws">
+    <div class="qd-ws-head"><span class="qd-no">#20</span><span class="qd-date"><span data-lang-en="">July 2026</span><span data-lang-jp="">2026年7月</span></span></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2025/nozomi-goto.html"><span data-lang-en="">Nozomu Goto</span><span data-lang-jp="">後藤 希</span></a><div class="qd-title"><span data-lang-en="">Degradation mechanisms of proton-conducting solid oxide fuel cells operating at 300&thinsp;&deg;C, and proposed countermeasures</span><span data-lang-jp="">300℃動作プロトン伝導性固体酸化物燃料電池の劣化機構の解明と改善策の提案</span></div></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2024/ryudai-ueno.html"><span data-lang-en="">Ryudai Ueno</span><span data-lang-jp="">上野 竜大生</span></a><div class="qd-title"><span data-lang-en="">Using historical statistics to reconstruct pre-plantation vegetation and to identify land suited to natural regeneration and afforestation</span><span data-lang-jp="">歴史統計を活用した人工林前生植生の解明と天然更新・植林適地の探索</span></div></div>
+  </div>
+  <div class="qd-ws">
+    <div class="qd-ws-head"><span class="qd-no">#19</span><span class="qd-date"><span data-lang-en="">May 2026</span><span data-lang-jp="">2026年5月</span></span></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2025/rika-iriguchi.html"><span data-lang-en="">Rika Iriguchi</span><span data-lang-jp="">入口 梨佳</span></a><div class="qd-title"><span data-lang-en="">Effects of applying CO<sub>2</sub> nanobubble water to blast-furnace cement on CO<sub>2</sub> fixation and material properties</span><span data-lang-jp="">高炉セメントへのCO<sub>2</sub>ナノバブル水の適用がCO<sub>2</sub>固定および材料特性に及ぼす影響</span></div></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2024/xianzhe-yang.html"><span data-lang-en="">Xianzhe Yang</span><span data-lang-jp="">楊 賢哲</span></a><div class="qd-title"><span data-lang-en="">Building environmental design using a digital twin of the building thermal environment</span><span data-lang-jp="">建築熱環境のデジタルツインによる建築環境設計</span></div></div>
+  </div>
+  <div class="qd-ws">
+    <div class="qd-ws-head"><span class="qd-no">#15</span><span class="qd-date"><span data-lang-en="">September 2025</span><span data-lang-jp="">2025年9月</span></span></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2025/kohei-sawada.html"><span data-lang-en="">Kohei Sawada</span><span data-lang-jp="">澤田 光平</span></a><div class="qd-title"><span data-lang-en="">Green hydrogen production by water splitting over gallium&ndash;indium-based photocatalysts</span><span data-lang-jp="">ガリウムインジウム系光触媒における水分解グリーン水素製造</span></div></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2025/zhai-xiazhe.html"><span data-lang-en="">Xiazhe Zhai</span><span data-lang-jp="">Xiazhe Zhai</span></a><div class="qd-title"><span data-lang-en="">A sustainable carbon-material utilisation system based on biomass sourced from Japan and its neighbouring waters</span><span data-lang-jp="">日本近域産バイオマスを用いた持続可能な炭素材料利用体系の研究</span></div></div>
+  </div>
+  <div class="qd-ws">
+    <div class="qd-ws-head"><span class="qd-no">#14</span><span class="qd-date"><span data-lang-en="">July 2025</span><span data-lang-jp="">2025年7月</span></span></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2023/hiroki-isogawa.html"><span data-lang-en="">Hiroki Isogawa</span><span data-lang-jp="">五十川 浩希</span></a><div class="qd-title"><span data-lang-en="">Development of tritium production technology using a high-temperature gas-cooled reactor for the initial fuel loading of a fusion reactor</span><span data-lang-jp="">核融合炉初期装荷燃料のための高温ガス炉を用いたトリチウム製造技術の開発</span></div></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2024/kodai-matsumoto.html"><span data-lang-en="">Kodai Matsumoto</span><span data-lang-jp="">松本 昂大</span></a><div class="qd-title"><span data-lang-en="">Development of a plasmon-enhanced light-conversion system for the efficient use of low-energy light</span><span data-lang-jp="">低エネルギー光の効率的利用を目指したプラズモン増強型光変換システムの開発</span></div></div>
+  </div>
+  <div class="qd-ws">
+    <div class="qd-ws-head"><span class="qd-no">#13</span><span class="qd-date"><span data-lang-en="">May 2025</span><span data-lang-jp="">2025年5月</span></span></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2022/jacqueline-andrea-hidalgo-jim-nez.html"><span data-lang-en="">Jacqueline Andrea Hidalgo Jiménez</span><span data-lang-jp="">Jacqueline Andrea Hidalgo Jiménez</span></a><div class="qd-title"><span data-lang-en="">High-entropy oxides for solar-driven photocatalysis: a systematic design approach</span><span data-lang-jp="">太陽光駆動光触媒反応のためのハイエントロピー酸化物：体系的な設計アプローチ</span></div></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2023/narmandakh-khongorzul.html"><span data-lang-en="">Narmandakh Khongorzul</span><span data-lang-jp="">Narmandakh Khongorzul</span></a><div class="qd-title"><span data-lang-en="">Development of model air electrodes for solid oxide cells by surface modification</span><span data-lang-jp="">固体酸化物形セルのための表面改質によるモデル空気極の開発</span></div></div>
+  </div>
+  <div class="qd-ws">
+    <div class="qd-ws-head"><span class="qd-no">#10</span><span class="qd-date"><span data-lang-en="">November 2024</span><span data-lang-jp="">2024年11月</span></span></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2022/qingyi-he.html"><span data-lang-en="">Qingyi He</span><span data-lang-jp="">何 清怡</span></a><div class="qd-title"><span data-lang-en="">Simulating energy-use behaviour in Japanese office buildings by modelling the relationship between psychological factors and occupant behaviour</span><span data-lang-jp="">日本における心理的要因と居住者の行動の関係をモデル化したオフィスビルのエネルギー使用行動のシミュレーション</span></div></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2022/yin-kan-phua.html"><span data-lang-en="">Yin Kan Phua</span><span data-lang-jp="">Yin Kan Phua</span></a><div class="qd-title"><span data-lang-en="">Explainable AI in functional polymer materials: applications and open challenges</span><span data-lang-jp="">機能性高分子材料分野における説明可能AIの適用と課題</span></div></div>
+  </div>
+  <div class="qd-ws">
+    <div class="qd-ws-head"><span class="qd-no">#8</span><span class="qd-date"><span data-lang-en="">July 2024</span><span data-lang-jp="">2024年7月</span></span></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2021/timothee-redarce.html"><span data-lang-en="">Timothee Redarce</span><span data-lang-jp="">Timothee Redarce</span></a><div class="qd-title"><span data-lang-en="">Towards the use of low-cost, high-strength steels in high-pressure hydrogen environments</span><span data-lang-jp="">高圧水素環境に適した低コスト・高強度鋼の利用に向けて</span></div></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2022/zifei-nie.html"><span data-lang-en="">Zifei Nie</span><span data-lang-jp="">Zifei Nie</span></a><div class="qd-title"><span data-lang-en="">Automated eco-driving control for electric vehicles under constrained computing resources, informed by traffic data</span><span data-lang-jp="">交通情報を考慮した計算資源制約下での電気自動車用自動エコドライブ制御</span></div></div>
+  </div>
+  <div class="qd-ws">
+    <div class="qd-ws-head"><span class="qd-no">#7</span><span class="qd-date"><span data-lang-en="">May 2024</span><span data-lang-jp="">2024年5月</span></span></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2022/shinichi-takeno.html"><span data-lang-en="">Shinichi Takeno</span><span data-lang-jp="">竹野 慎一</span></a><div class="qd-title"><span data-lang-en="">Exploring mixed electron&ndash;Li-ion conducting perovskite oxides for higher-energy-density Li-ion batteries</span><span data-lang-jp="">Liイオン電池の高エネルギー密度化に向けた電子・Liイオン混合伝導性ペロブスカイト型酸化物の探索</span></div></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2022/yixin-chen.html"><span data-lang-en="">Yixin Chen</span><span data-lang-jp="">陳 伊新</span></a><div class="qd-title"><span data-lang-en="">Construction of high-capacity all-solid-state batteries using hydride anodes</span><span data-lang-jp="">水素化物負極を用いた高容量全固体電池の構築</span></div></div>
+  </div>
+  <div class="qd-ws">
+    <div class="qd-ws-head"><span class="qd-no">#4</span><span class="qd-date"><span data-lang-en="">December 2023</span><span data-lang-jp="">2023年12月</span></span></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2021/kento-komatsubara.html"><span data-lang-en="">Kento Komatsubara</span><span data-lang-jp="">小松原 建人</span></a><div class="qd-title"><span data-lang-en="">High-resolution assessment of environmental sustainability using geospatial information</span><span data-lang-jp="">空間情報を用いた高分解能での環境持続可能性評価</span></div></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2021/yulu-chen.html"><span data-lang-en="">Yulu Chen</span><span data-lang-jp="">陳 雨露</span></a><div class="qd-title"><span data-lang-en="">Development of a PSE system that regulates indoor temperature and humidity naturally using renewable energy</span><span data-lang-jp="">再生可能エネルギーを利用して室内温湿度を自然調節するPSEシステムの開発</span></div></div>
+  </div>
+  <div class="qd-ws">
+    <div class="qd-ws-head"><span class="qd-no">#3</span><span class="qd-date"><span data-lang-en="">October 2023</span><span data-lang-jp="">2023年10月</span></span></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2022/ryoma-sato.html"><span data-lang-en="">Ryoma Sato</span><span data-lang-jp="">佐藤 稜真</span></a><div class="qd-title"><span data-lang-en="">Decarbonisation that coexists with food production: creating environmentally resilient biomass energy crops by modifying photosynthesis through functional genomics</span><span data-lang-jp="">食料生産と共存する脱炭素化の実現：機能ゲノミクスを基盤とした光合成改変による環境レジリエント（強靭）なバイオマスエネルギー資源作物の創出</span></div></div>
+  </div>
+  <div class="qd-ws">
+    <div class="qd-ws-head"><span class="qd-no">#2</span><span class="qd-date"><span data-lang-en="">July 2023</span><span data-lang-jp="">2023年7月</span></span></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2021/likhith-manjunatha.html"><span data-lang-en="">Likhith Manjunatha</span><span data-lang-jp="">Likhith Manjunatha</span></a><div class="qd-title"><span data-lang-en="">Countermeasures against fuel-starvation degradation in polymer electrolyte fuel cells</span><span data-lang-jp="">高分子電解質燃料電池の燃料不足による劣化対策</span></div></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2021/mingxu-sun.html"><span data-lang-en="">Mingxu Sun</span><span data-lang-jp="">Mingxu Sun</span></a><div class="qd-title"><span data-lang-en="">Electrochemical conversion of carbon dioxide into value-added chemicals</span><span data-lang-jp="">電気化学二酸化炭素を付加価値化学物質に変換する</span></div></div>
+  </div>
+  <div class="qd-ws">
+    <div class="qd-ws-head"><span class="qd-no">#1</span><span class="qd-date"><span data-lang-en="">May 2023</span><span data-lang-jp="">2023年5月</span></span></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2021/toraharu-watanabe.html"><span data-lang-en="">Toraharu Watanabe</span><span data-lang-jp="">渡邊 虎春</span></a><div class="qd-title"><span data-lang-en="">Ventilation control in ship engine rooms accounting for the use of ammonia fuel</span><span data-lang-jp="">アンモニア燃料を考慮した船舶機関室の換気制御に関する研究</span></div></div>
+    <div class="qd-talk"><a class="qd-who" href="students/2021/xiaofeng-shen.html"><span data-lang-en="">Xiaofeng Shen</span><span data-lang-jp="">沈 小烽</span></a><div class="qd-title"><span data-lang-en="">Overall water splitting using highly activated single-layer nanosheet dye-sensitised photocatalysts</span><span data-lang-jp="">高活性化単層ナノシート色素増感型光触媒による水の完全分解</span></div></div>
+  </div>
+</div>
+
+</div></main>
+<footer class="footer">
+  <span>K2&#8209;SPRING &middot; Q-ENERGY Innovator Unit (coordinated by Q-PIT, Kyushu University)</span>
+  <span>&copy; 2026 Q-PIT, Kyushu University. Designed &amp; built by Roman Selyanchyn.</span>
+</footer>
+<script>
+const LANG_KEY='k2spring_lang';
+function applyLang(lang){document.documentElement.lang=lang;document.getElementById('lang-toggle').textContent=lang==='ja'?'EN':'JP';localStorage.setItem(LANG_KEY,lang);}
+document.getElementById('lang-toggle').addEventListener('click',()=>{applyLang(document.documentElement.lang==='ja'?'en':'ja');});
+const saved=localStorage.getItem(LANG_KEY);if(saved==='en')applyLang('en');
+</script>
+</body></html>
