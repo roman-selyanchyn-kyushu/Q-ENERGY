@@ -251,6 +251,14 @@
   .research-figure{margin:22px auto 6px;max-width:520px;}
   .research-figure img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:var(--r-md);background:#fff;}
   .research-figure figcaption{margin-top:10px;font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--ink-3);text-align:center;}
+
+  /* Name badges (JSPS DC2 / alumni) */
+  .name-badges{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 2px;}
+  .name-badges:empty{display:none;}
+  .name-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.07em;padding:4px 11px;border-radius:999px;border:1px solid;white-space:nowrap;}
+  .nb-dc2{color:#7d5e0c;background:rgba(198,158,42,.14);border-color:rgba(198,158,42,.45);}
+  .nb-alumni{color:var(--ink-3);background:rgba(0,0,0,.035);border-color:var(--line);}
+  .nb-dot{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.8;flex:none;}
 </style>
 </head>
 <body>
@@ -399,6 +407,12 @@
     <div class="ach-group">
       <div class="ach-label"><span data-lang-en="">Research Papers</span><span data-lang-jp="">論文</span></div>
       <ol class="ach-list">
+        <li><span class="ach-authors">Jiang Z</span>, Itamoto R, Lin J, Mik&scaron;&iacute;k F, Miyazaki T, Kim Y-D, Thu K.
+          &ldquo;Lithium-ion battery aging: An integrated review of mechanisms, multi-scale modelling, and physics-informed health prediction&rdquo;
+          <em>Renewable and Sustainable Energy Reviews</em>, Vol.&thinsp;244, 117458 (2027) <a href="https://doi.org/10.1016/j.rser.2026.117458" target="_blank" rel="noopener">doi:10.1016/j.rser.2026.117458</a></li>
+        <li><span class="ach-authors">Jiang Z</span>, Itamoto R, Nagase T, Lin J, Tian Y, Miyazaki T, Kim Y-D, Thu K.
+          &ldquo;Thermal management and cycle life enhancement of Lithium-ion Battery packs using low-fin tubes: Electrochemical-thermal-aging modelling and geometric optimization&rdquo;
+          <em>Journal of Energy Storage</em>, Vol.&thinsp;181, 124527 (2026) <a href="https://doi.org/10.1016/j.est.2026.124527" target="_blank" rel="noopener">doi:10.1016/j.est.2026.124527</a></li>
         <li><span class="ach-authors">Jiang Z</span>, Tian Y, Li K, Zhao Z, Liu N, Zhang H.
           &ldquo;Research on refrigerant charge determination under different compressor speed and its effects on the performance of transcritical CO<sub>2</sub> air-conditioning heat pump system in electric vehicle&rdquo;
           <em>Energy</em>, Vol.&thinsp;296, 131192 (2024)</li>
