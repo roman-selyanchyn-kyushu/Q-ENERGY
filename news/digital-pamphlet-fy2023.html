@@ -55,6 +55,7 @@
   .award-block-label { font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--wine);margin-bottom:10px }
   .award-block-text { font-family:var(--serif);font-size:17px;font-style:italic;color:var(--ink);line-height:1.6;margin:0 }
 </style>
+<script src="../assets/js/lang.js"></script>
 </head>
 <body>
 <header class="topbar">
@@ -68,7 +69,7 @@
       <a href="../publications.html" data-lang-en="">Achievements</a><a href="../publications.html" data-lang-jp="">研究成果</a>
       <a href="../news.html" data-lang-en="" style="color:var(--blue)">News</a><a href="../news.html" data-lang-jp="" style="color:var(--blue)">ニュース</a>
     </nav>
-    <button class="lang-pill" id="lang-toggle" type="button" aria-label="Switch language">EN</button>
+    <button class="lang-switch" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></svg><span class="to-ja" lang="ja">日本語</span><span class="to-en" lang="en">English</span></button>
   </div>
 </header>
 <main><div class="article-wrap">
@@ -100,10 +101,4 @@
   <span>K2&#8209;SPRING &middot; Q-ENERGY Innovator Unit (coordinated by Q-PIT, Kyushu University)</span>
   <span>&copy; 2026 Q-PIT, Kyushu University. Designed &amp; built by Roman Selyanchyn.</span>
 </footer>
-<script>
-const LANG_KEY='k2spring_lang';
-function applyLang(lang){document.documentElement.lang=lang;document.getElementById('lang-toggle').textContent=lang==='ja'?'EN':'JP';localStorage.setItem(LANG_KEY,lang);}
-document.getElementById('lang-toggle').addEventListener('click',()=>{applyLang(document.documentElement.lang==='ja'?'en':'ja');});
-const saved=localStorage.getItem(LANG_KEY);if(saved==='en')applyLang('en');
-</script>
 </body></html>

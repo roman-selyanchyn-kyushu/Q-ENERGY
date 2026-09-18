@@ -44,11 +44,12 @@
   .program-mark{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:500;font-size:18px;letter-spacing:.01em;color:var(--ink);text-decoration:none;flex-shrink:0;}
   .program-mark .dot{width:10px;height:10px;background:linear-gradient(135deg,var(--accent-3) 0%,var(--accent) 50%,var(--accent-2) 100%);border-radius:2px;transform:rotate(45deg);}
   .program-mark small{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-left:4px;white-space:nowrap;writing-mode:horizontal-tb;}
-  .lang-toggle{display:flex;padding:3px;background:var(--paper-2);border:1px solid var(--line);border-radius:999px;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.06em;position:relative;}
-  .lang-toggle button{appearance:none;border:0;background:transparent;padding:7px 16px;border-radius:999px;color:var(--ink-3);cursor:pointer;font:inherit;letter-spacing:inherit;transition:color .25s ease;z-index:1;}
-  .lang-toggle button.is-active{color:var(--paper);}
-  .lang-toggle .pill{position:absolute;top:3px;bottom:3px;width:calc(50% - 3px);background:var(--accent);border-radius:999px;transition:transform .35s cubic-bezier(.5,.15,.2,1);z-index:0;}
-  .lang-toggle[data-lang="jp"] .pill{transform:translateX(100%);}
+  .lang-switch{display:inline-flex;align-items:center;gap:6px;flex-shrink:0;appearance:none;margin:0;padding:7px 13px 7px 10px;border:1px solid var(--line);border-radius:999px;background:var(--paper-2);color:var(--accent);font-family:var(--sans);font-size:13px;font-weight:600;line-height:1;cursor:pointer;transition:border-color .2s,background .2s;}
+  .lang-switch:hover{border-color:var(--accent);background:rgba(31,58,107,.06);}
+  .lang-switch:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+  .lang-switch svg{width:16px;height:16px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+  .lang-switch .to-en,html[lang="ja"] .lang-switch .to-ja{display:none;}
+  html[lang="ja"] .lang-switch .to-en{display:inline;}
   /* Mobile hamburger: site-section menu (shared topbar.js toggles .open on #site-nav) */
   .menu-btn{display:none;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;padding:0;border:1px solid var(--line);border-radius:10px;background:var(--paper-2);color:var(--ink);cursor:pointer;}
   .menu-btn svg{width:20px;height:20px;display:block;}
@@ -56,6 +57,7 @@
   .site-menu{display:none;}
   @media(max-width:760px){
     .menu-btn{display:inline-flex;}
+    .lang-switch{margin-left:auto;}
     .site-menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 14px 30px rgba(26,31,28,.13);padding:10px;z-index:60;}
     .site-menu.open{display:flex;}
     .site-menu a{padding:13px 14px;border-radius:8px;font-family:var(--sans);font-size:15px;font-weight:500;color:var(--ink-2);text-decoration:none;}
@@ -251,7 +253,16 @@
   .research-figure{margin:22px auto 6px;max-width:520px;}
   .research-figure img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:var(--r-md);background:#fff;}
   .research-figure figcaption{margin-top:10px;font-family:var(--sans);font-size:12.5px;line-height:1.5;color:var(--ink-3);text-align:center;}
+
+  /* Name badges (JSPS DC2 / alumni) */
+  .name-badges{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 2px;}
+  .name-badges:empty{display:none;}
+  .name-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.07em;padding:4px 11px;border-radius:999px;border:1px solid;white-space:nowrap;}
+  .nb-dc2{color:#7d5e0c;background:rgba(198,158,42,.14);border-color:rgba(198,158,42,.45);}
+  .nb-alumni{color:var(--ink-3);background:rgba(0,0,0,.035);border-color:var(--line);}
+  .nb-dot{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.8;flex:none;}
 </style>
+<script src="../../assets/js/lang.js"></script>
 </head>
 <body>
 
@@ -267,11 +278,7 @@
     
     <div class="fellow-nav"><a href="../../index.html#students" class="fnav-btn fnav-all" title="All fellows" aria-label="All fellows"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="5.5" r="2.4"/><path d="M2 13v-.6A3.2 3.2 0 0 1 5.2 9.2h1.6A3.2 3.2 0 0 1 10 12.4v.6"/><path d="M10.8 3.3a2.4 2.4 0 0 1 0 4.4"/><path d="M11.6 9.4a3.2 3.2 0 0 1 2.4 3v.6"/></svg></a><a href="hiroki-isogawa.html" class="fnav-btn" title="Previous fellow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12L6 8l4-4"/></svg></a><div class="fnav-jump"><button type="button" class="fnav-btn fnav-toggle" aria-haspopup="true" aria-expanded="false" title="Jump to fellow">2023<svg class="fnav-caret" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></button><div class="fnav-menu" hidden><div class="fnav-menu-head"><span data-lang-en="">2023 fellows</span><span data-lang-jp="">2023年度</span></div><a href="go-yokuhou.html" class="fnav-menu-item"><span data-lang-en="">Go Yokuhou</span><span data-lang-jp="">呉 翼峰</span></a><a href="hiroki-isogawa.html" class="fnav-menu-item"><span data-lang-en="">Hiroki Isogawa</span><span data-lang-jp="">五十川 浩希</span></a><a href="kentaro-wada.html" class="fnav-menu-item is-current" aria-current="page"><span data-lang-en="">Kentaro Wada</span><span data-lang-jp="">和田 健太郎</span></a><a href="kotaro-shinozaki.html" class="fnav-menu-item"><span data-lang-en="">Kotaro Shinozaki</span><span data-lang-jp="">篠崎 航太朗</span></a><a href="narmandakh-khongorzul.html" class="fnav-menu-item"><span data-lang-en="">Narmandakh Khongorzul</span><span data-lang-jp="">Narmandakh Khongorzul</span></a><a href="seiya-imada.html" class="fnav-menu-item"><span data-lang-en="">Seiya Imada</span><span data-lang-jp="">今田 青冶</span></a><a href="taisei-tomaru.html" class="fnav-menu-item"><span data-lang-en="">Taisei Tomaru</span><span data-lang-jp="">都丸 大晟</span></a><a href="xuesong-wei.html" class="fnav-menu-item"><span data-lang-en="">Xuesong Wei</span><span data-lang-jp="">韋 雪淞</span></a><a href="yusuke-oga.html" class="fnav-menu-item"><span data-lang-en="">Yusuke Oga</span><span data-lang-jp="">大賀 雄介</span></a><a href="yuta-takaoka.html" class="fnav-menu-item"><span data-lang-en="">Yuta Takaoka</span><span data-lang-jp="">髙岡 祐太</span></a><a href="yutong-chen.html" class="fnav-menu-item"><span data-lang-en="">Yutong Chen</span><span data-lang-jp="">陳 昱通</span></a><a href="../../index.html#students" class="fnav-menu-all"><span data-lang-en="">All fellows →</span><span data-lang-jp="">すべて →</span></a></div></div><a href="kotaro-shinozaki.html" class="fnav-btn" title="Next fellow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l4 4-4 4"/></svg></a></div>
     
-    <div class="lang-toggle" data-lang="en" role="group" aria-label="Language">
-      <span class="pill" aria-hidden="true"></span>
-      <button type="button" data-set-lang="en" class="is-active" aria-pressed="true">EN</button>
-      <button type="button" data-set-lang="jp" aria-pressed="false">日本語</button>
-    </div>
+    <button class="lang-switch" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></svg><span class="to-ja" lang="ja">日本語</span><span class="to-en" lang="en">English</span></button>
     <button type="button" class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
     <nav class="site-menu" id="site-nav">
       <a href="../../index.html#recruitment"><span data-lang-en="">Admissions</span><span data-lang-jp="">学生募集</span></a>
@@ -428,28 +435,6 @@
 </footer>
 
 <script>
-(function(){
-  var html = document.documentElement;
-  var toggle = document.querySelector('.lang-toggle');
-  var buttons = toggle.querySelectorAll('button[data-set-lang]');
-  var stored = null;
-  try { stored = localStorage.getItem('k2spring_lang'); } catch(e){}
-  if (stored === 'jp' || stored === 'en') setLang(stored);
-  function setLang(lang){
-    html.setAttribute('lang', lang === 'jp' ? 'ja' : 'en');
-    toggle.setAttribute('data-lang', lang);
-    buttons.forEach(function(b){
-      var on = b.dataset.setLang === lang;
-      b.classList.toggle('is-active', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
-    });
-    try { localStorage.setItem('k2spring_lang', lang); } catch(e){}
-  }
-  buttons.forEach(function(b){
-    b.addEventListener('click', function(){ setLang(b.dataset.setLang); });
-  });
-})();
-
 (function(){
   if (!('IntersectionObserver' in window)) return;
   var els = document.querySelectorAll('.research-primary, .phd-card, .ach-card');

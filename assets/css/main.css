@@ -17,11 +17,13 @@ a{color:var(--blue);text-underline-offset:3px}
 .landing-nav{display:flex;align-items:center;gap:2px;flex:1;justify-content:center}
 .landing-nav a{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:6px;transition:color .2s,background .2s}
 .landing-nav a:hover{color:var(--blue);background:rgba(31,58,107,.06)}
-.lang-toggle{display:flex;padding:3px;background:var(--paper2);border:1px solid var(--line);border-radius:999px;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.06em;position:relative;flex-shrink:0}
-.lang-toggle button{appearance:none;border:0;background:transparent;padding:7px 16px;border-radius:999px;color:var(--muted);cursor:pointer;font:inherit;letter-spacing:inherit;transition:color .25s ease;z-index:1}
-.lang-toggle button.is-active{color:var(--paper)}
-.lang-toggle .pill{position:absolute;top:3px;bottom:3px;width:calc(50% - 3px);background:var(--blue);border-radius:999px;transition:transform .35s cubic-bezier(.5,.15,.2,1);z-index:0}
-.lang-toggle[data-lang="jp"] .pill{transform:translateX(100%)}
+/* Language switch: one button naming the other language (see assets/js/lang.js) */
+.lang-switch{display:inline-flex;align-items:center;gap:6px;flex-shrink:0;appearance:none;margin:0;padding:7px 13px 7px 10px;border:1px solid var(--line);border-radius:999px;background:var(--paper2);color:var(--blue);font-family:var(--sans);font-size:13px;font-weight:600;line-height:1;cursor:pointer;transition:border-color .2s,background .2s}
+.lang-switch:hover{border-color:var(--blue);background:rgba(31,58,107,.06)}
+.lang-switch:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.lang-switch svg{width:16px;height:16px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.lang-switch .to-en,html[lang="ja"] .lang-switch .to-ja{display:none}
+html[lang="ja"] .lang-switch .to-en{display:inline}
 .menu-btn{display:none;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;padding:0;border:1px solid var(--line);border-radius:10px;background:var(--paper2);color:var(--ink);cursor:pointer}
 .menu-btn svg{width:20px;height:20px;display:block}
 .menu-btn[aria-expanded="true"]{background:var(--blue);color:var(--paper);border-color:var(--blue)}
@@ -30,7 +32,7 @@ a{color:var(--blue);text-underline-offset:3px}
 @media(max-width:760px){
   .program-mark small{display:none}
   .menu-btn{display:inline-flex}
-  .lang-toggle,.lang-pill{margin-left:auto}
+  .lang-switch{margin-left:auto}
   .qpit-uplink{display:none}
   .landing-nav .nav-qpit{display:block;margin-top:6px;border-top:1px solid var(--line);padding-top:14px;color:var(--blue)}
   .landing-nav{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 14px 30px rgba(25,33,29,.13);padding:10px;z-index:60}

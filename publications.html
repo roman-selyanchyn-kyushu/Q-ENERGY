@@ -253,6 +253,7 @@
     .pub-filter-wrap { top: 52px; }
   }
 </style>
+<script src="assets/js/lang.js"></script>
 </head>
 <body>
 
@@ -279,7 +280,7 @@
       <a href="news.html" data-lang-jp="" style="color:var(--blue)">ニュース</a>
       <a class="nav-qpit" href="https://q-pit.kyushu-u.ac.jp/" aria-label="Go to the main Q-PIT site">Q-PIT &#8599;</a>
     </nav>
-    <div class="lang-toggle" id="lang-toggle" data-lang="en" role="group" aria-label="Language"><span class="pill" aria-hidden="true"></span><button type="button" data-set-lang="en" class="is-active" aria-pressed="true">EN</button><button type="button" data-set-lang="jp" aria-pressed="false">日本語</button></div>
+    <button class="lang-switch" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></svg><span class="to-ja" lang="ja">日本語</span><span class="to-en" lang="en">English</span></button>
     <button type="button" class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
   </div>
 </header>
@@ -362,22 +363,6 @@ stress distribution&rdquo; <em>2025, Vol.37, No.086649, pp.1-19</em> (2025) [acc
 </footer>
 
 <script>
-// ── Language toggle (same localStorage key as student pages) ─────────────
-const LANG_KEY = 'k2spring_lang';
-
-function applyLang(lang) {
-  document.documentElement.lang = lang;
-  document.getElementById('lang-toggle').textContent = lang === 'ja' ? 'EN' : 'JP';
-  localStorage.setItem(LANG_KEY, lang);
-}
-
-document.getElementById('lang-toggle').addEventListener('click', () => {
-  applyLang(document.documentElement.lang === 'ja' ? 'en' : 'ja');
-});
-
-// Restore saved lang
-const saved = localStorage.getItem(LANG_KEY);
-if (saved === 'ja') applyLang('ja');
 
 // ── Year filter (operates on the pre-rendered static sections) ──────
 const filter = document.getElementById('pub-filter');
