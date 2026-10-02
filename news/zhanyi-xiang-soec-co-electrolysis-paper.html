@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zhanyi Xiang et al. — SOEC Co-Electrolysis Paper — Q-ENERGY News</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+<style>
+  [data-lang-jp]                  { display: none; }
+  html[lang="ja"] [data-lang-en]  { display: none; }
+  html[lang="ja"] [data-lang-jp]  { display: inline; }
+  html[lang="ja"] [data-lang-jp-block] { display: block; }
+  html[lang="ja"] [data-lang-en-block] { display: none; }
+  [data-lang-jp-block] { display: none; }
+  .article-wrap { max-width:740px;margin:0 auto;padding:64px var(--g) 96px }
+  .article-back { display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;letter-spacing:.04em;text-transform:uppercase;margin-bottom:48px;transition:color .2s }
+  .article-back:hover { color:var(--blue) }
+  .article-back::before { content:"←";font-size:14px }
+  .article-header { margin-bottom:40px }
+  .article-meta { display:flex;align-items:center;gap:12px;margin-bottom:20px }
+  .article-date { font-family:var(--sans);font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.04em }
+  .article-tag { display:inline-flex;align-items:center;border-radius:999px;padding:3px 11px;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.04em;border:1px solid var(--line);background:var(--paper2);color:var(--blue) }
+  .article-tag.award  { color:var(--wine);border-color:rgba(138,35,71,.2);background:rgba(138,35,71,.05) }
+  .article-tag.update { color:var(--green);border-color:rgba(42,138,134,.2);background:rgba(42,138,134,.05) }
+  .article-tag.event  { color:var(--gold);border-color:rgba(212,168,75,.3);background:rgba(212,168,75,.07) }
+  .article-headline { font-family:var(--serif);font-weight:400;font-size:clamp(24px,3.5vw,38px);line-height:1.18;letter-spacing:-.02em;color:var(--ink);margin:0 0 16px }
+  .article-lead { font-family:var(--serif);font-size:clamp(16px,1.6vw,19px);color:var(--muted);line-height:1.7;margin:0 }
+  .article-body { font-family:var(--serif);font-size:clamp(15px,1.4vw,17px);color:var(--ink);line-height:1.85 }
+  .article-body p { margin:0 0 20px }
+  .article-body p:last-child { margin:0 }
+  .article-body a { color:var(--blue) }
+  .article-body ul { margin:0 0 20px;padding-left:20px }
+  .article-body li { margin-bottom:6px }
+  .article-figure { margin:40px 0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;text-align:center }
+  .article-figure img { max-width:100%;height:auto;display:block;margin:0 auto;border-radius:6px }
+  .article-figure figcaption { font-family:var(--sans);font-size:12px;color:var(--muted);margin-top:14px;line-height:1.6;text-align:left }
+  .event-details { background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:24px 28px;margin:32px 0 }
+  .event-details-label { font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px }
+  .event-row { display:grid;grid-template-columns:90px 1fr;gap:4px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.6;margin-bottom:6px;align-items:baseline }
+  .event-row:last-child { margin-bottom:0 }
+  .event-key { color:var(--muted);font-weight:500;font-size:11.5px;letter-spacing:.03em }
+  .event-val { color:var(--ink) }
+  .pub-details { background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:24px 28px;margin:40px 0 }
+  .pub-details-label { font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:16px }
+  .pub-details-row { display:grid;grid-template-columns:100px 1fr;gap:6px 16px;font-family:var(--sans);font-size:13.5px;line-height:1.6;margin-bottom:8px;align-items:baseline }
+  .pub-details-row:last-child { margin-bottom:0 }
+  .pub-details-key { color:var(--muted);font-weight:500;font-size:11.5px;letter-spacing:.03em }
+  .pub-details-val { color:var(--ink) }
+  .pub-details-val a { color:var(--blue);word-break:break-all }
+  .pub-details-val em { font-style:italic }
+  .award-block { margin:40px 0;background:var(--paper2);border-left:3px solid var(--wine);border-radius:0 12px 12px 0;padding:24px 28px }
+  .award-block-label { font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--wine);margin-bottom:10px }
+  .award-block-text { font-family:var(--serif);font-size:17px;font-style:italic;color:var(--ink);line-height:1.6;margin:0 }
+
+  /* ── Photo slider (optional — see OPTIONAL BLOCKS below) ─── */
+  .article-photos { margin:44px 0 0 }
+  .photos-label { font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px }
+  .photo-slider { position:relative;width:100%;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:var(--paper2);box-shadow:0 1px 0 rgba(26,31,28,.04),0 16px 40px -20px rgba(26,31,28,.13) }
+  .slider-slide { position:absolute;inset:0;opacity:0;transition:opacity .45s ease;pointer-events:none }
+  .slider-slide.active { opacity:1;pointer-events:auto }
+  .slider-slide img { width:100%;height:100%;object-fit:cover;display:block }
+  .slider-btn { position:absolute;top:50%;transform:translateY(-50%);z-index:10;appearance:none;border:none;width:36px;height:36px;border-radius:50%;background:rgba(246,243,236,.88);backdrop-filter:blur(4px);color:var(--blue);font-size:18px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;box-shadow:0 2px 8px rgba(0,0,0,.12) }
+  .slider-btn:hover { background:rgba(246,243,236,1) }
+  .slider-prev { left:12px }
+  .slider-next { right:12px }
+  .slider-dots { position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:10 }
+  .slider-dot { appearance:none;border:none;width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;padding:0;transition:background .2s,transform .2s }
+  .slider-dot.active { background:#fff;transform:scale(1.25) }
+  .slider-counter { position:absolute;top:12px;right:14px;z-index:10;font-family:var(--sans);font-size:11px;font-weight:600;color:#fff;background:rgba(0,0,0,.32);border-radius:999px;padding:3px 10px;letter-spacing:.04em }
+</style>
+<script src="../assets/js/lang.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="program-mark" href="../index.html"><span class="dot" aria-hidden="true"></span><span>K2&#8209;SPRING</span><small>Q-ENERGY Innovator Unit</small></a>
+    <nav class="landing-nav">
+      <a href="../index.html#recruitment" data-lang-en="">Admissions</a><a href="../index.html#recruitment" data-lang-jp="">学生募集</a>
+      <a href="../activities.html" data-lang-en="">Activities</a><a href="../activities.html" data-lang-jp="">活動内容</a>
+      <a href="../index.html#pamphlets" data-lang-en="">Pamphlets</a><a href="../index.html#pamphlets" data-lang-jp="">パンフレット</a>
+      <a href="../index.html#students" data-lang-en="">Fellows</a><a href="../index.html#students" data-lang-jp="">ユニット生</a>
+      <a href="../publications.html" data-lang-en="">Achievements</a><a href="../publications.html" data-lang-jp="">研究成果</a>
+      <a href="../news.html" data-lang-en="" style="color:var(--blue)">News</a><a href="../news.html" data-lang-jp="" style="color:var(--blue)">ニュース</a>
+    </nav>
+    <button class="lang-switch" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></svg><span class="to-ja" lang="ja">日本語</span><span class="to-en" lang="en">English</span></button>
+  </div>
+</header>
+<main><div class="article-wrap">
+<a class="article-back" href="../news.html"><span data-lang-en="">All news</span><span data-lang-jp="">ニュース一覧</span></a>
+
+<header class="article-header">
+  <div class="article-meta">
+    <span class="article-date">October 2, 2026</span>
+    <span class="article-tag paper"><span data-lang-en="">New Paper</span><span data-lang-jp="">新論文</span></span>
+  </div>
+  <h1 class="article-headline">
+    <span data-lang-en="">Zhanyi Xiang et al.: Segmented Electrodes Reveal Uneven Reactions Inside SOEC Co-Electrolysis</span>
+    <span data-lang-jp="">向展毅ら：分割電極で捉えたSOEC共電解セル内部の反応分布</span>
+  </h1>
+  <p class="article-lead">
+    <span data-lang-en="">Published in <em>Energy Conversion and Management</em> — by measuring current, temperature and impedance segment by segment, the study shows how reactions vary along a solid oxide electrolysis cell that turns steam and CO<sub>2</sub> into syngas, and points to the reverse water–gas shift reaction and carbon deposition as likely causes.</span>
+    <span data-lang-jp=""><em>Energy Conversion and Management</em>誌に掲載 — 電流・温度・インピーダンスを区間ごとに計測し、水蒸気とCO<sub>2</sub>から合成ガスをつくる固体酸化物電解セルの内部で反応がどのように偏るかを明らかにしました。その要因として、逆水性ガスシフト反応と炭素析出が示唆されています。</span>
+  </p>
+</header>
+
+<div class="article-body">
+  <p data-lang-en-block="">A solid oxide electrolysis cell (SOEC) can use electricity to split steam and carbon dioxide at the same time, producing hydrogen and carbon monoxide — syngas, the starting point for synthetic fuels and chemicals. This co-electrolysis is highly efficient, but inside the cell the electrochemical reactions are coupled with chemical reactions between the gases, and how these play out locally, from the gas inlet to the outlet, has remained poorly understood. Most measurements see only the cell as a whole.</p>
+  <p data-lang-jp-block="">固体酸化物電解セル（SOEC）は、電気を用いて水蒸気と二酸化炭素を同時に分解し、水素と一酸化炭素、すなわち合成燃料や化学品の原料となる合成ガスを生成できます。この共電解は高効率ですが、セル内部では電気化学反応とガス間の化学反応が連成しており、ガス入口から出口までの各所でそれらがどのように進むのかは十分に理解されていませんでした。従来の計測の多くは、セル全体の平均的な挙動しか捉えられません。</p>
+
+  <p data-lang-en-block="">K2-SPRING fellow <a href="../students/2025/zhanyi-xiang.html">Zhanyi Xiang</a>, of the Department of Hydrogen Energy Systems, Graduate School of Engineering, addressed this together with Atsushi Ryudo, Hironori Nakajima and his supervisor <a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BC%8A%E8%97%A4-%E8%A1%A1%E5%B9%B3/" target="_blank" rel="noopener">Prof. Kohei ITO</a>. The team built a planar cell whose oxygen electrode is divided into three segments — upstream, midstream and downstream — and measured local current, local temperature, outlet gas composition and impedance at 650 °C while varying the ratio of steam to CO<sub>2</sub> in the feed.</p>
+  <p data-lang-jp-block="">工学府 水素エネルギーシステム専攻のK2-SPRINGユニット生<a href="../students/2025/zhanyi-xiang.html">向 展毅</a>さんは、共著者および指導教員の<a href="https://q-pit.kyushu-u.ac.jp/teacher/%E4%BC%8A%E8%97%A4-%E8%A1%A1%E5%B9%B3/" target="_blank" rel="noopener">伊藤 衡平 教授</a>とともにこの課題に取り組みました。研究チームは、酸素極を上流・中流・下流の3区間に分割した平板型セルを作製し、供給ガス中の水蒸気とCO<sub>2</sub>の比率を変えながら、650 °Cで局所電流・局所温度・出口ガス組成・インピーダンスを計測しました。</p>
+
+  <p data-lang-en-block="">Raising the CO<sub>2</sub> fraction lowered the current density and increased the cell's resistance. With steam in the feed, current fell steadily from upstream to downstream as the reactants were consumed — but in a steam-free, CO<sub>2</sub>-rich feed, the midstream segment carried more current than the upstream one, a pattern the impedance data link to lower ion-conduction and gas-diffusion resistance in that region. Temperature measurements showed that this CO<sub>2</sub>-rich condition switches from absorbing to releasing heat at a voltage well below the theoretical value, a sign of extra heat from chemical reactions. Gas analysis confirmed that the reverse water–gas shift reaction takes place even without electrolysis, and microscopy of the disassembled cell found carbon deposits in the fuel electrode.</p>
+  <p data-lang-jp-block="">CO<sub>2</sub>の割合を高めると、電流密度は低下し、セルの抵抗は増加しました。水蒸気を含む条件では、反応物の消費に伴い電流が上流から下流へと単調に減少しました。一方、水蒸気を含まずCO<sub>2</sub>の多い条件では、中流区間の電流が上流区間を上回りました。インピーダンス解析から、この区間ではイオン伝導やガス拡散に関わる抵抗が小さいことが関係していると考えられます。温度計測では、このCO<sub>2</sub>の多い条件において、吸熱から発熱へ転じる電圧が理論値を大きく下回り、化学反応による追加の発熱が示唆されました。さらに、出口ガス分析により電解を行わなくても逆水性ガスシフト反応が進行することが確認され、試験後に分解したセルの電子顕微鏡観察では燃料極に炭素の析出が見つかりました。</p>
+
+  <p data-lang-en-block="">Together, the results point to the reverse water–gas shift reaction and carbon deposition as likely contributors to the uneven temperature and current inside the cell. They also give direct, local experimental evidence for checking computer models of SOEC co-electrolysis — the focus of Xiang's doctoral research, which aims to build three-dimensional numerical models and design guidelines for more efficient and durable cells. The work acknowledges support from K2-SPRING, and the article is open access.</p>
+  <p data-lang-jp-block="">これらの結果は、逆水性ガスシフト反応と炭素析出が、セル内部の温度と電流の偏りに寄与している可能性を示しています。また、SOEC共電解の数値モデルを検証するための、局所的な実験データを直接提供するものです。これは、効率と耐久性に優れたセルの設計指針を得るために3次元数値解析モデルの構築を目指す、向さんの博士研究の中心テーマでもあります。本研究はK2-SPRINGの支援を受けて行われ、論文はオープンアクセスで公開されています。</p>
+</div>
+
+<div class="pub-details">
+  <div class="pub-details-label"><span data-lang-en="">Publication</span><span data-lang-jp="">論文情報</span></div>
+  <div class="pub-details-row"><span class="pub-details-key" data-lang-en="">Journal</span><span class="pub-details-key" data-lang-jp="">掲載誌</span><span class="pub-details-val"><em>Energy Conversion and Management</em> (Elsevier), Vol.&thinsp;370, 122104 (2026)</span></div>
+  <div class="pub-details-row"><span class="pub-details-key" data-lang-en="">Title</span><span class="pub-details-key" data-lang-jp="">論文名</span><span class="pub-details-val">&ldquo;In-situ analysis of reaction distributions in a solid oxide cell for H<sub>2</sub>O/CO<sub>2</sub> co-electrolysis using segmented electrodes&rdquo;</span></div>
+  <div class="pub-details-row"><span class="pub-details-key" data-lang-en="">Authors</span><span class="pub-details-key" data-lang-jp="">著者</span><span class="pub-details-val"><a href="../students/2025/zhanyi-xiang.html">Zhanyi Xiang</a>, Atsushi Ryudo, Hironori Nakajima, Kohei Ito</span></div>
+  <div class="pub-details-row"><span class="pub-details-key" data-lang-en="">Access</span><span class="pub-details-key" data-lang-jp="">公開形態</span><span class="pub-details-val"><span data-lang-en="">Open access (CC BY 4.0)</span><span data-lang-jp="">オープンアクセス（CC BY 4.0）</span></span></div>
+  <div class="pub-details-row"><span class="pub-details-key" data-lang-en="">DOI</span><span class="pub-details-key" data-lang-jp="">DOI</span><span class="pub-details-val"><a href="https://doi.org/10.1016/j.enconman.2026.122104" target="_blank" rel="noopener">10.1016/j.enconman.2026.122104</a></span></div>
+</div>
+</div></main>
+<footer class="footer">
+  <span>K2&#8209;SPRING &middot; Q-ENERGY Innovator Unit (coordinated by Q-PIT, Kyushu University)</span>
+  <span>&copy; 2026 Q-PIT, Kyushu University. Designed &amp; built by Roman Selyanchyn.</span>
+</footer>
+<script>
+
+// ── Photo slider (no-ops if the OPTIONAL PHOTO SLIDER block isn't used) ────
+(function () {
+  const slider = document.querySelector('[data-slider]');
+  if (!slider) return;
+  const slides = Array.from(slider.querySelectorAll('.slider-slide'));
+  if (slides.length < 2) return;
+  const dotsContainer = slider.querySelector('.slider-dots');
+  const counter       = slider.querySelector('.slider-counter');
+  let current = 0;
+
+  slides.forEach((_, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'slider-dot' + (i === 0 ? ' active' : '');
+    btn.setAttribute('aria-label', 'Photo ' + (i + 1));
+    btn.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(btn);
+  });
+  const dots = Array.from(dotsContainer.querySelectorAll('.slider-dot'));
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    counter.textContent = (current + 1) + ' / ' + slides.length;
+  }
+
+  counter.textContent = '1 / ' + slides.length;
+  slider.querySelector('.slider-prev').addEventListener('click', () => goTo(current - 1));
+  slider.querySelector('.slider-next').addEventListener('click', () => goTo(current + 1));
+
+  let touchStartX = 0;
+  slider.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  slider.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
+  });
+})();
+</script>
+</body></html>
