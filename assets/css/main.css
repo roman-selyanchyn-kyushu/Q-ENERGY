@@ -97,7 +97,7 @@ body.modal-open{overflow:hidden}
 @media(prefers-reduced-motion:reduce){.video-modal,.video-modal-frame,.video-modal-close{transition:none}}
 
 /* ── Pamphlets ──────────────────────────────────────────── */
-.pamphlet-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pamphlet-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
 .pamphlet-card{display:block;text-decoration:none;color:var(--ink);transition:transform .25s}
 .pamphlet-card img{width:100%;aspect-ratio:3/4.25;object-fit:cover;display:block;border-radius:10px;border:1px solid var(--line);box-shadow:0 10px 30px -20px rgba(26,31,28,.18)}
 .pamphlet-card span{display:block;margin-top:10px;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--blue);text-align:center}
