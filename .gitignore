@@ -43,3 +43,6 @@ _build/
 # The tracked README.md is the thin public one; README.internal.md is the working copy.
 CLAUDE.md
 README.internal.md
+
+# Internal status board — local only, never published via git.
+overview.html
