@@ -26,7 +26,24 @@
 
   var saved = null;
   try { saved = norm(localStorage.getItem(KEY)); } catch (e) {}
-  if (saved) root.lang = saved;  // otherwise keep the page's own default
+
+  // ?lang=en|ja (used by the redirects from the old WordPress pages) wins over a
+  // saved preference and is saved, so the rest of the visit stays in that language.
+  // The parameter is then dropped from the address bar to keep URLs clean.
+  var param = null;
+  try {
+    var m = /[?&]lang=([^&#]*)/.exec(location.search);
+    param = m && norm(decodeURIComponent(m[1]).toLowerCase());
+    if (param) {
+      try { localStorage.setItem(KEY, param); } catch (e) {}
+      if (history.replaceState) {
+        var q = location.search.replace(/([?&])lang=[^&#]*&?/, '$1').replace(/[?&]$/, '');
+        history.replaceState(history.state, '', location.pathname + q + location.hash);
+      }
+    }
+  } catch (e) {}
+
+  if (param || saved) root.lang = param || saved;  // otherwise keep the page's own default
 
   document.addEventListener('DOMContentLoaded', function () {
     apply(norm(root.lang) || 'en', false);
