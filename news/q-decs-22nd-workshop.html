@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Q-DeCS 22nd Workshop — November 25, 2026 — Q-ENERGY News</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+<style>
+  [data-lang-jp]                  { display: none; }
+  html[lang="ja"] [data-lang-en]  { display: none; }
+  html[lang="ja"] [data-lang-jp]  { display: inline; }
+  html[lang="ja"] [data-lang-jp-block] { display: block; }
+  html[lang="ja"] [data-lang-en-block] { display: none; }
+  [data-lang-jp-block] { display: none; }
+  .article-wrap { max-width:740px;margin:0 auto;padding:64px var(--g) 96px }
+  .article-back { display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;letter-spacing:.04em;text-transform:uppercase;margin-bottom:48px;transition:color .2s }
+  .article-back:hover { color:var(--blue) }
+  .article-back::before { content:"←";font-size:14px }
+  .article-header { margin-bottom:40px }
+  .article-meta { display:flex;align-items:center;gap:12px;margin-bottom:20px }
+  .article-date { font-family:var(--sans);font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.04em }
+  .article-tag { display:inline-flex;align-items:center;border-radius:999px;padding:3px 11px;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.04em;border:1px solid var(--line);background:var(--paper2);color:var(--blue) }
+  .article-tag.event  { color:var(--gold);border-color:rgba(212,168,75,.3);background:rgba(212,168,75,.07) }
+  .article-headline { font-family:var(--serif);font-weight:400;font-size:clamp(24px,3.5vw,38px);line-height:1.18;letter-spacing:-.02em;color:var(--ink);margin:0 0 16px }
+  .article-lead { font-family:var(--serif);font-size:clamp(16px,1.6vw,19px);color:var(--muted);line-height:1.7;margin:0 }
+  .article-body { font-family:var(--serif);font-size:clamp(15px,1.4vw,17px);color:var(--ink);line-height:1.85 }
+  .article-body p { margin:0 0 20px }
+  .article-body p:last-child { margin:0 }
+  .article-body a { color:var(--blue) }
+  .event-details { background:var(--paper2);border:1px solid var(--line);border-radius:12px;padding:24px 28px;margin:32px 0 }
+  .event-details-label { font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px }
+  .event-row { display:grid;grid-template-columns:90px 1fr;gap:4px 14px;font-family:var(--sans);font-size:13.5px;line-height:1.6;margin-bottom:6px;align-items:baseline }
+  .event-row:last-child { margin-bottom:0 }
+  .event-key { color:var(--muted);font-weight:500;font-size:11.5px;letter-spacing:.03em }
+  .event-val { color:var(--ink) }
+
+  /* ── Programme outline ───────────────────────────────────── */
+  .programme { margin:40px 0 }
+  .programme-label { font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px }
+  .prog-row { display:grid;grid-template-columns:104px 1fr;gap:4px 16px;padding:16px 0;border-top:1px solid var(--line);align-items:baseline }
+  .prog-row:last-child { border-bottom:1px solid var(--line) }
+  .prog-time { font-family:var(--sans);font-size:11.5px;font-weight:500;color:var(--muted);letter-spacing:.03em;white-space:nowrap }
+  .prog-session { font-family:var(--sans);font-size:12.5px;font-weight:700;letter-spacing:.03em;color:var(--ink);margin-bottom:2px }
+  .prog-chair { font-family:var(--sans);font-size:11.5px;color:var(--muted);margin-bottom:10px }
+  .prog-talk { font-family:var(--serif);font-size:15.5px;font-style:italic;color:var(--ink);line-height:1.55;margin:10px 0 2px }
+  .prog-speaker { font-family:var(--sans);font-size:11.5px;color:var(--muted);line-height:1.5 }
+  .prog-break { color:var(--muted);font-family:var(--sans);font-size:12.5px;font-style:italic }
+  @media (max-width:560px){
+    .prog-row { grid-template-columns:1fr;gap:6px }
+  }
+
+  /* ── Presenters block (joint-seminar convention) ─────────── */
+  .seminar-presenters { margin:40px 0 }
+  .seminar-presenters-label { font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px }
+  .presenter-entry { padding:22px 0;border-top:1px solid var(--line) }
+  .presenter-entry:last-child { border-bottom:1px solid var(--line) }
+  .presenter { display:flex;gap:20px;align-items:center;text-decoration:none;color:inherit }
+  .presenter:hover .presenter-name { color:var(--blue) }
+  .presenter-photo { width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:50% 22%;flex-shrink:0;background:var(--paper2);border:1px solid var(--line) }
+  .presenter-info { min-width:0 }
+  .presenter-name { font-family:var(--sans);font-size:15px;font-weight:600;color:var(--ink);margin-bottom:5px;transition:color .2s }
+  .presenter-title { font-family:var(--serif);font-size:15.5px;font-style:italic;color:var(--muted);line-height:1.5 }
+  .presenter-abstract { font-family:var(--serif);font-size:14.5px;color:var(--muted);line-height:1.8;margin:14px 0 0 96px }
+  @media (max-width:560px){
+    .presenter { gap:16px }
+    .presenter-photo { width:60px;height:60px }
+    .presenter-abstract { margin-left:0 }
+  }
+
+  /* ── Photo slider ─────────────────────────────────────────── */
+  .article-photos { margin:44px 0 0 }
+  .photos-label { font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px }
+  .photo-slider { position:relative;width:100%;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:var(--paper2);box-shadow:0 1px 0 rgba(26,31,28,.04),0 16px 40px -20px rgba(26,31,28,.13) }
+  .slider-slide { position:absolute;inset:0;opacity:0;transition:opacity .45s ease;pointer-events:none }
+  .slider-slide.active { opacity:1;pointer-events:auto }
+  .slider-slide img { width:100%;height:100%;object-fit:cover;display:block }
+  .slider-btn { position:absolute;top:50%;transform:translateY(-50%);z-index:10;appearance:none;border:none;width:36px;height:36px;border-radius:50%;background:rgba(246,243,236,.88);backdrop-filter:blur(4px);color:var(--blue);font-size:18px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;box-shadow:0 2px 8px rgba(0,0,0,.12) }
+  .slider-btn:hover { background:rgba(246,243,236,1) }
+  .slider-prev { left:12px }
+  .slider-next { right:12px }
+  .slider-dots { position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:10 }
+  .slider-dot { appearance:none;border:none;width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;padding:0;transition:background .2s,transform .2s }
+  .slider-dot.active { background:#fff;transform:scale(1.25) }
+  .slider-counter { position:absolute;top:12px;right:14px;z-index:10;font-family:var(--sans);font-size:11px;font-weight:600;color:#fff;background:rgba(0,0,0,.32);border-radius:999px;padding:3px 10px;letter-spacing:.04em }
+</style>
+<script src="../assets/js/lang.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="program-mark" href="../index.html"><span class="dot" aria-hidden="true"></span><span>K2&#8209;SPRING</span><small>Q-ENERGY Innovator Unit</small></a>
+    <nav class="landing-nav">
+      <a href="../index.html#recruitment" data-lang-en="">Admissions</a><a href="../index.html#recruitment" data-lang-jp="">学生募集</a>
+      <a href="../activities.html" data-lang-en="">Activities</a><a href="../activities.html" data-lang-jp="">活動内容</a>
+      <a href="../index.html#pamphlets" data-lang-en="">Pamphlets</a><a href="../index.html#pamphlets" data-lang-jp="">パンフレット</a>
+      <a href="../index.html#students" data-lang-en="">Fellows</a><a href="../index.html#students" data-lang-jp="">ユニット生</a>
+      <a href="../publications.html" data-lang-en="">Achievements</a><a href="../publications.html" data-lang-jp="">研究成果</a>
+      <a href="../news.html" data-lang-en="" style="color:var(--blue)">News</a><a href="../news.html" data-lang-jp="" style="color:var(--blue)">ニュース</a>
+    </nav>
+    <button class="lang-switch" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></svg><span class="to-ja" lang="ja">日本語</span><span class="to-en" lang="en">English</span></button>
+  </div>
+</header>
+<main><div class="article-wrap">
+<a class="article-back" href="../news.html"><span data-lang-en="">All news</span><span data-lang-jp="">ニュース一覧</span></a>
+<header class="article-header">
+  <div class="article-meta">
+    <span class="article-date">November 25, 2026</span>
+    <span class="article-tag event"><span data-lang-en="">Event</span><span data-lang-jp="">イベント</span></span>
+  </div>
+  <h1 class="article-headline">
+    <span data-lang-en="">Two Fellows Presented at the 22nd Q-DeCS Workshop — November 25, 2026</span>
+    <span data-lang-jp="">九州脱炭素化研究会 第22回ワークショップ（2026年11月25日）— ユニット生2名が研究発表</span>
+  </h1>
+  <p class="article-lead">
+    <span data-lang-en="">Takahiro Yamaguchi and Itsuki Oyama presented their doctoral research at the 22nd Workshop of the Decarbonization Society in Kyushu (Q-DeCS), held on Wednesday, 25 November 2026 on the Chikushi Campus and streamed online.</span>
+    <span data-lang-jp="">2026年11月25日（水）に九州大学筑紫キャンパスにてハイブリッド開催された「九州脱炭素化研究会（Q-DeCS）第22回ワークショップ」にて、ユニット生の山口貴大さんと小山一輝さんが博士研究の発表を行いました。</span>
+  </p>
+</header>
+<div class="article-body">
+  <p data-lang-en-block="">The <a href="https://q-decs.kyushu-u.net/" target="_blank" rel="noopener">Decarbonization Society in Kyushu (Q-DeCS)</a> held its 22nd workshop on Wednesday, 25 November 2026, from 10:00 in Room 104, Building E, Faculty of Engineering Sciences, on the Kyushu University Chikushi Campus. This time the workshop was combined with a facility tour. After a request-theme lecture by Prof. Hiroshi Idei, Director of the Advanced Fusion Research Center, Research Institute for Applied Mechanics, the doctoral research session followed, in which two fellows of the Q-ENERGY Innovator Unit presented, both from the Department of Interdisciplinary Science and Engineering, Interdisciplinary Graduate School of Engineering Sciences: <a href="../students/2025/takahiro-yamaguchi.html">Takahiro Yamaguchi</a> and <a href="../students/2024/itsuki-oyama.html">Itsuki Oyama</a>. The session, from 10:35 to 11:05, was chaired by Prof. Roman Selyanchyn of Q-PIT.</p>
+  <p data-lang-jp-block="">2026年11月25日（水）10:00より、九州大学筑紫キャンパス 総合理工学研究院 E棟104号室にて、<a href="https://q-decs.kyushu-u.net/" target="_blank" rel="noopener">九州脱炭素化研究会（Q-DeCS）</a>第22回ワークショップ・施設見学会が開催されました。応用力学研究所 附属高温プラズマ理工学研究センター長 出射 浩 教授によるリクエストテーマ講演「フュージョンエネルギー・高温プラズマ理工学研究センターでの取り組み」に続く「博士研究紹介」では、Q-ENERGYイノベーターユニットから、総合理工学府 総合理工学専攻の<a href="../students/2025/takahiro-yamaguchi.html">山口 貴大</a>さんと<a href="../students/2024/itsuki-oyama.html">小山 一輝</a>さんの2名が登壇しました。同セッション（10:35〜11:05）の座長は、Q-PIT 准教授 セリャンチン・ロマンが務めました。</p>
+  <p data-lang-en-block="">Both talks were on fusion plasma, so together with the lecture before them the morning formed one programme on fusion. Yamaguchi, supervised by <a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100022671_en.html" target="_blank" rel="noopener">Prof. Hiroshi IDEI</a>, who gave the lecture just before, works on starting up the plasma of a spherical tokamak with electron cyclotron resonance on the QUEST device. Oyama, supervised by <a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100022633_en.html" target="_blank" rel="noopener">Prof. Yusuke KOSUGA</a> of the Research Institute for Applied Mechanics, uses theory and numerical calculations to study how turbulence driven by plasma rotation carries heat in tokamaks. Their abstracts are below.</p>
+  <p data-lang-jp-block="">2名の発表はいずれも核融合プラズマに関するもので、直前の講演と合わせ、午前のプログラムは核融合をテーマとする構成となりました。直前に講演された<a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100022671_ja.html" target="_blank" rel="noopener">出射 浩 教授</a>のもとで研究する山口さんは、QUEST装置において、電子サイクロトロン共鳴を用いた球状トカマクのプラズマ立ち上げに取り組んでいます。応用力学研究所の<a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100022633_ja.html" target="_blank" rel="noopener">小菅 佑輔 准教授</a>のもとで研究する小山さんは、プラズマ回転が駆動する乱流による熱輸送を、理論モデルと数値計算により調べています。各発表の概要は下記のとおりです。</p>
+  <p data-lang-en-block="">After the workshop, participants toured the QUEST spherical tokamak at the Advanced Fusion Research Center on the Chikushi Campus, the device on which Yamaguchi carries out his research, and in the afternoon visited hydrogen research facilities on the Ito Campus.</p>
+  <p data-lang-jp-block="">ワークショップ終了後は、筑紫キャンパスの高温プラズマ理工学研究センターにて、山口さんが研究に用いている球状トカマク装置QUESTを見学し、午後には伊都キャンパスの水素関連研究施設を見学しました。</p>
+</div>
+<div class="event-details">
+  <div class="event-details-label"><span data-lang-en="">Event Details</span><span data-lang-jp="">開催概要</span></div>
+  <div class="event-row"><span class="event-key" data-lang-en="">Date</span><span class="event-key" data-lang-jp="">日時</span><span class="event-val"><span data-lang-en="">Wednesday, 25 November 2026, 10:00–11:10 (JST), followed by a facility tour</span><span data-lang-jp="">令和8年11月25日（水）10:00〜11:10（その後、施設見学会）</span></span></div>
+  <div class="event-row"><span class="event-key" data-lang-en="">Doctoral session</span><span class="event-key" data-lang-jp="">博士研究紹介</span><span class="event-val"><span data-lang-en="">10:35–11:05 — Chair: Prof. Roman Selyanchyn (Q-PIT)</span><span data-lang-jp="">10:35〜11:05 — 座長：Q-PIT 准教授 セリャンチン・ロマン</span></span></div>
+  <div class="event-row"><span class="event-key" data-lang-en="">Venue</span><span class="event-key" data-lang-jp="">場所</span><span class="event-val"><span data-lang-en="">Room 104, Building E, Faculty of Engineering Sciences, Kyushu University Chikushi Campus — hybrid</span><span data-lang-jp="">九州大学筑紫キャンパス 総合理工学研究院 E棟104号室 ※ハイブリッド開催</span></span></div>
+  <div class="event-row"><span class="event-key" data-lang-en="">Event</span><span class="event-key" data-lang-jp="">名称</span><span class="event-val"><span data-lang-en="">Decarbonization Society in Kyushu (Q-DeCS), 22nd Workshop and Facility Tour</span><span data-lang-jp="">九州脱炭素化研究会 第22回ワークショップ・施設見学会</span></span></div>
+  <div class="event-row"><span class="event-key" data-lang-en="">Website</span><span class="event-key" data-lang-jp="">ウェブサイト</span><span class="event-val"><a href="https://q-decs.kyushu-u.net/" target="_blank" rel="noopener">q-decs.kyushu-u.net</a></span></div>
+</div>
+<div class="seminar-presenters">
+  <div class="seminar-presenters-label"><span data-lang-en="">Presenters from the Unit</span><span data-lang-jp="">ユニットからの発表者</span></div>
+  <div class="presenter-entry">
+    <a class="presenter" href="../students/2025/takahiro-yamaguchi.html">
+      <img class="presenter-photo" src="../assets/photos/2025/yamaguchi_takahiro.jpg" alt="Portrait of Takahiro Yamaguchi" loading="lazy">
+      <div class="presenter-info">
+        <div class="presenter-name"><span data-lang-en="">Takahiro Yamaguchi</span><span data-lang-jp="">山口 貴大</span></div>
+        <div class="presenter-title">
+          <span data-lang-en="">Heating and plasma current start-up using electron cyclotron resonance in spherical tokamaks</span>
+          <span data-lang-jp="">球状トカマクでの電子サイクロトロン共鳴を用いた加熱とプラズマ電流立ち上げ</span>
+        </div>
+      </div>
+    </a>
+    <p class="presenter-abstract">
+      <span data-lang-en-block="">As expectations for fusion power grow on the way to a decarbonized society, the spherical tokamak (ST) is attracting attention as an approach that aims at early realization. An ST can operate at a higher beta value than a conventional tokamak (beta, the ratio of plasma pressure to the magnetic pressure of the coils, is an indicator of economic performance). In addition, a compact device design, built with technologies developed for projects such as ITER, is expected to bring an economically attractive fusion reactor at an early stage. Because the device is compact, however, there is not enough space for the central solenoid (CS) coil that is normally used to form the tokamak configuration. One way to start up the plasma without a CS coil is heating and current drive using electron cyclotron resonance. The QUEST device at Kyushu University has used this approach to reach what was, at the time, the world’s highest plasma current, together with a relatively high electron temperature.</span>
+      <span data-lang-jp-block="">脱炭素社会の実現に向けて核融合発電への期待が高まる中、早期実現を目指す方式として、球状トカマク装置（ST）が注目される。ST は従来のトカマクより高いベータ値（経済性の指標となる、プラズマ圧力とコイルの磁場圧力の比）での運転が可能である。加えて、コンパクトな装置設計とその建設に ITER などで培われた技術を活用することで、経済性の優れた核融合炉の早期実現が期待される。一方で、コンパクトさ故に、トカマク配位形成に通常用いられる中心ソレノイド（CS）コイルの設置に必要なスペースを十分に確保できないなどの課題がある。CS コイルを用いないプラズマ立ち上げ手法として電子サイクロトロン共鳴を用いた加熱・電流駆動がある。九州大学 QUEST 実験装置では、これまで世界最高値となるプラズマ電流（当時）と比較的高い電子温度を達成している。</span>
+    </p>
+  </div>
+  <div class="presenter-entry">
+    <a class="presenter" href="../students/2024/itsuki-oyama.html">
+      <img class="presenter-photo" src="../assets/photos/2024/oyama_itsuki.jpg" alt="Portrait of Itsuki Oyama" loading="lazy">
+      <div class="presenter-info">
+        <div class="presenter-name"><span data-lang-en="">Itsuki Oyama</span><span data-lang-jp="">小山 一輝</span></div>
+        <div class="presenter-title">
+          <span data-lang-en="">Heat transport by rotation-shear-driven modes in tokamaks</span>
+          <span data-lang-jp="">トカマクにおける回転シア駆動モードの熱輸送</span>
+        </div>
+      </div>
+    </a>
+    <p class="presenter-abstract">
+      <span data-lang-en-block="">Plasma rotation plays an important role in making fusion reactors practical. The goal of a fusion reactor is to reach a self-sustaining burning state driven by fusion reactions, keep it going, and extract energy from it. Transport by turbulence in the plasma carries heat out, lowers the temperature and stands in the way of this goal. Plasma rotation helps to suppress this transport by tearing turbulent structures apart and breaking them into smaller pieces. In recent years, however, it has become clear that rotation itself can also create turbulence, and turbulence caused by rotation may limit these gains in performance.</span>
+      <span data-lang-en-block="">My research focuses on this rotation-driven turbulence. Using theoretical models and numerical calculations, I aim to clarify the structure of this turbulence and, in particular, its transport properties.</span>
+      <span data-lang-en-block="">If these properties can be organized, they will help us understand how much rotation is appropriate when the plasma is heated stably while turbulence is kept down. The talk also explains how these findings can be used in actual fusion development.</span>
+      <span data-lang-jp-block="">核融合炉の実用化に向けて，プラズマの回転が重要な役割を果たします．核融合炉では，核融合反応による自律的な燃焼状態を実現し，それを持続してエネルギーを取り出すことが目標です．その際，プラズマ中の乱流による輸送は，熱を排出してしまうことで温度を下げ，実現の妨げになってしまいます．プラズマ回転は，こうした乱流構造を引き裂き，細分化することで，輸送を抑制することに寄与します．しかし近年，この回転自体も乱流を作り出すことが分かってきました．回転に起因する乱流は，こうした性能向上を制限する可能性があります．</span>
+      <span data-lang-jp-block="">私の研究では，この回転による乱流に注目しています．この乱流が持つ構造や，特に輸送に関する特徴を，理論モデルや数値計算を用いて明らかにしようとしています．</span>
+      <span data-lang-jp-block="">こうした特徴を整理することができれば，プラズマの運転における，乱流を抑えつつ安定にプラズマを加熱する際の，適切な回転具合を理解することの一助になると考えています．発表では，こうした知見が実際の核融合開発にどのように活用されていくのか，ということも含めご紹介します．</span>
+    </p>
+  </div>
+</div>
+<div class="article-photos">
+  <div class="photos-label"><span data-lang-en="">Photos</span><span data-lang-jp="">写真</span></div>
+  <div class="photo-slider" data-slider>
+    <div class="slider-slide active"><img src="../assets/photos/news/Q-DeCS-22-01.jpg" alt="Takahiro Yamaguchi's title slide at the 22nd Q-DeCS Workshop" loading="lazy"></div>
+    <div class="slider-slide"><img src="../assets/photos/news/Q-DeCS-22-02.jpg" alt="Takahiro Yamaguchi presenting his doctoral research" loading="lazy"></div>
+    <div class="slider-slide"><img src="../assets/photos/news/Q-DeCS-22-03.jpg" alt="Itsuki Oyama explaining why transport research matters for future fusion reactors" loading="lazy"></div>
+    <div class="slider-slide"><img src="../assets/photos/news/Q-DeCS-22-04.jpg" alt="Itsuki Oyama presenting his doctoral research" loading="lazy"></div>
+    <div class="slider-slide"><img src="../assets/photos/news/Q-DeCS-22-05.jpg" alt="The QUEST spherical tokamak, visited on the facility tour after the workshop" loading="lazy"></div>
+    <button class="slider-btn slider-prev" aria-label="Previous photo">&#8249;</button>
+    <button class="slider-btn slider-next" aria-label="Next photo">&#8250;</button>
+    <div class="slider-dots"></div>
+    <span class="slider-counter"></span>
+  </div>
+</div>
+</div></main>
+<footer class="footer">
+  <span>K2&#8209;SPRING &middot; Q-ENERGY Innovator Unit (coordinated by Q-PIT, Kyushu University)</span>
+  <span>&copy; 2026 Q-PIT, Kyushu University. Designed &amp; built by Roman Selyanchyn.</span>
+</footer>
+<script>
+
+// ── Photo slider ────────────────────────────────────────────
+(function () {
+  const slider = document.querySelector('[data-slider]');
+  if (!slider) return;
+  const slides = Array.from(slider.querySelectorAll('.slider-slide'));
+  if (slides.length < 2) return;
+  const dotsContainer = slider.querySelector('.slider-dots');
+  const counter       = slider.querySelector('.slider-counter');
+  let current = 0;
+
+  slides.forEach((_, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'slider-dot' + (i === 0 ? ' active' : '');
+    btn.setAttribute('aria-label', 'Photo ' + (i + 1));
+    btn.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(btn);
+  });
+  const dots = Array.from(dotsContainer.querySelectorAll('.slider-dot'));
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    counter.textContent = (current + 1) + ' / ' + slides.length;
+  }
+
+  counter.textContent = '1 / ' + slides.length;
+  slider.querySelector('.slider-prev').addEventListener('click', () => goTo(current - 1));
+  slider.querySelector('.slider-next').addEventListener('click', () => goTo(current + 1));
+
+  let touchStartX = 0;
+  slider.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  slider.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
+  });
+})();
+</script>
+</body></html>
